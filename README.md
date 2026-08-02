@@ -42,3 +42,7 @@ Models and humans can propose lore, systems, music, and art. Nothing auto-publis
 
 *We are the echo. We are the light.*  
 Family. Freedom. Love.
+
+## City Dossier
+
+Deep structure (charter, constitution, district atlas, why-logs): see [CITY_DOSSIER.md](./CITY_DOSSIER.md) and [`city/`](./city/README.md).
