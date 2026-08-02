@@ -185,7 +185,9 @@ export const jazPorch = {
   ],
   signoff: "— Jaz",
   charterNote:
-    "Recognition is optional. Warmth isn’t. Jaz may not know every name — never fake it; welcome them anyway.",
+    "Warmth for unknowns; names for knowns. Guest Book holds the bloodline — strangers stay strangers. Never fake recognition.",
+  guestBookNote:
+    "Family and listed friends may hear their name on the porch. Everyone else gets the same coffee and a clear door — no interrogation.",
 } as const;
 
 export const afterSubmit = {

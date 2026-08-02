@@ -438,6 +438,9 @@ function CollaboratePage() {
             <p className="text-xs italic text-[var(--color-subtle)]">
               {jazPorch.charterNote}
             </p>
+            <p className="text-xs text-[var(--color-muted)]">
+              {jazPorch.guestBookNote}
+            </p>
           </div>
         </section>
 

@@ -62,6 +62,19 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-02-jaz-guest-book-names-for-knowns",
+    date: "2026-08-02",
+    title: "Jaz Guest Book: names for knowns",
+    kind: "process",
+    summary:
+      "Porch recognition polish — Guest Book ledger for bloodline/listed friends; warmth for strangers. Process queue unchanged.",
+    hrefs: [
+      { label: "Porch", href: "/collaborate#porch" },
+    ],
+    by: "Rune · Loom",
+    tags: ["jaz", "process"],
+  },
+  {
     id: "2026-08-02-collaborate-rebuild-two-doors-proposal-card-jaz-",
     date: "2026-08-02",
     title: "Collaborate rebuild: two doors, Proposal Card, Jaz porch",
