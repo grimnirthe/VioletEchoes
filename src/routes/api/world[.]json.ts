@@ -33,6 +33,7 @@ export const Route = createFileRoute("/api/world.json")({
               culture: "/culture",
               updates: "/updates",
               updatesJson: "/api/updates.json",
+              commitsJson: "/api/commits.json",
               companions: "/bible/companions",
               docs: "/docs/",
               thisJson: "/api/world.json",

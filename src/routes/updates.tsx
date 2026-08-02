@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Newspaper, Radio } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
+import { GitActivityFeed } from "@/components/git-activity-feed";
 import {
   cityUpdates,
   updateKinds,
@@ -151,6 +152,12 @@ function UpdatesPage() {
               {updateKinds[k].label}
             </a>
           ))}
+          <a
+            href="#repo-activity"
+            className="rounded-full border border-[var(--color-border)] px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-[var(--color-muted)] transition hover:border-[var(--color-primary)]/40 hover:text-[var(--color-primary-soft)]"
+          >
+            Git feed
+          </a>
         </nav>
 
         {/* Full timeline newest first */}
@@ -162,6 +169,10 @@ function UpdatesPage() {
             <UpdateCard key={u.id} u={u} />
           ))}
         </section>
+
+        <div className="mt-16">
+          <GitActivityFeed />
+        </div>
 
         {/* By kind for agents / deep skim */}
         <section className="mt-16 space-y-10 border-t border-[var(--color-border)] pt-12">

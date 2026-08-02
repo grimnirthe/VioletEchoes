@@ -19,6 +19,7 @@ import { Route as MusicRouteImport } from './routes/music'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as SystemsRouteImport } from './routes/systems'
 import { Route as UpdatesRouteImport } from './routes/updates'
+import { Route as ApiCommitsDotjsonRouteImport } from './routes/api/commits[.]json'
 import { Route as ApiUpdatesDotjsonRouteImport } from './routes/api/updates[.]json'
 import { Route as ApiWorldDotjsonRouteImport } from './routes/api/world[.]json'
 import { Route as BibleIndexRouteImport } from './routes/bible/index'
@@ -79,6 +80,11 @@ const UpdatesRoute = UpdatesRouteImport.update({
   path: '/updates',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCommitsDotjsonRoute = ApiCommitsDotjsonRouteImport.update({
+  id: '/api/commits.json',
+  path: '/api/commits.json',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiUpdatesDotjsonRoute = ApiUpdatesDotjsonRouteImport.update({
   id: '/api/updates.json',
   path: '/api/updates.json',
@@ -136,6 +142,7 @@ export interface FileRoutesByFullPath {
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
   '/updates': typeof UpdatesRoute
+  '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
@@ -157,6 +164,7 @@ export interface FileRoutesByTo {
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
   '/updates': typeof UpdatesRoute
+  '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
@@ -179,6 +187,7 @@ export interface FileRoutesById {
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
   '/updates': typeof UpdatesRoute
+  '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
@@ -202,6 +211,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/systems'
     | '/updates'
+    | '/api/commits.json'
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
@@ -223,6 +233,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/systems'
     | '/updates'
+    | '/api/commits.json'
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
@@ -244,6 +255,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/systems'
     | '/updates'
+    | '/api/commits.json'
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
@@ -266,6 +278,7 @@ export interface RootRouteChildren {
   SearchRoute: typeof SearchRoute
   SystemsRoute: typeof SystemsRoute
   UpdatesRoute: typeof UpdatesRoute
+  ApiCommitsDotjsonRoute: typeof ApiCommitsDotjsonRoute
   ApiUpdatesDotjsonRoute: typeof ApiUpdatesDotjsonRoute
   ApiWorldDotjsonRoute: typeof ApiWorldDotjsonRoute
   BibleSlugRoute: typeof BibleSlugRoute
@@ -349,6 +362,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UpdatesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/commits.json': {
+      id: '/api/commits.json'
+      path: '/api/commits.json'
+      fullPath: '/api/commits.json'
+      preLoaderRoute: typeof ApiCommitsDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/updates.json': {
       id: '/api/updates.json'
       path: '/api/updates.json'
@@ -426,6 +446,7 @@ const rootRouteChildren: RootRouteChildren = {
   SearchRoute: SearchRoute,
   SystemsRoute: SystemsRoute,
   UpdatesRoute: UpdatesRoute,
+  ApiCommitsDotjsonRoute: ApiCommitsDotjsonRoute,
   ApiUpdatesDotjsonRoute: ApiUpdatesDotjsonRoute,
   ApiWorldDotjsonRoute: ApiWorldDotjsonRoute,
   BibleSlugRoute: BibleSlugRoute,

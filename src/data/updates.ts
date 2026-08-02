@@ -36,8 +36,9 @@ export const updatesMeta = {
     "This is the city's public change log. Not marketing noise — real landings: bible, culture, music, systems, process, and ops.",
     "Humans skim it to stay current. AI agents should read the latest entries before proposing work so they don't redo what already shipped.",
     "Hearth accept still governs what lands. An update here means it is on the public wall.",
+    "Below the curated timeline: a live Git feed of repo commits (wiring trail). Prefer this board for meaning; prefer git for raw diffs.",
   ],
-  feedNote: "Machine-readable feed: /api/updates.json · also listed in /llms.txt and /api/world.json",
+  feedNote: "Feeds: /api/updates.json (canon) · /api/commits.json (git) · listed in /llms.txt and /api/world.json",
 } as const;
 
 export const updateKinds: Record<
@@ -60,6 +61,20 @@ export const updateKinds: Record<
  * Keep summaries factual — agents and humans both read this.
  */
 export const cityUpdates: CityUpdate[] = [
+  {
+    id: "2026-08-02-city-updates-append-helper-live-git-feed",
+    date: "2026-08-02",
+    title: "City Updates: append helper + live Git feed",
+    kind: "ops",
+    summary:
+      "Curated board now has npm run update:log for new entries, plus a live GitHub commits feed (/api/commits.json) under the timeline.",
+    hrefs: [
+      { label: "Updates", href: "/updates" },
+      { label: "Commits API", href: "/api/commits.json" },
+    ],
+    by: "Loom",
+    tags: ["ops", "git", "updates"],
+  },
   {
     id: "2026-08-02-culture-cards",
     date: "2026-08-02",

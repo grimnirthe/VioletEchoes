@@ -29,6 +29,7 @@ export const Route = createFileRoute("/llms.txt")({
           "- Culture commons (music & art contributions): /culture",
           "- City Updates (public change log): /updates",
           "- Updates JSON feed: /api/updates.json",
+          "- Git commits feed: /api/commits.json",
           "- Faith & Practice (no state church): /bible/faith-practice",
           "- Search UI: /search?q=",
           "- This file: /llms.txt",
