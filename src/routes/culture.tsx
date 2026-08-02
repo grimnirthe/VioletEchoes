@@ -4,6 +4,7 @@ import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import {
   cultureContribute,
+  cultureHero,
   cultureIntro,
   cultureKeepers,
   cultureKinds,
@@ -170,6 +171,18 @@ function CulturePage() {
     <SiteShell>
       <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <PageNav sectionTo="/" current="Culture" />
+
+        <div className="mb-10 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+          <img
+            src={cultureHero.src}
+            alt={cultureHero.alt}
+            className="aspect-[21/9] w-full object-cover object-[center_20%]"
+            loading="eager"
+          />
+          <p className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-center text-xs italic text-[var(--color-muted)] sm:text-left">
+            {cultureHero.caption}
+          </p>
+        </div>
 
         <header className="mx-auto max-w-3xl space-y-4 text-center sm:text-left">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">

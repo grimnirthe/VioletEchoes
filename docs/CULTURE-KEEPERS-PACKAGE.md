@@ -116,8 +116,8 @@ Ultra detailed real life atmospheric still: Violet Echoes Cultural Hub fitting r
 
 - [ ] Review PR / branch `culture/starborn-velora-keepers`
 - [ ] Confirm portrait paths resolve (`starborn.jpg`, `velora.jpg`, regalia, ensemble-musicians)
-- [ ] Optional: generate hero stills A–E → `/public/images/culture/`
-- [ ] Wire new images into work cards if replacing portrait placeholders
+- [x] Optional: generate hero stills A–E → `/public/images/culture/`
+- [x] Wire new images into work cards if replacing portrait placeholders
 - [ ] Merge after hearth accept → Vercel deploy
 - [ ] Optional bible deep-section: note keepers under Cultural Hub
 
