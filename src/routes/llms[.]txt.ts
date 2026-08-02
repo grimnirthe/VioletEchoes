@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { llmsContributionBlock } from "@/data/collaborate";
 import { entries, glossaryTerms, principles, siteMeta } from "@/data/world";
 
 export const Route = createFileRoute("/llms.txt")({
@@ -38,8 +39,10 @@ export const Route = createFileRoute("/llms.txt")({
           "- Primary canon is on-site (bible, companions, world.json).",
           "- External aesthetic/tech links on /credits are inspiration only — not affiliations.",
           "- Credit reuse as #VioletEchoes.",
-          "- To propose changes: follow /collaborate (read order, hard rules, proposal template).",
+          "- To propose changes: follow /collaborate (Proposal Card, GitHub Issue or form).",
           "- Models draft only; human hearth accepts before production updates.",
+          "",
+          ...llmsContributionBlock.split("\n"),
           "",
           "## Core principles (Development Divergence)",
           ...principles.map((p) => `- ${p.title}: ${p.text}`),

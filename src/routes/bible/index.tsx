@@ -66,6 +66,15 @@ function BibleIndexPage() {
             Condensed city canon plus full companion meat. Private family sheets stay offline;
             this portal keeps systems, districts, doctrine, and Divergence searchable and coherent.
           </p>
+          <p className="text-sm text-[var(--color-subtle)]">
+            Propose additions →{" "}
+            <Link
+              to="/collaborate"
+              className="font-medium text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+            >
+              /collaborate
+            </Link>
+          </p>
           <div className="flex flex-wrap items-center gap-2">
             <Badge className="border-[var(--color-primary)]/30 text-[var(--color-primary-soft)]">
               {entries.length} condensed entries

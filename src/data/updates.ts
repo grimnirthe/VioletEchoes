@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-02-collaborate-rebuild-two-doors-proposal-card-jaz-",
+    date: "2026-08-02",
+    title: "Collaborate rebuild: two doors, Proposal Card, Jaz porch",
+    kind: "process",
+    summary:
+      "Public submit channels locked: GitHub Issues (researchers) + form on /collaborate (casuals). Proposal Card shape, statuses, models standing job, Jaz porch #porch. No public email/DM.",
+    body: [
+      "Form builds a Proposal Card and opens a GitHub Issue into the same queue. Private side door stays unadvertised.",
+    ],
+    hrefs: [
+      { label: "Collaborate", href: "/collaborate" },
+      { label: "Porch", href: "/collaborate#porch" },
+      { label: "llms.txt", href: "/llms.txt" },
+    ],
+    by: "Rune process · Loom wire · hearth",
+    tags: ["collaborate", "process", "jaz"],
+  },
+  {
     id: "2026-08-02-starborn-stage-district-soft-laws-on-culture",
     date: "2026-08-02",
     title: "Starborn Stage District soft laws on Culture",

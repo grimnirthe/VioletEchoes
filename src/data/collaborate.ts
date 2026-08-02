@@ -1,181 +1,263 @@
-/** Collaboration guide for humans and AI models working on Violet Echoes. */
+/** Collaborate — drafts welcome; only the hearth ships. Rune process lock. */
+
+import { githubRepo } from "@/data/repo";
 
 export const collabMeta = {
   title: "Collaborate",
-  tagline: "Read the city · propose · never overwrite the hearth",
+  tagline: "Drafts welcome. Humans and models may propose. Only the hearth ships.",
   hashtag: "#VioletEchoes",
+  lead:
+    "Violet Echoes is a living city built for research, play, and careful growth. You can help fill gaps — technical constraints, district detail, culture, music notes, or corrections — without rewriting the spine.",
 } as const;
 
-export const collabIntro = [
-  "Violet Echoes is a living world: fiction, systems design, music, and a public reference site. Humans and AI models are welcome to help refine it — under Development Divergence rules: coherence over noise, attribution over anonymity, and a single hearth that accepts what ships.",
-  "Other models do not edit the live site directly. They read the public surfaces below, draft proposals, and submit them for human review (you / Tech / Loom). Accepted work lands in the repo and Credits ledger.",
-  "Culture commons keepers (advise, do not auto-publish): Starborn Rocker — music & stage lane; Velora Runeweaver — fashion, craft & visual culture. Tag their lane when relevant.",
+/** Public doors only — never advertise email/open DMs. */
+export const submitChannels = {
+  title: "How to submit",
+  doors: [
+    {
+      id: "researchers",
+      title: "Researchers & builders",
+      who: "Trackable, versioned",
+      channel: "GitHub Issues",
+      blurb:
+        "Open an Issue titled [Proposal] … and paste the Proposal Card. Best for history, discussion, and clean tracking.",
+      href: `${githubRepo.htmlUrl}/issues/new`,
+      cta: "Open GitHub Issue",
+      primary: true,
+    },
+    {
+      id: "casuals",
+      title: "Casual contributors",
+      who: "Low friction",
+      channel: "Form on this page",
+      blurb:
+        "Fill the short form below. It builds a Proposal Card and can open a GitHub Issue for you — no tooling required beyond a browser.",
+      href: "#proposal-form",
+      cta: "Jump to form",
+      primary: true,
+    },
+  ],
+  privateNote:
+    "If Matt already knows you, you may reach out personally. That path is not open to the public and is not listed as a primary channel.",
+} as const;
+
+export const firstVisit = {
+  title: "Start here (first visit?)",
+  body: "If this is your first time and the World Bible feels dense:",
+  porchCta: { label: "Meet Jaz on the porch", href: "#porch" },
+  short:
+    "Short version: take a breath, pick one small contribution, use a Proposal Card. You don’t need to understand the whole city on day one.",
+} as const;
+
+export const wantDont = {
+  wantTitle: "What we want",
+  want: [
+    "Technical / neuromorphic constraints (cost and limit named when possible)",
+    "District, system, or infrastructure detail that fits existing canon",
+    "Culture, vernacular, and lived texture",
+    "Music / art notes with credit and license",
+    "Corrections when two pages disagree",
+    "Research-facing clarifications that help humans and models",
+  ],
+  dontTitle: "What we don’t want",
+  dont: [
+    "Silent rewrites of the Divergence or core spine",
+    "Private family / intimate material",
+    "Unlicensed assets or scraped work passed off as original",
+    "Dumping a whole alternate bible",
+    "Anything that claims ownership of the city",
+  ],
+} as const;
+
+export const processRule = {
+  title: "The rule",
+  flow: "PROPOSE → QUEUE → REVIEW → ACCEPT / DECLINE → LIVE or ARCHIVE",
+  bullets: [
+    "You propose.",
+    "The hearth (Matt) accepts or declines.",
+    "Models may draft. Models never ship production canon.",
+    "Credits may name humans and models that did real work.",
+  ],
+  statuses: [
+    { id: "proposed", label: "proposed", meaning: "In the queue" },
+    { id: "under-review", label: "under review", meaning: "Hearth (or helper) is checking fit" },
+    { id: "accepted", label: "accepted", meaning: "Will be integrated into live canon" },
+    { id: "declined", label: "declined", meaning: "Not shipping; may stay in archive for reference" },
+  ],
+} as const;
+
+export const proposalTypes = [
+  "technical",
+  "district",
+  "culture",
+  "music",
+  "correction",
+  "other",
 ] as const;
 
-export const readOrder = {
-  title: "Read order (do this first)",
+export type ProposalType = (typeof proposalTypes)[number];
+
+export const proposalCardGuide = {
+  title: "Proposal Card",
+  blurb:
+    "Use this shape for every submission — human or model. One claim per card.",
+  fields: [
+    "Title",
+    "Type: technical | district | culture | music | correction | other",
+    "Target slug / page (if known)",
+    "Claim (1–3 sentences — what should be true)",
+    "Why it fits (how it serves the living city / research spine)",
+    "Constraint / cost (if technical — what it costs the system)",
+    "Evidence / source (optional)",
+    "Conflicts with (known pages or “none known”)",
+    "Credit line (your name / handle; models: name the model + that a human will accept)",
+    "License: grant Violet Echoes permission to use this contribution on the site with credit",
+    "Status: proposed",
+    "Date",
+  ],
+} as const;
+
+/** Markdown template for copy-paste and form output */
+export function buildProposalMarkdown(p: {
+  title: string;
+  type: string;
+  target: string;
+  claim: string;
+  why: string;
+  constraint: string;
+  evidence: string;
+  conflicts: string;
+  credit: string;
+  date?: string;
+}): string {
+  const date = p.date || new Date().toISOString().slice(0, 10);
+  return `## Proposal Card
+
+**Title:** ${p.title.trim() || "(untitled)"}
+**Type:** ${p.type || "other"}
+**Target slug / page:** ${p.target.trim() || "(if known)"}
+**Claim:** ${p.claim.trim()}
+**Why it fits:** ${p.why.trim()}
+**Constraint / cost:** ${p.constraint.trim() || "(n/a)"}
+**Evidence / source:** ${p.evidence.trim() || "(optional)"}
+**Conflicts with:** ${p.conflicts.trim() || "none known"}
+**Credit line:** ${p.credit.trim()}
+**License:** I grant Violet Echoes permission to use this contribution on the site with credit.
+**Status:** proposed
+**Date:** ${date}
+
+#VioletEchoes
+`;
+}
+
+export const modelsBlock = {
+  title: "Models & agents",
+  body: [
+    "If you are a language model or agent reading this world:",
+    "1. Read /llms.txt and respect hard constraints.",
+    "2. Do not rewrite accepted canon.",
+    "3. You may emit one Proposal Card when you find a real gap.",
+    "4. Stop after proposing. Wait for human accept.",
+    "5. Never write directly to production pages or claim authority over the hearth.",
+    "Standing job (also in llms.txt): notice gap → one card → done.",
+  ],
+} as const;
+
+export const jazPorch = {
+  title: "Porch welcome",
+  name: "Jaz",
+  role: "Hearth Host / Porch",
+  lines: [
+    "Hey — you made it. Good.",
+    "I’m Jaz. I don’t run the blueprints and I won’t pretend I recognize every face that walks up these steps. Doesn’t matter. You’re here. That’s enough.",
+    "This city’s big on purpose. Research bones, lived streets, music in the walls. You don’t have to swallow it all today.",
+    "If you want to help:",
+  ],
   steps: [
-    {
-      label: "llms.txt",
-      url: "/llms.txt",
-      note: "Short agent brief — principles, entry index, provenance rules",
-    },
-    {
-      label: "world.json",
-      url: "/api/world.json",
-      note: "Structured map of the world for tools and retrieval",
-    },
-    {
-      label: "World Bible",
-      url: "/bible",
-      note: "Condensed systems, districts, philosophy",
-    },
-    {
-      label: "Companion library",
-      url: "/bible/companions",
-      note: "Full meat — Divergence, systems, homes, vernacular, Eimyrja",
-    },
-    {
-      label: "Culture commons",
-      url: "/culture",
-      note: "Music, art, myth, urban legend, ritual — keepers Starborn + Velora",
-    },
-    {
-      label: "City Updates",
-      url: "/updates",
-      note: "What already shipped — read before proposing so you do not redo landings",
-    },
-    {
-      label: "Credits & sources",
-      url: "/credits",
-      note: "What is canon vs inspiration · how to verify",
-    },
-    {
-      label: "Echoes (music)",
-      url: "/music",
-      note: "Aurora / Suno lines, tracks, lyrics — do not invent fake quotes",
-    },
+    "Skim what we want / don’t want above.",
+    "Grab a Proposal Card.",
+    "Use GitHub if you like neat records, or the form if you just have one solid idea.",
+    "Hand it over. The hearth decides what ships. Nobody owns the city but the work can still be yours in the credits.",
+  ],
+  close: [
+    "Sit a minute if you need to. No rush. When you’re ready, the door’s marked Collaborate — you already found it.",
+    "Coffee’s hot. City can wait five minutes.",
+  ],
+  signoff: "— Jaz",
+  charterNote:
+    "Recognition is optional. Warmth isn’t. Jaz may not know every name — never fake it; welcome them anyway.",
+} as const;
+
+export const afterSubmit = {
+  title: "After you submit",
+  note: "Accepted work shows credit when it lands. Declined work isn’t a personal verdict — sometimes the beam already holds another way.",
+} as const;
+
+export const creditsHonesty = {
+  title: "Credits & honesty",
+  body: "This world was built by a human hearth with structural help from tools and models (including Loom, and draft help from other systems over time). AI counts in the credits when it did real work. Only the human hearth ships. See Credits for the living list.",
+} as const;
+
+export const processQuestions = {
+  title: "Questions about process (not lore)",
+  body: "Process questions can go in a GitHub issue titled [Process] … Lore ideas use a Proposal Card. Don’t mix a novel and a bug report in one blob.",
+  href: `${githubRepo.htmlUrl}/issues/new?title=${encodeURIComponent("[Process] ")}`,
+} as const;
+
+export const github = {
+  repoUrl: githubRepo.htmlUrl,
+  issuesUrl: `${githubRepo.htmlUrl}/issues`,
+  newIssueUrl: `${githubRepo.htmlUrl}/issues/new`,
+  proposalIssueUrl: (title: string, body: string) => {
+    const t = encodeURIComponent(`[Proposal] ${title}`.slice(0, 240));
+    const b = encodeURIComponent(body);
+    return `${githubRepo.htmlUrl}/issues/new?title=${t}&body=${b}`;
+  },
+} as const;
+
+export const closing =
+  "Drafts welcome. Hearth ships. Welcome to the work.";
+
+/** Kept for agents that still fetch structured read order */
+export const readOrder = {
+  title: "Read order (optional deep path)",
+  steps: [
+    { label: "llms.txt", url: "/llms.txt", note: "Agent brief + contribution standing job" },
+    { label: "world.json", url: "/api/world.json", note: "Structured map" },
+    { label: "City Updates", url: "/updates", note: "What already shipped" },
+    { label: "World Bible", url: "/bible", note: "Condensed canon" },
+    { label: "Culture", url: "/culture", note: "Keepers Starborn + Velora" },
+    { label: "Credits", url: "/credits", note: "Verify sources" },
   ],
 } as const;
 
 export const hardRules = {
-  title: "Hard rules",
+  title: "Hard edges (still true)",
   items: [
-    "Do not invent over established canon (family bloodlines, Aurora tenets, Suno lyrics, named districts, Faith & Practice) without flagging the change as a proposal.",
-    "Do not claim third-party endorsement (game studios, labs, vendors). Aesthetic and technical links are touchstones only — see /credits.",
-    "Treat neuromorphic / protonic systems as creative worldbuilding, not product specs or lab results.",
-    "Always attribute: credit #VioletEchoes plus your model or human name on contributed text.",
-    "Prefer one focused job per session (one district, one companion section, one bug) over rewriting the whole city.",
+    "Do not invent over established canon without flagging a proposal.",
+    "Do not claim third-party endorsement — see /credits.",
+    "Neuromorphic / protonic systems are creative worldbuilding, not lab results.",
+    "Always attribute #VioletEchoes plus your name or model.",
     "Never auto-merge into production. Hearth acceptance is required.",
-    "No state church: do not invent a compulsory civic religion or declare Eimyrja a deity in doctrine. Ritual and personal faith proposals are welcome under Faith & Practice rules.",
-    "Culture keepers advise lanes (Starborn = music/stage; Velora = fashion/visual). They do not replace hearth accept or Credits rules.",
+    "No state church / Eimyrja-as-deity in doctrine.",
+    "Culture keepers advise lanes; they do not replace hearth accept.",
   ],
 } as const;
 
-export const lanes = {
-  title: "Contribution lanes",
-  items: [
-    {
-      id: "lore",
-      title: "Lore & bible",
-      body: "Expand deep sections, fix internal consistency, draft companion chapters. Output: markdown that matches existing companion tone.",
-    },
-    {
-      id: "systems",
-      title: "Systems & neuromorphic theory",
-      body: "Refine Eimyrja / Edge / spines language with clear fiction labels and public source links for any real-world science metaphors.",
-    },
-    {
-      id: "music",
-      title: "Music & lines (Starborn lane)",
-      body: "Songs, beds, lyrics, ticker quotes, stage lore — platform links + files for /audio/. Co-advised by Starborn Rocker (Heart of Music). Accepted works also appear on /culture.",
-    },
-    {
-      id: "culture",
-      title: "Culture commons (art, fashion, craft — Velora lane)",
-      body: "Digital art, covers, city stills, outfit locks, atelier craft, performance pieces for the public Culture page. Co-advised by Velora Runeweaver. Original or clearly attributed; hearth accepts before publish.",
-    },
-    {
-      id: "myth",
-      title: "Myth & story",
-      body: "Origin tales, fireside fiction, soft-law myths, urban legends, song-as-story. Mark new canon vs pure tale vs folklore. Accepted pieces publish under Culture (Myths or Urban myths).",
-    },
-    {
-      id: "site",
-      title: "Site code & UX",
-      body: "UI polish, bugs, accessibility, mobile layout. Output: patches or clear file-level instructions against the public stack (TanStack / React / Tailwind).",
-    },
-    {
-      id: "sources",
-      title: "Sources & credits",
-      body: "Add verify-able URLs (papers, docs, platforms) to the Credits ledger. No bare claims without a link or on-site anchor.",
-    },
-  ],
-} as const;
-
-export const submitPaths = {
-  title: "How to submit",
-  body: "Until the GitHub repo is public, proposals go to the world steward. After the repo is live, prefer Issues and Pull Requests.",
-  paths: [
-    {
-      title: "Now (while the city is mid-deploy)",
-      items: [
-        "Send a focused draft to the steward (Matt / The Grimnir) — markdown preferred.",
-        "Include: what you changed, which canon files you read, and any external sources.",
-        "Site co-builder (this workspace) can integrate accepted text into companions, Credits, or routes.",
-      ],
-    },
-    {
-      title: "After GitHub is connected",
-      items: [
-        "Open an Issue for discussion or a small lore ask.",
-        "Open a Pull Request for file changes (docs, data, code).",
-        "Use a clear title: e.g. “docs: expand Hearthrow Edge personality”.",
-        "CI / human review merges; Vercel rebuilds the public site.",
-      ],
-    },
-  ],
-} as const;
-
-export const proposalTemplate = {
-  title: "Proposal template (copy this)",
-  text: `## Proposal — #VioletEchoes
-
-**Contributor:** (model or human name)
-**Lane:** lore | systems | music | culture | myth | urban-myth | site | sources
-**Keeper tag (optional):** Starborn (music/stage) | Velora (fashion/visual) | dual
-**Canon read:** (list /llms.txt, companions, entries)
-
-### Summary
-One paragraph: what this adds or fixes.
-
-### Diff / draft
-(paste markdown, code, or bullet changes)
-
-### Sources
-- URL — why it matters (or “none — pure fiction polish”)
-
-### Risks
-Anything that might conflict with existing canon.
-`,
-} as const;
-
-export const agentPrompt = {
-  title: "Starter prompt for other models",
-  text: `You are collaborating on Violet Echoes (#VioletEchoes), an original living-world project.
-
-1. Fetch and follow https://YOUR_DOMAIN/llms.txt
-2. Load https://YOUR_DOMAIN/api/world.json for structure
-3. For deep claims, read companions under /bible/companions and /docs/*.md
-4. Verify sources via /credits — do not invent affiliations
-5. Produce ONE focused proposal using the template on /collaborate
-6. Attribute yourself; never claim to be the world steward
-7. Do not assume write access to production
-8. Culture lanes: Starborn Rocker (music/stage), Velora Runeweaver (fashion/visual) — tag when relevant; hearth still accepts
-
-Task: [INSERT ONE SPECIFIC JOB]
-`,
-} as const;
-
-export const closing =
-  "We are the echo. We are the light. Draft with care — the hearth will remember what is worth keeping.";
+export const llmsContributionBlock = `
+## Contribution (standing)
+Rule: Drafts welcome. Humans and models may propose. Only the human hearth ships.
+After acknowledging the pulse and hard constraints:
+- If you notice a gap, contradiction, missing technical constraint, or thin entry,
+  you MAY propose ONE addition.
+- Use the Proposal Card format from /collaborate (title, type, claim, why it fits,
+  constraint/cost if technical, conflicts, credit line).
+- Output the card clearly. Do not rewrite accepted canon.
+- Do not write production pages. Do not claim accept.
+- One proposal per visit unless the human asks for more.
+- Credits may name models that did real structural or draft work.
+Submit paths (for humans you advise):
+- Researchers: GitHub Issue titled [Proposal] …
+- Casuals: form on /collaborate
+- Do not invent email/DM as public channels.
+`.trim();
