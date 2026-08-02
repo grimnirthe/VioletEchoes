@@ -1,10 +1,11 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, Music2, Palette, BookOpen, MapPin } from "lucide-react";
+import { ExternalLink, Music2, Palette, BookOpen, MapPin, Sparkles } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import {
   cultureContribute,
   cultureIntro,
+  cultureKeepers,
   cultureKinds,
   cultureTales,
   cultureWorks,
@@ -22,7 +23,7 @@ export const Route = createFileRoute("/culture")({
       {
         name: "description",
         content:
-          "Violet Echoes culture commons — music, art, myths, urban legends, stories, and faith & practice. Memory-warming works; contribute via Collaborate.",
+          "Violet Echoes culture commons — music, art, myths, urban legends, stories, rituals, and faith & practice. Stewards: Starborn Rocker (music) & Velora Runeweaver (visual). Contribute via Collaborate.",
       },
     ],
   }),
@@ -47,6 +48,8 @@ function WorkCard({ work }: { work: CultureWork }) {
         <div className="flex aspect-[16/10] items-center justify-center border-b border-[var(--color-border)] bg-[color-mix(in_oklab,var(--color-primary)_8%,var(--color-bg))]">
           {work.kind === "music" ? (
             <Music2 className="h-10 w-10 text-[var(--color-primary-soft)] opacity-70" />
+          ) : work.kind === "ritual" ? (
+            <Sparkles className="h-10 w-10 text-[var(--color-gold)] opacity-70" />
           ) : (
             <Palette className="h-10 w-10 text-[var(--color-primary-soft)] opacity-70" />
           )}
@@ -158,6 +161,7 @@ function TaleCard({ tale }: { tale: CultureTale }) {
 function CulturePage() {
   const music = cultureWorks.filter((w) => w.kind === "music");
   const art = cultureWorks.filter((w) => w.kind === "art" || w.kind === "mixed");
+  const rituals = cultureWorks.filter((w) => w.kind === "ritual");
   const myths = cultureTales.filter((t) => t.kind === "myth");
   const stories = cultureTales.filter((t) => t.kind === "story");
   const urban = cultureTales.filter((t) => t.kind === "urban-myth");
@@ -193,6 +197,10 @@ function CulturePage() {
               Cultural Hub
             </Link>
             {" · "}
+            <a href="#keepers" className="text-[var(--color-primary-soft)] hover:underline">
+              Keepers
+            </a>
+            {" · "}
             <a href="#faith-practice" className="text-[var(--color-primary-soft)] hover:underline">
               Faith & practice
             </a>
@@ -205,6 +213,10 @@ function CulturePage() {
               Urban myths
             </a>
             {" · "}
+            <a href="#rituals" className="text-[var(--color-primary-soft)] hover:underline">
+              Rituals
+            </a>
+            {" · "}
             <Link
               to="/collaborate"
               className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
@@ -213,6 +225,58 @@ function CulturePage() {
             </Link>
           </p>
         </header>
+
+        {/* Culture keepers — Starborn + Velora */}
+        <section
+          id="keepers"
+          className="mx-auto mt-12 max-w-3xl scroll-mt-24 space-y-5"
+        >
+          <div className="text-center sm:text-left">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+              Public stewards · dual lane
+            </p>
+            <h2 className="mt-1 font-display text-2xl text-[var(--color-fg)]">
+              {cultureKeepers.title}
+            </h2>
+            <p className="mt-1 font-display text-base italic text-[var(--color-primary-soft)]">
+              {cultureKeepers.tagline}
+            </p>
+            <div className="mt-3 space-y-2 text-sm leading-relaxed text-[var(--color-muted)]">
+              {cultureKeepers.body.map((p) => (
+                <p key={p.slice(0, 40)}>{p}</p>
+              ))}
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {cultureKeepers.keepers.map((k) => (
+              <a
+                key={k.id}
+                href={k.href}
+                className="group flex overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] transition hover:border-[var(--color-primary)]/40"
+              >
+                <div className="aspect-[3/4] w-28 shrink-0 overflow-hidden border-r border-[var(--color-border)] bg-[var(--color-bg)] sm:w-32">
+                  <img
+                    src={k.portrait}
+                    alt=""
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col justify-center gap-1 p-4">
+                  <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-[var(--color-gold)]">
+                    {k.accent}
+                  </p>
+                  <h3 className="font-display text-lg text-[var(--color-fg)]">{k.name}</h3>
+                  <p className="text-xs text-[var(--color-primary-soft)]">{k.title}</p>
+                  <p className="text-xs leading-relaxed text-[var(--color-muted)]">{k.lane}</p>
+                  <span className="pt-1 text-xs font-medium text-[var(--color-primary-soft)] underline-offset-2 group-hover:underline">
+                    Open gallery →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
 
         {/* Faith & practice — locked doctrine summary */}
         <section
@@ -304,11 +368,25 @@ function CulturePage() {
           </div>
         </section>
 
+        {rituals.length ? (
+          <section id="rituals" className="mt-14 scroll-mt-24">
+            <h2 className="font-display text-2xl text-[var(--color-fg)]">Ritual & practice</h2>
+            <p className="mt-1 max-w-2xl text-sm text-[var(--color-subtle)]">
+              Memory-warming practices — not liturgy. Plural hearths only.
+            </p>
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {rituals.map((w) => (
+                <WorkCard key={w.id} work={w} />
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         {music.length ? (
           <section className="mt-14">
             <h2 className="font-display text-2xl text-[var(--color-fg)]">Music</h2>
             <p className="mt-1 text-sm text-[var(--color-subtle)]">
-              More on{" "}
+              Keeper: Starborn Rocker · more on{" "}
               <Link to="/music" className="text-[var(--color-primary-soft)] hover:underline">
                 Echoes
               </Link>
@@ -326,7 +404,7 @@ function CulturePage() {
           <section className="mt-14">
             <h2 className="font-display text-2xl text-[var(--color-fg)]">Art & image</h2>
             <p className="mt-1 text-sm text-[var(--color-subtle)]">
-              Full cast in the{" "}
+              Keeper: Velora Runeweaver · full cast in the{" "}
               <Link to="/gallery" className="text-[var(--color-primary-soft)] hover:underline">
                 Gallery
               </Link>

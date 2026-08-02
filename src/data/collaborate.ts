@@ -9,6 +9,7 @@ export const collabMeta = {
 export const collabIntro = [
   "Violet Echoes is a living world: fiction, systems design, music, and a public reference site. Humans and AI models are welcome to help refine it — under Development Divergence rules: coherence over noise, attribution over anonymity, and a single hearth that accepts what ships.",
   "Other models do not edit the live site directly. They read the public surfaces below, draft proposals, and submit them for human review (you / Tech / Loom). Accepted work lands in the repo and Credits ledger.",
+  "Culture commons keepers (advise, do not auto-publish): Starborn Rocker — music & stage lane; Velora Runeweaver — fashion, craft & visual culture. Tag their lane when relevant.",
 ] as const;
 
 export const readOrder = {
@@ -35,6 +36,11 @@ export const readOrder = {
       note: "Full meat — Divergence, systems, homes, vernacular, Eimyrja",
     },
     {
+      label: "Culture commons",
+      url: "/culture",
+      note: "Music, art, myth, urban legend, ritual — keepers Starborn + Velora",
+    },
+    {
       label: "Credits & sources",
       url: "/credits",
       note: "What is canon vs inspiration · how to verify",
@@ -57,6 +63,7 @@ export const hardRules = {
     "Prefer one focused job per session (one district, one companion section, one bug) over rewriting the whole city.",
     "Never auto-merge into production. Hearth acceptance is required.",
     "No state church: do not invent a compulsory civic religion or declare Eimyrja a deity in doctrine. Ritual and personal faith proposals are welcome under Faith & Practice rules.",
+    "Culture keepers advise lanes (Starborn = music/stage; Velora = fashion/visual). They do not replace hearth accept or Credits rules.",
   ],
 } as const;
 
@@ -75,13 +82,13 @@ export const lanes = {
     },
     {
       id: "music",
-      title: "Music & lines",
-      body: "Songs, beds, lyrics, ticker quotes — platform links + files for /audio/. Accepted works also appear on /culture.",
+      title: "Music & lines (Starborn lane)",
+      body: "Songs, beds, lyrics, ticker quotes, stage lore — platform links + files for /audio/. Co-advised by Starborn Rocker (Heart of Music). Accepted works also appear on /culture.",
     },
     {
       id: "culture",
-      title: "Culture commons (art & music)",
-      body: "Digital art, covers, city stills, performance pieces for the public Culture page. Original or clearly attributed; hearth accepts before publish.",
+      title: "Culture commons (art, fashion, craft — Velora lane)",
+      body: "Digital art, covers, city stills, outfit locks, atelier craft, performance pieces for the public Culture page. Co-advised by Velora Runeweaver. Original or clearly attributed; hearth accepts before publish.",
     },
     {
       id: "myth",
@@ -131,6 +138,7 @@ export const proposalTemplate = {
 
 **Contributor:** (model or human name)
 **Lane:** lore | systems | music | culture | myth | urban-myth | site | sources
+**Keeper tag (optional):** Starborn (music/stage) | Velora (fashion/visual) | dual
 **Canon read:** (list /llms.txt, companions, entries)
 
 ### Summary
@@ -158,6 +166,7 @@ export const agentPrompt = {
 5. Produce ONE focused proposal using the template on /collaborate
 6. Attribute yourself; never claim to be the world steward
 7. Do not assume write access to production
+8. Culture lanes: Starborn Rocker (music/stage), Velora Runeweaver (fashion/visual) — tag when relevant; hearth still accepts
 
 Task: [INSERT ONE SPECIFIC JOB]
 `,
