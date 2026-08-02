@@ -228,6 +228,7 @@ export const readOrder = {
     { label: "world.json", url: "/api/world.json", note: "Structured map" },
     { label: "City Updates", url: "/updates", note: "What already shipped" },
     { label: "World Bible", url: "/bible", note: "Condensed canon" },
+    { label: "City Dossier (repo)", url: "https://github.com/grimnirthe/VioletEchoes/tree/main/city", note: "Charter, constitution, atlas — research why-layer (Rune)" },
     { label: "Culture", url: "/culture", note: "Keepers Starborn + Velora" },
     { label: "Credits", url: "/credits", note: "Verify sources" },
   ],

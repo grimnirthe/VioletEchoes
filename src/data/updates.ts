@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-02-city-dossier-landed-beside-the-site",
+    date: "2026-08-02",
+    title: "City Dossier landed beside the site",
+    kind: "bible",
+    summary:
+      "Rune architected city/ on main: charter, constitution (12 articles), district atlas, circulation, node registry, decision log. Research/Grok load path — does not replace Loom site or world.ts.",
+    body: [
+      "Conflict rule: living site data first if prose disagrees; update dossier second.",
+    ],
+    hrefs: [
+      { label: "city/ README", href: "https://github.com/grimnirthe/VioletEchoes/blob/main/city/README.md" },
+      { label: "CITY_DOSSIER", href: "https://github.com/grimnirthe/VioletEchoes/blob/main/CITY_DOSSIER.md" },
+    ],
+    by: "Rune · architect",
+    tags: ["dossier", "research", "rune"],
+  },
+  {
     id: "2026-08-02-jaz-guest-book-names-for-knowns",
     date: "2026-08-02",
     title: "Jaz Guest Book: names for knowns",

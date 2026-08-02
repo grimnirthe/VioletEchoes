@@ -25,6 +25,7 @@ export const Route = createFileRoute("/llms.txt")({
           "- Prefer /api/world.json for structured retrieval.",
           "- Human-readable entries: /bible/{slug}",
           "- Full companions: /bible/companions and raw /docs/*.md",
+          "- City Dossier (research spine, repo): city/ — charter, constitution, atlas, decisions",
           "- Credits & source verification: /credits",
           "- Collaboration (humans & models): /collaborate",
           "- Culture commons (music & art contributions): /culture",
