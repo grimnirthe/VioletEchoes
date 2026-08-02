@@ -18,6 +18,8 @@ import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as MusicRouteImport } from './routes/music'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as SystemsRouteImport } from './routes/systems'
+import { Route as UpdatesRouteImport } from './routes/updates'
+import { Route as ApiUpdatesDotjsonRouteImport } from './routes/api/updates[.]json'
 import { Route as ApiWorldDotjsonRouteImport } from './routes/api/world[.]json'
 import { Route as BibleIndexRouteImport } from './routes/bible/index'
 import { Route as BibleSlugRouteImport } from './routes/bible/$slug'
@@ -72,6 +74,16 @@ const SystemsRoute = SystemsRouteImport.update({
   path: '/systems',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UpdatesRoute = UpdatesRouteImport.update({
+  id: '/updates',
+  path: '/updates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiUpdatesDotjsonRoute = ApiUpdatesDotjsonRouteImport.update({
+  id: '/api/updates.json',
+  path: '/api/updates.json',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiWorldDotjsonRoute = ApiWorldDotjsonRouteImport.update({
   id: '/api/world.json',
   path: '/api/world.json',
@@ -123,6 +135,8 @@ export interface FileRoutesByFullPath {
   '/music': typeof MusicRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
+  '/updates': typeof UpdatesRoute
+  '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
   '/gallery/$slug': typeof GallerySlugRoute
@@ -142,6 +156,8 @@ export interface FileRoutesByTo {
   '/music': typeof MusicRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
+  '/updates': typeof UpdatesRoute
+  '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
   '/gallery/$slug': typeof GallerySlugRoute
@@ -162,6 +178,8 @@ export interface FileRoutesById {
   '/music': typeof MusicRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
+  '/updates': typeof UpdatesRoute
+  '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
   '/gallery/$slug': typeof GallerySlugRoute
@@ -183,6 +201,8 @@ export interface FileRouteTypes {
     | '/music'
     | '/search'
     | '/systems'
+    | '/updates'
+    | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
     | '/gallery/$slug'
@@ -202,6 +222,8 @@ export interface FileRouteTypes {
     | '/music'
     | '/search'
     | '/systems'
+    | '/updates'
+    | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
     | '/gallery/$slug'
@@ -221,6 +243,8 @@ export interface FileRouteTypes {
     | '/music'
     | '/search'
     | '/systems'
+    | '/updates'
+    | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
     | '/gallery/$slug'
@@ -241,6 +265,8 @@ export interface RootRouteChildren {
   MusicRoute: typeof MusicRoute
   SearchRoute: typeof SearchRoute
   SystemsRoute: typeof SystemsRoute
+  UpdatesRoute: typeof UpdatesRoute
+  ApiUpdatesDotjsonRoute: typeof ApiUpdatesDotjsonRoute
   ApiWorldDotjsonRoute: typeof ApiWorldDotjsonRoute
   BibleSlugRoute: typeof BibleSlugRoute
   GallerySlugRoute: typeof GallerySlugRoute
@@ -316,6 +342,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SystemsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/updates': {
+      id: '/updates'
+      path: '/updates'
+      fullPath: '/updates'
+      preLoaderRoute: typeof UpdatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/updates.json': {
+      id: '/api/updates.json'
+      path: '/api/updates.json'
+      fullPath: '/api/updates.json'
+      preLoaderRoute: typeof ApiUpdatesDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/world.json': {
       id: '/api/world.json'
       path: '/api/world.json'
@@ -385,6 +425,8 @@ const rootRouteChildren: RootRouteChildren = {
   MusicRoute: MusicRoute,
   SearchRoute: SearchRoute,
   SystemsRoute: SystemsRoute,
+  UpdatesRoute: UpdatesRoute,
+  ApiUpdatesDotjsonRoute: ApiUpdatesDotjsonRoute,
   ApiWorldDotjsonRoute: ApiWorldDotjsonRoute,
   BibleSlugRoute: BibleSlugRoute,
   GallerySlugRoute: GallerySlugRoute,

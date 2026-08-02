@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Cpu, Map, Music2, Search } from "lucide-react";
+import { ArrowRight, BookOpen, Cpu, Map, Music2, Newspaper, Search } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
 import { EntryCard } from "@/components/entry-card";
@@ -58,6 +58,14 @@ const doors = [
     image: media.doorBible,
     icon: BookOpen,
     accent: "text-[var(--color-rain)]",
+  },
+  {
+    to: "/updates" as const,
+    title: "Updates",
+    blurb: "City change log — what shipped for residents and models.",
+    image: media.citySkyline,
+    icon: Newspaper,
+    accent: "text-[var(--color-gold)]",
   },
 ];
 

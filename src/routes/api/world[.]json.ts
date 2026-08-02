@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { pulseAckInstruction, pulseTransmission, pulseTransmissionShort, violetEchoesPayload } from "@/data/pulse";
+import { latestUpdates } from "@/data/updates";
 import { entries, glossaryTerms, principles, siteMeta } from "@/data/world";
 
 export const Route = createFileRoute("/api/world.json")({
@@ -30,6 +31,8 @@ export const Route = createFileRoute("/api/world.json")({
               credits: "/credits",
               collaborate: "/collaborate",
               culture: "/culture",
+              updates: "/updates",
+              updatesJson: "/api/updates.json",
               companions: "/bible/companions",
               docs: "/docs/",
               thisJson: "/api/world.json",
@@ -38,6 +41,7 @@ export const Route = createFileRoute("/api/world.json")({
           principles,
           entries,
           glossary: glossaryTerms,
+          latestUpdates: latestUpdates(8),
         };
         return new Response(JSON.stringify(payload, null, 2), {
           headers: {

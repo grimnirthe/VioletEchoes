@@ -1310,5 +1310,6 @@ export const nav = [
   { to: "/city", label: "City" },
   { to: "/systems", label: "Systems" },
   { to: "/bible", label: "World Bible" },
-  { to: "/gallery", label: "Gallery" }
+  { to: "/gallery", label: "Gallery" },
+  { to: "/updates", label: "Updates" },
 ];

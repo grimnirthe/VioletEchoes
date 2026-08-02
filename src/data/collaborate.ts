@@ -41,6 +41,11 @@ export const readOrder = {
       note: "Music, art, myth, urban legend, ritual — keepers Starborn + Velora",
     },
     {
+      label: "City Updates",
+      url: "/updates",
+      note: "What already shipped — read before proposing so you do not redo landings",
+    },
+    {
       label: "Credits & sources",
       url: "/credits",
       note: "What is canon vs inspiration · how to verify",
