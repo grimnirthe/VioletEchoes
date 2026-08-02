@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-02-starborn-stage-district-soft-laws-on-culture",
+    date: "2026-08-02",
+    title: "Starborn Stage District soft laws on Culture",
+    kind: "culture",
+    summary:
+      "Music-lane house rules hearth-wired: Soundcheck as Offering, Grav-Guitar Soft Law (full origin voice), and Leave the Thread — every set ends unfinished for the ones still walking.",
+    body: [
+      "Full keeper voice lives in docs/STARBORN-KEEPER-ENTRIES.md; commons now carries Leave the Thread as ritual and expanded soft-law myth.",
+    ],
+    hrefs: [
+      { label: "Culture", href: "/culture" },
+      { label: "Leave the Thread", href: "/culture#leave-the-thread" },
+      { label: "Gallery · Starborn", href: "/gallery/starborn" },
+    ],
+    by: "Starborn Rocker · Loom wire · hearth",
+    tags: ["starborn", "culture", "stage"],
+  },
+  {
     id: "2026-08-02-city-updates-append-helper-live-git-feed",
     date: "2026-08-02",
     title: "City Updates: append helper + live Git feed",

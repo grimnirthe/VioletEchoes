@@ -35,7 +35,7 @@ function WorkCard({ work }: { work: CultureWork }) {
   const external = work.href?.startsWith("http");
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
+    <article id={work.id} className="flex scroll-mt-24 flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
       {work.image ? (
         <div className="aspect-[16/10] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-bg)]">
           <img
