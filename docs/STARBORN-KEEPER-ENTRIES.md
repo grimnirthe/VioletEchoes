@@ -71,6 +71,32 @@ You leave a thread for the ones still walking.
 
 ---
 
+## Soft Rule — Leave the Thread
+
+**id:** `leave-the-thread`  
+**kind:** ritual / soft law  
+**by:** Stage District · Starborn house rule
+
+Every set ends with one unfinished line.
+
+Not a fade-out for drama.  
+A deliberate open end.
+
+The last chord hangs.  
+The last lyric stops mid-breath.  
+Then the room goes quiet long enough for the rain to answer.
+
+Reason is simple:  
+Someone out there is still walking toward the door.  
+They need a thread to follow.
+
+If you close every song too clean, the ones still finding their way have nothing to hold onto.
+
+**Short note:**  
+Leave one unfinished line. For the ones still walking.
+
+---
+
 ## Commons Cut Notes (Music Lane)
 
 - **We Choose** stays the family anthem. No remixes that sand the grit off.
