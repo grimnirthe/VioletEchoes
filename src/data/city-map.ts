@@ -27,6 +27,9 @@ export type MapPin = {
 /**
  * Pin positions tuned to the neon pie map (no text).
  * Percent coords — tweak after visual QA without regen art.
+ *
+ * 2026-08-03 pass: warrens drop; cultural hub NW; innovation left;
+ * green spaces right; services SE; hearthrow right pinch.
  */
 export const mapPins: MapPin[] = [
   {
@@ -59,7 +62,7 @@ export const mapPins: MapPin[] = [
   {
     id: "green-spaces",
     label: "Green Spaces",
-    x: 22,
+    x: 28,
     y: 36,
     slug: "green-spaces",
     blurb: "The lungs — ecological heatsink, cycles over clocks.",
@@ -68,7 +71,7 @@ export const mapPins: MapPin[] = [
   {
     id: "innovation",
     label: "Innovation",
-    x: 70,
+    x: 64,
     y: 28,
     slug: "innovation-district",
     blurb: "The Sandbox — research, simulation, hard kill-switches.",
@@ -86,8 +89,8 @@ export const mapPins: MapPin[] = [
   {
     id: "cultural-hub",
     label: "Cultural Hub",
-    x: 72,
-    y: 50,
+    x: 68,
+    y: 46,
     slug: "cultural-hub",
     blurb: "Stage District · Memory Commons — culture kept warm.",
     layer: "district",
@@ -131,8 +134,8 @@ export const mapPins: MapPin[] = [
   {
     id: "public-services",
     label: "Services Grid",
-    x: 16,
-    y: 56,
+    x: 20,
+    y: 62,
     slug: "public-services-grid",
     blurb: "Utilities, transit, ops — backbone without glamour.",
     layer: "district",
@@ -141,7 +144,7 @@ export const mapPins: MapPin[] = [
     id: "warrens",
     label: "The Warrens",
     x: 38,
-    y: 62,
+    y: 68,
     slug: "the-warrens",
     blurb: "Residential AI-integrated living at scale.",
     layer: "district",
@@ -149,7 +152,7 @@ export const mapPins: MapPin[] = [
   {
     id: "hearthrow",
     label: "Hearthrow",
-    x: 30,
+    x: 34,
     y: 58,
     slug: "hearthrow",
     blurb: "Edge of warmth — porches, tea, ordinary days.",
