@@ -217,6 +217,12 @@ export const creditSections: CreditSection[] = [
         note: "Domain registration and DNS for the dual doors",
         verify: "Registrar WHOIS / DNS when domains are live",
       },
+      {
+        label: "GrokFilm (cinema technique index)",
+        url: "https://grokfilm.app/",
+        note: "Third-party prompt language for camera/light/cut — craft shelf for Imagine stills/video, not story canon",
+        verify: "External site · no affiliation · see docs/SHOT-LANGUAGE.md",
+      },
     ],
   },
 
