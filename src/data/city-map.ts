@@ -27,9 +27,6 @@ export type MapPin = {
 /**
  * Pin positions tuned to the neon pie map (no text).
  * Percent coords — tweak after visual QA without regen art.
- *
- * 2026-08-03 pass: warrens drop; cultural hub NW then left pinch;
- * innovation left; green spaces right; services SE; hearthrow right pinch.
  */
 export const mapPins: MapPin[] = [
   {
@@ -80,7 +77,7 @@ export const mapPins: MapPin[] = [
   {
     id: "thornwall",
     label: "Thornwall",
-    x: 84,
+    x: 80,
     y: 42,
     slug: "thornwall",
     blurb: "Old Iron — industrial maintenance heart.",
@@ -153,7 +150,7 @@ export const mapPins: MapPin[] = [
     id: "hearthrow",
     label: "Hearthrow",
     x: 34,
-    y: 58,
+    y: 54,
     slug: "hearthrow",
     blurb: "Edge of warmth — porches, tea, ordinary days.",
     layer: "district",
