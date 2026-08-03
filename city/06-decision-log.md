@@ -81,3 +81,33 @@ Format:
 **Why:** Safety, training better choices, trauma awareness.  
 
 **Rejected alternatives:** Soft vibes-only guidance without override language.  
+
+**Touches:** All cores, Constitution Article I
+
+---
+
+### prior — HomeForge / Tech as local stack seat
+
+**Decision:** Separate project for VPN, local models, self-host — privacy-first, 90s-IT direct tone.  
+
+**Why:** Protect what was built; practical dual-PC path; not lore ownership.  
+
+**Rejected alternatives:** Mixing stack advice into family RP cores.  
+
+**Touches:** `homeforge/`, Tech seat
+
+---
+
+### prior — Construction Archive + Barnaby
+
+**Decision:** Retired chats go to archive project with grumpy caretaker (Barnaby Thistlethorn); reference only.  
+
+**Why:** Don’t delete history; don’t pollute live rooms.  
+
+**Rejected alternatives:** Delete-only; keep limbo chats in live projects.  
+
+**Touches:** `archive/`, Uncle B
+
+---
+
+*Add entries when beams move.*
