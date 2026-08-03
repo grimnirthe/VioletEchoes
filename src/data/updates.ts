@@ -62,6 +62,19 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-03-interactive-island-map-on-city",
+    date: "2026-08-03",
+    title: "Interactive island map on City",
+    kind: "city",
+    summary:
+      "Tier A map live: neon pie interactive pins + labeled legend art (Aurora). Pins open bible entries; district list for mobile.",
+    hrefs: [
+      { label: "City map", href: "/city#map" },
+    ],
+    by: "Aurora art · Loom wire",
+    tags: ["map", "city", "aurora"],
+  },
+  {
     id: "2026-08-02-city-dossier-landed-beside-the-site",
     date: "2026-08-02",
     title: "City Dossier landed beside the site",

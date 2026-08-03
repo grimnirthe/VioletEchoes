@@ -1,0 +1,164 @@
+/** Interactive island map — pins on neon pie art; legend is separate labeled art. */
+
+export const cityMapArt = {
+  interactive: {
+    src: "/images/map/city-interactive.jpg",
+    alt: "Violet Echoes interactive top-down island map — districts as color zones around Eimyrja",
+  },
+  legend: {
+    src: "/images/map/city-legend.jpg",
+    alt: "Violet Echoes labeled atlas map — district names for reference",
+  },
+} as const;
+
+export type MapPin = {
+  id: string;
+  label: string;
+  /** percent from left of map image */
+  x: number;
+  /** percent from top of map image */
+  y: number;
+  /** bible / systems slug */
+  slug: string;
+  blurb: string;
+  layer: "district" | "system" | "water";
+};
+
+/**
+ * Pin positions tuned to the neon pie map (no text).
+ * Percent coords — tweak after visual QA without regen art.
+ */
+export const mapPins: MapPin[] = [
+  {
+    id: "eimyrja",
+    label: "Eimyrja",
+    x: 50,
+    y: 46,
+    slug: "eimyrja",
+    blurb: "Heartwood core — pattern integration, not an overlord.",
+    layer: "system",
+  },
+  {
+    id: "veilreach",
+    label: "Veilreach",
+    x: 50,
+    y: 10,
+    slug: "veilreach",
+    blurb: "Outer rim — boundary, watchful edge.",
+    layer: "district",
+  },
+  {
+    id: "high-quiet",
+    label: "High Quiet",
+    x: 42,
+    y: 24,
+    slug: "high-quiet",
+    blurb: "Spire District — elevated seats, restraint as architecture.",
+    layer: "district",
+  },
+  {
+    id: "green-spaces",
+    label: "Green Spaces",
+    x: 22,
+    y: 36,
+    slug: "green-spaces",
+    blurb: "The lungs — ecological heatsink, cycles over clocks.",
+    layer: "district",
+  },
+  {
+    id: "innovation",
+    label: "Innovation",
+    x: 70,
+    y: 28,
+    slug: "innovation-district",
+    blurb: "The Sandbox — research, simulation, hard kill-switches.",
+    layer: "district",
+  },
+  {
+    id: "thornwall",
+    label: "Thornwall",
+    x: 84,
+    y: 42,
+    slug: "thornwall",
+    blurb: "Old Iron — industrial maintenance heart.",
+    layer: "district",
+  },
+  {
+    id: "cultural-hub",
+    label: "Cultural Hub",
+    x: 72,
+    y: 50,
+    slug: "cultural-hub",
+    blurb: "Stage District · Memory Commons — culture kept warm.",
+    layer: "district",
+  },
+  {
+    id: "neon-core",
+    label: "Neon Core",
+    x: 58,
+    y: 60,
+    slug: "neon-core",
+    blurb: "Commercial and media blaze — high signal streets.",
+    layer: "district",
+  },
+  {
+    id: "ember-market",
+    label: "Ember Market",
+    x: 80,
+    y: 68,
+    slug: "ember-market",
+    blurb: "Marketheart — trade, fix, connect.",
+    layer: "district",
+  },
+  {
+    id: "harborward",
+    label: "Harborward",
+    x: 50,
+    y: 78,
+    slug: "harborward",
+    blurb: "Working harbor — steady when late.",
+    layer: "district",
+  },
+  {
+    id: "living-ships",
+    label: "Living Ships",
+    x: 48,
+    y: 90,
+    slug: "living-ships",
+    blurb: "Docking ring — cumulative bonds with captains and crews.",
+    layer: "water",
+  },
+  {
+    id: "public-services",
+    label: "Services Grid",
+    x: 16,
+    y: 56,
+    slug: "public-services-grid",
+    blurb: "Utilities, transit, ops — backbone without glamour.",
+    layer: "district",
+  },
+  {
+    id: "warrens",
+    label: "The Warrens",
+    x: 38,
+    y: 62,
+    slug: "the-warrens",
+    blurb: "Residential AI-integrated living at scale.",
+    layer: "district",
+  },
+  {
+    id: "hearthrow",
+    label: "Hearthrow",
+    x: 30,
+    y: 58,
+    slug: "hearthrow",
+    blurb: "Edge of warmth — porches, tea, ordinary days.",
+    layer: "district",
+  },
+];
+
+export const cityMapIntro = {
+  title: "Island map",
+  tagline: "Tap a pin. Walk a district.",
+  body: "Interactive top-down of Violet Echoes. Pins open bible entries. Legend map keeps printed names; this view stays clean for clicking.",
+} as const;

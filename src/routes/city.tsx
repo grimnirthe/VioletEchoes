@@ -4,6 +4,7 @@ import { EntryCard } from "@/components/entry-card";
 import { PageNav } from "@/components/page-nav";
 import { MediaFrame } from "@/components/media-frame";
 import { media, systemsGallery } from "@/data/media";
+import { CityMapInteractive } from "@/components/city-map";
 import { entries } from "@/data/world";
 
 export const Route = createFileRoute("/city")({
@@ -71,6 +72,10 @@ function CityPage() {
             priority
           />
         </section>
+
+        <div className="mt-12">
+          <CityMapInteractive />
+        </div>
 
         <section className="mt-10 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
           <div className="grid gap-0 lg:grid-cols-2">
