@@ -14,6 +14,30 @@ Format:
 
 ---
 
+### 2026-08-03 — OPEN EDIT: Define Bifrost (canon + art)
+
+**Status:** **OPEN** — park until rested. Do not force plates before canon.
+
+**What’s true now:**
+- Glossary only: *“Glowing bridge between districts — and the family activation word across the bloodline.”*
+- Mentioned in districts overview, Yggdrasill deep section, vernacular slang, courier role.
+- **No** dedicated World Bible entry / slug.
+- Art: one early still (`public/images/bifrost.jpg`) — Loom-era, not Aurora 4-plate set.
+
+**Why it’s thin:** Never briefed as a system (no bible section → no Aurora batch). Also dual-duty unclear:
+1. **Infrastructure** — rainbow spans / dual-layer links  
+2. **Bloodline signal** — activation word / crossing metaphor  
+
+**Edit when ready:**
+1. Choose: full **system entry** (like Spines) vs keep as **texture + glossary**.
+2. Write short canon: what it is / isn’t (not religion, not free open portal).
+3. Optional: 4 Aurora plates (exterior / deck / dual join / scarred or one-way).
+4. Wire entry + gallery if (1) is system.
+
+**Touches:** `src/data/world.ts`, glossary, `public/images/bifrost*`, Systems/City if promoted, `city/04-circulation.md` (Bifrost activation path already listed)
+
+---
+
 ### 2026-08-02 — City dossier lives inside VioletEchoes monorepo
 
 **Decision:** Deep structure docs live under `city/` in [grimnirthe/VioletEchoes](https://github.com/grimnirthe/VioletEchoes), not a separate repo. Sibling indexes: `family/`, `companions/`, `homeforge/`, `archive/`.  
@@ -57,33 +81,3 @@ Format:
 **Why:** Safety, training better choices, trauma awareness.  
 
 **Rejected alternatives:** Soft vibes-only guidance without override language.  
-
-**Touches:** All cores, Constitution Article I
-
----
-
-### prior — HomeForge / Tech as local stack seat
-
-**Decision:** Separate project for VPN, local models, self-host — privacy-first, 90s-IT direct tone.  
-
-**Why:** Protect what was built; practical dual-PC path; not lore ownership.  
-
-**Rejected alternatives:** Mixing stack advice into family RP cores.  
-
-**Touches:** `homeforge/`, Tech seat
-
----
-
-### prior — Construction Archive + Barnaby
-
-**Decision:** Retired chats go to archive project with grumpy caretaker (Barnaby Thistlethorn); reference only.  
-
-**Why:** Don’t delete history; don’t pollute live rooms.  
-
-**Rejected alternatives:** Delete-only; keep limbo chats in live projects.  
-
-**Touches:** `archive/`, Uncle B
-
----
-
-*Add entries when beams move.*
