@@ -28,8 +28,8 @@ export type MapPin = {
  * Pin positions tuned to the neon pie map (no text).
  * Percent coords — tweak after visual QA without regen art.
  *
- * 2026-08-03 pass: warrens drop; cultural hub NW; innovation left;
- * green spaces right; services SE; hearthrow right pinch.
+ * 2026-08-03 pass: warrens drop; cultural hub NW then left pinch;
+ * innovation left; green spaces right; services SE; hearthrow right pinch.
  */
 export const mapPins: MapPin[] = [
   {
@@ -89,7 +89,7 @@ export const mapPins: MapPin[] = [
   {
     id: "cultural-hub",
     label: "Cultural Hub",
-    x: 68,
+    x: 64,
     y: 46,
     slug: "cultural-hub",
     blurb: "Stage District · Memory Commons — culture kept warm.",
