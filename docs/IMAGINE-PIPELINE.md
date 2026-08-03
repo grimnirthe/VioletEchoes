@@ -6,6 +6,28 @@
 
 ---
 
+## Both tracks (yes, do both)
+
+| Track | Where | Who |
+| --- | --- | --- |
+| **Grok app skills** | Install skill-links while logged into Grok | You — official skill runtime |
+| **Loom local skill** | `.grok/skills/imagine-film-pipeline/` (sandbox) + `docs/skills/imagine-film-pipeline.md` (repo) | Me — multi-shot jobs in this workspace |
+
+Same four steps either way. Grok app ≠ sandbox automatically.
+
+### Grok install (you)
+
+1. https://grok.com/skill-link/4ea4d5d0f3db64a305201b8ecdd58c19 — script writer  
+2. https://grok.com/skill-link/2fc5926c10669d41d5b59d012b3bf11b — char sheet  
+3. https://grok.com/skill-link/9ea62d13b889ef13d561f2bdf58fb05f — location/prop  
+4. https://grok.com/skill-link/0792131c8a1e985998c0973522a41255 — prompt-creator  
+
+### Loom local
+
+Load skill **`imagine-film-pipeline`** for multi-shot jobs. Single stills still use `imagine` + [SHOT-LANGUAGE](./SHOT-LANGUAGE.md).
+
+---
+
 ## Pipeline (don’t skip steps)
 
 ```text
