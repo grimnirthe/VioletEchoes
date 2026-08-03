@@ -2,6 +2,7 @@
 
 **Not city canon.** Working notes for stronger stills/video prompts.  
 **External index:** [GrokFilm](https://grokfilm.app/) — cinema techniques written as prompt language for Grok Imagine.  
+**Multi-shot pipeline:** [IMAGINE-PIPELINE.md](./IMAGINE-PIPELINE.md) — script → char sheet → location/prop → sealed prompts (Tetsuo skills).  
 **Rule:** subject / identity lock first → **one** technique → VE mood. Never dump a technique pile.
 
 ---

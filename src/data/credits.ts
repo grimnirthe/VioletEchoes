@@ -223,6 +223,12 @@ export const creditSections: CreditSection[] = [
         note: "Third-party prompt language for camera/light/cut — craft shelf for Imagine stills/video, not story canon",
         verify: "External site · no affiliation · see docs/SHOT-LANGUAGE.md",
       },
+      {
+        label: "Grok Imagine film skills (Tetsuo / AgenC)",
+        url: "https://x.com/tetsuoai/status/2083878550885830769",
+        note: "Script → char sheet → location/prop → prompt-creator pipeline for short films — craft only",
+        verify: "X thread + skill links · see docs/IMAGINE-PIPELINE.md · no affiliation",
+      },
     ],
   },
 
