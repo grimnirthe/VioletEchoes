@@ -13,6 +13,8 @@ export const media = {
   hero: "/images/city-aerial-nexus.jpg",
   heroIsland: "/images/hero-island.jpg",
   og: "/images/logo-violet-echoes.jpg",
+  cityHero3d: "/images/map/city-hero-3d.jpg",
+  cityHero3dClean: "/images/map/city-hero-3d-clean.jpg",
   cityInteractiveMap: "/images/map/city-interactive.jpg",
   cityLegendMap: "/images/map/city-legend.jpg",
   citySkyline: "/images/city-aerial-nexus.jpg",

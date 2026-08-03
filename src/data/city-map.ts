@@ -1,4 +1,4 @@
-/** Interactive island map — pins on neon pie art; legend is separate labeled art. */
+/** Interactive island map — pins on neon pie art; legend + 3D hero are separate. */
 
 export const cityMapArt = {
   interactive: {
@@ -8,6 +8,14 @@ export const cityMapArt = {
   legend: {
     src: "/images/map/city-legend.jpg",
     alt: "Violet Echoes labeled atlas map — district names for reference",
+  },
+  hero3d: {
+    src: "/images/map/city-hero-3d.jpg",
+    alt: "Violet Echoes 3D island hero map with district labels around Eimyrja",
+  },
+  hero3dClean: {
+    src: "/images/map/city-hero-3d-clean.jpg",
+    alt: "Violet Echoes 3D island map, text-free — rain, radial districts, living ship at harbor",
   },
 } as const;
 
@@ -160,5 +168,5 @@ export const mapPins: MapPin[] = [
 export const cityMapIntro = {
   title: "Island map",
   tagline: "Tap a pin. Walk a district.",
-  body: "Interactive top-down of Violet Echoes. Pins open bible entries. Legend map keeps printed names; this view stays clean for clicking.",
+  body: "Interactive top-down of Violet Echoes. Pins open bible entries. Legend and 3D hero keep the printed / cinematic views; this one stays clean for clicking.",
 } as const;

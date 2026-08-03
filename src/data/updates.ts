@@ -62,6 +62,19 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-03-city-3d-hero-map-aurora",
+    date: "2026-08-03",
+    title: "City 3D hero map (Aurora)",
+    kind: "city",
+    summary:
+      "Labeled 3D radial island as City hero; text-free twin beside Atmosphere. Interactive neon pins unchanged.",
+    hrefs: [
+      { label: "City", href: "/city" },
+    ],
+    by: "Aurora art · Loom wire",
+    tags: ["map", "city", "aurora"],
+  },
+  {
     id: "2026-08-03-interactive-island-map-on-city",
     date: "2026-08-03",
     title: "Interactive island map on City",

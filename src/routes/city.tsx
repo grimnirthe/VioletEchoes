@@ -5,6 +5,7 @@ import { PageNav } from "@/components/page-nav";
 import { MediaFrame } from "@/components/media-frame";
 import { media, systemsGallery } from "@/data/media";
 import { CityMapInteractive } from "@/components/city-map";
+import { cityMapArt } from "@/data/city-map";
 import { entries } from "@/data/world";
 
 export const Route = createFileRoute("/city")({
@@ -65,12 +66,15 @@ function CityPage() {
 
         <section className="mt-8 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
           <MediaFrame
-            src={media.citySkyline}
-            alt="Violet Echoes skyline with luminous rain and central hub"
+            src={cityMapArt.hero3d.src}
+            alt={cityMapArt.hero3d.alt}
             aspect="wide"
             veil="bottom"
             priority
           />
+          <p className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-xs text-[var(--color-subtle)] sm:px-5">
+            Island overview · Eimyrja at center · Living Ships at harbor · Aurora 3D map
+          </p>
         </section>
 
         <div className="mt-12">
@@ -99,14 +103,13 @@ function CityPage() {
             </div>
             <div className="relative border-t border-[var(--color-border)] bg-[var(--color-bg)] lg:border-l lg:border-t-0">
               <MediaFrame
-                src={media.citySchematic}
-                alt="Conceptual island map of Violet Echoes districts and spines"
+                src={cityMapArt.hero3dClean.src}
+                alt={cityMapArt.hero3dClean.alt}
                 aspect="video"
                 className="h-full min-h-[240px]"
-                imgClassName="object-contain bg-[var(--color-bg)] p-2 sm:p-3"
               />
               <p className="border-t border-[var(--color-border)] px-4 py-2 text-xs uppercase tracking-[0.18em] text-[var(--color-subtle)]">
-                Island map · conceptual
+                Island · text-free 3D
               </p>
             </div>
           </div>
