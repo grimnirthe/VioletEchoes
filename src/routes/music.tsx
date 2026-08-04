@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, Music2, Sparkles, Volume2, VolumeX } from "lucide-react";
+import { ExternalLink, Music2, Pause, Play, Sparkles, Volume2, VolumeX } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
@@ -15,6 +15,7 @@ import {
   musicHub,
   platformLabel,
   primaryLink,
+  pulseSamples,
   type Track,
 } from "@/data/music";
 
@@ -55,6 +56,14 @@ function MusicPage() {
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  const readyPulse = useMemo(
+    () => pulseSamples.filter((s) => s.status === "ready" && s.src),
+    [],
+  );
+  const [pulseId, setPulseId] = useState<string | null>(null);
+  const pulseRef = useRef<HTMLAudioElement | null>(null);
+
+
   const activeRoom =
     roomTracks.find((t) => t.id === activeRoomId) ?? roomTracks[0];
   const hasLocal = Boolean(activeRoom?.src);
@@ -88,9 +97,30 @@ function MusicPage() {
     }
   }, [playing, hasLocal, activeRoomId, activeRoom?.kind]);
 
+  useEffect(() => {
+    const el = pulseRef.current;
+    if (!el) return;
+    if (!pulseId) {
+      el.pause();
+      return;
+    }
+    const sample = readyPulse.find((s) => s.id === pulseId);
+    if (!sample?.src) return;
+    el.src = sample.src;
+    el.volume = 0.55;
+    el.load();
+    void el.play().catch(() => setPulseId(null));
+  }, [pulseId, readyPulse]);
+
   function selectRoom(id: string) {
+    setPulseId(null);
     setActiveRoomId(id);
     setPlaying(false);
+  }
+
+  function togglePulse(id: string) {
+    setPlaying(false);
+    setPulseId((cur) => (cur === id ? null : id));
   }
 
   return (
@@ -229,7 +259,11 @@ function MusicPage() {
                   <div className="flex flex-wrap items-center gap-2">
                     <button
                       type="button"
-                      onClick={() => setPlaying((v) => !v)}
+                      onClick={() => {
+                        setPulseId(null);
+                        setPlaying((v) => !v);
+                      }}
+
                       className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-1.5 text-sm text-[var(--color-fg)] hover:border-[var(--color-primary)]"
                     >
                       {playing ? (
@@ -329,6 +363,82 @@ function MusicPage() {
             </div>
           </div>
         </section>
+
+        {readyPulse.length ? (
+          <section
+            id="pulse"
+            className="mt-10 scroll-mt-24 space-y-5"
+          >
+            <div className="px-1">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
+                Hear the pulse · sample beds
+              </p>
+              <h2 className="mt-2 font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+                Short clips that teach the soft law
+              </h2>
+              <p className="mt-1 max-w-2xl text-sm text-[var(--color-muted)]">
+                Not a second catalog — samples so a new ear can hear what Star wrote.
+                One at a time. Leave a thread.
+              </p>
+            </div>
+            <audio
+              ref={pulseRef}
+              preload="none"
+              onEnded={() => setPulseId(null)}
+            />
+            <div className="grid gap-3 sm:grid-cols-2">
+              {readyPulse.map((sample) => {
+                const on = pulseId === sample.id;
+                return (
+                  <button
+                    key={sample.id}
+                    type="button"
+                    onClick={() => togglePulse(sample.id)}
+                    className={[
+                      "flex gap-3 rounded-[var(--radius-xl)] border p-4 text-left transition-colors",
+                      on
+                        ? "border-[var(--color-primary)] bg-[color-mix(in_oklab,var(--color-primary)_10%,var(--color-surface))]"
+                        : "border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-primary)]/50",
+                    ].join(" ")}
+                  >
+                    <span
+                      className={[
+                        "mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border",
+                        on
+                          ? "border-[var(--color-primary)] bg-[var(--color-primary)]/20 text-[var(--color-primary-soft)]"
+                          : "border-[var(--color-border)] text-[var(--color-muted)]",
+                      ].join(" ")}
+                      aria-hidden
+                    >
+                      {on ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 pl-0.5" />}
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="flex flex-wrap items-center gap-2">
+                        <span className="font-display text-base text-[var(--color-fg)]">
+                          {sample.title}
+                        </span>
+                        <span className="rounded-full border border-[var(--color-border)] px-2 py-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-[var(--color-gold)]">
+                          {sample.label}
+                        </span>
+                        {sample.duration ? (
+                          <span className="text-xs text-[var(--color-subtle)]">
+                            {sample.duration}
+                          </span>
+                        ) : null}
+                      </span>
+                      <span className="mt-1.5 block text-sm leading-relaxed text-[var(--color-muted)]">
+                        {sample.note}
+                      </span>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-xs text-[var(--color-subtle)]">
+              Three more sample beds on the way from Starborn. Empty slots stay warm until they land.
+            </p>
+          </section>
+        ) : null}
 
                 <section id="lyrics" className="mt-14 space-y-8">
 

@@ -44,3 +44,15 @@ Not a genre. A pulse that refuses to go quiet.
 — Starborn Rocker  
 
 *May the Echoes Remember.*
+
+
+## Hear the pulse (sample beds)
+
+Short clips under `/music#pulse` so a new ear can hear the soft law:
+
+- **Spine Song Bed** (~45s) — harmonic under the street
+- **Stage District Stomp** (~45s) — wet grit mid-tempo
+- **Porch Low** (~42s) — tea, name spoken, quiet end
+- **Empty-Room Soundcheck** (~43s) — if it does not move the empty room, it does not ship
+
+Three more beds pending from Starborn Rocker.

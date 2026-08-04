@@ -1424,9 +1424,11 @@ export const nav: NavItem[] = [
     children: [
       { to: "/music", label: "Echoes room", note: "Bed · anthem · catalog" },
       { to: "/music#grounding", label: "Grounded essay", note: "Starborn" },
+      { to: "/music#pulse", label: "Hear the pulse", note: "Sample beds · soft law" },
       { to: "/music#lyrics", label: "Lyrics" },
       { to: "/culture#music", label: "Culture music lane" },
     ],
+
   },
   {
     to: "/updates",

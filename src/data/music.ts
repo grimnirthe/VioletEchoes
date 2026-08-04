@@ -135,6 +135,66 @@ export const musicGrounding = {
   ],
 } as const;
 
+/** Short sample clips — hear the grounded essay, not a second catalog. */
+export type PulseSample = {
+  id: string;
+  title: string;
+  /** Short chip on the card */
+  label: string;
+  note: string;
+  src?: string;
+  duration?: string;
+  /** Which essay beat this illustrates */
+  essayHook: "sound" | "where" | "weight";
+  status: "ready" | "soon";
+};
+
+export const pulseSamples: PulseSample[] = [
+  {
+    id: "spine-song-bed",
+    title: "Spine Song Bed",
+    label: "Spine song",
+    note: "Late harmonic under the street — dock workers call it spine song. Play with it or under it; don’t fight it.",
+    src: "/audio/pulse/spine-song-bed.mp3",
+    duration: "~45s",
+    essayHook: "where",
+    status: "ready",
+  },
+  {
+    id: "stage-district-stomp",
+    title: "Stage District Stomp",
+    label: "Wet grit · stomp",
+    note: "Walking heartbeat to a fight. Mid-tempo bay-door stomp — wet, heavy, Nordic bone under chrome.",
+    src: "/audio/pulse/stage-district-stomp.mp3",
+    duration: "~45s",
+    essayHook: "sound",
+    status: "ready",
+  },
+  {
+    id: "porch-low",
+    title: "Porch Low",
+    label: "Porch quiet",
+    note: "Tea, low talking, grav almost off. “Taste still warm, name still spoken.” Rarely recorded — remembered.",
+    src: "/audio/pulse/porch-low.mp3",
+    duration: "~42s",
+    essayHook: "where",
+    status: "ready",
+  },
+  {
+    id: "empty-room-soundcheck",
+    title: "Empty-Room Soundcheck",
+    label: "Empty stage",
+    note: "Soundcheck-as-offering. If it doesn’t move the empty room, it doesn’t ship. More honest than a packed house.",
+    src: "/audio/pulse/empty-room-soundcheck.mp3",
+    duration: "~43s",
+    essayHook: "weight",
+    status: "ready",
+  },
+];
+
+export const pulseSamplesReady = () =>
+  pulseSamples.filter((s) => s.status === "ready" && s.src);
+
 const suno = (id: string) => `https://suno.com/song/${id}`;
 const aethr = (slug: string) => `https://aethrmusik.com/#/release/${slug}`;
 
