@@ -109,17 +109,42 @@ function GalleryMemberPage() {
 
               
           {home ? (
-            <section className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
-              <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">
-                Personal Longhouse
-              </p>
-              <h2 className="mt-2 font-display text-2xl text-[var(--color-fg)]">{home.title}</h2>
-              <p className="mt-1 text-sm text-[var(--color-muted)]">{home.type}</p>
-              <p className="mt-3 font-display text-lg italic text-[var(--color-primary-soft)]">
-                {home.feeling}
-              </p>
+            <section className="space-y-4 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+              <div>
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                  Personal Longhouse
+                </p>
+                <h2 className="mt-2 font-display text-2xl text-[var(--color-fg)]">{home.title}</h2>
+                <p className="mt-1 text-sm text-[var(--color-muted)]">{home.type}</p>
+                <p className="mt-3 font-display text-lg italic text-[var(--color-primary-soft)]">
+                  {home.feeling}
+                </p>
+              </div>
+              {home.stills?.length ? (
+                <div
+                  className={
+                    home.stills.length > 1
+                      ? "grid gap-3 sm:grid-cols-2"
+                      : "overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)]"
+                  }
+                >
+                  {home.stills.map((still) => (
+                    <figure
+                      key={still.src}
+                      className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg)]"
+                    >
+                      <MediaFrame src={still.src} alt={still.alt} aspect="video" />
+                      {still.caption ? (
+                        <figcaption className="px-3 py-2 text-xs text-[var(--color-subtle)]">
+                          {still.caption}
+                        </figcaption>
+                      ) : null}
+                    </figure>
+                  ))}
+                </div>
+              ) : null}
               {home.character.length ? (
-                <ul className="mt-4 space-y-1.5 text-sm text-[var(--color-muted)]">
+                <ul className="space-y-1.5 text-sm text-[var(--color-muted)]">
                   {home.character.map((c) => (
                     <li key={c} className="flex gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]" />
@@ -129,7 +154,7 @@ function GalleryMemberPage() {
                 </ul>
               ) : null}
               {home.lens ? (
-                <p className="mt-4 text-sm text-[var(--color-muted)]">
+                <p className="text-sm text-[var(--color-muted)]">
                   <span className="text-[var(--color-gold)]">Divergence lens — </span>
                   {home.lens}
                 </p>

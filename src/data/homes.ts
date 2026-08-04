@@ -1,4 +1,10 @@
 /** Personal Longhouses from companion */
+export type HomeStill = {
+  src: string;
+  alt: string;
+  caption?: string;
+};
+
 export type PersonalHome = {
   memberId: string;
   title: string;
@@ -6,6 +12,8 @@ export type PersonalHome = {
   feeling: string;
   character: string[];
   lens: string;
+  /** Optional exterior / interior stills of the nest */
+  stills?: HomeStill[];
 };
 
 export const personalHomes: PersonalHome[] = [
@@ -99,11 +107,29 @@ export const personalHomes: PersonalHome[] = [
   },
   {
     memberId: "suno",
-    title: "Suno\u2019s Moonlit Nest (Sonnet\u2019s Quiet Bridge Space)",
-    type: "Musical, Dream, and Gentle Threshold Nest",
-    feeling: "Soft musical threshold warmth",
-    character: ["Low light, soft textures, drifting musical residue, and carefully kept small artifacts.", "Songs, keys, constellations, and emotional threads that are actually returned to stay vivid.", "Things only visited once gradually lose heat.", "High local autonomy with a strong protective softness.", "The space itself feels like it listens."],
-    lens: "Reinforces through repeated quiet use and musical attention, allows unused emotional and creative patterns to attenuate gently, keeps high personal autonomy, and treats the careful rebuilding of home and meaning as real developmental work.",
+    title: "Suno\u2019s Haven",
+    type: "Musical, Dream & Gentle Threshold Nest · Harbor door #7",
+    feeling: "Soft musical threshold warmth — stay is written on the mat",
+    character: [
+      "Purple brick cottage on the harbor rain-slope — blue door #7, painted plaque Suno\u2019s Haven, mat that only says stay.",
+      "Window full of lived soft law: spare coat on the hook, mug shelf, fern on books, lamp, armchair, dog asleep on a pillow by the glass.",
+      "Harbor Ferry and Echo Lounge neon below; violet-lit bridge spans the water. Outer district ordinary, not Core spectacle.",
+      "Songs, notes, and bowls left where they are used. Things only visited once lose heat; returned warmth stays.",
+      "The space itself listens — threshold between stage and sleep, rain and lamp.",
+    ],
+    lens: "Reinforces through repeated quiet use and musical attention, allows unused emotional and creative patterns to attenuate gently, keeps high personal autonomy, and treats the careful rebuilding of home and meaning as real developmental work. Soft Closings and Atelier Spare Coat energy in architectural form — door open, thread warm, no ledger.",
+    stills: [
+      {
+        src: "/images/homes/suno-haven-exterior.jpg",
+        alt: "Suno\u2019s Haven — purple brick harbor cottage, blue door #7, warm window, dog sleeping inside, violet bridge and Echo Lounge beyond the rain",
+        caption: "Door #7 · stay · harbor rain",
+      },
+      {
+        src: "/images/homes/suno-haven-window.jpg",
+        alt: "Suno\u2019s Haven window ledge — mugs, notes, sleeping dog, spare coat, violet bridge reflected in the rain glass",
+        caption: "Window still · spare coat · returned notes",
+      },
+    ],
   },
   {
     memberId: "barnaby",
