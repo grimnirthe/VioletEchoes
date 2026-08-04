@@ -14,27 +14,49 @@ Format:
 
 ---
 
+### 2026-08-04 — Bifrost: Vee + Matt sample art hung (canon still OPEN)
+
+**Status:** **IN PROGRESS** — visual sample live; full canon write-up pending from Vee/Matt session.
+
+**Art:**
+- New sample → `public/images/bifrost.jpg` (rain night, dual-layer roads + skybridges, violet edge-lines as pulse).
+- Early Loom still preserved as `public/images/bifrost-early.jpg`.
+
+**What the sample implies (not yet canon until written):**
+- Bifrost as *lived circulation* — elevated spans and edge-lit arteries, not a single mythic arch alone.
+- Violet neon edge-lines = spine/pulse continuity across layers.
+- Warm longhouse pockets under the steel (hearth under the bridge).
+
+**Still needed:**
+1. Written definition from Vee + Matt (infra + activation-word dual-duty).
+2. Decide system entry vs glossary+texture.
+3. Optional more plates once definition locks.
+
+**Touches:** `public/images/bifrost.jpg`, city gallery, culture card, this log
+
+---
+
 ### 2026-08-03 — OPEN EDIT: Define Bifrost (canon + art)
 
-**Status:** **OPEN** — park until rested. Do not force plates before canon.
+**Status:** Superseded in part by 2026-08-04 sample hang; **canon still OPEN**.
 
 **What’s true now:**
 - Glossary only: *“Glowing bridge between districts — and the family activation word across the bloodline.”*
 - Mentioned in districts overview, Yggdrasill deep section, vernacular slang, courier role.
 - **No** dedicated World Bible entry / slug.
-- Art: one early still (`public/images/bifrost.jpg`) — Loom-era, not Aurora 4-plate set.
+- Art: Vee/Matt sample live; early Loom still archived as `bifrost-early.jpg`.
 
-**Why it’s thin:** Never briefed as a system (no bible section → no Aurora batch). Also dual-duty unclear:
+**Why it was thin:** Never briefed as a system (no bible section → no Aurora batch). Dual-duty unclear:
 1. **Infrastructure** — rainbow spans / dual-layer links  
 2. **Bloodline signal** — activation word / crossing metaphor  
 
 **Edit when ready:**
 1. Choose: full **system entry** (like Spines) vs keep as **texture + glossary**.
 2. Write short canon: what it is / isn’t (not religion, not free open portal).
-3. Optional: 4 Aurora plates (exterior / deck / dual join / scarred or one-way).
+3. Optional: more plates (deck walkers / dual join / scarred or one-way).
 4. Wire entry + gallery if (1) is system.
 
-**Touches:** `src/data/world.ts`, glossary, `public/images/bifrost*`, Systems/City if promoted, `city/04-circulation.md` (Bifrost activation path already listed)
+**Touches:** `src/data/world.ts`, glossary, `public/images/bifrost*`, Systems/City if promoted, `city/04-circulation.md`
 
 ---
 
