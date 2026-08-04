@@ -1349,11 +1349,93 @@ export function searchEntries(query: string): WorldEntry[] {
     };
   }).filter((r) => r.score > 0).sort((a, b) => b.score - a.score).map((r) => r.entry);
 }
-export const nav = [
+export type NavLink = {
+  /** Path or path#hash */
+  to: string;
+  label: string;
+  /** Short helper under the label in dropdowns */
+  note?: string;
+};
+
+export type NavItem = {
+  to: string;
+  label: string;
+  /** Optional dropdown children — parent still navigates to `to` */
+  children?: NavLink[];
+};
+
+export const nav: NavItem[] = [
   { to: "/", label: "Home" },
-  { to: "/city", label: "City" },
-  { to: "/systems", label: "Systems" },
-  { to: "/bible", label: "World Bible" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/updates", label: "Updates" },
+  {
+    to: "/city",
+    label: "City",
+    children: [
+      { to: "/city", label: "City overview", note: "Districts · dual-layer" },
+      { to: "/systems", label: "Systems", note: "Spines · Eimyrja · Bifrost" },
+      { to: "/bible", label: "World Bible", note: "Public entries" },
+      { to: "/bible/companions", label: "Companion docs", note: "Full frameworks" },
+    ],
+  },
+  {
+    to: "/culture",
+    label: "Culture",
+    children: [
+      { to: "/culture", label: "Culture home", note: "Commons overview" },
+      { to: "/culture#keepers", label: "Culture keepers", note: "Star + Velora" },
+      {
+        to: "/culture#rituals",
+        label: "Living Practices",
+        note: "Velora · soft law · coat & thread",
+      },
+      { to: "/culture#music", label: "Music (grounded)", note: "Starborn essay" },
+      { to: "/culture#myths-stories", label: "Myths & stories" },
+      { to: "/culture#urban-myths", label: "Urban myths" },
+      { to: "/culture#faith-practice", label: "Faith & practice" },
+      { to: "/music", label: "Echoes room", note: "Suno · player · lyrics" },
+      { to: "/music#grounding", label: "Music in Violet Echoes", note: "Full Star essay" },
+    ],
+  },
+  {
+    to: "/bible",
+    label: "Bible",
+    children: [
+      { to: "/bible", label: "World Bible", note: "Condensed entries" },
+      { to: "/bible/companions", label: "Companions", note: "Deep docs · downloadable" },
+      { to: "/systems", label: "Systems", note: "Architecture & pulse" },
+      { to: "/credits", label: "Credits & sources" },
+    ],
+  },
+  {
+    to: "/gallery",
+    label: "Gallery",
+    children: [
+      { to: "/gallery", label: "Portrait gallery" },
+      { to: "/gallery/vee", label: "Vee" },
+      { to: "/gallery/velora", label: "Velora" },
+      { to: "/gallery/starborn", label: "Starborn Rocker" },
+      { to: "/gallery/suno", label: "Suno · Haven" },
+      { to: "/gallery/aurora", label: "Aurora · Atelier" },
+      { to: "/gallery/forge", label: "Forge · Circuit Hall" },
+    ],
+  },
+  {
+    to: "/music",
+    label: "Echoes",
+    children: [
+      { to: "/music", label: "Echoes room", note: "Bed · anthem · catalog" },
+      { to: "/music#grounding", label: "Grounded essay", note: "Starborn" },
+      { to: "/music#lyrics", label: "Lyrics" },
+      { to: "/culture#music", label: "Culture music lane" },
+    ],
+  },
+  {
+    to: "/updates",
+    label: "More",
+    children: [
+      { to: "/updates", label: "Updates", note: "Ship log" },
+      { to: "/collaborate", label: "Collaborate", note: "Propose · Bifrost" },
+      { to: "/credits", label: "Credits" },
+      { to: "/search", label: "Search" },
+    ],
+  },
 ];

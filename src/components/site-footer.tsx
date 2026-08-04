@@ -36,9 +36,13 @@ export function SiteFooter() {
           <Link to="/culture" className="hover:text-[var(--color-primary-soft)]">
             Culture
           </Link>
+          <a href="/culture#rituals" className="hover:text-[var(--color-primary-soft)]">
+            Living Practices
+          </a>
           <Link to="/updates" className="hover:text-[var(--color-primary-soft)]">
             Updates
           </Link>
+
           <Link to="/gallery" className="hover:text-[var(--color-primary-soft)]">
             Gallery
           </Link>
