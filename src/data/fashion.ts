@@ -73,7 +73,7 @@ export const fashionLine = {
     },
   },
   acceptedBy:
-    "Velora Runeweaver · visual-lane · waves 1–2 sealed · wave 3 cut for review",
+    "Velora Runeweaver · visual-lane · waves 1–3 sealed · sixteen looks citizen cloth",
 } as const;
 
 export const fashionLooks: FashionLook[] = [
