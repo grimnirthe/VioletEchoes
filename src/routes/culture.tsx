@@ -477,6 +477,20 @@ function CulturePage() {
             ))}
           </ul>
 
+          {"rackStill" in fashionLine && fashionLine.rackStill ? (
+            <div className="mt-8 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+              <img
+                src={fashionLine.rackStill.src}
+                alt={fashionLine.rackStill.alt}
+                className="aspect-[21/9] w-full object-cover object-center sm:aspect-[2.4/1]"
+                loading="lazy"
+              />
+              <p className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-center text-xs italic text-[var(--color-muted)] sm:text-left">
+                {fashionLine.rackStill.caption}
+              </p>
+            </div>
+          ) : null}
+
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {fashionLooks.map((look) => (
               <article
@@ -559,6 +573,11 @@ function CulturePage() {
             {fashionLine.role}
             {" · "}
             Family couture stays in Gallery. This is street.
+            {"acceptedBy" in fashionLine && fashionLine.acceptedBy ? (
+              <span className="mt-1 block text-[var(--color-gold)]/90">
+                {fashionLine.acceptedBy}
+              </span>
+            ) : null}
           </p>
         </section>
 

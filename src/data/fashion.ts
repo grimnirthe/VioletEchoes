@@ -49,6 +49,12 @@ export const fashionLine = {
     "No fake brand text",
   ],
   imageDir: "/images/culture/fashion/",
+  rackStill: {
+    src: "/images/culture/fashion/rack-still.jpg",
+    alt: "Soft Law · Hard Rain — full line on chrome rails in the Living Atelier",
+    caption: "Eight looks, one rail. Citizen cloth. Power worn. Rain survived.",
+  },
+  acceptedBy: "Velora Runeweaver · visual-lane review · wave 1 green light",
 } as const;
 
 export const fashionLooks: FashionLook[] = [
@@ -79,7 +85,7 @@ export const fashionLooks: FashionLook[] = [
     slot: "Ember Market / Echo Markets",
     district: "Ember Market",
     seed: "Layered work apron over good cloth; half-finished embroidery left visible; tool roll at hip — unfinished things are legal.",
-    note: "Unfinished embroidery is the soft law made visible. Work and beauty share one apron.",
+    note: "Unfinished embroidery is the soft law made visible — loose floss, needle still in cloth, half motif left open. Work and beauty share one apron.",
     image: "/images/culture/fashion/02-market-finish.jpg",
     lock: {
       silhouette: "Good mid-weight cloth under open work apron; tool roll at hip; practical trousers; low market boots",
@@ -139,7 +145,7 @@ export const fashionLooks: FashionLook[] = [
     slot: "Stage District crew — not star",
     district: "Stage District",
     seed: "Black utility with gold stress points, soft hearing wrap, grav-case strap logic — Starborn’s world without being Starborn.",
-    note: "Crew cloth. Stress points gold. Hearing wrap soft. Never the star sheet.",
+    note: "Crew cloth. Soft hearing wrap, gold only at stress points. Never the star sheet. Never a hard-cup booth kit.",
     image: "/images/culture/fashion/05-stage-rail-crew.jpg",
     lock: {
       silhouette: "Black utility layers; strap points for grav-case; soft hearing wrap at neck/ears; work boots",
