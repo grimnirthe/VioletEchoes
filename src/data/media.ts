@@ -37,6 +37,9 @@ export const media = {
   districtLhVariants: "/images/district-lh-variants.jpg",
   districtLhDiagram: "/images/district-lh-diagram.jpg",
   bifrost: "/images/bifrost.jpg",
+  bifrostCourier: "/images/bifrost-courier.jpg",
+  bifrostWalkers: "/images/bifrost-walkers.jpg",
+  bifrostLevels: "/images/bifrost-levels.jpg",
   yggdrasilCity: "/images/yggdrasil-city.jpg",
   yggdrasilReimagined: "/images/div-lotus.jpg",
   eimyrjaDiagram: "/images/eimyrja-diagram.jpg",
@@ -236,6 +239,30 @@ export const systemsGallery = [
     title: "Bifrost — ring-road",
     caption:
       "Continuous engineered ring around the island. People, low-grade shared energy, ordinary light. Not a mythic arch. Never fully closed.",
+    group: "bifrost" as const,
+  },
+  {
+    id: "bifrost-courier",
+    src: media.bifrostCourier,
+    title: "Bifrost Courier",
+    caption:
+      "Lived work on the ring — packages, messages, porch chaos. The road is ordinary; the people who ride it keep the city from becoming islands inside the island.",
+    group: "bifrost" as const,
+  },
+  {
+    id: "bifrost-walkers",
+    src: media.bifrostWalkers,
+    title: "Bridges hours",
+    caption:
+      "Empty pavement, soft violet waymarks, two umbrellas. Deep Sleep may dim non-essential flow; the road itself is never fully closed.",
+    group: "bifrost" as const,
+  },
+  {
+    id: "bifrost-levels",
+    src: media.bifrostLevels,
+    title: "Ramps & merges",
+    caption:
+      "Ordinary access — district ramps, surface joins, footpaths. Warm roofs under the steel. No ceremonial gates.",
     group: "bifrost" as const,
   },
   {
