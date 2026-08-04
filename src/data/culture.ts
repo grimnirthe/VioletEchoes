@@ -398,6 +398,36 @@ export const cultureWorks: CultureWork[] = [
     echoes: ["cultural-hub", "vee"],
     accepted: "2026-08-04",
   },
+  {
+    id: "returned-things",
+    title: "The Returned Things",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "A quiet shelf in a few longhouses and Quiet Hearths. People leave small objects they no longer need but still care about — a tool, a book, a coat that still has warmth in it. Anyone may take one if it calls to them. No names. No tracking. Just things moving to where they are still useful.",
+    image: "/images/hearth-evening.jpg",
+    echoes: ["longhouses", "quiet-hearths", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "first-light-walk",
+    title: "First Light Walk",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "Some mornings a few people walk the quiet streets just after the deep-night systems cycle. No destination. No conversation required. Just moving through the city while it is still soft. Newcomers are sometimes invited. It helps the place feel real in the body, not just on a map.",
+    image: "/images/ember-night.jpg",
+    echoes: ["hearthrow", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "unspoken-seat",
+    title: "The Unspoken Seat",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "In every longhouse and most shared rooms, one seat is left slightly open or slightly set aside. Not reserved. Not marked. Just available. If someone arrives carrying weight, that seat is theirs without asking. When they leave, the seat returns to being ordinary again.",
+    image: "/images/hearth-porch.jpg",
+    echoes: ["longhouses", "shared-watch", "vee"],
+    accepted: "2026-08-04",
+  },
 ];
 
 export const cultureTales: CultureTale[] = [
