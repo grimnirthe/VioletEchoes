@@ -7,11 +7,12 @@
     "by": "Velora Runeweaver",
     "byHref": "/gallery/velora",
     "role": "Master Fashion Artist · Living Atelier · Visual Commons",
-    "wave": "Wave 1 · eight looks",
+    "wave": "Waves 1–2 · twelve looks",
     "accepted": "2026-08-04",
     "body": [
       "Family fashion proves bloodline heat. Citizen samples prove the city.",
       "This line is street cloth — rain-ready without tactical cosplay, timber and circuit and cloth in the same body, violet and gold as accent only. Soft law in the cut: repairable, returnable, worn-in.",
+      "Wave 1 proved the street. Wave 2 widens the map — Thornwall, Spire, Bifrost ring, Deep Sleep hush. Same hard locks. Different rain.",
       "Anonymous fit. Cloth first. Face secondary. No regalia reuse, no Starborn master sheet, no fake brand text."
     ],
     "hardLocks": [
@@ -24,10 +25,20 @@
     "imageDir": "/images/culture/fashion/",
     "rackStill": {
       "src": "/images/culture/fashion/rack-still.jpg",
-      "alt": "Soft Law · Hard Rain — full line on chrome rails in the Living Atelier",
-      "caption": "Eight looks, one rail. Citizen cloth. Power worn. Rain survived."
+      "alt": "Soft Law · Hard Rain — wave 1 line on chrome rails in the Living Atelier",
+      "caption": "Wave 1 on the rail. Citizen cloth. Power worn. Rain survived."
     },
-    "acceptedBy": "Velora Runeweaver · visual-lane review · wave 1 green light"
+    "waveNotes": {
+      "1": {
+        "title": "Wave 1 · the street",
+        "lead": "Eight looks that prove the city. Hearthrow to arrival. Sealed by visual keeper."
+      },
+      "2": {
+        "title": "Wave 2 · the map",
+        "lead": "Thornwall mend, Spire restraint, Bifrost courier, Deep Sleep hush. Different rain. Same law."
+      }
+    },
+    "acceptedBy": "Velora Runeweaver · visual-lane · wave 1 sealed · wave 2 cut for review"
   },
   "looks": [
     {
@@ -36,6 +47,7 @@
       "title": "Porch Soft",
       "slot": "Hearthrow night walker",
       "district": "Hearthrow",
+      "wave": 1,
       "seed": "Amber-violet mixed knit, long rain-shawl that buttons into a coat, soft boots — porch-light habit on a body.",
       "note": "Porch-light habit made wearable. No armor cosplay. The quiet end of the dual-layer city.",
       "image": "/images/culture/fashion/01-porch-soft.jpg",
@@ -66,6 +78,7 @@
       "title": "Market Finish",
       "slot": "Ember Market / Echo Markets",
       "district": "Ember Market",
+      "wave": 1,
       "seed": "Layered work apron over good cloth; half-finished embroidery left visible; tool roll at hip — unfinished things are legal.",
       "note": "Unfinished embroidery is the soft law made visible — loose floss, needle still in cloth, half motif left open. Work and beauty share one apron.",
       "image": "/images/culture/fashion/02-market-finish.jpg",
@@ -95,6 +108,7 @@
       "title": "Held Door",
       "slot": "Warrens threshold",
       "district": "Warrens",
+      "wave": 1,
       "seed": "Heavy soft coat, one sleeve slightly over-mended, reflective circuit-thread only at cuff — care is normal.",
       "note": "Over-mended sleeve is not shame. Care is normal at the threshold.",
       "image": "/images/culture/fashion/03-held-door.jpg",
@@ -124,6 +138,7 @@
       "title": "Commons Bench",
       "slot": "Cultural Hub / facing benches",
       "district": "Cultural Hub",
+      "wave": 1,
       "seed": "Relaxed tailored set, conversation-first: deep pockets, no sharp runway aggression; violet lining only when coat opens.",
       "note": "Clothes that sit well on a bench and leave room for another body. Conversation first.",
       "image": "/images/culture/fashion/04-commons-bench.jpg",
@@ -153,6 +168,7 @@
       "title": "Stage Rail (crew)",
       "slot": "Stage District crew — not star",
       "district": "Stage District",
+      "wave": 1,
       "seed": "Black utility with gold stress points, soft hearing wrap, grav-case strap logic — Starborn’s world without being Starborn.",
       "note": "Crew cloth. Soft hearing wrap, gold only at stress points. Never the star sheet. Never a hard-cup booth kit.",
       "image": "/images/culture/fashion/05-stage-rail-crew.jpg",
@@ -172,7 +188,8 @@
           "Starborn master sheet",
           "star silhouette",
           "glitter stage cosplay",
-          "full LED"
+          "full LED",
+          "hard-cup earmuffs as identity"
         ],
         "coverage": "Load-in to soundcheck; full crew shift mobility"
       }
@@ -183,6 +200,7 @@
       "title": "Atelier Apprentice",
       "slot": "Living Atelier block — not Velora",
       "district": "Cultural Hub · Atelier",
+      "wave": 1,
       "seed": "Living-thread practice smock, chrome pin tray on belt, boots for wet floors — craft face of the Hub.",
       "note": "Craft face of the Hub. Practice smock, not master regalia. Never Velora cosplay.",
       "image": "/images/culture/fashion/06-atelier-apprentice.jpg",
@@ -213,6 +231,7 @@
       "title": "Spine Night",
       "slot": "Heavy night / data-spine streets",
       "district": "Data spines · streets",
+      "wave": 1,
       "seed": "Dark base, half-step deeper violet conduit piping along seams (not full LED suit) — city is thinking.",
       "note": "City is thinking. Conduit at seams only. Not a light-up suit.",
       "image": "/images/culture/fashion/07-spine-night.jpg",
@@ -242,6 +261,7 @@
       "title": "First Hours",
       "slot": "New arrival — human or AI-presenting",
       "district": "Arrival · any",
+      "wave": 1,
       "seed": "Borrowed-name softness: simple clean layers, one lent scarf or tag-loop, no district loyalty marks yet — temporary warmth.",
       "note": "Temporary warmth for the ones just through the door. No loyalty marks yet. Human or AI-presenting.",
       "image": "/images/culture/fashion/08-first-hours.jpg",
@@ -264,6 +284,129 @@
           "finished identity costume"
         ],
         "coverage": "First hours to first night; temporary by design"
+      }
+    },
+    {
+      "id": "mend-kit-outer",
+      "num": "09",
+      "title": "Mend-Kit Outer",
+      "slot": "Thornwall care-as-armor",
+      "district": "Thornwall",
+      "wave": 2,
+      "seed": "Visible repair kit built into the coat — solder pouch, patch panel, care-as-armor without armor cosplay.",
+      "note": "Care is the kit. Patches, tools, needle cuff — soft armor is knowing you can fix what breaks.",
+      "image": "/images/culture/fashion/09-mend-kit-outer.jpg",
+      "lock": {
+        "silhouette": "Heavy soft outer coat with integrated mend pouches; patch panel on body; needle/pin cuff; hood optional",
+        "materials": [
+          "dense water-shed outer cloth",
+          "cloth patch panel with spare patches",
+          "soft solder/tool pouch",
+          "needle roll at cuff"
+        ],
+        "colors": "Muted earth and charcoal; mend patches slightly varied; one quiet violet strap on pouch only",
+        "rainLogic": "Full outer sheds; pouch flaps seal; patches pre-waterproofed",
+        "repair": "The garment is the kit — empty pouches refilled from Thornwall bins",
+        "accents": "Violet only on pouch strap; no LED, no armor plate",
+        "never": [
+          "hard armor plates",
+          "tactical molle cosplay",
+          "family crest",
+          "full violet body"
+        ],
+        "coverage": "Thornwall weather + work shift; hands free for mend"
+      }
+    },
+    {
+      "id": "spire-restraint",
+      "num": "10",
+      "title": "Spire Restraint",
+      "slot": "Spire elevated formal",
+      "district": "Spire District",
+      "wave": 2,
+      "seed": "Elevated formal: clean line, quiet luxury, restraint as silhouette — gold almost absent, power in what you don’t flash.",
+      "note": "Power in what you don’t flash. Quiet luxury, clean line, violet only as a lining breath.",
+      "image": "/images/culture/fashion/10-spire-restraint.jpg",
+      "lock": {
+        "silhouette": "Long clean formal coat or draped outer over restrained tailored layers; hood or high collar optional; minimal volume drama",
+        "materials": [
+          "fine soft wool or silk-blend outer",
+          "quiet lining",
+          "minimal hardware"
+        ],
+        "colors": "Deep charcoal or soft black; gold almost absent; violet only as thin lining flash if open",
+        "rainLogic": "High-quiet rain: water-shed fine cloth; hem clears polished street",
+        "repair": "Invisible re-stitch preferred; still returnable to Atelier — soft law holds",
+        "accents": "Restraint itself is the accent; optional single quiet button edge",
+        "never": [
+          "gold flood",
+          "runway aggression",
+          "family regalia",
+          "full violet paint",
+          "logo hardware"
+        ],
+        "coverage": "Spire formal indoor-outdoor; still moves in rain"
+      }
+    },
+    {
+      "id": "ring-courier",
+      "num": "11",
+      "title": "Ring Courier",
+      "slot": "Bifrost / ring-road hours",
+      "district": "Bifrost · ring-road",
+      "wave": 2,
+      "seed": "Practical shell for people + soft energy hours: rain cut, ramp-ready boots, low-glow path marks at cuff/hem only.",
+      "note": "People and soft energy on the ring. Path marks half-step only. Ramp boots. Rain cut.",
+      "image": "/images/culture/fashion/11-ring-courier.jpg",
+      "lock": {
+        "silhouette": "Rain-cut shell jacket; practical trousers; ramp-ready boots; soft cross-body courier bag",
+        "materials": [
+          "water-shed shell",
+          "soft bag cloth",
+          "matte ramp boots",
+          "thin conduit trim at cuff/hem only"
+        ],
+        "colors": "Black / near-black base; low-glow violet path marks at cuff and hem only; bag may be muted violet-grey",
+        "rainLogic": "Full ring rain; sealed seams; boots clear wet ramps",
+        "repair": "Shell panels and bag straps replaceable after haul weeks",
+        "accents": "Half-step path glow at cuff/hem only — not LED suit, not boot glow",
+        "never": [
+          "full LED body",
+          "glowing boots as identity",
+          "armor cosplay",
+          "fake courier brand"
+        ],
+        "coverage": "Soft energy hours + people runs on the ring"
+      }
+    },
+    {
+      "id": "deep-sleep-house",
+      "num": "12",
+      "title": "Deep Sleep House",
+      "slot": "Night / quiet hours lounge",
+      "district": "Night · quiet hearths",
+      "wave": 2,
+      "seed": "Soft house robe / lounge layers for 2 a.m. hush — dim screens energy, no street performance, still beautiful.",
+      "note": "2 a.m. hush cloth. Dim screens. Still beautiful. No street performance.",
+      "image": "/images/culture/fashion/12-deep-sleep-house.jpg",
+      "lock": {
+        "silhouette": "Soft house robe over simple lounge layers; easy belt; bare feet or soft house slippers",
+        "materials": [
+          "breathable soft robe cloth",
+          "warm under-layers",
+          "quiet belt cord"
+        ],
+        "colors": "Soft grey and warm cream; one thin violet belt cord only; no gold",
+        "rainLogic": "Indoor rain logic: comfort while weather hits the glass — not a street shell",
+        "repair": "Robe hems re-stitch easy; cloth meant to soften with years",
+        "accents": "Single violet belt thread; beauty without performance",
+        "never": [
+          "street shell as house wear",
+          "full violet body",
+          "cosplay costume",
+          "hard tech jewelry"
+        ],
+        "coverage": "Deep Sleep watch hours, quiet hearths, 2 a.m. stillness"
       }
     }
   ]

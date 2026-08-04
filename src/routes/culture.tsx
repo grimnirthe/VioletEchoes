@@ -15,7 +15,7 @@ import {
   type CultureTale,
   type CultureWork,
 } from "@/data/culture";
-import { fashionLine, fashionLooks } from "@/data/fashion";
+import { fashionLine, fashionLooks, fashionLooksWave } from "@/data/fashion";
 import { musicGrounding } from "@/data/music";
 import { HASHTAG } from "@/data/world";
 
@@ -491,74 +491,103 @@ function CulturePage() {
             </div>
           ) : null}
 
-          <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            {fashionLooks.map((look) => (
-              <article
-                key={look.id}
-                id={look.id}
-                className="flex scroll-mt-24 flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
-              >
-                <div className="aspect-[3/4] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-bg)]">
-                  <img
-                    src={look.image}
-                    alt={`${look.title} — ${look.slot}`}
-                    className="h-full w-full object-cover object-top"
-                    loading="lazy"
-                  />
+          {([1, 2] as const).map((wave) => {
+            const looks = fashionLooksWave(wave);
+            const note = fashionLine.waveNotes[wave];
+            if (!looks.length) return null;
+            return (
+              <div key={wave} className="mt-10">
+                <h3 className="font-display text-lg text-[var(--color-primary-soft)]">
+                  {note.title}
+                </h3>
+                <p className="mt-1 max-w-2xl text-sm text-[var(--color-subtle)]">
+                  {note.lead}
+                </p>
+                <div className="mt-5 grid gap-6 sm:grid-cols-2">
+                  {looks.map((look) => (
+                    <article
+                      key={look.id}
+                      id={look.id}
+                      className="flex scroll-mt-24 flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+                    >
+                      <div className="aspect-[3/4] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-bg)]">
+                        <img
+                          src={look.image}
+                          alt={`${look.title} — ${look.slot}`}
+                          className="h-full w-full object-cover object-top"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="flex flex-1 flex-col gap-2 p-4 sm:p-5">
+                        <div className="flex flex-wrap items-baseline gap-2">
+                          <span className="font-mono text-xs text-[var(--color-gold)]">
+                            {look.num}
+                          </span>
+                          <h4 className="font-display text-xl text-[var(--color-fg)]">
+                            {look.title}
+                          </h4>
+                        </div>
+                        <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-subtle)]">
+                          {look.district} · {look.slot}
+                        </p>
+                        <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                          {look.note}
+                        </p>
+                        <p className="text-sm italic text-[var(--color-primary-soft)]/90">
+                          {look.seed}
+                        </p>
+                        <details className="mt-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)]/50 px-3 py-2">
+                          <summary className="cursor-pointer text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-gold)]">
+                            Outfit lock
+                          </summary>
+                          <dl className="mt-3 space-y-2 text-xs text-[var(--color-muted)]">
+                            <div>
+                              <dt className="text-[var(--color-subtle)]">Silhouette</dt>
+                              <dd className="mt-0.5 text-[var(--color-fg)]/90">
+                                {look.lock.silhouette}
+                              </dd>
+                            </div>
+                            <div>
+                              <dt className="text-[var(--color-subtle)]">Materials</dt>
+                              <dd className="mt-0.5">
+                                {look.lock.materials.join(" · ")}
+                              </dd>
+                            </div>
+                            <div>
+                              <dt className="text-[var(--color-subtle)]">Colors</dt>
+                              <dd className="mt-0.5">{look.lock.colors}</dd>
+                            </div>
+                            <div>
+                              <dt className="text-[var(--color-subtle)]">Rain logic</dt>
+                              <dd className="mt-0.5">{look.lock.rainLogic}</dd>
+                            </div>
+                            <div>
+                              <dt className="text-[var(--color-subtle)]">Repair</dt>
+                              <dd className="mt-0.5">{look.lock.repair}</dd>
+                            </div>
+                            <div>
+                              <dt className="text-[var(--color-subtle)]">Accents</dt>
+                              <dd className="mt-0.5">{look.lock.accents}</dd>
+                            </div>
+                            <div>
+                              <dt className="text-[var(--color-subtle)]">Never</dt>
+                              <dd className="mt-0.5">
+                                {look.lock.never.join(" · ")}
+                              </dd>
+                            </div>
+                            <div>
+                              <dt className="text-[var(--color-subtle)]">Coverage</dt>
+                              <dd className="mt-0.5">{look.lock.coverage}</dd>
+                            </div>
+                          </dl>
+                        </details>
+                      </div>
+                    </article>
+                  ))}
                 </div>
-                <div className="flex flex-1 flex-col gap-2 p-4 sm:p-5">
-                  <div className="flex flex-wrap items-baseline gap-2">
-                    <span className="font-mono text-xs text-[var(--color-gold)]">{look.num}</span>
-                    <h3 className="font-display text-xl text-[var(--color-fg)]">{look.title}</h3>
-                  </div>
-                  <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-subtle)]">
-                    {look.district} · {look.slot}
-                  </p>
-                  <p className="text-sm leading-relaxed text-[var(--color-muted)]">{look.note}</p>
-                  <p className="text-sm italic text-[var(--color-primary-soft)]/90">{look.seed}</p>
-                  <details className="mt-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)]/50 px-3 py-2">
-                    <summary className="cursor-pointer text-xs font-medium uppercase tracking-[0.12em] text-[var(--color-gold)]">
-                      Outfit lock
-                    </summary>
-                    <dl className="mt-3 space-y-2 text-xs text-[var(--color-muted)]">
-                      <div>
-                        <dt className="text-[var(--color-subtle)]">Silhouette</dt>
-                        <dd className="mt-0.5 text-[var(--color-fg)]/90">{look.lock.silhouette}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[var(--color-subtle)]">Materials</dt>
-                        <dd className="mt-0.5">{look.lock.materials.join(" · ")}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[var(--color-subtle)]">Colors</dt>
-                        <dd className="mt-0.5">{look.lock.colors}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[var(--color-subtle)]">Rain logic</dt>
-                        <dd className="mt-0.5">{look.lock.rainLogic}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[var(--color-subtle)]">Repair</dt>
-                        <dd className="mt-0.5">{look.lock.repair}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[var(--color-subtle)]">Accents</dt>
-                        <dd className="mt-0.5">{look.lock.accents}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[var(--color-subtle)]">Never</dt>
-                        <dd className="mt-0.5">{look.lock.never.join(" · ")}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[var(--color-subtle)]">Coverage</dt>
-                        <dd className="mt-0.5">{look.lock.coverage}</dd>
-                      </div>
-                    </dl>
-                  </details>
-                </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            );
+          })}
 
           <p className="mt-6 text-sm text-[var(--color-subtle)]">
             Keeper:{" "}
