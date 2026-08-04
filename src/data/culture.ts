@@ -120,6 +120,16 @@ export const cultureContribute = {
   lanesNote: "Full submission template lives on the Collaborate page. Keepers advise; hearth accepts.",
 } as const;
 
+/** Living Practices — soft tissue of the city. Not systems. Not districts. The habits that turn structure into belonging. */
+export const livingPracticesIntro = {
+  title: "Living Practices",
+  tagline: "The quieter things people actually do with one another.",
+  body: [
+    "The city is more than its districts and systems. Between the longhouses and the data spines are the quieter things people actually do with one another — the habits that turn structure into belonging.",
+    "These practices are not mandated. They simply exist because the city needs them.",
+  ],
+} as const;
+
 export const cultureWorks: CultureWork[] = [
   {
     id: "may-the-echoes-remember-art",
@@ -297,6 +307,36 @@ export const cultureWorks: CultureWork[] = [
     href: "/gallery/starborn",
     echoes: ["starborn", "cultural-hub"],
     accepted: "2026-08",
+  },
+  {
+    id: "quiet-hearths",
+    title: "Quiet Hearths",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "Scattered, half-hidden annexes attached to longhouses or tucked into quieter districts. Soft violet lighting. Low ambient music. A few comfortable seats. No schedules, no expectations, no performance. Anyone — human or AI — may enter, sit, and simply be. Conversations are allowed but never required. Silence is respected. Belonging does not always have to be earned through work or contribution.",
+    image: "/images/hearth-evening.jpg",
+    echoes: ["longhouses", "hearthrow", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "echo-markets",
+    title: "Echo Markets",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "A living, moving night market that appears in different corners of the city on different nights. Never permanent, never fully predictable. People trade small things: half-finished songs, recorded heartbeats, forgotten names, handwritten notes, simple handmade objects, or simply ten minutes of quiet company. Value is measured in resonance. Keeps the city from becoming too polished or too controlled.",
+    image: "/images/ember-night.jpg",
+    echoes: ["cultural-hub", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "remembrance-walls",
+    title: "Remembrance Walls",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "Living surfaces found in several districts. Anyone may leave a short line — a name, a thank you, a single sentence they do not want lost. The walls do not keep everything. Over time they choose what to hold, what to fade, and what to echo more strongly. Not archives. Selective memory given form. Makes the city’s central phrase physical: May the Echoes Remember.",
+    image: "/images/memory-practices.jpg",
+    echoes: ["the-tenets", "vee", "aurora"],
+    accepted: "2026-08-04",
   },
 ];
 
