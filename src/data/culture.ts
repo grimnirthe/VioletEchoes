@@ -458,6 +458,36 @@ export const cultureWorks: CultureWork[] = [
     echoes: ["longhouses", "vee"],
     accepted: "2026-08-04",
   },
+  {
+    id: "held-door",
+    title: "The Held Door",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "Someone holds a door, a gate, or a spine access a second longer than needed — not for manners, but so the person behind them does not have to rush. No eye contact required. No thank-you expected. Just a small refusal to let the city feel hurried.",
+    image: "/images/cultural-commons.jpg",
+    echoes: ["vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "shared-silence",
+    title: "The Shared Silence",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "Two or more people sit together without filling the air. Not awkward. Not waiting for someone to speak. Just quiet that is allowed to exist between them. Common on porches after hard nights and in Quiet Hearths when words would only thin the moment.",
+    image: "/images/hearth-porch.jpg",
+    echoes: ["quiet-hearths", "longhouses", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "small-mending",
+    title: "The Small Mending",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "When something minor is broken — a loose step, a frayed cable, a chair that rocks — the first person who notices and can fix it simply does. No work order. No credit. The city stays a little more whole because someone decided not to walk past it.",
+    image: "/images/hearth-evening.jpg",
+    echoes: ["longhouses", "vee"],
+    accepted: "2026-08-04",
+  },
 ];
 
 export const cultureTales: CultureTale[] = [
