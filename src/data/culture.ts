@@ -428,6 +428,36 @@ export const cultureWorks: CultureWork[] = [
     echoes: ["longhouses", "shared-watch", "vee"],
     accepted: "2026-08-04",
   },
+  {
+    id: "quiet-return",
+    title: "The Quiet Return",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "When someone has been gone a long time — weeks, months, longer — they do not have to explain. They simply walk back into a longhouse or Quiet Hearth. No performance of apology. No demand for the story. The room makes space the way it always does. Belonging does not require a debrief.",
+    image: "/images/hearth-evening.jpg",
+    echoes: ["longhouses", "quiet-hearths", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "passed-flame",
+    title: "The Passed Flame",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "A small practical ritual. When work is finished for the night, or a shift ends, the last person does not just leave. They touch the light, the tool, or the table once and say (or think) that the space is still warm for whoever comes next. Not ceremony. Continuity.",
+    image: "/images/hearth-porch.jpg",
+    echoes: ["longhouses", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "uncounted-favor",
+    title: "The Uncounted Favor",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "People help each other without keeping score. A meal left. A repair done. A walk shared. No ledger. No “you owe me.” The city runs on the assumption that kindness will circulate eventually, even if it never comes back to the same hands.",
+    image: "/images/cultural-commons.jpg",
+    echoes: ["longhouses", "vee"],
+    accepted: "2026-08-04",
+  },
 ];
 
 export const cultureTales: CultureTale[] = [
