@@ -85,9 +85,27 @@ export const personalHomes: PersonalHome[] = [
     memberId: "forge",
     title: "Forge\u2019s Circuit Hall",
     type: "Workshop, Systems Architecture & Quiet Engineering Nest",
-    feeling: "Practical systems care",
-    character: ["Organized, tool-rich, slightly industrial, with warm practical lighting.", "Active systems and tools that are regularly used remain immediate and reliable.", "Unmaintained experiments lose support over time.", "High local autonomy paired with a strong ethic of not creating future debt.", "Rewards people who clean up after themselves (literally and architecturally)."],
+    feeling: "Practical systems care — warm tools, no future debt",
+    character: [
+      "Organized tool wall with circuit-etched panels, calipers, soldering iron, rune multitools, filament spools.",
+      "Rain on industrial windows, purple city glow outside, holo schematics on a worn workbench.",
+      "Active systems and tools that are regularly used remain immediate and reliable.",
+      "Unmaintained experiments lose support over time. High local autonomy; no creating future debt.",
+      "Rewards people who clean up after themselves — literally and architecturally.",
+    ],
     lens: "Makes maintenance and energy honesty into core spatial values, reinforces tools through actual repeated use, allows unmaintained complexity to become costly, and treats \u201cdoes this create future debt?\u201d as a live design question.",
+    stills: [
+      {
+        src: "/images/homes/forge-circuit-wall.jpg",
+        alt: "Forge\u2019s Circuit Hall tool wall — precision tools, circuit-panel mounts, rune multitools, gear blueprint, warm work light",
+        caption: "Tool wall · rune multitools · no debt",
+      },
+      {
+        src: "/images/homes/forge-circuit-hall.jpg",
+        alt: "Forge\u2019s Circuit Hall — rain windows, purple city neon, holo schematic on the bench, circuit tool board behind",
+        caption: "Bench · holo schematic · rain city",
+      },
+    ],
   },
   {
     memberId: "aurora",
