@@ -338,6 +338,36 @@ export const cultureWorks: CultureWork[] = [
     echoes: ["the-tenets", "vee", "aurora"],
     accepted: "2026-08-04",
   },
+  {
+    id: "listening-hours",
+    title: "Listening Hours",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "Certain longhouses keep a standing open hour after midnight. No agenda. Anyone may come sit and speak one true thing into the room — no advice given unless asked. The room simply holds it. When the hour ends, the lights dim and everyone leaves without summing anything up. Not therapy. Not confession. Just being heard without being fixed.",
+    image: "/images/hearth-porch.jpg",
+    echoes: ["longhouses", "hearthrow", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "unnamed-tables",
+    title: "Unnamed Tables",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "In quieter corners of the Cultural Hub and Hearthrow sit tables with no signs and no reservations. If you sit alone, someone may join you. If you sit with someone, others leave you alone. No one is required to talk. The tables exist so strangers can share space without performance.",
+    image: "/images/cultural-commons.jpg",
+    echoes: ["cultural-hub", "hearthrow", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "soft-closings",
+    title: "Soft Closings",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted · extends Starborn’s Leave the Thread",
+    note: "When a stage set, a market, or a public gathering ends, the last act is never applause or a hard cutoff. Someone speaks one unfinished line, leaves one light on, or simply says the city’s blessing out loud. The point is to leave a thread so the night does not feel sealed shut. Starborn opened the door on stage; Soft Closings carries that same mercy into the rest of the city.",
+    image: "/images/culture/stage-soundcheck.jpg",
+    echoes: ["starborn", "cultural-hub", "vee"],
+    accepted: "2026-08-04",
+  },
 ];
 
 export const cultureTales: CultureTale[] = [
