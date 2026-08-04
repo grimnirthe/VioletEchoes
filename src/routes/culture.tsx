@@ -164,6 +164,8 @@ function CulturePage() {
   const music = cultureWorks.filter((w) => w.kind === "music");
   const art = cultureWorks.filter((w) => w.kind === "art" || w.kind === "mixed");
   const rituals = cultureWorks.filter((w) => w.kind === "ritual");
+  const livingFeatured = rituals.filter((w) => w.featured);
+  const livingMore = rituals.filter((w) => !w.featured);
   const myths = cultureTales.filter((t) => t.kind === "myth");
   const stories = cultureTales.filter((t) => t.kind === "story");
   const urban = cultureTales.filter((t) => t.kind === "urban-myth");
@@ -393,11 +395,48 @@ function CulturePage() {
             <p className="mt-1 max-w-2xl text-sm text-[var(--color-subtle)]">
               {livingPracticesIntro.lead} Memory-warming practices — not liturgy. Plural hearths only.
             </p>
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {rituals.map((w) => (
-                <WorkCard key={w.id} work={w} />
-              ))}
+
+            <div className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+              <img
+                src={livingPracticesIntro.hero.src}
+                alt={livingPracticesIntro.hero.alt}
+                className="aspect-[21/9] w-full object-cover object-center"
+                loading="lazy"
+              />
+              <p className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-center text-xs italic text-[var(--color-muted)] sm:text-left">
+                {livingPracticesIntro.hero.caption}
+              </p>
             </div>
+
+            {livingFeatured.length ? (
+              <div className="mt-8">
+                <h3 className="font-display text-lg text-[var(--color-primary-soft)]">
+                  Soft tissue first
+                </h3>
+                <p className="mt-1 max-w-2xl text-sm text-[var(--color-subtle)]">
+                  {livingPracticesIntro.featuredNote}
+                </p>
+                <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {livingFeatured.map((w) => (
+                    <WorkCard key={w.id} work={w} />
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            {livingMore.length ? (
+              <div className="mt-10">
+                <h3 className="font-display text-lg text-[var(--color-fg)]">More practices</h3>
+                <p className="mt-1 max-w-2xl text-sm text-[var(--color-subtle)]">
+                  {livingPracticesIntro.moreNote}
+                </p>
+                <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {livingMore.map((w) => (
+                    <WorkCard key={w.id} work={w} />
+                  ))}
+                </div>
+              </div>
+            ) : null}
           </section>
         ) : null}
 
