@@ -167,6 +167,9 @@ export const deepSections: Record<string, DeepSection[]> = {
     },
     {
       title: "Why it is still called a bridge",
+      body: [
+        "It is still called a bridge because of what it does — not because it is a single glowing arch.",
+      ],
       bullets: [
         "Bridges distance — without forcing every district through the core",
         "Bridges energy states — outer and inner share circulation without a single high-pressure line",

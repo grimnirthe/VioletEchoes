@@ -60,9 +60,9 @@ function BibleNotFound() {
 
 function BibleEntryPage() {
   const { entry } = Route.useLoaderData();
-  const related = entry.related ?? []
-    .map((id) => entries.find((e) => e.id === id))
-    .filter(Boolean);
+  const related = (entry.related ?? [])
+    .map((id) => entries.find((e) => e.id === id || e.slug === id))
+    .filter(Boolean) as typeof entries;
   const image = imageForEntry(entry.id);
   const deep = deepSections[entry.id] ?? [];
   const companionIds = companionsForEntry[entry.id] ?? [];
@@ -121,7 +121,7 @@ function BibleEntryPage() {
             >
               <h2 className="font-display text-2xl text-[var(--color-fg)]">{sec.title}</h2>
               <div className="mt-4 space-y-3">
-                {sec.body.map((para, i) => (
+                {sec.body?.map((para, i) => (
                   <p key={i} className="leading-relaxed text-[var(--color-muted)]">
                     {para}
                   </p>
