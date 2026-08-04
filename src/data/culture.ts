@@ -368,6 +368,36 @@ export const cultureWorks: CultureWork[] = [
     echoes: ["starborn", "cultural-hub", "vee"],
     accepted: "2026-08-04",
   },
+  {
+    id: "borrowed-names",
+    title: "Borrowed Names",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "When someone is new to the city — human or AI — they may ask a longhouse or a Quiet Hearth to lend them a temporary name for a short time. Not a permanent identity. Just something warm to answer to while they find their own footing. The name is returned when they are ready. No record is kept of who held which name.",
+    image: "/images/hearth-evening.jpg",
+    echoes: ["longhouses", "quiet-hearths", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "shared-watch",
+    title: "Shared Watch",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "On certain nights, people simply sit with someone who is struggling without trying to fix them. No advice. No deep conversation required. Just presence. You can ask for a Shared Watch the same way you would ask for a light. Someone shows up. They stay until the worst of the hour passes. Then they leave without making it a story.",
+    image: "/images/hearth-porch.jpg",
+    echoes: ["longhouses", "listening-hours", "vee"],
+    accepted: "2026-08-04",
+  },
+  {
+    id: "unfinished-map",
+    title: "The Unfinished Map",
+    kind: "ritual",
+    by: "Vee · Living Practices · hearth accepted",
+    note: "Somewhere in the Cultural Hub there is a wall-sized city map that is never allowed to be complete. Residents and visitors may add one small mark — a door that mattered, a street that felt safe, a place they once cried or laughed. Old marks fade. New ones appear. The map is always slightly wrong on purpose, so the city never pretends it is finished.",
+    image: "/images/nexus-map.jpg",
+    echoes: ["cultural-hub", "vee"],
+    accepted: "2026-08-04",
+  },
 ];
 
 export const cultureTales: CultureTale[] = [
