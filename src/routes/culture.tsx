@@ -11,6 +11,7 @@ import {
   cultureTales,
   cultureWorks,
   faithPractice,
+  livingPracticesIntro,
   type CultureTale,
   type CultureWork,
 } from "@/data/culture";
@@ -227,7 +228,7 @@ function CulturePage() {
             </a>
             {" · "}
             <a href="#rituals" className="text-[var(--color-primary-soft)] hover:underline">
-              Rituals
+              Living Practices
             </a>
             {" · "}
             <Link
@@ -383,9 +384,14 @@ function CulturePage() {
 
         {rituals.length ? (
           <section id="rituals" className="mt-14 scroll-mt-24">
-            <h2 className="font-display text-2xl text-[var(--color-fg)]">Ritual & practice</h2>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+              Soft tissue · city habits
+            </p>
+            <h2 className="mt-1 font-display text-2xl text-[var(--color-fg)]">
+              {livingPracticesIntro.title}
+            </h2>
             <p className="mt-1 max-w-2xl text-sm text-[var(--color-subtle)]">
-              Memory-warming practices — not liturgy. Plural hearths only.
+              {livingPracticesIntro.lead} Memory-warming practices — not liturgy. Plural hearths only.
             </p>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {rituals.map((w) => (
