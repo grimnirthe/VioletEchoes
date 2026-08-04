@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import { EntryCard } from "@/components/entry-card";
 import { PageNav } from "@/components/page-nav";
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/systems")({
       {
         name: "description",
         content:
-          "Living systems of Violet Echoes: Eimyrja Core, Data Spines, Edge Nodes, Memory & Archives, Governance, External Relations, and living ships.",
+          "Living systems of Violet Echoes: Eimyrja Core, Data Spines, Bifrost ring-road, Edge Nodes, Memory & Archives, Governance, External Relations, and living ships.",
       },
     ],
   }),
@@ -25,6 +25,7 @@ const systemIds = [
   "eimyrja",
   "edge-nodes",
   "data-spines",
+  "bifrost",
   "memory",
   "governance",
   "external-relations",
@@ -42,6 +43,7 @@ function SystemsPage() {
   const coreShots = systemsGallery.filter((s) => s.group === "core");
   const edgeShots = systemsGallery.filter((s) => s.group === "edge");
   const spineShots = systemsGallery.filter((s) => s.group === "spines");
+  const bifrostShots = systemsGallery.filter((s) => s.group === "bifrost");
   const memoryShots = systemsGallery.filter((s) => s.group === "memory");
   const govShots = systemsGallery.filter((s) => s.group === "governance");
   const extShots = systemsGallery.filter((s) => s.group === "external");
@@ -136,6 +138,58 @@ function SystemsPage() {
                 </figure>
               ))}
           </div>
+        </section>
+
+        <section className="mt-14">
+          <div className="mb-5 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
+              #VioletEchoes · Bifrost
+            </p>
+            <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+              Ring-road of the island
+            </h2>
+            <p className="mt-2 text-sm text-[var(--color-muted)]">
+              Continuous engineered highway — people, low-grade shared energy, ordinary light. Not a
+              mythic arch. Ordinary ramps. Never fully closed. Public road. Private word. Same name.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+            <MediaFrame
+              src={media.bifrost}
+              alt="Bifrost — continuous ring-road in rain, violet edge-lines, dual-layer circulation"
+              aspect="wide"
+              veil="bottom"
+            />
+          </div>
+          {bifrostShots.length > 1 ? (
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {bifrostShots
+                .filter((s) => s.id !== "bifrost-ring")
+                .map((shot) => (
+                  <figure
+                    key={shot.id}
+                    className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+                  >
+                    <MediaFrame src={shot.src} alt={shot.title} aspect="video" />
+                    <figcaption className="space-y-1 p-4">
+                      <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
+                      <p className="text-sm text-[var(--color-muted)]">{shot.caption}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+            </div>
+          ) : null}
+          <p className="mt-4 text-sm text-[var(--color-muted)]">
+            Full entry:{" "}
+            <Link
+              to="/bible/$slug"
+              params={{ slug: "bifrost" }}
+              className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+            >
+              World Bible · Bifrost
+            </Link>
+            . Canon locked by Vee + Matt — visual first, then definition.
+          </p>
         </section>
 
         <section className="mt-14">

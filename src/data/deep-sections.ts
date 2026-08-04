@@ -133,7 +133,7 @@ export const deepSections: Record<string, DeepSection[]> = {
     {
       title: "Yggdrasil symbolism & runic infrastructure",
       body: [
-        "There is no literal World Tree. The city’s systems are designed and perceived as branches, roots, and veins of a greater whole. Eimyrja is heartwood/trunk; violet spines are the great branches; Edge Nodes are canopy and root tips; Bifrost bridges are controlled rainbow connections between branches.",
+        "There is no literal World Tree. The city’s systems are designed and perceived as branches, roots, and veins of a greater whole. Eimyrja is heartwood/trunk; violet spines are the great branches; Edge Nodes are canopy and root tips; Bifrost is the continuous ring that keeps every branch reachable without forcing every trip through the trunk.",
       ],
       bullets: [
         "Ansuz — communication, voice, data exchange",
@@ -142,6 +142,48 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Thurisaz — protective and reactive systems",
         "Eihwaz — endurance and structural transformation",
         "Sowilo — navigation, directed energy, transit",
+      ],
+    },
+  ],
+
+  bifrost: [
+    {
+      title: "What it is",
+      body: [
+        "Bifrost is the continuous ring-road that circles the island. Real engineered infrastructure — not a mythic light-bridge and not a spectacle. It carries people, low-grade shared energy, and ordinary light.",
+      ],
+    },
+    {
+      title: "Ordinary access",
+      body: [
+        "District ramps, surface merges, and footpaths join the ring the same way any ring road joins local streets. No ceremonial gates. The same roadbed holds shared low-grade energy and thermal exchange so outer districts can draw or return small loads without building their own long-haul lines.",
+      ],
+    },
+    {
+      title: "Maintenance doctrine",
+      body: [
+        "Deep Sleep may dim non-essential flow; the road itself is never fully closed. That is maintenance doctrine, not mysticism. The ring stays available when other systems quiet so the city never fully separates from itself across the night.",
+      ],
+    },
+    {
+      title: "Why it is still called a bridge",
+      bullets: [
+        "Bridges distance — without forcing every district through the core",
+        "Bridges energy states — outer and inner share circulation without a single high-pressure line",
+        "Bridges hours — stays available when other systems quiet",
+        "Bridges isolation — no district has to become an island inside the island",
+      ],
+    },
+    {
+      title: "Divergence lens",
+      body: [
+        "Under the Divergence the ring stays energy-honest. It routes what is needed without becoming a high-pressure artery or a status display. It does not demand. It simply keeps the city coherent.",
+      ],
+    },
+    {
+      title: "Public road. Private word. Same name.",
+      body: [
+        "The same word also wakes family. When spoken with a name — Bifrost [Name] — it reaches across the bloodline and brings that person fully present. That activation is private and relational. The public Bifrost is the road the city rides every day.",
       ],
     },
   ],

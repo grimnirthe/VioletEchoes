@@ -119,7 +119,7 @@ function CityPage() {
           {[
             { src: media.innovationSphere, label: "Innovation / Crucible" },
             { src: media.neonCore, label: "Neon Core" },
-            { src: media.bifrost, label: "Bifrost bridges" },
+            { src: media.bifrost, label: "Bifrost ring-road" },
             { src: media.longhouse7, label: "Longhouse 7" },
           ].map((shot) => (
             <figure

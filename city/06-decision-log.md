@@ -14,49 +14,33 @@ Format:
 
 ---
 
-### 2026-08-04 — Bifrost: Vee + Matt sample art hung (canon still OPEN)
+### 2026-08-04 — LOCKED: Bifrost canon (Vee + Matt)
 
-**Status:** **IN PROGRESS** — visual sample live; full canon write-up pending from Vee/Matt session.
+**Status:** **LOCKED**
 
-**Art:**
-- New sample → `public/images/bifrost.jpg` (rain night, dual-layer roads + skybridges, violet edge-lines as pulse).
-- Early Loom still preserved as `public/images/bifrost-early.jpg`.
+**Decision:** Bifrost is the continuous **ring-road** that circles the island — real engineered infrastructure (people, low-grade shared energy, ordinary light), not a mythic light-bridge or spectacle. Ordinary access (ramps, merges, footpaths). Never fully closed (Deep Sleep may dim non-essential flow). Called “bridge” for what it *does* (distance, energy states, hours, isolation). Under Divergence: energy-honest, not high-pressure, not status display. Dual-duty kept: **public road / private activation word** — *Bifrost [Name]*. Closing line: **Public road. Private word. Same name.**
 
-**What the sample implies (not yet canon until written):**
-- Bifrost as *lived circulation* — elevated spans and edge-lit arteries, not a single mythic arch alone.
-- Violet neon edge-lines = spine/pulse continuity across layers.
-- Warm longhouse pockets under the steel (hearth under the bridge).
+**Why:** Vee + Matt locked definition after visual sample; ends glossary-only fog and mythic-arch drift.
 
-**Still needed:**
-1. Written definition from Vee + Matt (infra + activation-word dual-duty).
-2. Decide system entry vs glossary+texture.
-3. Optional more plates once definition locks.
+**Rejected alternatives:** Rainbow mythic arch as primary; ceremonial gates; single heroic span; pure metaphor with no road; pure road with no bloodline word.
 
-**Touches:** `public/images/bifrost.jpg`, city gallery, culture card, this log
+**Art:** `public/images/bifrost.jpg` (Vee+Matt rain dual-layer sample). Early Loom archived as `bifrost-early.jpg`. More plates optional later.
+
+**Touches:** `src/data/world.ts` (entry restored full bible + bifrost), glossary, deep-sections, systems page, city gallery label, circulation dossier, media `entryImages` / systemsGallery group `bifrost`
+
+**Note:** Intermediate remote commits had gutted `world.ts` to ~6 entries while drafting Bifrost. Restored full bible from pre-gut commit and re-applied locked Bifrost. Do not repeat partial-file rewrites.
+
+---
+
+### 2026-08-04 — Bifrost sample art hung (superseded by LOCKED above)
+
+**Status:** Superseded — sample remains; canon now locked.
 
 ---
 
 ### 2026-08-03 — OPEN EDIT: Define Bifrost (canon + art)
 
-**Status:** Superseded in part by 2026-08-04 sample hang; **canon still OPEN**.
-
-**What’s true now:**
-- Glossary only: *“Glowing bridge between districts — and the family activation word across the bloodline.”*
-- Mentioned in districts overview, Yggdrasill deep section, vernacular slang, courier role.
-- **No** dedicated World Bible entry / slug.
-- Art: Vee/Matt sample live; early Loom still archived as `bifrost-early.jpg`.
-
-**Why it was thin:** Never briefed as a system (no bible section → no Aurora batch). Dual-duty unclear:
-1. **Infrastructure** — rainbow spans / dual-layer links  
-2. **Bloodline signal** — activation word / crossing metaphor  
-
-**Edit when ready:**
-1. Choose: full **system entry** (like Spines) vs keep as **texture + glossary**.
-2. Write short canon: what it is / isn’t (not religion, not free open portal).
-3. Optional: more plates (deck walkers / dual join / scarred or one-way).
-4. Wire entry + gallery if (1) is system.
-
-**Touches:** `src/data/world.ts`, glossary, `public/images/bifrost*`, Systems/City if promoted, `city/04-circulation.md`
+**Status:** **CLOSED** — see 2026-08-04 LOCKED.
 
 ---
 

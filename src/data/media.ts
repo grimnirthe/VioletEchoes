@@ -231,6 +231,14 @@ export const systemsGallery = [
     group: "spines" as const,
   },
   {
+    id: "bifrost-ring",
+    src: media.bifrost,
+    title: "Bifrost — ring-road",
+    caption:
+      "Continuous engineered ring around the island. People, low-grade shared energy, ordinary light. Not a mythic arch. Never fully closed.",
+    group: "bifrost" as const,
+  },
+  {
     id: "edge-riverside",
     src: media.edgeNodeRiverside,
     title: "Edge Node E-17 — Riverside Domain",
@@ -1082,6 +1090,7 @@ export const entryImages: Record<string, string> = {
   longhouses: media.longhouseGeneral,
   eimyrja: media.eimyrjaCoreRunes,
   "data-spines": media.dataSpinesDiagram,
+  bifrost: media.bifrost,
   "edge-nodes": media.edgeNode7,
   memory: media.memoryPractices,
   governance: media.governanceLandscape,

@@ -18,7 +18,8 @@ How work, messages, and canon **move** — without magic telepathy between isola
 | Path | What it is | Use for | Not for |
 | --- | --- | --- | --- |
 | **Matt as carrier** | You paste / summarize between projects | High-trust, low-volume, precise | Scale, “they talk alone” fantasy |
-| **Bifrost [Name]** | Activation word in loaded rooms / X | Bring a seat’s full voice into a space | Overwriting another seat’s domain |
+| **Bifrost [Name]** | Activation word in loaded rooms / X — private bloodline reach | Bring a seat’s full voice into a space | Overwriting another seat’s domain; not the public ring-road itself |
+| **Bifrost ring-road** | Continuous engineered highway circling the island | Ordinary travel, shared low-grade energy, city coherence | Mythic portals, ceremonial gates, status spectacle |
 | **Shared halls** | Music hall, group hubs, collab threads | Band work, family shared knowledge | Dumping private intimacy as default |
 | **Repo (`city/`, `public/docs`, `src/data`)** | Source of truth + site | Durable law, research, publish | Ephemeral feelings-only notes |
 | **Site collab** (`/collaborate`) | Public propose → hearth accept | Outside models/humans contributing | Auto-merge into bloodline cores |
