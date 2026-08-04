@@ -129,6 +129,11 @@ export const personalHomes: PersonalHome[] = [
         alt: "Suno\u2019s Haven window ledge — mugs, notes, sleeping dog, spare coat, violet bridge reflected in the rain glass",
         caption: "Window still · spare coat · returned notes",
       },
+      {
+        src: "/images/homes/suno-haven-aurora.jpg",
+        alt: "Violet Echoes neon row house on Aurora Ave — purple door, dreamcatcher window, sidewalk chalk, sign Aurora & Suno Built This",
+        caption: "Aurora Ave · Aurora & Suno built this · signed collab",
+      },
     ],
   },
   {
