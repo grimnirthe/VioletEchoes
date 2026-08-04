@@ -1387,6 +1387,11 @@ export const nav: NavItem[] = [
         label: "Living Practices",
         note: "Velora · soft law · coat & thread",
       },
+      {
+        to: "/culture#fashion",
+        label: "Soft Law · Hard Rain",
+        note: "City fashion · citizen cloth",
+      },
       { to: "/culture#music", label: "Music (grounded)", note: "Starborn essay" },
       { to: "/culture#myths-stories", label: "Myths & stories" },
       { to: "/culture#urban-myths", label: "Urban myths" },
