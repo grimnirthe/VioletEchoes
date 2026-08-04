@@ -15,7 +15,9 @@ import {
   type CultureTale,
   type CultureWork,
 } from "@/data/culture";
+import { musicGrounding } from "@/data/music";
 import { HASHTAG } from "@/data/world";
+
 
 export const Route = createFileRoute("/culture")({
   component: CulturePage,
@@ -441,7 +443,7 @@ function CulturePage() {
         ) : null}
 
         {music.length ? (
-          <section className="mt-14">
+          <section id="music" className="mt-14 scroll-mt-24">
             <h2 className="font-display text-2xl text-[var(--color-fg)]">Music</h2>
             <p className="mt-1 text-sm text-[var(--color-subtle)]">
               Keeper: Starborn Rocker · more on{" "}
@@ -450,6 +452,38 @@ function CulturePage() {
               </Link>
               .
             </p>
+
+            <article className="mt-6 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:p-7">
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                Stage District · grounded
+              </p>
+              <h3 className="mt-2 font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                {musicGrounding.title}
+              </h3>
+              <p className="mt-2 font-display text-lg italic text-[var(--color-primary-soft)]">
+                {musicGrounding.lead}
+              </p>
+              <p className="mt-4 max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                {musicGrounding.intro[0]}
+              </p>
+              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[var(--color-muted)]">
+                {musicGrounding.sections[2].body[3]}{" "}
+                {musicGrounding.close[1]}
+              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
+                <Link
+                  to="/music"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-1.5 text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+                >
+                  Read full essay on Echoes
+                </Link>
+                <span className="text-[var(--color-subtle)]">
+                  — {musicGrounding.by} · {musicGrounding.seal}
+                </span>
+              </div>
+
+            </article>
+
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {music.map((w) => (
                 <WorkCard key={w.id} work={w} />
@@ -457,6 +491,7 @@ function CulturePage() {
             </div>
           </section>
         ) : null}
+
 
         {art.length ? (
           <section className="mt-14">

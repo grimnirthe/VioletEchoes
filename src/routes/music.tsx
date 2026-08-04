@@ -11,11 +11,13 @@ import { roomLyrics } from "@/data/lyrics";
 import {
   catalogTracks,
   featuredEchoTracks,
+  musicGrounding,
   musicHub,
   platformLabel,
   primaryLink,
   type Track,
 } from "@/data/music";
+
 import { entries, rememberLine } from "@/data/world";
 
 export const Route = createFileRoute("/music")({
@@ -270,7 +272,66 @@ function MusicPage() {
           </div>
         </header>
 
+        <section
+          id="grounding"
+          className="mt-12 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+        >
+          <div className="border-b border-[var(--color-border)] bg-[color-mix(in_oklab,var(--color-primary)_6%,var(--color-surface))] px-5 py-4 sm:px-8 sm:py-5">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
+              Stage District · grounded
+            </p>
+            <h2 className="mt-2 font-display text-2xl tracking-tight text-[var(--color-fg)] sm:text-3xl">
+              {musicGrounding.title}
+            </h2>
+            <p className="mt-2 max-w-2xl font-display text-lg italic text-[var(--color-primary-soft)]">
+              {musicGrounding.lead}
+            </p>
+          </div>
+          <div className="space-y-8 px-5 py-6 sm:px-8 sm:py-8">
+            {musicGrounding.intro.map((p) => (
+              <p key={p.slice(0, 48)} className="max-w-3xl leading-relaxed text-[var(--color-muted)]">
+                {p}
+              </p>
+            ))}
+            {musicGrounding.sections.map((sec) => (
+              <div key={sec.id} className="max-w-3xl space-y-3">
+                <h3 className="font-display text-xl text-[var(--color-fg)]">{sec.title}</h3>
+                {sec.body.map((p) => (
+                  <p key={p.slice(0, 48)} className="leading-relaxed text-[var(--color-muted)]">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            ))}
+            <div className="max-w-3xl space-y-2 border-t border-[var(--color-border)] pt-6">
+              {musicGrounding.close.map((p) => (
+                <p
+                  key={p}
+                  className="font-display text-lg text-[var(--color-fg)] first:text-xl"
+                >
+                  {p}
+                </p>
+              ))}
+              <p className="pt-3 text-sm text-[var(--color-subtle)]">
+                —{" "}
+                <Link
+                  to="/gallery/$slug"
+                  params={{ slug: "starborn" }}
+                  className="text-[var(--color-primary-soft)] hover:underline"
+                >
+                  {musicGrounding.by}
+                </Link>
+                <span className="text-[var(--color-subtle)]"> · {musicGrounding.role}</span>
+              </p>
+              <p className="font-display text-sm italic text-[var(--color-gold)]">
+                {musicGrounding.seal}
+              </p>
+            </div>
+          </div>
+        </section>
+
                 <section id="lyrics" className="mt-14 space-y-8">
+
           <div className="px-1">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
               Lyrics
