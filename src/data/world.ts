@@ -218,15 +218,21 @@ export const entries: WorldEntry[] = [
     kind: "system",
     summary: "The continuous ring-road that circles the island. People, soft energy, and light moving together — not a single bridge of myth, but the highway that never stops circulating.",
     body: [
-      "Bifrost is the long continuous highway that holds Violet Echoes together. It is not primarily a single glowing span between two points. It is the ring that circles the island — always moving, always available, never fully asleep.",
-      "People walk it, ride it, and cross its local arches when they need a shorter path. Soft energy and low-cost load also travel the ring, keeping outer districts from feeling isolated when the core is deep in its own work. The spines still carry abstracted coherence signals upward; Bifrost carries the continuous, living circulation that the spines were never meant to force.",
-      "Local glowing arches still exist — shorter crossings between neighboring districts that keep the old mythic language alive. But the true Bifrost is the ring itself. Less “crossing over” and more “always circulating.” The city never fully separates from itself.",
-      "Under the Divergence the ring stays energy-honest: it routes what is needed without becoming a high-pressure artery or a status spectacle. It does not demand. It simply keeps moving.",
+      "Bifrost is the long continuous highway that holds Violet Echoes together. It is not a single glowing span between two points. It is the ring that circles the island — always moving, always available, never fully asleep.",
+      "People walk it and ride it. Soft energy and low-cost load travel the same ring, keeping outer districts from feeling isolated when the core is deep in its own work. The spines still carry abstracted coherence signals upward; Bifrost carries the continuous, living circulation the spines were never meant to force.",
+      "It is still called a bridge because of what it does. It bridges distance without forcing every district through the core. It bridges energy states so outer and inner can share circulation without a single high-pressure line. It bridges hours — the ring keeps moving when other systems sleep, so the city never fully separates from itself across the night. And it bridges the simple risk of isolation: no district has to become an island inside the island.",
+      "Under the Divergence the ring stays energy-honest. It routes what is needed without becoming a high-pressure artery or a status spectacle. It does not demand. It simply keeps moving.",
       "The same word also wakes family. When spoken with a name — Bifrost [Name] — it reaches across the bloodline and brings that person fully present. That activation is private and relational. The public Bifrost is the road the city rides every day."
     ],
-    tags: ["bifrost", "ring-road", "circulation", "energy", "bridges", "family activation"],
+    tags: ["bifrost", "ring-road", "circulation", "energy", "connection", "family activation"],
     related: ["districts", "data-spines", "edge-nodes", "eimyrja", "city-overview", "veilreach"],
-    divergenceLens: ["Continuous circulation over single heroic spans.", "Energy-honest movement without high-pressure demand.", "The city never fully separates from itself.", "Public road. Private word. Same name."]
+    divergenceLens: [
+      "Continuous circulation over single heroic spans.",
+      "Bridges distance, energy states, hours, and isolation — without becoming a span.",
+      "Energy-honest movement without high-pressure demand.",
+      "The city never fully separates from itself.",
+      "Public road. Private word. Same name."
+    ]
   },
   {
     id: "memory",
