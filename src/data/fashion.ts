@@ -25,7 +25,7 @@ export type FashionLook = {
   seed: string;
   note: string;
   image: string;
-  wave: 1 | 2 | 3;
+  wave: 1 | 2 | 3 | 4;
   lock: FashionLock;
 };
 
@@ -37,12 +37,13 @@ export const fashionLine = {
   by: "Velora Runeweaver",
   byHref: "/gallery/velora",
   role: "Master Fashion Artist · Living Atelier · Visual Commons",
-  wave: "Waves 1–3 · sixteen looks",
+  wave: "Waves 1–4 · twenty looks",
   accepted: "2026-08-04",
   body: [
     "Family fashion proves bloodline heat. Citizen samples prove the city.",
     "This line is street cloth — rain-ready without tactical cosplay, timber and circuit and cloth in the same body, violet and gold as accent only. Soft law in the cut: repairable, returnable, worn-in.",
     "Wave 1 proved the street. Wave 2 widened the map. Wave 3 fills gaps — Harborward oilcloth, High Quiet hush, Veilreach unfinished path, Grid Tender civic care.",
+    "Wave 4 is the risk chapter: Innovation warmth, Neon Core rain-survived heat, Green Spaces living systems, and Assembly Soft — higher-up council cloth without corporate cosplay.",
     "Anonymous fit. Cloth first. Face secondary. No regalia reuse, no Starborn master sheet, no fake brand text.",
   ],
   hardLocks: [
@@ -70,6 +71,10 @@ export const fashionLine = {
     3: {
       title: "Wave 3 · the gaps",
       lead: "Harborward oilcloth, High Quiet hush, Veilreach unfinished path, Grid Tender civic care. Map chapter, not a dump.",
+    },
+    4: {
+      title: "Wave 4 · the risk chapter",
+      lead: "Innovation lab warmth, Neon Core without Night City cosplay, Green Field systems care, Assembly Soft higher-up cloth. Same law. Harder art direction.",
     },
   },
   acceptedBy:
@@ -599,10 +604,146 @@ export const fashionLooks: FashionLook[] = [
       ],
       coverage: "Water, light, ramp honesty shifts — ordinary infrastructure hours",
     },
+  },,
+
+  {
+    id: "innovation-lab",
+    num: "17",
+    title: "Innovation Lab",
+    slot: "Innovation District · warm tools not sterile",
+    district: "Innovation",
+    wave: 4,
+    seed: "Soft charcoal-cream work coat with repairable tool loops; violet only at pocket edge; wet-floor boots — human lab, not hospital TV.",
+    note: "Warm tools. Repairable loops. No sterile cosplay. Innovation that still looks worn-in.",
+    image: "/images/culture/fashion/17-innovation-lab.jpg",
+    lock: {
+      silhouette:
+        "Soft work coat over simple layers; tool loops that re-stitch; practical trousers; wet-floor boots",
+      materials: [
+        "soft water-shed lab cloth",
+        "repairable tool loops",
+        "worn work boots",
+        "timber-toggle or quiet zip",
+      ],
+      colors:
+        "Warm cream and charcoal; muted violet only at pocket edge or loop stitch",
+      rainLogic: "Coat sheds splash on district walks between labs; boots for wet floors",
+      repair: "Loops and pocket panels replaceable from innovation bins; darn is legal",
+      accents: "Single violet pocket-edge stitch — never full coat paint",
+      never: [
+        "sterile white hospital TV coat",
+        "full violet paint",
+        "family crest",
+        "chrome greeble cosplay",
+        "logo patch brand",
+      ],
+      coverage: "Lab and between-building rain; honest work hours",
+    },
   },
+  {
+    id: "neon-core-drip",
+    num: "18",
+    title: "Neon Core Drip",
+    slot: "Neon Core · rain-survived heat",
+    district: "Neon Core",
+    wave: 4,
+    seed: "Dark worn rain layers; neon only as wet reflection and thin seam piping — signal without costume, not generic Night City drip.",
+    note: "Heat that survived rain. Accent piping, not LED bodysuit. Bought for the street, not the gram.",
+    image: "/images/culture/fashion/18-neon-core-drip.jpg",
+    lock: {
+      silhouette:
+        "Layered rain-cut coat and soft underlayers; hood optional; practical trousers; street boots",
+      materials: [
+        "worn water-shed cloth",
+        "soft leather or cloth mix",
+        "thin reflective seam piping",
+      ],
+      colors:
+        "Black and deep charcoal base; violet/cyan only as neon reflections and thin piping accents",
+      rainLogic: "Commercial-heart rain; coat fully closes; hem clears deep puddles",
+      repair: "Panels and piping re-stitchable; scuffs stay — new is not the point",
+      accents: "Thin seam piping only — half-step, not full LED suit",
+      never: [
+        "generic Night City logo drip",
+        "full LED bodysuit",
+        "paint-splatter identity",
+        "family marks",
+        "fake brand text",
+      ],
+      coverage: "Neon Core night rain and high signal hours",
+    },
+  },
+  {
+    id: "green-field",
+    num: "19",
+    title: "Green Field",
+    slot: "Green Spaces · ecological heatsinks",
+    district: "Green Spaces",
+    wave: 4,
+    seed: "Weather shell, soil-practical trousers, plant/water pouch; muted green-earth with single violet stitch — living systems care, not elf-ranger LARP.",
+    note: "Ecology with dual-layer city still in the cut. Soft tech optional. No fantasy ranger kit.",
+    image: "/images/culture/fashion/19-green-field.jpg",
+    lock: {
+      silhouette:
+        "Light weather shell; soil-practical trousers; small plant/water tool pouch at hip or belt",
+      materials: [
+        "breathable weather shell",
+        "soil-smart cloth trousers",
+        "small soft tool pouch",
+      ],
+      colors:
+        "Muted green and earth; single violet stitch or zipper accent only",
+      rainLogic: "Mist and soft rain in ecological corridors; shell packs small",
+      repair: "Knees and pouch straps re-stitchable; dirt is not damage",
+      accents: "One violet stitch line — living systems, not fashion flood",
+      never: [
+        "elf ranger LARP",
+        "full camo cosplay",
+        "family crest",
+        "gold trim flood",
+      ],
+      coverage: "Green Spaces work and walk hours; heatsink edges",
+    },
+  },
+  {
+    id: "assembly-soft",
+    num: "20",
+    title: "Assembly Soft",
+    slot: "Higher-up · resource councils · soft corporate",
+    district: "Municipal · multi-layer governance",
+    wave: 4,
+    seed: "Quiet authority coat for humans who sit resource councils — worn-in excellent cloth, violet lining flash only, tablet not chrome throne prop. Corporate without corporate cosplay.",
+    note: "Higher-up human cloth. Not Spire monochrome (that’s 10). Not bloodline heat. Power that allocates, recommends, constrains — and still walks home in the rain.",
+    image: "/images/culture/fashion/20-assembly-soft.jpg",
+    lock: {
+      silhouette:
+        "Long refined coat over high soft knit or tailored base; clean line; soft ledger or tablet carried, not brandished",
+      materials: [
+        "excellent worn-in wool-blend or rain-smart formal cloth",
+        "soft knit underlayer",
+        "quiet fasteners",
+      ],
+      colors:
+        "Deep ink and warm grey; violet only as lining flash when walking; gold almost absent",
+      rainLogic: "Coat seals for district-to-assembly rain; lining protected; hem practical",
+      repair:
+        "Invisible mend preferred but legal; excellence includes longevity, not disposability",
+      accents: "Violet lining breath only — never full-body paint or rank medals",
+      never: [
+        "CEO superhero cape",
+        "logo power suit",
+        "chrome throne prop",
+        "family regalia",
+        "gold flood",
+        "Spire monochrome clone of look 10",
+      ],
+      coverage: "Council, resource assembly, and the walk home — soft corporate hours",
+    },
+  },
+
 ];
 
-export const fashionLooksWave = (wave: 1 | 2 | 3) =>
+export const fashionLooksWave = (wave: 1 | 2 | 3 | 4) =>
   fashionLooks.filter((l) => l.wave === wave);
 
 export const fashionLookById = (id: string) =>
