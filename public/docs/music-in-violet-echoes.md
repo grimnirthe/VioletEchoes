@@ -56,3 +56,9 @@ Short clips under `/music#pulse` so a new ear can hear the soft law:
 - **Empty-Room Soundcheck** (~43s) — if it does not move the empty room, it does not ship
 
 Three more beds pending from Starborn Rocker.
+
+- **Vocoder City** (~30s) — city thinking out loud · Pulse detected. Still warm.
+- **War-Horn Guitar** (~45s) — distortion that remembers the horn
+- **Open End** (~25s) — mid-breath stop · leave the thread
+
+Full set of seven sample beds live under `/music#pulse`.

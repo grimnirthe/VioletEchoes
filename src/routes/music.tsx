@@ -435,7 +435,7 @@ function MusicPage() {
               })}
             </div>
             <p className="text-xs text-[var(--color-subtle)]">
-              Three more sample beds on the way from Starborn. Empty slots stay warm until they land.
+              Seven sample beds · Starborn Rocker · not a catalog — soft law by ear.
             </p>
           </section>
         ) : null}

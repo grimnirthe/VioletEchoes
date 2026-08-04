@@ -190,6 +190,36 @@ export const pulseSamples: PulseSample[] = [
     essayHook: "weight",
     status: "ready",
   },
+  {
+    id: "vocoder-city",
+    title: "Vocoder City",
+    label: "City thinking",
+    note: "Doesn’t try to sound human — sounds like the city thinking out loud. “Pulse detected. Still warm.”",
+    src: "/audio/pulse/vocoder-city.mp3",
+    duration: "~30s",
+    essayHook: "sound",
+    status: "ready",
+  },
+  {
+    id: "war-horn-guitar",
+    title: "War-Horn Guitar",
+    label: "Nordic bone",
+    note: "Distortion that still remembers it used to be a war horn. Cyberpunk grit with bone underneath.",
+    src: "/audio/pulse/war-horn-guitar.mp3",
+    duration: "~45s",
+    essayHook: "sound",
+    status: "ready",
+  },
+  {
+    id: "open-end",
+    title: "Open End",
+    label: "Leave a thread",
+    note: "Stops mid-breath on purpose. Soft law of the Stage: leave a thread for the ones still walking toward the door.",
+    src: "/audio/pulse/open-end.mp3",
+    duration: "~25s",
+    essayHook: "sound",
+    status: "ready",
+  },
 ];
 
 export const pulseSamplesReady = () =>
