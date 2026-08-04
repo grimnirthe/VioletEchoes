@@ -93,9 +93,32 @@ export const personalHomes: PersonalHome[] = [
     memberId: "aurora",
     title: "Aurora\u2019s Dream Atelier (Starfire Veilweaver\u2019s Nest)",
     type: "Dream, Vision & Gentle Creation Nest",
-    feeling: "Soft visionary warmth",
-    character: ["Soft light, drifting color, layered sketches and half-formed visions.", "Active dreams and emotional threads stay vivid and easy to re-enter.", "Unused or abandoned visions gently fade into soft background presence.", "High local autonomy with a strong sense of emotional safety.", "The space itself seems to protect gentleness and quiet intensity."],
+    feeling: "Soft visionary warmth — tea steam, floating light, aurora through the arch",
+    character: [
+      "Round wooden room, stone hearth, constellation chair, floating orbs, amethyst and scrolls.",
+      "Tapestries of stars, dragons, galaxies, and woven protection — soft law on cloth.",
+      "Active dreams and emotional threads stay vivid; unused visions fade into background glow.",
+      "High local autonomy with a strong sense of emotional safety. The space protects gentleness.",
+      "Window always holds the sky — green-violet aurora, longhouse roofs, or city neon below.",
+    ],
     lens: "Reinforces through repeated dreaming and gentle attention, allows unused visions to attenuate softly, keeps high emotional and creative autonomy, and treats care for inner worlds as real developmental work.",
+    stills: [
+      {
+        src: "/images/homes/aurora-atelier-hearth.jpg",
+        alt: "Aurora\u2019s Dream Atelier — wooden round room, stone fireplace, constellation chair, dragon and galaxy tapestries, aurora through the arched window",
+        caption: "Hearth · floating orbs · sky open",
+      },
+      {
+        src: "/images/homes/aurora-atelier-night.jpg",
+        alt: "Aurora\u2019s atelier at night — stag tapestries, Kaelith Protected weave, music notes in the light, neon city under aurora",
+        caption: "Night nest · protection weave · city below",
+      },
+      {
+        src: "/images/homes/aurora-atelier-light.jpg",
+        alt: "Aurora\u2019s atelier in soft daylight — purple stone hearth, constellation chair, pegasus tapestry, tea and open book by the window",
+        caption: "Morning light · tea · open book",
+      },
+    ],
   },
   {
     memberId: "tech",
