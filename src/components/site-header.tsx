@@ -11,7 +11,15 @@ import {
   Users,
   MoreHorizontal,
 } from "lucide-react";
-import { FormEvent, useEffect, useId, useRef, useState } from "react";
+import {
+  FormEvent,
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
+import { createPortal } from "react-dom";
 import { media } from "@/data/media";
 import { HASHTAG, nav, siteMeta, type NavItem, type NavLink } from "@/data/world";
 import { cn } from "@/lib/utils";
@@ -54,15 +62,49 @@ function NavDropdown({
 }) {
   const panelId = useId();
   const wrapRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const [coords, setCoords] = useState<{ top: number; left: number } | null>(
+    null,
+  );
   const Icon = icons[item.to] ?? Home;
   const active =
     isActive(pathname, item.to) ||
     (item.children?.some((c) => isActive(pathname, c.to)) ?? false);
 
+  // Fixed + portal so the menu escapes nav overflow-x-auto (absolute panels
+  // were clipped to ~one line and sat under the tenets ticker).
+  useLayoutEffect(() => {
+    if (!open || !wrapRef.current) {
+      setCoords(null);
+      return;
+    }
+    function place() {
+      const el = wrapRef.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const panelW = panelRef.current?.offsetWidth ?? 248;
+      const maxLeft = Math.max(8, window.innerWidth - panelW - 8);
+      setCoords({
+        top: r.bottom + 4,
+        left: Math.min(Math.max(8, r.left), maxLeft),
+      });
+    }
+    place();
+    window.addEventListener("resize", place);
+    window.addEventListener("scroll", place, true);
+    return () => {
+      window.removeEventListener("resize", place);
+      window.removeEventListener("scroll", place, true);
+    };
+  }, [open]);
+
   useEffect(() => {
     if (!open) return;
     function onDoc(e: MouseEvent) {
-      if (!wrapRef.current?.contains(e.target as Node)) onClose();
+      const t = e.target as Node;
+      if (wrapRef.current?.contains(t)) return;
+      if (panelRef.current?.contains(t)) return;
+      onClose();
     }
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -75,6 +117,75 @@ function NavDropdown({
     };
   }, [open, onClose]);
 
+  const panel =
+    open && coords
+      ? createPortal(
+          <div
+            ref={panelRef}
+            id={panelId}
+            role="menu"
+            className="fixed z-[80] min-w-[15.5rem] max-w-[min(20rem,calc(100vw-1rem))]"
+            style={{ top: coords.top, left: coords.left }}
+            onMouseEnter={() => {
+              if (window.matchMedia("(hover: hover)").matches) onOpen();
+            }}
+            onMouseLeave={() => {
+              if (window.matchMedia("(hover: hover)").matches) onClose();
+            }}
+          >
+            <div className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] py-1.5 shadow-[0_12px_40px_color-mix(in_oklab,var(--color-bg)_70%,transparent)]">
+              <p className="px-3 pb-1.5 pt-1 text-[0.65rem] uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                {item.label}
+              </p>
+              {(item.children as NavLink[]).map((child) => {
+                const { path, hash } = splitHref(child.to);
+                const className = cn(
+                  "block px-3 py-2 transition-colors",
+                  "text-[var(--color-fg)] hover:bg-[var(--color-surface-2)] hover:text-[var(--color-primary-soft)]",
+                );
+                const body = (
+                  <>
+                    <span className="block text-sm font-medium leading-tight">
+                      {child.label}
+                    </span>
+                    {child.note ? (
+                      <span className="mt-0.5 block text-xs text-[var(--color-subtle)]">
+                        {child.note}
+                      </span>
+                    ) : null}
+                  </>
+                );
+                if (hash) {
+                  return (
+                    <a
+                      key={child.to}
+                      href={child.to}
+                      role="menuitem"
+                      className={className}
+                      onClick={onClose}
+                    >
+                      {body}
+                    </a>
+                  );
+                }
+                return (
+                  <Link
+                    key={child.to}
+                    to={path}
+                    role="menuitem"
+                    className={className}
+                    onClick={onClose}
+                  >
+                    {body}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>,
+          document.body,
+        )
+      : null;
+
   return (
     <div
       ref={wrapRef}
@@ -83,7 +194,18 @@ function NavDropdown({
         if (window.matchMedia("(hover: hover)").matches) onOpen();
       }}
       onMouseLeave={() => {
-        if (window.matchMedia("(hover: hover)").matches) onClose();
+        if (!window.matchMedia("(hover: hover)").matches) return;
+        // Panel is portaled — keep open until panel leave or outside click.
+        // Brief delay so the pointer can cross into the fixed menu.
+        window.setTimeout(() => {
+          if (
+            panelRef.current?.matches(":hover") ||
+            wrapRef.current?.matches(":hover")
+          ) {
+            return;
+          }
+          onClose();
+        }, 120);
       }}
     >
       <div className="flex items-center">
@@ -115,67 +237,14 @@ function NavDropdown({
           onClick={() => (open ? onClose() : onOpen())}
         >
           <ChevronDown
-            className={cn("h-3.5 w-3.5 transition-transform", open && "rotate-180")}
+            className={cn(
+              "h-3.5 w-3.5 transition-transform",
+              open && "rotate-180",
+            )}
           />
         </button>
       </div>
-
-      {open ? (
-        <div
-          id={panelId}
-          role="menu"
-          className="absolute left-0 top-full z-50 min-w-[15.5rem] pt-1"
-        >
-          <div className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] py-1.5 shadow-[0_12px_40px_color-mix(in_oklab,var(--color-bg)_70%,transparent)]">
-            <p className="px-3 pb-1.5 pt-1 text-[0.65rem] uppercase tracking-[0.16em] text-[var(--color-gold)]">
-              {item.label}
-            </p>
-            {(item.children as NavLink[]).map((child) => {
-              const { path, hash } = splitHref(child.to);
-              const className = cn(
-                "block px-3 py-2 transition-colors",
-                "text-[var(--color-fg)] hover:bg-[var(--color-surface-2)] hover:text-[var(--color-primary-soft)]",
-              );
-              const body = (
-                <>
-                  <span className="block text-sm font-medium leading-tight">{child.label}</span>
-                  {child.note ? (
-                    <span className="mt-0.5 block text-xs text-[var(--color-subtle)]">
-                      {child.note}
-                    </span>
-                  ) : null}
-                </>
-              );
-              // Hash targets use plain anchors so the browser scrolls to the section.
-              if (hash) {
-                return (
-                  <a
-                    key={child.to}
-                    href={child.to}
-                    role="menuitem"
-                    className={className}
-                    onClick={onClose}
-                  >
-                    {body}
-                  </a>
-                );
-              }
-              return (
-                <Link
-                  key={child.to}
-                  to={path}
-                  role="menuitem"
-                  className={className}
-                  onClick={onClose}
-                >
-                  {body}
-                </Link>
-              );
-            })}
-
-          </div>
-        </div>
-      ) : null}
+      {panel}
     </div>
   );
 }
@@ -203,7 +272,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)]/80 bg-[color-mix(in_oklab,var(--color-bg)_92%,transparent)] backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6">
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <Link to="/" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
+          <Link
+            to="/"
+            className="group flex min-w-0 items-center gap-2.5 sm:gap-3"
+          >
             <img
               src={media.logoMark}
               alt=""
@@ -251,7 +323,10 @@ export function SiteHeader() {
         </Link>
       </div>
 
-      <nav aria-label="Primary" className="border-t border-[var(--color-border)]/60">
+      <nav
+        aria-label="Primary"
+        className="border-t border-[var(--color-border)]/60"
+      >
         <div className="mx-auto flex max-w-6xl items-center gap-0.5 overflow-x-auto px-2 py-1.5 sm:gap-1 sm:px-4">
           {nav.map((item) => {
             if (!item.children?.length) {
@@ -280,7 +355,9 @@ export function SiteHeader() {
                 pathname={pathname}
                 open={openKey === item.label}
                 onOpen={() => setOpenKey(item.label)}
-                onClose={() => setOpenKey((k) => (k === item.label ? null : k))}
+                onClose={() =>
+                  setOpenKey((k) => (k === item.label ? null : k))
+                }
               />
             );
           })}
