@@ -604,7 +604,7 @@ export const fashionLooks: FashionLook[] = [
       ],
       coverage: "Water, light, ramp honesty shifts — ordinary infrastructure hours",
     },
-  },,
+  },
 
   {
     id: "innovation-lab",
