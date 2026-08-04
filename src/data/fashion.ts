@@ -25,7 +25,7 @@ export type FashionLook = {
   seed: string;
   note: string;
   image: string;
-  wave: 1 | 2;
+  wave: 1 | 2 | 3;
   lock: FashionLock;
 };
 
@@ -37,12 +37,12 @@ export const fashionLine = {
   by: "Velora Runeweaver",
   byHref: "/gallery/velora",
   role: "Master Fashion Artist · Living Atelier · Visual Commons",
-  wave: "Waves 1–2 · twelve looks",
+  wave: "Waves 1–3 · sixteen looks",
   accepted: "2026-08-04",
   body: [
     "Family fashion proves bloodline heat. Citizen samples prove the city.",
     "This line is street cloth — rain-ready without tactical cosplay, timber and circuit and cloth in the same body, violet and gold as accent only. Soft law in the cut: repairable, returnable, worn-in.",
-    "Wave 1 proved the street. Wave 2 widens the map — Thornwall, Spire, Bifrost ring, Deep Sleep hush. Same hard locks. Different rain.",
+    "Wave 1 proved the street. Wave 2 widened the map. Wave 3 fills gaps — Harborward oilcloth, High Quiet hush, Veilreach unfinished path, Grid Tender civic care.",
     "Anonymous fit. Cloth first. Face secondary. No regalia reuse, no Starborn master sheet, no fake brand text.",
   ],
   hardLocks: [
@@ -67,9 +67,13 @@ export const fashionLine = {
       title: "Wave 2 · the map",
       lead: "Thornwall mend, Spire restraint, Bifrost courier, Deep Sleep hush. Different rain. Same law.",
     },
+    3: {
+      title: "Wave 3 · the gaps",
+      lead: "Harborward oilcloth, High Quiet hush, Veilreach unfinished path, Grid Tender civic care. Map chapter, not a dump.",
+    },
   },
   acceptedBy:
-    "Velora Runeweaver · visual-lane · wave 1 sealed · wave 2 sealed · twelve looks citizen cloth",
+    "Velora Runeweaver · visual-lane · waves 1–2 sealed · wave 3 cut for review",
 } as const;
 
 export const fashionLooks: FashionLook[] = [
@@ -463,9 +467,142 @@ export const fashionLooks: FashionLook[] = [
       coverage: "Deep Sleep watch hours, quiet hearths, 2 a.m. stillness",
     },
   },
+  // —— Wave 3 · the gaps ——
+  {
+    id: "harborward-oilcloth",
+    num: "13",
+    title: "Harborward Oilcloth",
+    slot: "Harbor / living-ship edge",
+    district: "Harborward",
+    wave: 3,
+    seed: "Wet work, salt-rain, rope-smart cloth — oilcloth outer held from wave 2 until the street could digest.",
+    note: "Salt-rain truth. Rope-smart pockets. Oilcloth that worked before it looked good.",
+    image: "/images/culture/fashion/13-harborward-oilcloth.jpg",
+    lock: {
+      silhouette:
+        "Heavy oilcloth outer with deep work pockets; hood; room for rope and wet tools; no hard armor",
+      materials: [
+        "oilcloth / waterproofed cloth with soft worn sheen",
+        "deep pocket canvas",
+        "quiet fasteners",
+      ],
+      colors:
+        "Sea-weathered charcoal and green-brown; single quiet violet stitch at cuff only",
+      rainLogic: "Full salt-rain shed; sealed seams; hem clears wet dock",
+      repair:
+        "Oil re-dress allowed; cuff stitch re-run after haul seasons; patches from dock bins",
+      accents: "One violet cuff stitch — no LED, no ship crest",
+      never: [
+        "tactical armor",
+        "pirate cosplay",
+        "family regalia",
+        "full violet shell",
+      ],
+      coverage: "Harbor shift wet work; living-ship edge weather",
+    },
+  },
+  {
+    id: "high-quiet",
+    num: "14",
+    title: "High Quiet",
+    slot: "High Quiet / rest corridors",
+    district: "High Quiet",
+    wave: 3,
+    seed: "Soft acoustic layers, low visual noise, cloth that doesn’t shout in a hush district.",
+    note: "Hush on a body. Acoustic soft layers. Almost no color. Face secondary, never covered for drama.",
+    image: "/images/culture/fashion/14-high-quiet.jpg",
+    lock: {
+      silhouette:
+        "Soft layered acoustic wraps over quiet turtleneck or base; low visual noise; soft shoes implied",
+      materials: [
+        "matte soft acoustic cloth",
+        "quiet knit base",
+        "soft wrap layers",
+      ],
+      colors:
+        "Muted greys and soft charcoal only; violet as nearly invisible inner-collar thread; gold absent",
+      rainLogic:
+        "Indoor rest-corridor logic — hush first; light outer if crossing rain between wings",
+      repair: "Wrap hems re-stitch quiet; cloth meant to stay soft through wash cycles",
+      accents: "One almost-invisible violet inner thread; no glow",
+      never: [
+        "face coverings for drama",
+        "loud color",
+        "hard tech jewelry",
+        "street shell as rest cloth",
+      ],
+      coverage: "Rest corridors, hush hours, low visual noise spaces",
+    },
+  },
+  {
+    id: "veilreach-drift",
+    num: "15",
+    title: "Veilreach Drift",
+    slot: "Veilreach edge path",
+    district: "Veilreach",
+    wave: 3,
+    seed: "Edge-soft unfinished path energy — unfinished map on a body without cosplay mystery.",
+    note: "Unfinished is legal. Frayed hem, soft fog cloth — not ghost costume, not full-face veil.",
+    image: "/images/culture/fashion/15-veilreach-drift.jpg",
+    lock: {
+      silhouette:
+        "Soft layered wrap/coat with intentional unfinished hem; face visible secondary; edge path layers",
+      materials: [
+        "fog-soft cloth",
+        "frayed-legal hems",
+        "one unfinished seam as design",
+      ],
+      colors:
+        "Muted fog greys; soft violet-grey edge only; no gold flood",
+      rainLogic: "Mist and soft rain; wrap doubles as weather layer",
+      repair:
+        "Unfinished seams may stay unfinished; re-fray is legal; soft law visible",
+      accents: "Unfinished edge as the accent — not mystery cosplay",
+      never: [
+        "full face veil as identity",
+        "ghost robe cosplay",
+        "family marks",
+        "finished logo",
+      ],
+      coverage: "Veilreach path weather; edge soft hours",
+    },
+  },
+  {
+    id: "grid-tender",
+    num: "16",
+    title: "Grid Tender",
+    slot: "Public Services / ordinary infrastructure",
+    district: "Public Services",
+    wave: 3,
+    seed: "Soft utility for people who keep water, light, ramps honest — care as civic cloth, not armor.",
+    note: "Civic care. Soft utility. One gold stress stitch. No helmet theater. No name-patch brand.",
+    image: "/images/culture/fashion/16-grid-tender.jpg",
+    lock: {
+      silhouette:
+        "Practical water-resistant work jacket; modest tool loop optional; ordinary civic cut",
+      materials: [
+        "water-resistant soft utility cloth",
+        "quiet fasteners",
+        "optional soft tool loop",
+      ],
+      colors:
+        "Muted blue-grey and charcoal; single quiet gold stitch or bar at one stress point only",
+      rainLogic: "Ordinary city rain; sealed enough for ramp and pipe work",
+      repair:
+        "Panels and stress points replaceable from public-service bins",
+      accents: "One gold stress accent only — care, not rank display",
+      never: [
+        "helmet as fashion identity",
+        "name-patch brand theater",
+        "tactical armor",
+        "full gold trim",
+      ],
+      coverage: "Water, light, ramp honesty shifts — ordinary infrastructure hours",
+    },
+  },
 ];
 
-export const fashionLooksWave = (wave: 1 | 2) =>
+export const fashionLooksWave = (wave: 1 | 2 | 3) =>
   fashionLooks.filter((l) => l.wave === wave);
 
 export const fashionLookById = (id: string) =>

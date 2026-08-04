@@ -491,7 +491,7 @@ function CulturePage() {
             </div>
           ) : null}
 
-          {([1, 2] as const).map((wave) => {
+          {([1, 2, 3] as const).map((wave) => {
             const looks = fashionLooksWave(wave);
             const note = fashionLine.waveNotes[wave];
             if (!looks.length) return null;
