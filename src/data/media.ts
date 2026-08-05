@@ -110,6 +110,11 @@ export const media = {
   /** Oni Shadow Rider form studies — studio exteriors */
   oniMonoWheel: "/images/oni-mono-wheel.jpg",
   oniStreetCruiser: "/images/oni-street-cruiser.jpg",
+  oniLightningCruiser: "/images/oni-lightning-cruiser.jpg",
+  oniPursuitCoil: "/images/oni-pursuit-coil.jpg",
+  oniRuneCruiser: "/images/oni-rune-cruiser.jpg",
+  oniWraithMono: "/images/oni-wraith-mono.jpg",
+  oniProwlerMono: "/images/oni-prowler-mono.jpg",
   dualIsland: "/images/dual-island.jpg",
   dualHeartbeats: "/images/dual-heartbeats.jpg",
   dualInterwoven: "/images/dual-interwoven.jpg",
@@ -1042,6 +1047,46 @@ export const systemsGallery = [
     title: "Oni — Street cruiser form",
     caption:
       "Two-wheel street resonance. Living alloy body, rune-ring tires, gold under glow. Partner, not tool.",
+    group: "vehicles" as const,
+  },
+  {
+    id: "oni-lightning-cruiser",
+    src: media.oniLightningCruiser,
+    title: "Oni — Lightning cruiser",
+    caption:
+      "Charge under load. Crack-vein gold and violet along the flanks — high-coherence street form.",
+    group: "vehicles" as const,
+  },
+  {
+    id: "oni-pursuit-coil",
+    src: media.oniPursuitCoil,
+    title: "Oni — Pursuit Coil",
+    caption:
+      "Sport-forward stance. Solid front hub, violet lightning tread, gold armature. Built for the chase.",
+    group: "vehicles" as const,
+  },
+  {
+    id: "oni-rune-cruiser",
+    src: media.oniRuneCruiser,
+    title: "Oni — Rune cruiser",
+    caption:
+      "Hollow-hub street form with full Futhark ring on the rubber. Quiet menace; history in the tire.",
+    group: "vehicles" as const,
+  },
+  {
+    id: "oni-wraith-mono",
+    src: media.oniWraithMono,
+    title: "Oni — Wraith mono",
+    caption:
+      "Aggressive mono-wheel with open jaw intake. Stealth posture, violet core ring — Kagekou edge.",
+    group: "vehicles" as const,
+  },
+  {
+    id: "oni-prowler-mono",
+    src: media.oniProwlerMono,
+    title: "Oni — Prowler mono",
+    caption:
+      "Raked mono stance, dual-tread stack. Terrain Stride cousin — ready for Mist Glide when the bond deepens.",
     group: "vehicles" as const,
   },
 

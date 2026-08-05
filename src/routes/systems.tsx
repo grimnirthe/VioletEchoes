@@ -693,8 +693,8 @@ function SystemsPage() {
                 Oni exterior language
               </h3>
               <p className="mt-2 text-sm text-[var(--color-muted)]">
-                Studio studies of living-alloy mounts. Shape fluency in steel and rune — more forms
-                as they generate.
+                Studio studies of living-alloy mounts. Mono, cruiser, pursuit, wraith — shape fluency
+                in steel and rune. Hoverbikes still to come.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
