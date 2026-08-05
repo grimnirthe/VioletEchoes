@@ -664,7 +664,12 @@ function SystemsPage() {
           </div>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {systemsGallery
-              .filter((s) => s.group === "vehicles" && s.id !== "vehicles-variants")
+              .filter(
+                (s) =>
+                  s.group === "vehicles" &&
+                  s.id !== "vehicles-variants" &&
+                  !s.id.startsWith("oni-"),
+              )
               .map((shot) => (
                 <figure
                   key={shot.id}
@@ -677,6 +682,42 @@ function SystemsPage() {
                   </figcaption>
                 </figure>
               ))}
+          </div>
+
+          <div className="mt-8 space-y-4">
+            <div className="max-w-2xl">
+              <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                Form studies · more landing
+              </p>
+              <h3 className="mt-1 font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                Oni exterior language
+              </h3>
+              <p className="mt-2 text-sm text-[var(--color-muted)]">
+                Studio studies of living-alloy mounts. Shape fluency in steel and rune — more forms
+                as they generate.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {systemsGallery
+                .filter((s) => s.id.startsWith("oni-"))
+                .map((shot) => (
+                  <figure
+                    key={shot.id}
+                    className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+                  >
+                    <MediaFrame
+                      src={shot.src}
+                      alt={shot.title}
+                      aspect="video"
+                      imgClassName="object-contain bg-[var(--color-bg)]"
+                    />
+                    <figcaption className="space-y-1 p-4">
+                      <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
+                      <p className="text-sm text-[var(--color-muted)]">{shot.caption}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+            </div>
           </div>
         </section>
         <section className="mt-16">

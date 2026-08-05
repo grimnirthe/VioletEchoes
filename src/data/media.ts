@@ -107,6 +107,9 @@ export const media = {
   vehiclesLeap: "/images/vehicles-leap.jpg",
   vehiclesAnatomy: "/images/vehicles-anatomy.jpg",
   vehiclesBond: "/images/vehicles-bond.jpg",
+  /** Oni Shadow Rider form studies — studio exteriors */
+  oniMonoWheel: "/images/oni-mono-wheel.jpg",
+  oniStreetCruiser: "/images/oni-street-cruiser.jpg",
   dualIsland: "/images/dual-island.jpg",
   dualHeartbeats: "/images/dual-heartbeats.jpg",
   dualInterwoven: "/images/dual-interwoven.jpg",
@@ -1025,6 +1028,22 @@ export const systemsGallery = [
       "Intent shapes form. History echoes in structure. Betrayal or neglect incurs cost.",
     group: "vehicles" as const,
   },
+  {
+    id: "oni-mono-wheel",
+    src: media.oniMonoWheel,
+    title: "Oni — Mono-wheel form",
+    caption:
+      "Compact pursuit / terrain stride. Single rune-tread wheel, violet charge, gold bone filigree. Form serves the moment.",
+    group: "vehicles" as const,
+  },
+  {
+    id: "oni-street-cruiser",
+    src: media.oniStreetCruiser,
+    title: "Oni — Street cruiser form",
+    caption:
+      "Two-wheel street resonance. Living alloy body, rune-ring tires, gold under glow. Partner, not tool.",
+    group: "vehicles" as const,
+  },
 
   {
     id: "dual-island",
@@ -1201,7 +1220,7 @@ export const entryImages: Record<string, string> = {
   "the-tenets": media.tenetsBook,
   "living-ships": media.shipsAnatomy,
   aethelgard: media.aethelgardOrbitProfile,
-  "oni-shadow-rider": media.vehiclesVariants,
+  "oni-shadow-rider": media.oniStreetCruiser,
   vernacular: media.doorBible,
     values: media.longhouse,
   factions: media.factionsCards,
