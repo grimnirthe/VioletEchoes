@@ -165,6 +165,10 @@ export const media = {
   aethelgardOrbitRing: "/images/aethelgard-orbit-ring.jpg",
   aethelgardOrbitFlare: "/images/aethelgard-orbit-flare.jpg",
   aethelgardOrbitNightside: "/images/aethelgard-orbit-nightside.jpg",
+  /** Interior study sheets — room language still settling */
+  aethelgardInteriorV1: "/images/aethelgard-interior-v1.jpg",
+  aethelgardInteriorV2: "/images/aethelgard-interior-v2.jpg",
+  aethelgardInteriorV3: "/images/aethelgard-interior-v3.jpg",
   eimyrja: "/images/eimyrja-core-runes.jpg",
 } as const;
 
@@ -533,6 +537,30 @@ export const systemsGallery = [
     title: "Aethelgard — nightside pass",
     caption:
       "Over city lights. Black living alloy, white bone frame, purple core — ~180m, heavy frigate / light capital scale.",
+    group: "ships" as const,
+  },
+  {
+    id: "aethelgard-interior-v1",
+    src: media.aethelgardInteriorV1,
+    title: "Aethelgard interiors — bone & gold",
+    caption:
+      "Cockpit · Hallway · Docking Port · Crew Bunks · Galley & Rec · Audio Studio · Elevator. Warm bone frame, open violet veins.",
+    group: "ships" as const,
+  },
+  {
+    id: "aethelgard-interior-v2",
+    src: media.aethelgardInteriorV2,
+    title: "Aethelgard interiors — dark cockpit",
+    caption:
+      "Same deck plan, cooler bond tone. Black pilot seat, stronger violet charge in docking sphere and elevator shaft.",
+    group: "ships" as const,
+  },
+  {
+    id: "aethelgard-interior-v3",
+    src: media.aethelgardInteriorV3,
+    title: "Aethelgard interiors — gold elevator",
+    caption:
+      "Gold-lit lift core and docking sphere. Interiors breathe with the bond — still open language until the hull is final.",
     group: "ships" as const,
   },
 

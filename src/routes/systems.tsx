@@ -490,7 +490,12 @@ function SystemsPage() {
           </div>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {shipShots
-              .filter((s) => s.id !== "ships-anatomy" && !s.id.startsWith("aethelgard-orbit-"))
+              .filter(
+                (s) =>
+                  s.id !== "ships-anatomy" &&
+                  !s.id.startsWith("aethelgard-orbit-") &&
+                  !s.id.startsWith("aethelgard-interior-"),
+              )
               .map((shot) => (
                 <figure
                   key={shot.id}
@@ -519,7 +524,7 @@ function SystemsPage() {
                 <p className="font-display text-2xl text-[var(--color-fg)]">Aethelgard</p>
                 <p className="text-sm text-[var(--color-muted)]">
                   Long-term bond archetype · line command & exploration · ~180m. Exterior language
-                  locked; interiors open until the hull is final. Use becomes structure.
+                  locked; interior room set studying in. Use becomes structure.
                 </p>
               </div>
             </div>
@@ -535,7 +540,7 @@ function SystemsPage() {
               </h3>
               <p className="mt-2 text-sm text-[var(--color-muted)]">
                 Same hull, different light. Profile, keel, Grav Ring aspect, ring flare, nightside —
-                locked exterior still has room to be seen. Interiors next.
+                locked exterior still has room to be seen.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -550,6 +555,40 @@ function SystemsPage() {
                     <figcaption className="space-y-1 p-4">
                       <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
                       <p className="text-sm text-[var(--color-muted)]">{shot.caption}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+            </div>
+          </div>
+
+          <div className="mt-10 space-y-4">
+            <div className="max-w-2xl">
+              <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                Class interiors · room study
+              </p>
+              <h3 className="mt-1 font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                Aethelgard inside the bond
+              </h3>
+              <p className="mt-2 text-sm text-[var(--color-muted)]">
+                Cockpit · Hallway · Docking Port · Crew Bunks · Galley & Rec · Audio Studio · Elevator
+                to top/bottom decks. No traditional consoles — neurological connection. Warm bone,
+                living alloy, violet-gold veins. Three study sheets while the room language settles.
+              </p>
+            </div>
+            <div className="grid gap-4 lg:grid-cols-1">
+              {shipShots
+                .filter((s) => s.id.startsWith("aethelgard-interior-"))
+                .map((shot) => (
+                  <figure
+                    key={shot.id}
+                    className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+                  >
+                    <MediaFrame src={shot.src} alt={shot.title} aspect="wide" />
+                    <figcaption className="space-y-1 p-4 sm:flex sm:items-start sm:justify-between sm:gap-6">
+                      <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
+                      <p className="max-w-xl text-sm text-[var(--color-muted)] sm:text-right">
+                        {shot.caption}
+                      </p>
                     </figcaption>
                   </figure>
                 ))}
