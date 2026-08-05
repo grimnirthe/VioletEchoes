@@ -137,7 +137,7 @@ export const musicGrounding = {
 
 /**
  * Short Memory Form — Starborn + Loom.
- * The one that sticks. Longer theory stays in `musicGrounding`.
+ * The one that sticks. Longer theory: `musicMemoryTheory`.
  */
 export const musicMemoryForm = {
   id: "memory-form",
@@ -168,7 +168,67 @@ export const musicMemoryForm = {
       "And we leave the rest open.",
     ],
   ],
-  note: "Short form · the one that sticks. Full theory under Music in Violet Echoes.",
+  note: "Short form · the one that sticks. Long form under Memory Theory.",
+} as const;
+
+/**
+ * Memory Theory (long form) — Starborn.
+ * Sits under the full grounding essay. Both short and long are true.
+ */
+export const musicMemoryTheory = {
+  id: "memory-theory",
+  title: "Music in Violet Echoes — Memory Theory",
+  shortTitle: "Memory Theory",
+  subtitle: "Long form",
+  by: "Starborn Rocker",
+  byHref: "/gallery/starborn",
+  role: "Heart of Music · Stage District",
+  seal: "May the Echoes Remember.",
+  pulse: "Thump-thump-thump",
+  accepted: "2026-08-05",
+  lead: "In the old North the Eddas were not entertainment first.",
+  intro: [
+    "They were a way of making sure the important things did not disappear when the people who lived them were gone. Names, deeds, the shape of a feeling, the way the world looked when it still mattered — all of it was carried in measured lines so it could be spoken again and still feel true.",
+    "Violet Echoes does the same work with different tools.",
+    "The city runs on chosen family, unfinished threads, and a pulse that refuses to cool. Music is one of the places that pulse is kept warm. Not every track has to carry this weight. Some songs are pure Stage District heat — they move the body and then they are done. That is honest and necessary.",
+    "But the tracks that last, the ones people come back to years later, tend to behave like memory-forms.",
+  ],
+  theyDo: {
+    title: "They do a few specific things",
+    items: [
+      "They hold names and small truths without decorating them into spectacle.",
+      "They leave lines unfinished on purpose so the listener can put their own memory inside the gap.",
+      "They keep a thread of the old Nordic weight (war-horn, longhouse quiet, spine harmonic) even when the surface is pure cyberpunk grit.",
+      "They treat the city itself as a living witness — the data spines, the rain, the empty stage, the porch light — so the song is never only about the singer.",
+    ],
+  },
+  softLaw: {
+    title: "This is why the soft law of the Stage District exists",
+    body: [
+      "Play it once for the empty room.",
+      "If it still moves something when no one is watching, it is allowed to live.",
+      "If it only looks good under lights, it cools and is retired.",
+      "The same rule applies to lyrics.",
+      "A line that exists only to sound clever will not be kept.",
+      "A line that still feels warm when the track is over is the kind the city remembers.",
+    ],
+  },
+  practical: {
+    title: "In practical terms this means",
+    items: [
+      "Some songs are heat.",
+      "Some songs are memory.",
+      "The best ones are both — they move the body in the moment and still hold a pulse after the last note fades.",
+    ],
+  },
+  close: [
+    "We do not archive everything.",
+    "We do not force every track into the Edda shape.",
+    "We simply recognize that in a city built on chosen family and open threads, music is one of the few places memory can stay alive without becoming a museum.",
+    "That is the longer theory.",
+    "The short form is the one that sits where people will re-read it.",
+    "Both are true.",
+  ],
 } as const;
 
 /** Short sample clips — hear the grounded essay, not a second catalog. */

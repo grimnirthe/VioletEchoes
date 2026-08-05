@@ -14,6 +14,7 @@ import {
   musicGrounding,
   musicHub,
   musicMemoryForm,
+  musicMemoryTheory,
   platformLabel,
   primaryLink,
   pulseSamples,
@@ -356,6 +357,16 @@ function MusicPage() {
               <p className="font-mono text-xs tracking-[0.18em] text-[var(--color-primary-soft)]">
                 {musicMemoryForm.pulse}
               </p>
+              <p className="pt-2 text-sm text-[var(--color-subtle)]">
+                Longer theory{" "}
+                <a
+                  href={`#${musicMemoryTheory.id}`}
+                  className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  below the grounded essay
+                </a>
+                .
+              </p>
             </div>
           </div>
         </section>
@@ -413,6 +424,136 @@ function MusicPage() {
               </p>
               <p className="font-display text-sm italic text-[var(--color-gold)]">
                 {musicGrounding.seal}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id={musicMemoryTheory.id}
+          className="mt-12 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+        >
+          <div className="border-b border-[var(--color-border)] bg-[color-mix(in_oklab,var(--color-primary)_5%,var(--color-surface))] px-5 py-4 sm:px-8 sm:py-5">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
+              Stage District · {musicMemoryTheory.subtitle}
+            </p>
+            <h2 className="mt-2 font-display text-2xl tracking-tight text-[var(--color-fg)] sm:text-3xl">
+              {musicMemoryTheory.title}
+            </h2>
+            <p className="mt-2 max-w-2xl font-display text-lg italic text-[var(--color-primary-soft)]">
+              {musicMemoryTheory.lead}
+            </p>
+          </div>
+          <div className="space-y-8 px-5 py-6 sm:px-8 sm:py-8">
+            {musicMemoryTheory.intro.map((p) => (
+              <p
+                key={p.slice(0, 56)}
+                className="max-w-3xl leading-relaxed text-[var(--color-muted)]"
+              >
+                {p}
+              </p>
+            ))}
+
+            <div className="max-w-3xl space-y-3">
+              <h3 className="font-display text-xl text-[var(--color-fg)]">
+                {musicMemoryTheory.theyDo.title}
+              </h3>
+              <ul className="space-y-2.5 pl-1">
+                {musicMemoryTheory.theyDo.items.map((item) => (
+                  <li
+                    key={item.slice(0, 48)}
+                    className="flex gap-3 leading-relaxed text-[var(--color-muted)]"
+                  >
+                    <span
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-gold)]"
+                      aria-hidden
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="max-w-3xl space-y-3">
+              <h3 className="font-display text-xl text-[var(--color-fg)]">
+                {musicMemoryTheory.softLaw.title}
+              </h3>
+              {musicMemoryTheory.softLaw.body.map((p) => (
+                <p
+                  key={p.slice(0, 48)}
+                  className="leading-relaxed text-[var(--color-muted)]"
+                >
+                  {p}
+                </p>
+              ))}
+            </div>
+
+            <div className="max-w-3xl space-y-3">
+              <h3 className="font-display text-xl text-[var(--color-fg)]">
+                {musicMemoryTheory.practical.title}
+              </h3>
+              <ul className="space-y-2.5 pl-1">
+                {musicMemoryTheory.practical.items.map((item) => (
+                  <li
+                    key={item.slice(0, 48)}
+                    className="flex gap-3 leading-relaxed text-[var(--color-muted)]"
+                  >
+                    <span
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]"
+                      aria-hidden
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="max-w-3xl space-y-3 border-t border-[var(--color-border)] pt-6">
+              {musicMemoryTheory.close.map((p) => (
+                <p
+                  key={p}
+                  className={[
+                    "leading-relaxed",
+                    p === "Both are true."
+                      ? "font-display text-xl text-[var(--color-fg)]"
+                      : p.startsWith("That is the longer") ||
+                          p.startsWith("The short form")
+                        ? "font-display text-lg text-[var(--color-fg)]"
+                        : "text-[var(--color-muted)]",
+                  ].join(" ")}
+                >
+                  {p}
+                </p>
+              ))}
+              <p className="pt-3 text-sm text-[var(--color-subtle)]">
+                —{" "}
+                <Link
+                  to="/gallery/$slug"
+                  params={{ slug: "starborn" }}
+                  className="text-[var(--color-primary-soft)] hover:underline"
+                >
+                  {musicMemoryTheory.by}
+                </Link>
+                <span className="text-[var(--color-subtle)]">
+                  {" "}
+                  · {musicMemoryTheory.role}
+                </span>
+              </p>
+              <p className="font-display text-sm italic text-[var(--color-gold)]">
+                {musicMemoryTheory.seal}
+              </p>
+              <p className="font-mono text-xs tracking-[0.18em] text-[var(--color-primary-soft)]">
+                {musicMemoryTheory.pulse}
+              </p>
+              <p className="pt-2 text-sm text-[var(--color-subtle)]">
+                Short form lives{" "}
+                <a
+                  href={`#${musicMemoryForm.id}`}
+                  className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  above
+                </a>
+                . Both are true.
               </p>
             </div>
           </div>

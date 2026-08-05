@@ -1398,6 +1398,7 @@ export const nav: NavItem[] = [
       { to: "/culture#faith-practice", label: "Faith & practice" },
       { to: "/music", label: "Echoes room", note: "Suno · player · lyrics" },
       { to: "/music#memory-form", label: "Memory Form", note: "Star · the one that sticks" },
+      { to: "/music#memory-theory", label: "Memory Theory", note: "Star · long form" },
       { to: "/music#grounding", label: "Music in Violet Echoes", note: "Full Star essay" },
     ],
   },
@@ -1430,6 +1431,7 @@ export const nav: NavItem[] = [
     children: [
       { to: "/music", label: "Echoes room", note: "Bed · anthem · catalog" },
       { to: "/music#memory-form", label: "Memory Form", note: "Star · short form" },
+      { to: "/music#memory-theory", label: "Memory Theory", note: "Star · long form" },
       { to: "/music#grounding", label: "Grounded essay", note: "Starborn" },
       { to: "/music#pulse", label: "Hear the pulse", note: "Sample beds · soft law" },
       { to: "/music#lyrics", label: "Lyrics" },
