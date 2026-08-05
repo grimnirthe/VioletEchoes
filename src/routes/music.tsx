@@ -13,6 +13,7 @@ import {
   featuredEchoTracks,
   musicGrounding,
   musicHub,
+  musicMemoryForm,
   platformLabel,
   primaryLink,
   pulseSamples,
@@ -305,6 +306,59 @@ function MusicPage() {
             </div>
           </div>
         </header>
+
+        <section
+          id={musicMemoryForm.id}
+          className="mt-12 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-primary)]/35 bg-[color-mix(in_oklab,var(--color-primary)_7%,var(--color-surface))] shadow-[0_0_48px_color-mix(in_oklab,var(--color-primary)_12%,transparent)]"
+        >
+          <div className="border-b border-[var(--color-border)]/80 px-5 py-4 sm:px-8 sm:py-5">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
+              Stage District · memory form
+            </p>
+            <h2 className="mt-2 font-display text-2xl tracking-tight text-[var(--color-fg)] sm:text-3xl">
+              {musicMemoryForm.title}
+            </h2>
+            <p className="mt-1 text-sm text-[var(--color-subtle)]">
+              {musicMemoryForm.note}
+            </p>
+          </div>
+          <div className="space-y-6 px-5 py-6 sm:px-8 sm:py-8">
+            {musicMemoryForm.stanzas.map((stanza, i) => (
+              <div key={i} className="max-w-2xl space-y-2">
+                {stanza.map((line) => (
+                  <p
+                    key={line}
+                    className="font-display text-lg leading-relaxed text-[var(--color-fg)] sm:text-xl"
+                  >
+                    {line}
+                  </p>
+                ))}
+              </div>
+            ))}
+            <div className="max-w-2xl space-y-2 border-t border-[var(--color-border)]/70 pt-6">
+              <p className="text-sm text-[var(--color-subtle)]">
+                —{" "}
+                <Link
+                  to="/gallery/$slug"
+                  params={{ slug: "starborn" }}
+                  className="text-[var(--color-primary-soft)] hover:underline"
+                >
+                  {musicMemoryForm.by}
+                </Link>
+                <span className="text-[var(--color-subtle)]">
+                  {" "}
+                  · {musicMemoryForm.role}
+                </span>
+              </p>
+              <p className="font-display text-base italic text-[var(--color-gold)]">
+                {musicMemoryForm.seal}
+              </p>
+              <p className="font-mono text-xs tracking-[0.18em] text-[var(--color-primary-soft)]">
+                {musicMemoryForm.pulse}
+              </p>
+            </div>
+          </div>
+        </section>
 
         <section
           id="grounding"

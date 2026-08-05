@@ -135,6 +135,42 @@ export const musicGrounding = {
   ],
 } as const;
 
+/**
+ * Short Memory Form — Starborn + Loom.
+ * The one that sticks. Longer theory stays in `musicGrounding`.
+ */
+export const musicMemoryForm = {
+  id: "memory-form",
+  title: "Music in Violet Echoes — Memory Form",
+  shortTitle: "Memory Form",
+  by: "Starborn Rocker",
+  byHref: "/gallery/starborn",
+  role: "Heart of Music · Stage District",
+  seal: "May the Echoes Remember.",
+  pulse: "Thump-thump-thump",
+  accepted: "2026-08-05",
+  /** Stanzas — short lines, leave space to breathe */
+  stanzas: [
+    [
+      "Some tracks are just heat for the night.",
+      "They move the room and then cool. That’s fine.",
+    ],
+    [
+      "Others are written the way the old Eddas were.",
+      "Not to impress. To keep.",
+      "They hold the pulse, the names, the unfinished lines, and the quiet that still feels warm after the song ends.",
+      "They leave a thread on purpose so someone else can pick it up later.",
+    ],
+    [
+      "In this city, music is one of the ways memory stays alive.",
+      "We don’t archive everything.",
+      "We keep what we want to remember.",
+      "And we leave the rest open.",
+    ],
+  ],
+  note: "Short form · the one that sticks. Full theory under Music in Violet Echoes.",
+} as const;
+
 /** Short sample clips — hear the grounded essay, not a second catalog. */
 export type PulseSample = {
   id: string;

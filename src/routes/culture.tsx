@@ -16,7 +16,7 @@ import {
   type CultureWork,
 } from "@/data/culture";
 import { fashionLine, fashionLooks, fashionLooksWave } from "@/data/fashion";
-import { musicGrounding } from "@/data/music";
+import { musicGrounding, musicMemoryForm } from "@/data/music";
 import { HASHTAG } from "@/data/world";
 
 
@@ -620,6 +620,47 @@ function CulturePage() {
               </Link>
               .
             </p>
+
+            <article
+              id={musicMemoryForm.id}
+              className="mt-6 scroll-mt-24 rounded-[var(--radius-xl)] border border-[var(--color-primary)]/35 bg-[color-mix(in_oklab,var(--color-primary)_7%,var(--color-surface))] p-5 sm:p-7"
+            >
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                Stage District · memory form
+              </p>
+              <h3 className="mt-2 font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                {musicMemoryForm.title}
+              </h3>
+              <div className="mt-4 max-w-2xl space-y-4">
+                {musicMemoryForm.stanzas.map((stanza, i) => (
+                  <div key={i} className="space-y-1.5">
+                    {stanza.map((line) => (
+                      <p
+                        key={line}
+                        className="font-display text-base leading-relaxed text-[var(--color-fg)] sm:text-lg"
+                      >
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-5 text-sm text-[var(--color-subtle)]">
+                — {musicMemoryForm.by} ·{" "}
+                <span className="font-display italic text-[var(--color-gold)]">
+                  {musicMemoryForm.seal}
+                </span>
+              </p>
+              <div className="mt-4">
+                <Link
+                  to="/music"
+                  hash="memory-form"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+                >
+                  Open on Echoes
+                </Link>
+              </div>
+            </article>
 
             <article className="mt-6 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:p-7">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
