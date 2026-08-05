@@ -693,8 +693,8 @@ function SystemsPage() {
                 Oni exterior language
               </h3>
               <p className="mt-2 text-sm text-[var(--color-muted)]">
-                Studio studies of living-alloy mounts. Mono, cruiser, pursuit, wraith — shape fluency
-                in steel and rune. Hoverbikes still to come.
+                Studio studies of living-alloy mounts. Mono, cruiser, pursuit, wraith, hover — shape
+                fluency in steel, rune, and open air.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">

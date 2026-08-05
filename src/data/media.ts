@@ -115,6 +115,8 @@ export const media = {
   oniRuneCruiser: "/images/oni-rune-cruiser.jpg",
   oniWraithMono: "/images/oni-wraith-mono.jpg",
   oniProwlerMono: "/images/oni-prowler-mono.jpg",
+  oniHoverSpear: "/images/oni-hover-spear.jpg",
+  oniHoverSkiff: "/images/oni-hover-skiff.jpg",
   dualIsland: "/images/dual-island.jpg",
   dualHeartbeats: "/images/dual-heartbeats.jpg",
   dualInterwoven: "/images/dual-interwoven.jpg",
@@ -1087,6 +1089,22 @@ export const systemsGallery = [
     title: "Oni — Prowler mono",
     caption:
       "Raked mono stance, dual-tread stack. Terrain Stride cousin — ready for Mist Glide when the bond deepens.",
+    group: "vehicles" as const,
+  },
+  {
+    id: "oni-hover-spear",
+    src: media.oniHoverSpear,
+    title: "Oni — Hover spear",
+    caption:
+      "Mist Glide form. Twin prows, canopy charge, aft thruster ring — street left behind for open air.",
+    group: "vehicles" as const,
+  },
+  {
+    id: "oni-hover-skiff",
+    src: media.oniHoverSkiff,
+    title: "Oni — Hover skiff",
+    caption:
+      "Broader canopy, dual ring thrusters. Courier / scout hover variant — gold bone over black living alloy.",
     group: "vehicles" as const,
   },
 
