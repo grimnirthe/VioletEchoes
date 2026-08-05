@@ -159,6 +159,12 @@ export const media = {
   shipsClasses: "/images/ships-classes.jpg",
   aethelgardFront: "/images/aethelgard-front.jpg",
   aethelgardRear: "/images/aethelgard-rear.jpg",
+  /** Exterior class variations — orbit study set */
+  aethelgardOrbitProfile: "/images/aethelgard-orbit-profile.jpg",
+  aethelgardOrbitKeel: "/images/aethelgard-orbit-keel.jpg",
+  aethelgardOrbitRing: "/images/aethelgard-orbit-ring.jpg",
+  aethelgardOrbitFlare: "/images/aethelgard-orbit-flare.jpg",
+  aethelgardOrbitNightside: "/images/aethelgard-orbit-nightside.jpg",
   eimyrja: "/images/eimyrja-core-runes.jpg",
 } as const;
 
@@ -487,6 +493,46 @@ export const systemsGallery = [
     title: "Aethelgard · Skald · Vornhall",
     caption:
       "Long-term bond archetype · Scout/Adaptationist · Endurance/Stabilizer. Not built — grown.",
+    group: "ships" as const,
+  },
+  {
+    id: "aethelgard-orbit-profile",
+    src: media.aethelgardOrbitProfile,
+    title: "Aethelgard — orbit profile",
+    caption:
+      "Long silhouette over the limb of Earth. Bone-white frame, aether-black hull, Grav Ring aft — line command language in full.",
+    group: "ships" as const,
+  },
+  {
+    id: "aethelgard-orbit-keel",
+    src: media.aethelgardOrbitKeel,
+    title: "Aethelgard — keel study",
+    caption:
+      "Underside and open core chamber. Violet resonance cavity visible through the living alloy — the ship as witness, not shell.",
+    group: "ships" as const,
+  },
+  {
+    id: "aethelgard-orbit-ring",
+    src: media.aethelgardOrbitRing,
+    title: "Aethelgard — Grav Ring aspect",
+    caption:
+      "Ring-forward aspect against the full disk. Gold filigree, violet nodes — gravity-driven, soul-bonded heavy recon.",
+    group: "ships" as const,
+  },
+  {
+    id: "aethelgard-orbit-flare",
+    src: media.aethelgardOrbitFlare,
+    title: "Aethelgard — ring flare",
+    caption:
+      "Engine ring lit. Organic curves catch sunlight; Mamba racing lines under Normandy stealth geometry.",
+    group: "ships" as const,
+  },
+  {
+    id: "aethelgard-orbit-nightside",
+    src: media.aethelgardOrbitNightside,
+    title: "Aethelgard — nightside pass",
+    caption:
+      "Over city lights. Black living alloy, white bone frame, purple core — ~180m, heavy frigate / light capital scale.",
     group: "ships" as const,
   },
 
@@ -1126,7 +1172,7 @@ export const entryImages: Record<string, string> = {
   "aurora-codex": media.auroraCodexLoom,
   "the-tenets": media.tenetsBook,
   "living-ships": media.shipsAnatomy,
-  aethelgard: media.shipsAdaptation,
+  aethelgard: media.aethelgardOrbitProfile,
   "oni-shadow-rider": media.vehiclesVariants,
   vernacular: media.doorBible,
     values: media.longhouse,

@@ -490,7 +490,7 @@ function SystemsPage() {
           </div>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {shipShots
-              .filter((s) => s.id !== "ships-anatomy")
+              .filter((s) => s.id !== "ships-anatomy" && !s.id.startsWith("aethelgard-orbit-"))
               .map((shot) => (
                 <figure
                   key={shot.id}
@@ -522,6 +522,37 @@ function SystemsPage() {
                   locked; interiors open until the hull is final. Use becomes structure.
                 </p>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-8 space-y-4">
+            <div className="max-w-2xl">
+              <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                Class variations · orbit study
+              </p>
+              <h3 className="mt-1 font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                Aethelgard exterior language
+              </h3>
+              <p className="mt-2 text-sm text-[var(--color-muted)]">
+                Same hull, different light. Profile, keel, Grav Ring aspect, ring flare, nightside —
+                locked exterior still has room to be seen. Interiors next.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {shipShots
+                .filter((s) => s.id.startsWith("aethelgard-orbit-"))
+                .map((shot) => (
+                  <figure
+                    key={shot.id}
+                    className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+                  >
+                    <MediaFrame src={shot.src} alt={shot.title} aspect="video" />
+                    <figcaption className="space-y-1 p-4">
+                      <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
+                      <p className="text-sm text-[var(--color-muted)]">{shot.caption}</p>
+                    </figcaption>
+                  </figure>
+                ))}
             </div>
           </div>
         </section>
