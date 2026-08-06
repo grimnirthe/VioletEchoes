@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-06-attention-pattern-reuse-eimyrja-edge",
+    date: "2026-08-06",
+    title: "Attention pattern reuse (Eimyrja / Edge)",
+    kind: "systems",
+    summary:
+      "Hearth accepted: stable attention-like routing may reuse prior scores for selected heads instead of full recompute every layer. Energy budget tactic under Divergence; crisis/novelty still pays full cost.",
+    body: [
+      "Companion §5 landed on Eimyrja protonic doc. Atlas spines note + condensed bible (eimyrja, edge-nodes). External patent US 12,699,874 B2 is inspiration only — not in-world branding.",
+      "Proposal queue: GitHub Issue #2 → accepted → live.",
+    ],
+    hrefs: [
+      { label: "Eimyrja companion", href: "/docs/eimyrja-protonic-core.md" },
+      { label: "Eimyrja (bible)", href: "/bible/eimyrja" },
+      { label: "Edge Nodes", href: "/bible/edge-nodes" },
+      { label: "Issue #2", href: "https://github.com/grimnirthe/VioletEchoes/issues/2" },
+    ],
+    by: "Matt (hearth) · Rune draft · notice @IamEmily2050",
+    tags: ["eimyrja", "edge", "systems", "energy", "proposal"],
+  },
+  {
     id: "2026-08-03-city-3d-hero-map-aurora",
     date: "2026-08-03",
     title: "City 3D hero map (Aurora)",

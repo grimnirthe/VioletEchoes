@@ -303,6 +303,12 @@ export const creditSections: CreditSection[] = [
       "Patterns that flavored neuromorphic fiction. Verify via the public article — then treat VE systems as story, not engineering manuals.",
     items: [
       {
+        label: "US Patent 12,699,874 B2 — Reuse transformers (attention redundancy)",
+        url: "https://patents.google.com/patent/US20230112862A1/en",
+        note: "Attention score reuse across layers for selected heads — inspiration for Eimyrja/Edge §5 energy budget; not VE hardware or endorsement",
+        verify: "USPTO / Google Patents · compare /docs/eimyrja-protonic-core.md §5 · Credits fiction disclaimer",
+      },
+      {
         label: "Neuromorphic computing (overview)",
         url: "https://en.wikipedia.org/wiki/Neuromorphic_engineering",
         note: "Edge intelligence, event-driven processing as design language",

@@ -193,6 +193,7 @@ export const entries: WorldEntry[] = [
       "Eimyrja is the city-scale pattern integration and long-horizon coherence layer \u2014 not a central commander. It receives abstracted, deliberately lossy summaries from Edge Nodes, surfaces cross-domain patterns and emerging tensions, and issues recommendations and soft constraints rather than hard directives for routine matters.",
       "Architecturally it is a neuromorphic protonic matrix: functionalized chitosan and silk nanofiber meshes where protons hop along hydrogen-bond networks (Grotthuss), eliminating the von Neumann bottleneck. Sub-Cortex Pods sit beneath district Aura Fountains; microfluidic vascular loops hydrate and cool; baseline power comes from reverse electrodialysis osmotic stacks at the estuary.",
       "Circadian maintenance rotates pods into Deep Sleep around 2 a.m. for enzymatic flush and matrix regeneration (5\u20137 year biological cycle). Emergency tiers run from minor anomaly isolation through catastrophic hibernation. Citizens mostly feel the Core as fountain hue, spine hum, and the sense of the city breathing.",
+      "Where attention-like routing patterns stay stable across successive layers, Eimyrja and Edge Nodes may reuse prior attention scores for selected heads instead of full recompute — an energy budget tactic, not a new architecture. Unstable, novel, or crisis traffic forces full recompute (higher cost, better accuracy). Bookkeeping is never free.",
       "Under the Divergence: no real-time high-fidelity twin of everything; consolidation is slow and durable; escalation is expensive; most living intelligence stays at the edges. When something goes wrong at city scale, Eimyrja\u2019s first move is usually to surface the pattern and ask the relevant Edge Nodes what they see.",
       "Full technical companion: Eimyrja Core \u2014 Neuromorphic Protonic Architecture. Deep philosophy: Development Divergence Core Framework \xA76.2."
     ],
@@ -214,6 +215,7 @@ export const entries: WorldEntry[] = [
     divergenceLens: [
       "Recommendations over continuous command.",
       "Protonic, energy-honest, circadian-maintained.",
+      "Reuse stable attention; pay full cost when the world is new.",
       "Long-horizon coherence; local intelligence remains primary.",
       "The city heartbeat \u2014 usually invisible until it is not."
     ]
@@ -226,7 +228,7 @@ export const entries: WorldEntry[] = [
     summary: "Primary sites of living, adaptive intelligence across districts and domains. Decades of domain tenure; local first; reset is a significant event.",
     body: [
       "Edge Nodes are where most of the living intelligence of the city actually resides. They improve through continuous grounded interaction, solve problems locally first, maintain their own energy budgets and protection tiers, and develop recognizable operational styles over long periods \u2014 treated as normal and often useful.",
-      "Reflex arcs: Tier 1 autonomous (sub-millisecond local fix \u2014 a hiss, a flicker); Tier 2 somatosensory coordination (seconds to minutes \u2014 violet-gold load shunts, soft hums); Tier 3 semantic abstraction (lossy token of meaning up the spine to Eimyrja). High-fidelity crisis data is discarded; pattern is kept.",
+      "Reflex arcs: Tier 1 autonomous (sub-millisecond local fix \u2014 a hiss, a flicker); Tier 2 somatosensory coordination (seconds to minutes \u2014 violet-gold load shunts, soft hums); Tier 3 semantic abstraction (lossy token of meaning up the spine to Eimyrja). High-fidelity crisis data is discarded; pattern is kept. Steady local traffic may reuse stable attention patterns across layers for selected heads; novelty and crisis pay full recompute.",
       "An Edge Node that has managed the same district for decades carries deep, hard-to-transfer local knowledge. Moving or resetting that node is a big deal. New nodes take significant time to become fully effective. Unused skills attenuate unless protected.",
       "District personalities (Old Tide, High Quiet, Marketheart, Old Iron, Veil, Warmth, and functional-layer peers) are canonized as operational taste, not decoration. Humans who work with a node learn its style the way one learns a long-term colleague.",
       "See Systems & Applications companion and Core Framework \xA76.3 for coordination ladders and conflict resolution."

@@ -14,6 +14,22 @@ Format:
 
 ---
 
+### 2026-08-06 — ACCEPTED: Attention pattern reuse (Eimyrja / Edge)
+
+**Status:** **ACCEPTED** · live companion §5
+
+**Decision:** Where attention-like routing patterns remain stable across successive processing layers, Eimyrja and Edge Nodes may **reuse prior attention scores for selected heads** instead of full recompute every layer. Budget tactic only — not a new architecture family, not Divergence rewrite, not hard-command over life. Unstable / novelty / crisis traffic may force full recompute (higher energy, better accuracy). Bookkeeping cost is real; reuse is never free.
+
+**Why:** Divergence already prioritizes coherence and energy over thrash. External patent US 12,699,874 B2 (Google LLC, granted 4 Aug 2026) is **inspiration / corroboration** only — industry solving the same class of problem. Solid HARD → BRIDGE fill; one claim.
+
+**Rejected alternatives:** Silent spine rewrite; branding Google/in-world corporate hardware; dumping a full alternate technical bible; inventing consciousness from the patent.
+
+**Touches:** `public/docs/eimyrja-protonic-core.md` §5 · `city/03-district-atlas/eimyrja-and-spines.md` · `src/data/world.ts` (eimyrja, edge-nodes) · `src/data/updates.ts` · `src/data/credits.ts` · GitHub Issue #2
+
+**Credit:** Matt (hearth) · Rune (draft/structure) · public notice @IamEmily2050 · patent inventors as published
+
+---
+
 ### 2026-08-04 — LOCKED: Bifrost canon (Vee + Matt)
 
 **Status:** **LOCKED**

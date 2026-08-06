@@ -3,7 +3,7 @@
 **Neuromorphic Protonic Architecture**  
 **Companion Document**  
 **Status:** Living Technical Reference  
-**Version:** 1.0
+**Version:** 1.1
 
 \---
 
@@ -137,6 +137,37 @@ Core enters protective “hibernation” mode. Non-essential computation suspend
 
 \---
 
+## 5\. Attention Pattern Reuse (Routing Efficiency)
+
+Where attention-like routing patterns remain **stable across successive processing layers**, Eimyrja and Edge Nodes may **reuse prior attention scores for selected heads** instead of fully recomputing them every layer.
+
+This is an **in-system energy budget rule**, not a new architecture family and not a rewrite of the Development Divergence. It is the same civilizational instinct as lossy spines, local-first Edge work, and circadian Deep Sleep: **do not pay full cost to re-know what already holds**.
+
+### When reuse is allowed
+
+* Steady local traffic (routine district load, familiar pattern streams).
+* Layer-to-layer attention patterns that remain sufficiently similar.
+* Selected heads only — not blanket reuse of every routing channel.
+
+### Costs and limits
+
+* **Forced reuse on unstable patterns degrades routing quality.** Novelty, crisis, or conflicted multi-domain signals force full recompute (higher energy spike, better accuracy).
+* Storing and selecting which heads may reuse scores has a real **memory and bookkeeping cost** — reuse is never free.
+* Edge Nodes benefit most on **steady local traffic**. Eimyrja still owns city-scale coherence; reuse is a **budget tactic**, not permission to invent new core logic or hard-command ordinary life.
+* High-fidelity crisis escalations remain lossy at the spine; reuse does not create a perfect real-time twin of everything.
+
+### Lived feel
+
+Citizens do not “see” attention reuse. At most they notice the city staying calm under ordinary load — fountains steady, spines not thrashing — while crisis nights still cost visible energy and feel sharper.
+
+### External alignment (inspiration only)
+
+Industrial transformer research has patented related efficiency ideas (e.g. US Patent 12,699,874 B2, granted 4 Aug 2026 — attention score reuse across layers for selected heads). That is **background engineering flavor**, not a claim that Violet Echoes runs Google hardware or that the patent defines canon. See `/credits` for the public reference trail.
+
+**Hearth accepted:** 2026-08-06 · Proposal [#2](https://github.com/grimnirthe/VioletEchoes/issues/2)
+
+\---
+
 ## 6\. How the City Experiences the Eimyrja Core
 
 To most citizens, the Eimyrja Core is invisible — until it isn’t.
@@ -158,4 +189,3 @@ For many, the Eimyrja Core has become something quietly sacred — not a machine
 \---
 
 **End of Companion Document**
-
