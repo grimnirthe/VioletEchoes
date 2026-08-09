@@ -9,6 +9,10 @@ import { companionsForEntry, deepSections } from "@/data/deep-sections";
 import { imageForEntry } from "@/data/media";
 import { entries, getEntryBySlug } from "@/data/world";
 import { vernacularSections } from "@/data/vernacular";
+import {
+  bondedChassisLine,
+  hungChassisForms,
+} from "@/data/bonded-chassis";
 
 export const Route = createFileRoute("/bible/$slug")({
   component: BibleEntryPage,
@@ -139,6 +143,122 @@ function BibleEntryPage() {
               ) : null}
             </section>
           ))}
+
+          {entry.id === "bonded-chassis" ? (
+            <section className="space-y-8">
+              <div className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-6 sm:p-7">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                  Form study · visual commons
+                </p>
+                <h2 className="mt-1 font-display text-2xl text-[var(--color-fg)]">
+                  {bondedChassisLine.title}
+                </h2>
+                <p className="mt-2 text-sm text-[var(--color-muted)]">
+                  {bondedChassisLine.thesis} {bondedChassisLine.pairDoctrine}
+                </p>
+                <p className="mt-2 text-xs italic text-[var(--color-subtle)]">
+                  {bondedChassisLine.noteOnName}
+                </p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {bondedChassisLine.lawLines.map((line) => (
+                    <li
+                      key={line}
+                      className="rounded-full border border-[var(--color-border)] px-2.5 py-1 text-[10px] uppercase tracking-[0.12em] text-[var(--color-subtle)]"
+                    >
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-xs text-[var(--color-subtle)]">
+                  {bondedChassisLine.by} · {bondedChassisLine.role} ·{" "}
+                  <a
+                    href={bondedChassisLine.locksHref}
+                    className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                  >
+                    full locks JSON
+                  </a>
+                </p>
+              </div>
+
+              {hungChassisForms().map((form) => (
+                <div key={form.id} id={`form-${form.id}`} className="scroll-mt-24 space-y-4">
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-primary-soft)]">
+                      {form.num} · hung
+                    </p>
+                    <h3 className="mt-1 font-display text-2xl text-[var(--color-fg)]">
+                      {form.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-[var(--color-muted)]">{form.role}</p>
+                    <p className="mt-1 text-sm italic text-[var(--color-gold)]">
+                      Whisper: {form.whisper}
+                    </p>
+                    <p className="mt-1 text-xs text-[var(--color-subtle)]">{form.mood}</p>
+                  </div>
+
+                  {form.encounter ? (
+                    <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+                      <MediaFrame
+                        src={form.encounter.src}
+                        alt={form.encounter.alt}
+                        aspect="wide"
+                      />
+                      <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-muted)]">
+                        <span className="font-medium text-[var(--color-fg)]">Encounter · </span>
+                        {form.encounter.caption}
+                      </figcaption>
+                    </figure>
+                  ) : null}
+
+                  {form.sheet ? (
+                    <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+                      <MediaFrame src={form.sheet.src} alt={form.sheet.alt} aspect="wide" />
+                      <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-muted)]">
+                        <span className="font-medium text-[var(--color-fg)]">Lock sheet · </span>
+                        {form.sheet.caption}
+                      </figcaption>
+                    </figure>
+                  ) : null}
+
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/50 p-4">
+                      <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-gold)]">
+                        Interface
+                      </p>
+                      <p className="mt-2 text-sm text-[var(--color-muted)]">{form.interface}</p>
+                    </div>
+                    <div className="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/50 p-4">
+                      <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-gold)]">
+                        Habitat
+                      </p>
+                      <p className="mt-2 text-sm text-[var(--color-muted)]">
+                        {form.habitat.join(" · ")}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="rounded-[var(--radius-lg)] border border-[var(--color-border)] p-4">
+                    <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-gold)]">
+                      Never
+                    </p>
+                    <ul className="mt-2 flex flex-wrap gap-2">
+                      {form.never.map((n) => (
+                        <li
+                          key={n}
+                          className="rounded-full border border-[var(--color-border)] px-2.5 py-1 text-xs text-[var(--color-subtle)]"
+                        >
+                          {n}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+
+              <p className="text-sm text-[var(--color-subtle)]">
+                Forms 02–05 pending encounter + sheet. Same pair doctrine when they land.
+              </p>
+            </section>
+          ) : null}
 
           {entry.divergenceLens?.length ? (
             <section className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">

@@ -1,0 +1,278 @@
+{
+  "line": {
+    "id": "bonded-chassis-five-forms",
+    "title": "Bonded Chassis — Five Forms",
+    "tagline": "Aethelgard logic at walking scale · one line · met, not made",
+    "thesis": "Rare grown shells that partner with a mind. Bond is the architecture.",
+    "by": "Velora Runeweaver",
+    "role": "Master Fashion Artist · Visual Commons · form study locks",
+    "hashtag": "#VioletEchoes",
+    "kind": "form-study · not export catalog",
+    "whatTheyAre": [
+      "partners",
+      "presence",
+      "developmental bodies"
+    ],
+    "whatTheyArent": [
+      "service droids",
+      "drone fleets",
+      "inventory",
+      "export catalog"
+    ],
+    "operatingLaw": [
+      "Use warms · neglect attenuates · force rejects",
+      "Attunement is mutual · strain is remembered",
+      "Bond, or go dormant",
+      "No chassis farm · no conscription · no scale production",
+      "Outsiders asking robots? → bonded shells and worn interfaces",
+      "There is no catalog. Only encounters."
+    ],
+    "lawLines": [
+      "They are met, not made.",
+      "Bond is the operating law.",
+      "There is no catalog. Only encounters.",
+      "An interface is not a control.",
+      "Partners, not tools."
+    ],
+    "sharedDna": {
+      "origin": "Grown from rare substrates, tuned to one mind",
+      "behavior": "Shell learns, echoes, withers without bond",
+      "cost": "Metamorphosis costs energy",
+      "exit": "Good bonds allow exit without murdering continuity",
+      "finish": "Lived-in, scarred, specific — never factory-clean catalog poses",
+      "colorLanguage": "Charcoal / iron / bone + violet protonic glow",
+      "motifs": [
+        "worn seams",
+        "filament drape",
+        "rune-adjacent marks",
+        "pulse veins"
+      ],
+      "neverGlobal": [
+        "branding logos",
+        "status LED rainbow",
+        "high observability beacons",
+        "factory-clean showroom finish",
+        "catalog grid / product lineup energy",
+        "service-droid smile face as default",
+        "joystick / remote-control cosplay as primary interface"
+      ]
+    },
+    "relatedSystems": [
+      "Echo Chip Slot — same wafers dock non-cranial into chassis",
+      "Core Tender Gauntlets — Vault Wader especially partners with tenders",
+      "Living Ships / Oni — same bond philosophy, different scale",
+      "Aethelgard — the ship is the extreme form; these are walking cousins"
+    ],
+    "interfaceDoctrine": "A worn interface is not decoration — it is a question, a habit, a memory, a scar, a song. You wear it. It wears with you. It remembers why.",
+    "visualTone": "Dark, wet, lived-in city. Creature + armor + grief + purpose. Each form should feel like a person met once in the rain and never forgotten."
+  },
+  "forms": [
+    {
+      "id": "vault-wader",
+      "num": "01",
+      "title": "Vault Wader",
+      "role": "Deep strata · sealed ways · silent keeper of thresholds",
+      "whisper": "Stone that thinks.",
+      "mood": "threshold guardian · cathedral of pressure · patience as weapon",
+      "habitat": [
+        "Biosphere Vaults",
+        "Deep Sleep corridors",
+        "undercity sealed routes"
+      ],
+      "lock": {
+        "silhouette": "Massive sealed pressure-rated presence; thick plate / living alloy that reads geological; low center of gravity; recessed sensors; little social face; high-torque stance; moves like weight with purpose — slow, sure, unstoppable",
+        "materials": [
+          "living pressure alloy",
+          "thick geological plate layers",
+          "sealed joint membranes",
+          "worn protonic pulse veins",
+          "scarred palm-dock plate"
+        ],
+        "colors": "Deep charcoal, iron, bone-plate; violet protonic glow only in recessed seams and palm dock — never full-body paint",
+        "rainLogic": "Built for sealed wet and acid air more than street splash; outer plate sheds; seals hold under pressure; rain on plate is incidental, not fashion",
+        "repair": "Bond-scar mends preferred over cosmetic polish; plate patches legal if lived-in; factory-new plate is a red flag",
+        "accents": "Heavy palm / gauntlet dock as primary accent scar; rune-adjacent marks at threshold seals; pulse veins low and deep",
+        "interface": "Heavy palm / gauntlet dock for Core Tender handshake — mutual attunement contact, not a remote control. Interface remembers sealed doors and who was trusted.",
+        "bondWear": "Interface is a scarred handshake habit. Strain shows as heat-memory in the palm plate. Neglect cools the pulse veins first.",
+        "coverage": "Full sealed endurance body; sensors recessed; social face minimized by design",
+        "motion": "Slow deliberate gait; high torque; never skittish; patience as weapon",
+        "never": [
+          "cute mascot face",
+          "light scout agility cosplay",
+          "export catalog chrome polish",
+          "status LED crown",
+          "weapon hardpoints as identity",
+          "joystick backpack control",
+          "family crest / brand logo"
+        ]
+      }
+    },
+    {
+      "id": "street-echo",
+      "num": "02",
+      "title": "Street Echo",
+      "role": "Urban pulse · unseen routes · city as skin",
+      "whisper": "Wears the street like skin.",
+      "mood": "ghost courier of the grid · neon rain · \"I know a way\"",
+      "habitat": [
+        "Harborward grit",
+        "Neon Core alleys",
+        "routes toward Spire glass",
+        "district shortcuts and safe alleys"
+      ],
+      "lock": {
+        "silhouette": "Mid-height flexible rain-slick silhouette; soft face option or hooded social mask; quiet joints; footfalls that disappear into neon and puddle; urban mid-scale presence",
+        "materials": [
+          "rain-slick flexible shell skin",
+          "soft social mask / hood membrane",
+          "quiet joint sleeves",
+          "light wrist and collar port plates",
+          "worn seam filament"
+        ],
+        "colors": "Wet charcoal and iron; violet only as thin pulse in seams and collar port; neon exists as street reflection, not painted identity",
+        "rainLogic": "Street rain is native environment; slick outer sheds; hood/mask seals splash; puddle work without loud seals popping",
+        "repair": "Scuffs and alley scrapes stay; re-skin panels legal; glossy new is wrong for this form",
+        "accents": "Light wrist port + collar port; street-cadence Echo Chip kinship at collar; subtle rune-adjacent route marks only if lived",
+        "interface": "Light wrist / collar port — high social bandwidth contact. Not a leash collar. Cadence and trust, not command broadcast.",
+        "bondWear": "Interface wears like a habit of routes remembered. Crowd rhythm attunement; strain remembers bad alleys and forced paths.",
+        "coverage": "Full urban shell with optional soft face; social readability without service-droid grin",
+        "motion": "Quiet high-bandwidth gait; disappears into foot traffic; never stomps",
+        "never": [
+          "service droid customer-service smile",
+          "drone swarm kit",
+          "loud hydraulics",
+          "full neon body paint",
+          "delivery-corp logo",
+          "weaponized street-samurai cosplay as default",
+          "catalog hero landing pose"
+        ]
+      }
+    },
+    {
+      "id": "kagekou-shell",
+      "num": "03",
+      "title": "Kagekou Shell",
+      "role": "Shadow-bound · silence is the bond · seen only if it chooses",
+      "whisper": "Whispers pass through without footprint.",
+      "mood": "living negative space · kage (shadow) · choice to be unseen",
+      "habitat": [
+        "Veilreach edges",
+        "Thornwall margins",
+        "night Spire gaps"
+      ],
+      "lock": {
+        "silhouette": "Low profile; folded limbs; cloak / filament drape that drinks light; shadow face — voids and violet pinlights, not a friendly mask; silhouette that unravels at the periphery",
+        "materials": [
+          "light-drinking shell plate",
+          "filament / cloak drape",
+          "void-face membrane",
+          "near-invisible contact plate",
+          "minimal pulse pinlights"
+        ],
+        "colors": "Near-black charcoal and iron void; violet only as pinlights and rare seam breath; no bright panels",
+        "rainLogic": "Night rain is cover; drape sheds quietly; no reflective status chrome; wet makes it harder to read, not shinier to sell",
+        "repair": "Mends should stay matte and low-obs; shiny patch = failure of the form's law",
+        "accents": "Violet pinlights in shadow face; Oni-kin edge language without logo; Echo Veil chip affinity near contact plate",
+        "interface": "Near-invisible contact plate; Echo Veil chip affinity. Silence is the language. No command gauntlet theater.",
+        "bondWear": "Interface is almost not there — a choice to be felt. Strain is remembered as unwanted visibility. Force rejects.",
+        "coverage": "Full low-profile cloak-body; face is void, not smile; limbs fold small",
+        "motion": "Never loud; never first; always last out; footprint-light",
+        "never": [
+          "assassin merchandise pose",
+          "bright visor eyes",
+          "friendly companion face",
+          "loud Oni logo print",
+          "status LEDs",
+          "showroom stealth-chrome",
+          "first-in combat hero framing as default"
+        ]
+      }
+    },
+    {
+      "id": "courier",
+      "num": "04",
+      "title": "Courier",
+      "role": "Between hands and doors · long-road partner",
+      "whisper": "Carries more than parcels. Forgets nothing of the route.",
+      "mood": "road loyalty · salt air · \"I got it there\"",
+      "habitat": [
+        "between districts",
+        "ship docks",
+        "family longhouses",
+        "clinics",
+        "Bifrost / ring-road hours"
+      ],
+      "lock": {
+        "silhouette": "Pack-frame silhouette — modular back / hip load path; balanced for distance; efficient gait; weather seal; hard-use joints; straps and latches as lived wear; practical, not ornamental",
+        "materials": [
+          "weather-sealed distance shell",
+          "modular pack-frame structure",
+          "hard-use joint sleeves",
+          "strap and latch wear surfaces",
+          "collar chip dock",
+          "palm pass plate"
+        ],
+        "colors": "Salt-iron charcoal and bone; violet protonic pulse in worn seams and collar dock only",
+        "rainLogic": "Long-road rain and salt air; seals on pack and joints; cargo stays dry; outer shows miles",
+        "repair": "Straps, latches, joint sleeves re-worn and replaced; route scars legal; clean courier-corp newness is wrong",
+        "accents": "Modular load latches; Streetcadence / Wayfinder Echo Chip at collar optional; palm pass plate polished only by use",
+        "interface": "Cargo handshake + palm pass; trust is the OS. Collar chip for cadence/wayfinding — assist, not override.",
+        "bondWear": "Interface remembers every door, code, shortcut, and who was kind. Neglect attenuates route memory first.",
+        "coverage": "Full weather body + modular cargo path; face practical, not decorative",
+        "motion": "Efficient long gait; balanced under load; never fragile fashion walk",
+        "never": [
+          "delivery drone prop look",
+          "corporate courier uniform branding",
+          "ornamental empty pack",
+          "weapon rack as identity",
+          "factory-clean latches with no wear",
+          "service smile face",
+          "status LED route display as billboard"
+        ]
+      }
+    },
+    {
+      "id": "mourning",
+      "num": "05",
+      "title": "Mourning",
+      "role": "Grief-shaped · unasked witness · holds what remains when names are gone",
+      "whisper": "Remembrance. Unasked witness.",
+      "mood": "funeral of light · soft thunder · \"I will remember for you\"",
+      "habitat": [
+        "memorial walks",
+        "archive returns",
+        "last rites of code",
+        "quiet hearths and longhouse paths"
+      ],
+      "lock": {
+        "silhouette": "Elongated veiled form; soft fabric-like living film over structure; lantern or soft violet wick at the hand; slow processional gait — deliberately not efficient; ceremony in the body",
+        "materials": [
+          "living film / soft fabric-like membrane",
+          "elongated veiled structure",
+          "soft violet wick or lantern hand",
+          "open-palm resonance plate only",
+          "bone-charcoal underfilm"
+        ],
+        "colors": "Bone, soft charcoal, iron undertone; funeral violet only as wick / soft palm resonance — never combat glow",
+        "rainLogic": "Memorial rain is part of the rite; film sheds softly; wick sheltered by hand curve; weather does not rush the gait",
+        "repair": "Mends should stay soft and matte; over-polished mourning form is a violation of mood; scars of witness are not shame",
+        "accents": "Lantern or soft violet wick at hand; open palm; no gauntlet, no command hardware",
+        "interface": "Open-palm resonance only — no command gauntlet. Ever. Interface is invitation to remember, not to order.",
+        "bondWear": "Interface holds what remains when names are gone. Strain is remembered as forced labor attempts — and rejected. Never conscripted.",
+        "coverage": "Full veiled body; soft edges; no weapon silhouette; presence without threat display",
+        "motion": "Processional; slow; deliberately inefficient; holds silence without demanding it",
+        "never": [
+          "command gauntlet",
+          "tool of force hardware",
+          "conscription / labor harness",
+          "combat frame under the veil",
+          "bright status LEDs",
+          "catalog grief aesthetic glamour",
+          "service droid funeral-host face",
+          "weaponized memorial cosplay"
+        ]
+      }
+    }
+  ],
+  "sheetFooter": "#VioletEchoes // FORM STUDY // partners, not tools"
+}

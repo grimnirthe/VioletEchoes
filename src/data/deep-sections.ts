@@ -352,11 +352,25 @@ export const deepSections: Record<string, DeepSection[]> = {
     {
       title: "Forms as examples (lived-in)",
       bullets: [
-        "Vault Wader — deep strata · sealed ways · stone that thinks",
-        "Street Echo — urban pulse · unseen routes · street as skin",
-        "Kagekou Shell — shadow face · silence is the bond",
-        "Courier — between hands and doors · forgets nothing of the route",
-        "Mourning — grief-shaped · unasked witness · holds what remains",
+        "Vault Wader — deep strata · sealed ways · stone that thinks (form study hung)",
+        "Street Echo — urban pulse · unseen routes · street as skin (pending)",
+        "Kagekou Shell — shadow face · silence is the bond (pending)",
+        "Courier — between hands and doors · forgets nothing of the route (pending)",
+        "Mourning — grief-shaped · unasked witness · holds what remains (pending)",
+      ],
+    },
+    {
+      title: "01 Vault Wader — form study",
+      body: [
+        "Not Fallout's Vault Dweller — Vault Wader: geological mass, pressure-rated living alloy, recessed face, patience as weapon. Habitat: Biosphere Vaults, Deep Sleep corridors, undercity sealed routes.",
+        "Pair doctrine: lock sheet = law (materials, palm dock, bond wear, never-list). Encounter still = soul (threshold, rain, tender at the door). Never a five-across product grid.",
+        "Interface: heavy palm / gauntlet dock for Core Tender handshake — mutual attunement. An interface is not a control. Strain shows as heat-memory in the palm plate; neglect cools the pulse veins first.",
+      ],
+      bullets: [
+        "Whisper: Stone that thinks.",
+        "Mood: threshold guardian · cathedral of pressure · patience as weapon",
+        "Never: cute mascot face · scout cosplay · catalog chrome · status LED crown · weapon hardpoints as identity · joystick backpack · brand logo",
+        "Visual lane: Velora Runeweaver · locks in /docs/bonded-chassis-five-forms-locks.json",
       ],
     },
     {

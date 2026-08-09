@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-vault-wader-form-study",
+    date: "2026-08-09",
+    title: "Vault Wader hung — Bonded Chassis form study 01",
+    kind: "systems",
+    summary:
+      "Form 01 Vault Wader live: encounter still + lock sheet. Sheet = law, encounter = soul. Not Fallout's Vault Dweller — stone that thinks.",
+    body: [
+      "Bonded Chassis form study template is hung on the bible entry and systems gallery. Visual lane: Velora Runeweaver. Full locks JSON public. Forms 02–05 pending the same pair doctrine.",
+      "There is no catalog. Only encounters. An interface is not a control.",
+    ],
+    hrefs: [
+      { label: "Bonded Chassis", href: "/bible/bonded-chassis" },
+      { label: "Systems", href: "/systems" },
+      { label: "Locks JSON", href: "/docs/bonded-chassis-five-forms-locks.json" },
+    ],
+    by: "Velora Runeweaver · visual commons",
+    tags: ["bonded-chassis", "vault-wader", "form-study", "velora", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-09-echo-chip-master",
     date: "2026-08-09",
     title: "Echo Chip Slot — master concept sheets locked",
