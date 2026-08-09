@@ -780,10 +780,17 @@ function SystemsPage() {
                     key={shot.id}
                     className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
                   >
-                    <MediaFrame src={shot.src} alt={shot.title} aspect="wide" />
+                    <MediaFrame
+                      src={shot.src}
+                      alt={shot.title}
+                      aspect="sheet"
+                      fit="contain"
+                      expandable
+                    />
                     <figcaption className="space-y-1 p-4">
                       <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
                       <p className="text-sm text-[var(--color-muted)]">{shot.caption}</p>
+                      <p className="text-xs text-[var(--color-subtle)]">Tap for full sheet</p>
                     </figcaption>
                   </figure>
                 ))}
@@ -801,10 +808,17 @@ function SystemsPage() {
                     key={shot.id}
                     className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
                   >
-                    <MediaFrame src={shot.src} alt={shot.title} aspect="wide" />
+                    <MediaFrame
+                      src={shot.src}
+                      alt={shot.title}
+                      aspect="sheet"
+                      fit="contain"
+                      expandable
+                    />
                     <figcaption className="space-y-1 p-4">
                       <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
                       <p className="text-sm text-[var(--color-muted)]">{shot.caption}</p>
+                      <p className="text-xs text-[var(--color-subtle)]">Tap for full sheet</p>
                     </figcaption>
                   </figure>
                 ))}
@@ -822,10 +836,17 @@ function SystemsPage() {
                     key={shot.id}
                     className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
                   >
-                    <MediaFrame src={shot.src} alt={shot.title} aspect="wide" />
+                    <MediaFrame
+                      src={shot.src}
+                      alt={shot.title}
+                      aspect="sheet"
+                      fit="contain"
+                      expandable
+                    />
                     <figcaption className="space-y-1 p-4">
                       <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
                       <p className="text-sm text-[var(--color-muted)]">{shot.caption}</p>
+                      <p className="text-xs text-[var(--color-subtle)]">Tap for full sheet</p>
                     </figcaption>
                   </figure>
                 ))}

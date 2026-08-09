@@ -103,7 +103,19 @@ function BibleEntryPage() {
               <MediaFrame
                 src={image}
                 alt={`Visual for ${entry.title}`}
-                aspect="video"
+                aspect={
+                  entry.id === "bonded-chassis" || entry.id === "echo-slot"
+                    ? "sheet"
+                    : "video"
+                }
+                fit={
+                  entry.id === "bonded-chassis" || entry.id === "echo-slot"
+                    ? "contain"
+                    : "cover"
+                }
+                expandable={
+                  entry.id === "bonded-chassis" || entry.id === "echo-slot"
+                }
                 priority
               />
             </figure>
@@ -201,21 +213,35 @@ function BibleEntryPage() {
                       <MediaFrame
                         src={form.encounter.src}
                         alt={form.encounter.alt}
-                        aspect="wide"
+                        aspect="sheet"
+                        fit="contain"
+                        expandable
                       />
                       <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-muted)]">
                         <span className="font-medium text-[var(--color-fg)]">Encounter · </span>
                         {form.encounter.caption}
+                        <span className="mt-1 block text-xs text-[var(--color-subtle)]">
+                          Tap image for full view
+                        </span>
                       </figcaption>
                     </figure>
                   ) : null}
 
                   {form.sheet ? (
                     <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
-                      <MediaFrame src={form.sheet.src} alt={form.sheet.alt} aspect="wide" />
+                      <MediaFrame
+                        src={form.sheet.src}
+                        alt={form.sheet.alt}
+                        aspect="sheet"
+                        fit="contain"
+                        expandable
+                      />
                       <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-muted)]">
                         <span className="font-medium text-[var(--color-fg)]">Lock sheet · </span>
                         {form.sheet.caption}
+                        <span className="mt-1 block text-xs text-[var(--color-subtle)]">
+                          Tap image for full sheet — text is meant to be read
+                        </span>
                       </figcaption>
                     </figure>
                   ) : null}
@@ -275,7 +301,9 @@ function BibleEntryPage() {
                     <MediaFrame
                       src={bondedChassisLine.lineChorus.primary.src}
                       alt={bondedChassisLine.lineChorus.primary.alt}
-                      aspect="wide"
+                      aspect="sheet"
+                      fit="contain"
+                      expandable
                     />
                     <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-muted)]">
                       {bondedChassisLine.lineChorus.primary.caption}
@@ -285,7 +313,9 @@ function BibleEntryPage() {
                     <MediaFrame
                       src={bondedChassisLine.lineChorus.verse.src}
                       alt={bondedChassisLine.lineChorus.verse.alt}
-                      aspect="wide"
+                      aspect="sheet"
+                      fit="contain"
+                      expandable
                     />
                     <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-muted)]">
                       {bondedChassisLine.lineChorus.verse.caption}
