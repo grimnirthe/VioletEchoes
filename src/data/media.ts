@@ -139,6 +139,8 @@ export const media = {
   kagekouShellSheet: "/images/chassis/03-kagekou-shell-sheet.jpg",
   courierEncounter: "/images/chassis/04-courier-encounter.jpg",
   courierSheet: "/images/chassis/04-courier-sheet.jpg",
+  mourningEncounter: "/images/chassis/05-mourning-encounter.jpg",
+  mourningSheet: "/images/chassis/05-mourning-sheet.jpg",
   /** Core Tender Gauntlets & Light Exos */
   tenderGauntletsAnatomy: "/images/tender-gauntlets-anatomy.jpg",
   tenderGauntletsPrinciples: "/images/tender-gauntlets-principles.jpg",

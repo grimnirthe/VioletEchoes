@@ -255,7 +255,7 @@ function BibleEntryPage() {
               ))}
 
               <p className="text-sm text-[var(--color-subtle)]">
-                Form 05 Mourning pending encounter + sheet. Encounters may vary by night — same form, different rain. Courier may share the frame with Street Echo kin. Same pair doctrine when they land.
+                All five forms hung — sheet + encounter each. Encounters may vary by night; forms may share a frame (Courier · Street Echo). Mourning: open palm only — never a command gauntlet. There is no catalog. Only encounters.
               </p>
             </section>
           ) : null}

@@ -44,6 +44,7 @@ export const bondedChassisLine = {
   locksHref: "/docs/bonded-chassis-five-forms-locks.json",
   bibleHref: "/bible/bonded-chassis",
   accepted: "2026-08-09",
+  waveNote: "All five forms hung — sheet + encounter each. No catalog. Only encounters.",
 } as const;
 
 export const bondedChassisForms: ChassisForm[] = [
@@ -197,14 +198,36 @@ export const bondedChassisForms: ChassisForm[] = [
     role: "Grief-shaped · unasked witness · holds what remains when names are gone",
     whisper: "Remembrance. Unasked witness.",
     mood: 'funeral of light · soft thunder · "I will remember for you"',
-    status: "pending",
-    habitat: ["memorial walks", "archive returns", "last rites of code", "quiet hearths"],
-    interface: "Open-palm resonance only — no command gauntlet. Ever.",
+    status: "hung",
+    encounter: {
+      src: "/images/chassis/05-mourning-encounter.jpg",
+      alt: "Mourning bonded chassis in a rainy longhouse hall — open palm, violet wick lantern, unasked witness with a seated griever",
+      caption:
+        "Encounter — open palm only. Lantern wick. Someone is allowed to sit with what remains. Never a command gauntlet.",
+    },
+    sheet: {
+      src: "/images/chassis/05-mourning-sheet.jpg",
+      alt: "Mourning form study lock sheet — processional veil, open-palm interface, never-list",
+      caption:
+        "Lock sheet — open palm as law. Processional rain. Invitation to remember, not to order.",
+    },
+    habitat: [
+      "memorial walks",
+      "archive returns",
+      "last rites of code",
+      "quiet hearths and longhouse paths",
+    ],
+    interface:
+      "Open-palm resonance only — no command gauntlet. Ever. Invitation to remember, not to order.",
     never: [
       "command gauntlet",
       "tool of force hardware",
-      "labor harness",
+      "conscription / labor harness",
       "combat frame under the veil",
+      "bright status LEDs",
+      "catalog grief aesthetic glamour",
+      "service droid funeral-host face",
+      "weaponized memorial cosplay",
     ],
   },
 ];

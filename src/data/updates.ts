@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-mourning-form-study",
+    date: "2026-08-09",
+    title: "Mourning hung — Bonded Chassis five forms complete",
+    kind: "systems",
+    summary:
+      "Form 05 Mourning closes the line: open-palm lock sheet + longhouse encounter. All five forms hung. No catalog. Only encounters.",
+    body: [
+      "Vault Wader · Street Echo · Kagekou Shell · Courier · Mourning — each sheet + encounter. Visual lane: Velora Runeweaver. An interface is not a control. Partners, not tools.",
+    ],
+    hrefs: [
+      { label: "Bonded Chassis", href: "/bible/bonded-chassis" },
+      { label: "Systems", href: "/systems" },
+      { label: "Locks JSON", href: "/docs/bonded-chassis-five-forms-locks.json" },
+    ],
+    by: "Velora Runeweaver · visual commons",
+    tags: ["bonded-chassis", "mourning", "form-study", "velora", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-09-courier-form-study",
     date: "2026-08-09",
     title: "Courier hung — Bonded Chassis form study 04",

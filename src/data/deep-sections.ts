@@ -356,7 +356,7 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Street Echo — urban pulse · unseen routes · street as skin (form study hung)",
         "Kagekou Shell — shadow face · silence is the bond (form study hung)",
         "Courier — between hands and doors · forgets nothing of the route (form study hung)",
-        "Mourning — grief-shaped · unasked witness · holds what remains (pending)",
+        "Mourning — grief-shaped · unasked witness · holds what remains (form study hung)",
       ],
     },
     {
@@ -410,6 +410,19 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Whisper: Carries more than parcels. Forgets nothing of the route.",
         "Mood: road loyalty · salt air · I got it there",
         "Never: delivery drone prop · corp branding · empty ornamental pack · weapon rack identity · factory-clean latches · service smile · LED route billboard",
+      ],
+    },
+    {
+      title: "05 Mourning — form study",
+      body: [
+        "Elongated veiled form; living film over structure; lantern or soft violet wick; processional gait — deliberately not efficient. Habitat: memorial walks, archive returns, last rites of code, quiet hearths and longhouse paths.",
+        "Pair: open-palm lock sheet + longhouse encounter (sitter free to grieve). Sacred interface: open-palm resonance only — no command gauntlet. Ever. Never conscripted. Never a tool of force.",
+        "All five forms now hung as sheet + encounter. There is no catalog. Only encounters.",
+      ],
+      bullets: [
+        "Whisper: Remembrance. Unasked witness.",
+        "Mood: funeral of light · soft thunder · I will remember for you",
+        "Never: command gauntlet · force hardware · labor harness · combat under veil · status LEDs · catalog grief glamour · funeral-host face · weaponized memorial",
       ],
     },
     {
