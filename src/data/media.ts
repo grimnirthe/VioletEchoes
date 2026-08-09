@@ -141,6 +141,8 @@ export const media = {
   courierSheet: "/images/chassis/04-courier-sheet.jpg",
   mourningEncounter: "/images/chassis/05-mourning-encounter.jpg",
   mourningSheet: "/images/chassis/05-mourning-sheet.jpg",
+  lineChorusFiveRains: "/images/chassis/line-chorus-five-rains.jpg",
+  lineChorusFiveRainsVerse: "/images/chassis/line-chorus-five-rains-verse.jpg",
   /** Core Tender Gauntlets & Light Exos */
   tenderGauntletsAnatomy: "/images/tender-gauntlets-anatomy.jpg",
   tenderGauntletsPrinciples: "/images/tender-gauntlets-principles.jpg",

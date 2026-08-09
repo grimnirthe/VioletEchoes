@@ -62,6 +62,21 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-chassis-line-chorus",
+    date: "2026-08-09",
+    title: "Bonded Chassis line chorus — five rains · one law",
+    kind: "systems",
+    summary:
+      "Optional unlabeled strip + verse strip hung under the five form pairs. Examples only — not a catalog, not inventory.",
+    body: [
+      "Canon remains sheet + encounter per form. Chorus is line memory in one frame. Board 3 atlas not hung.",
+    ],
+    hrefs: [{ label: "Bonded Chassis", href: "/bible/bonded-chassis" }],
+    by: "Velora Runeweaver · visual commons",
+    tags: ["bonded-chassis", "line-chorus", "velora", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-09-mourning-form-study",
     date: "2026-08-09",
     title: "Mourning hung — Bonded Chassis five forms complete",

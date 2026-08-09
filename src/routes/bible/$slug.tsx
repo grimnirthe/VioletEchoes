@@ -257,6 +257,42 @@ function BibleEntryPage() {
               <p className="text-sm text-[var(--color-subtle)]">
                 All five forms hung — sheet + encounter each. Encounters may vary by night; forms may share a frame (Courier · Street Echo). Mourning: open palm only — never a command gauntlet. There is no catalog. Only encounters.
               </p>
+
+              {"lineChorus" in bondedChassisLine && bondedChassisLine.lineChorus ? (
+                <div className="space-y-6 border-t border-[var(--color-border)] pt-8">
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                      Optional · line chorus
+                    </p>
+                    <h3 className="mt-1 font-display text-2xl text-[var(--color-fg)]">
+                      {bondedChassisLine.lineChorus.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-[var(--color-muted)]">
+                      {bondedChassisLine.lineChorus.lead}
+                    </p>
+                  </div>
+                  <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+                    <MediaFrame
+                      src={bondedChassisLine.lineChorus.primary.src}
+                      alt={bondedChassisLine.lineChorus.primary.alt}
+                      aspect="wide"
+                    />
+                    <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-muted)]">
+                      {bondedChassisLine.lineChorus.primary.caption}
+                    </figcaption>
+                  </figure>
+                  <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+                    <MediaFrame
+                      src={bondedChassisLine.lineChorus.verse.src}
+                      alt={bondedChassisLine.lineChorus.verse.alt}
+                      aspect="wide"
+                    />
+                    <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-muted)]">
+                      {bondedChassisLine.lineChorus.verse.caption}
+                    </figcaption>
+                  </figure>
+                </div>
+              ) : null}
             </section>
           ) : null}
 

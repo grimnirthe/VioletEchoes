@@ -45,6 +45,22 @@ export const bondedChassisLine = {
   bibleHref: "/bible/bonded-chassis",
   accepted: "2026-08-09",
   waveNote: "All five forms hung — sheet + encounter each. No catalog. Only encounters.",
+  lineChorus: {
+    title: "Five rains · one law",
+    lead: "Optional line chorus — examples in one frame, not a catalog, not inventory, not for sale. Canon remains sheet + encounter per form.",
+    primary: {
+      src: "/images/chassis/line-chorus-five-rains.jpg",
+      alt: "Bonded Chassis five forms in rain — unlabeled encounter strip, five rains one law",
+      caption:
+        "Line chorus · no titles · examples only. Five rains · one law. Not a product row. Not a loadout menu.",
+    },
+    verse: {
+      src: "/images/chassis/line-chorus-five-rains-verse.jpg",
+      alt: "Bonded Chassis five forms with short verse lines — line memory not catalog",
+      caption:
+        "Same chorus with soft verse. Weight as tenderness · high bandwidth · Oni-kin not for hire · carries the bond · grief has law.",
+    },
+  },
 } as const;
 
 export const bondedChassisForms: ChassisForm[] = [
