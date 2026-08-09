@@ -317,17 +317,27 @@ export const deepSections: Record<string, DeepSection[]> = {
 
   "core-tender-gauntlets": [
     {
-      title: "Worn interface, not robot crew",
+      title: "Piece job — worn tools, not robots",
       body: [
-        "Gauntlets extend the existing bio-conductive haptic gloves: piezo-protonic link, graphene mesh, runic feedback, isolation cuff. Light exos are optional vault frames powered from the local vascular loop. Hang them after Deep Sleep. Overwear is a design failure.",
+        "Gauntlets: piezo-protonic link · graphene mesh · runic feedback · isolation cuff. Light exo: optional forearm→shoulder frame — assist, don’t control. Human still decides what to warm. Not autonomous.",
       ],
     },
     {
-      title: "Human context stays in the loop",
+      title: "Feel the pod — three states",
       bullets: [
-        "AI prints chitosan; tender validates which pathways to warm",
-        "Cascade work: tender acts as external pre-frontal cortex for a dying node",
-        "Bare hands remain holy — exo culture is not the default life",
+        "Clean = warm hum — stable, open, ready",
+        "Fouled = cold grit — resistance, drag, warning",
+        "Cascade = freeze-tremor — critical; back off",
+        "Trust the feel, not the flash",
+      ],
+    },
+    {
+      title: "Vault loop power · hang after cycle",
+      bullets: [
+        "Power from the vault resonant loop — conduits, not storage",
+        "No battery empire · no portable power hoarding",
+        "Hang them after the cycle — overwear = pulse-sick",
+        "Rest is ritual · we warm what we remember",
       ],
     },
   ],

@@ -770,6 +770,27 @@ function SystemsPage() {
           </p>
           <div className="mt-8">
             <p className="mb-3 text-xs uppercase tracking-[0.16em] text-[var(--color-subtle)]">
+              Tender Gauntlets & Light Exos — vault protocol
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {systemsGallery
+                .filter((s) => s.group === "tender-gauntlets")
+                .map((shot) => (
+                  <figure
+                    key={shot.id}
+                    className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+                  >
+                    <MediaFrame src={shot.src} alt={shot.title} aspect="wide" />
+                    <figcaption className="space-y-1 p-4">
+                      <p className="font-display text-lg text-[var(--color-fg)]">{shot.title}</p>
+                      <p className="text-sm text-[var(--color-muted)]">{shot.caption}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+            </div>
+          </div>
+          <div className="mt-8">
+            <p className="mb-3 text-xs uppercase tracking-[0.16em] text-[var(--color-subtle)]">
               Bonded Chassis — form studies
             </p>
             <div className="grid gap-4 sm:grid-cols-3">

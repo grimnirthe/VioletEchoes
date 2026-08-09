@@ -39,38 +39,43 @@ They make the human–matrix handshake safer, stronger, and more legible.
 
 | Layer | Function |
 |---|---|
-| Skin contact mesh | Piezo-protonic link; temperature, vibration, “resistance” as tactile state |
-| Graphene electrode grid | Maps voltage surges the tender can guide by gesture |
-| Runic feedback ring | Soft Ansuz / Uruz / Laguz glow when the bond is clean; ragged dissonance when fouled |
-| Isolation cuff | Manual barrier drag — force lateral dump when a pod is dying |
-| Memory-warm pad | Palm rest that “holds” a pattern the tender is reinforcing so it doesn’t drop mid-weave |
+| Piezo-protonic link | Micro-vibration bridge; feels before it acts; reads pod state + operator intent |
+| Graphene mesh | Flexible conductive weave; distributes pressure and protonic signal |
+| Runic feedback | Tactile pulse patterns across knuckles and palm — live pod-state translation |
+| Isolation cuff | Bio-isolate + feedback seal; protects the tender, not the tool |
+| Memory-warm pad | Palm rest that holds a pattern mid-warm so it doesn’t drop mid-weave |
+
+### How they feel the pod (three states)
+
+| State | Feel |
+|---|---|
+| **Clean** | Warm hum — stable, open, ready · clean pulse under the palm |
+| **Fouled** | Cold grit — resistance, drag, warning · sand in the joints |
+| **Cascade** | Freeze-tremor — critical instability · ice in the link · **back off** |
+
+Trust the feel, not the flash.
 
 ### Light exo (optional)
 
-- **When:** heavy vault work, beam clear, structural assist, multi-pod crisis  
-- **What:** living-alloy ribs + silk-strain sensors; power drawn from local vault vascular loop, not a personal battery empire  
-- **What it is not:** power armor for street war, autonomous drone suit, permanent body replacement  
+- **When:** heavy vault work, beam clear, multi-pod crisis  
+- **What:** forearm→shoulder frame — shoulder anchor, tendon rods (assist, don’t control), vault-loop port, beam stabilizer  
+- **Power:** vault resonant loop only — conduits, not storage; no internal cells; no portable power hoarding  
+- **What it is not:** power armor, autonomous drone suit, permanent body replacement  
 
-The exo **listens** to the tender’s intent the way an Oni listens to a rider — shallow bond, high cost if worn beyond need. After a Deep Sleep cycle, most crews hang the frame and go home in ordinary clothes. That attenuation is healthy.
+### Hang after the cycle
 
-### How it feels (to the tender)
+Overwear = **pulse-sick**: numb echo · tremor lag · cold drift · feedback nausea · echo-burn.  
+Let the piezo mesh discharge. Clean, reset, rest. **Rest is ritual.** Pulse-sick tenders don’t help the vault.
 
-- Clean link: warm palms, low hum, steady violet under the knuckles  
-- Biofouling: cold spike, ragged tone, “grit” in the fingers  
-- Cascade: freezing tremor or piercing acoustic feedback — act as the node’s external pre-frontal cortex  
-- Overwear: pulse-sick, rune-burn twitch — take the gauntlets off and walk  
+### Vault worker creed
 
-### Design smells (good)
+- They tender the work — tools extend care, not replace it  
+- Human still decides what to warm  
+- From the loop, for the loop — we do not hoard  
+- Respect the wear · hang · cleanse · recover  
+- **We warm what we remember.**  
 
-- Human remains the decision-maker for context and memory-warming  
-- Feedback is sensory, not a dashboard empire  
-- Frames hang when unused; they do not demand constant wear  
-
-### Design smells (bad)
-
-- Full-time exo culture that forgets bare hands  
-- Gauntlets that command pods without consent of local Edge personality  
-- Treating tenders as disposable “white blood cells” without rest and Longhouse warmth  
+**Tender Protocol v.3.7**
 
 ---
 

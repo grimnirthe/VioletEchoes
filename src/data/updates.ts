@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-tender-gauntlets",
+    date: "2026-08-09",
+    title: "Tender Gauntlets & Light Exos — Protocol v.3.7",
+    kind: "systems",
+    summary:
+      "Vault-worker worn tools hung: piezo-protonic gauntlets, optional light exo, three-state pod feel, vault-loop power, hang-after-cycle law.",
+    body: [
+      "Care over control. Feel before you warm. Rest is ritual. We warm what we remember. Completes the mobile interface triad with Bonded Chassis and Echo Chip Slot.",
+    ],
+    hrefs: [
+      { label: "Core Tender Gauntlets", href: "/bible/core-tender-gauntlets" },
+      { label: "Systems", href: "/systems" },
+      { label: "Mobile Interface companion", href: "/bible/companions/mobile-interface" },
+    ],
+    by: "hearth · vault workers · Loom",
+    tags: ["gauntlets", "light-exo", "core-tender", "pulse-sick", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-09-bonded-chassis-forms",
     date: "2026-08-09",
     title: "Bonded Chassis — five lived-in forms",

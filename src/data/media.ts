@@ -126,6 +126,11 @@ export const media = {
   bondedChassisHero: "/images/bonded-chassis-hero.jpg",
   bondedChassisForms: "/images/bonded-chassis-forms.jpg",
   bondedChassisLaw: "/images/bonded-chassis-law.jpg",
+  /** Core Tender Gauntlets & Light Exos */
+  tenderGauntletsAnatomy: "/images/tender-gauntlets-anatomy.jpg",
+  tenderGauntletsPrinciples: "/images/tender-gauntlets-principles.jpg",
+  tenderGauntletsFeel: "/images/tender-gauntlets-feel.jpg",
+  tenderGauntletsProtocol: "/images/tender-gauntlets-protocol.jpg",
   dualIsland: "/images/dual-island.jpg",
   dualHeartbeats: "/images/dual-heartbeats.jpg",
   dualInterwoven: "/images/dual-interwoven.jpg",
@@ -1172,6 +1177,38 @@ export const systemsGallery = [
       "Born, not built. Not for conscription. An interface is not a control — it is a question, a habit, a scar, a song.",
     group: "bonded-chassis" as const,
   },
+  {
+    id: "tender-gauntlets-anatomy",
+    src: media.tenderGauntletsAnatomy,
+    title: "Tender Gauntlets — Anatomy",
+    caption:
+      "Piezo-protonic link · graphene mesh · runic feedback · isolation cuff. Light exo optional. Hang after cycle.",
+    group: "tender-gauntlets" as const,
+  },
+  {
+    id: "tender-gauntlets-principles",
+    src: media.tenderGauntletsPrinciples,
+    title: "Tender Gauntlets — Vault worker notes",
+    caption:
+      "They tender the work. Read the feedback. From the loop, for the loop. Respect the wear.",
+    group: "tender-gauntlets" as const,
+  },
+  {
+    id: "tender-gauntlets-feel",
+    src: media.tenderGauntletsFeel,
+    title: "Tender Gauntlets — Feel the pod",
+    caption:
+      "Clean = warm hum · fouled = cold grit · cascade = freeze-tremor. Power from the vault loop, not a battery empire.",
+    group: "tender-gauntlets" as const,
+  },
+  {
+    id: "tender-gauntlets-protocol",
+    src: media.tenderGauntletsProtocol,
+    title: "Tender Protocol v.3.7",
+    caption:
+      "Care over control · feel before you warm · rest is ritual. We warm what we remember.",
+    group: "tender-gauntlets" as const,
+  },
 
   {
     id: "dual-island",
@@ -1349,7 +1386,7 @@ export const entryImages: Record<string, string> = {
   "living-ships": media.shipsAnatomy,
   aethelgard: media.aethelgardOrbitProfile,
   "oni-shadow-rider": media.oniStreetCruiser,
-  "core-tender-gauntlets": media.vehiclesBond,
+  "core-tender-gauntlets": media.tenderGauntletsAnatomy,
   "bonded-chassis": media.bondedChassisHero,
   "echo-slot": media.echoChipSpecV01,
   vernacular: media.doorBible,
@@ -1386,6 +1423,7 @@ export function imageForEntry(id: string): string | undefined {
     "oni-shadow-rider": "vehicles",
     "echo-slot": "echo-chip",
     "bonded-chassis": "bonded-chassis",
+    "core-tender-gauntlets": "tender-gauntlets",
     "city-overview": "dual-layer",
   };
   const group = groupAliases[id] ?? id;

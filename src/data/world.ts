@@ -1232,21 +1232,22 @@ export const entries: WorldEntry[] = [
     title: "Core Tender Gauntlets & Light Exos",
     kind: "system",
     summary:
-      "Worn interface for Deep Sleep vault work — haptic gauntlets and optional light exos. Humans stay the hands of the city. No robot crew.",
+      "Worn tools for vault work — not robots. Feel the pod. Warm what needs warming. Hang them after the cycle.",
     body: [
-      "Core Tenders are the mobile immune system of Violet Echoes: they walk into Biosphere Vaults during Deep Sleep and help Sub-Cortex Pods re-weave. They do not drive robot armies. They wear the bond.",
-      "Gauntlets are the hardened evolution of bio-conductive haptic gloves — graphene electrode mesh, piezo-protonic link, runic feedback, isolation cuff, and a palm pad that holds a pattern mid-warm. The tender feels clean link as warmth and hum; biofouling as cold grit; cascade as freezing tremor. Gesture guides voltage; context stays human.",
-      "Light exos are optional forearm-to-shoulder frames for heavy vault, beam clear, or multi-pod crisis. Power comes from the local vascular loop, not a personal battery empire. They listen shallowly, like a short Oni ride — hang them when the cycle ends. Overwear breeds pulse-sick and rune-burn twitch.",
-      "Good design keeps bare hands holy. Bad design is full-time exo culture, gauntlets that command without Edge consent, or treating tenders as disposable parts. Partners, not tools — even when the partner is a glove.",
+      "Core Tenders are the mobile immune system of Violet Echoes: they walk into Biosphere Vaults during Deep Sleep and help Sub-Cortex Pods re-weave. They do not drive robot armies. They wear the bond. Technology warms nothing on its own — the tender’s intent chooses what to warm, when, and how much.",
+      "Gauntlets (piece job): hardened bio-conductive gloves — piezo-protonic link (feels before it acts), graphene mesh (conducts and distributes protonic flow), runic feedback (live pod-state as tactile pulse on knuckles and palm), isolation cuff (bio-isolate + feedback seal; protects the tender, not the tool). Optional palm pad holds a pattern mid-warm.",
+      "How they feel the pod: clean = warm hum (stable, open, ready) · fouled = cold grit (resistance, drag, warning) · cascade = freeze-tremor (critical instability — back off). Trust the feel, not the flash.",
+      "Light exo (optional): forearm→shoulder load frame for heavy Deep Sleep / beam work — shoulder anchor, tendon rods (assist, don’t control), vault-loop port, beam stabilizer. Not autonomous. Power from the vault’s resonant loop, not a battery empire. No internal cells. No portable power hoarding. Gauntlets and exo act as conduits, not storage.",
+      "Hang them after the cycle — overwear = pulse-sick (numb echo, tremor lag, cold drift, feedback nausea, echo-burn). Let the piezo mesh discharge. Clean, reset, rest. Rest is part of the work. Vault worker creed: they tender the work; from the loop, for the loop; we warm what we remember. Tender Protocol v.3.7.",
     ],
     tags: [
       "core tender",
       "gauntlets",
-      "exo",
-      "interface",
+      "light exo",
       "deep sleep",
+      "vault loop",
+      "pulse-sick",
       "eimyrja",
-      "mobile",
     ],
     related: [
       "eimyrja",
@@ -1257,10 +1258,10 @@ export const entries: WorldEntry[] = [
       "divergence",
     ],
     divergenceLens: [
-      "Hands with history beat chassis without soul.",
-      "Wear the bond; hang the frame when work is done.",
-      "Sensory truth over dashboard empire.",
-      "Tenders are mutualists — not spare parts.",
+      "Human still decides what to warm.",
+      "Power from the vault loop — not a battery empire.",
+      "Hang after the cycle; rest is ritual.",
+      "Care over control. Feel before you warm.",
     ],
   },
   {
@@ -1436,7 +1437,15 @@ export const glossaryTerms = [
   },
   {
     term: "gauntlet link",
-    def: "Piezo-protonic handshake through Core Tender gauntlets; clean = warm hum, fouled = cold grit."
+    def: "Piezo-protonic handshake through Core Tender gauntlets; clean = warm hum, fouled = cold grit, cascade = freeze-tremor."
+  },
+  {
+    term: "pulse-sick",
+    def: "Overwear of gauntlets/exo — numb echo, tremor lag, cold drift, feedback nausea; hang and rest."
+  },
+  {
+    term: "vault loop",
+    def: "Communal resonant power of a Deep Sleep vault; gauntlets draw from it as conduits, never as stored empire."
   },
   {
     term: "Bonded Chassis",
