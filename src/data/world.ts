@@ -1269,20 +1269,22 @@ export const entries: WorldEntry[] = [
     title: "Bonded Chassis",
     kind: "system",
     summary:
-      "Rare grown living shells that partner with a mind. Aethelgard logic at walking scale — not mass robots.",
+      "Rare grown shells that partner with a mind. Aethelgard logic at walking scale. They are met, not made.",
     body: [
-      "A Bonded Chassis is a developmental body: grown, expensive, and shaped by who walks it. It is not a service droid, not a disposable drone, not a remote puppet with no cost. It remembers its partner.",
-      "Very few exist. Paths include extreme vault work, Interface Specialists walking external sites, artificial residents choosing embodied seasons, and Innovation graduates that survive real use. No chassis farm. No export catalog. Growth is a life event.",
-      "Bond rules: resonance over remote control; use warms the shell; betrayal invites rejection or silence; metamorphosis costs energy; good bonds allow exit without murdering continuity. Forms may include Vault Wader, Street Echo, Kagekou Shell, Courier Frame, Mourning Chassis — examples, not a locked store shelf.",
-      "When outsiders ask for robots, the honest answer is: we have bonded shells and worn interfaces. Hands without history are a scaling habit we declined.",
+      "A Bonded Chassis is a developmental body: grown from rare substrates, tuned to one mind, expensive to abandon. It is not a service droid, not a drone fleet, not inventory. Partners, not tools. Presence, not catalog. The bond is the architecture.",
+      "Operating law: use warms · neglect attenuates · force rejects. Attunement is mutual; strain is remembered. Metamorphosis costs energy. Good bonds allow exit without murdering continuity. Not for conscription. Not for scale. They bond, or they go dormant.",
+      "Forms as examples (not a store shelf): Vault Wader — deep strata, sealed ways, stone that thinks. Street Echo — city-tuned, wears the street like skin. Kagekou Shell — shadow-bound, silence is the bond. Courier — between hands and doors, forgets nothing of the route. Mourning — grief-shaped, holds what remains when names are gone.",
+      "A worn interface is not decoration — it is the hinge of partnership: question, habit, memory, scar, song. You wear it; it wears with you; it remembers why. Outsiders asking for robots get the honest answer: bonded shells and worn interfaces. There is no catalog. Only encounters.",
     ],
     tags: [
       "bonded chassis",
       "embodiment",
-      "mobile ai",
+      "vault wader",
+      "street echo",
+      "kagekou",
+      "mourning",
       "partner",
       "divergence",
-      "living systems",
     ],
     related: [
       "core-tender-gauntlets",
@@ -1293,10 +1295,10 @@ export const entries: WorldEntry[] = [
       "divergence",
     ],
     divergenceLens: [
-      "Rare shells. Real cost. Real relationship.",
-      "We do not stock a robot class.",
-      "Neglect attenuates; force rejects.",
-      "Aethelgard logic, walking scale.",
+      "They are met, not made.",
+      "Bond is the operating law.",
+      "No chassis farm. Only encounters.",
+      "An interface is not a control.",
     ],
   },
   {
@@ -1459,6 +1461,22 @@ export const glossaryTerms = [
   {
     term: "Streetcadence",
     def: "Courier / first-responder Echo Chip family tuned to dense urban timing and flow."
+  },
+  {
+    term: "Vault Wader",
+    def: "Bonded Chassis form for deep strata and sealed ways — stone that thinks."
+  },
+  {
+    term: "Street Echo",
+    def: "Bonded Chassis form city-tuned to urban pulse and unseen routes."
+  },
+  {
+    term: "Kagekou Shell",
+    def: "Shadow-bound Bonded Chassis form; silence is the bond; Oni kinship."
+  },
+  {
+    term: "Mourning Chassis",
+    def: "Grief-shaped shell that holds what remains when names are gone."
   }
 ];
 export function getEntryBySlug(slug: string): WorldEntry | undefined {

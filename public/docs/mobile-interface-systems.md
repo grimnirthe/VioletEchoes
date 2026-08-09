@@ -117,11 +117,20 @@ No chassis farm. No export catalog. Growth is a developmental event, not a purch
 
 | Form | Role |
 |---|---|
-| **Vault Wader** | Deep Sleep isolation; acid-mist resistant; short-range |
-| **Street Echo** | Public presence; soft face; high social bandwidth |
-| **Kagekou Shell** | Stealth / edge work; Oni kinship |
-| **Courier Frame** | Light load, long walk, low signature |
-| **Mourning Chassis** | Funeral / memory-warming processions; deliberately slow |
+| **Vault Wader** | Deep strata · sealed ways · silent keeper of thresholds · stone that thinks |
+| **Street Echo** | Urban pulse · unseen routes · wears the street like skin |
+| **Kagekou Shell** | Shadow-bound · silence is the bond · seen only if it chooses |
+| **Courier** | Between hands and doors · long-road partner · forgets nothing of the route |
+| **Mourning** | Grief-shaped · unasked witness · holds what remains when names are gone |
+
+### Bond language (hearth-locked)
+
+- They are **met, not made**.  
+- **Bond is the operating law.**  
+- A worn interface is not decoration — it is a question, a habit, a memory, a scar, a song.  
+- You wear it. It wears with you. It remembers why.  
+- **There is no catalog. Only encounters.**  
+- Not for conscription. Not for scale. They bond, or they go dormant.
 
 ### Relationship to “robots”
 

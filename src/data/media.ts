@@ -122,6 +122,10 @@ export const media = {
   echoChipAnatomy: "/images/echo-chip-anatomy.jpg",
   echoChipCirculation: "/images/echo-chip-circulation.jpg",
   echoChipFlow: "/images/echo-chip-flow.jpg",
+  /** Bonded Chassis — concept form sheets */
+  bondedChassisHero: "/images/bonded-chassis-hero.jpg",
+  bondedChassisForms: "/images/bonded-chassis-forms.jpg",
+  bondedChassisLaw: "/images/bonded-chassis-law.jpg",
   dualIsland: "/images/dual-island.jpg",
   dualHeartbeats: "/images/dual-heartbeats.jpg",
   dualInterwoven: "/images/dual-interwoven.jpg",
@@ -1144,6 +1148,30 @@ export const systemsGallery = [
       "Seat · resonance sync · spiking activation · city memory. “We don’t invent the future here. We echo it.”",
     group: "echo-chip" as const,
   },
+  {
+    id: "bonded-chassis-hero",
+    src: media.bondedChassisHero,
+    title: "Bonded Chassis — They are met, not made",
+    caption:
+      "Rare grown shells. Vault Wader · Street Echo · Kagekou · Courier · Mourning. No chassis farm. Only encounters.",
+    group: "bonded-chassis" as const,
+  },
+  {
+    id: "bonded-chassis-forms",
+    src: media.bondedChassisForms,
+    title: "Bonded Chassis — Five lived-in forms",
+    caption:
+      "Deep strata · urban pulse · silent passage · between doors · unasked witness. You wear it. It wears with you.",
+    group: "bonded-chassis" as const,
+  },
+  {
+    id: "bonded-chassis-law",
+    src: media.bondedChassisLaw,
+    title: "Bonded Chassis — Bond is the operating law",
+    caption:
+      "Born, not built. Not for conscription. An interface is not a control — it is a question, a habit, a scar, a song.",
+    group: "bonded-chassis" as const,
+  },
 
   {
     id: "dual-island",
@@ -1322,7 +1350,7 @@ export const entryImages: Record<string, string> = {
   aethelgard: media.aethelgardOrbitProfile,
   "oni-shadow-rider": media.oniStreetCruiser,
   "core-tender-gauntlets": media.vehiclesBond,
-  "bonded-chassis": media.vehiclesAnatomy,
+  "bonded-chassis": media.bondedChassisHero,
   "echo-slot": media.echoChipSpecV01,
   vernacular: media.doorBible,
     values: media.longhouse,
@@ -1357,6 +1385,7 @@ export function imageForEntry(id: string): string | undefined {
     factions: "factions",
     "oni-shadow-rider": "vehicles",
     "echo-slot": "echo-chip",
+    "bonded-chassis": "bonded-chassis",
     "city-overview": "dual-layer",
   };
   const group = groupAliases[id] ?? id;

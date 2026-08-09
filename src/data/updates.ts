@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-bonded-chassis-forms",
+    date: "2026-08-09",
+    title: "Bonded Chassis — five lived-in forms",
+    kind: "systems",
+    summary:
+      "Vault Wader, Street Echo, Kagekou Shell, Courier, Mourning hung as form studies. They are met, not made. No catalog — only encounters.",
+    body: [
+      "Concept sheets lock the bond law: use warms · neglect attenuates · force rejects. Born not built. Not for conscription. Outsiders asking for robots still get: bonded shells and worn interfaces.",
+    ],
+    hrefs: [
+      { label: "Bonded Chassis", href: "/bible/bonded-chassis" },
+      { label: "Systems — forms", href: "/systems" },
+      { label: "Mobile Interface companion", href: "/bible/companions/mobile-interface" },
+    ],
+    by: "hearth · Aurora line · Loom",
+    tags: ["bonded-chassis", "forms", "mobile-interface", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-09-echo-chip-aurora",
     date: "2026-08-09",
     title: "Echo Chip Slot — Aurora neuromorphic line",

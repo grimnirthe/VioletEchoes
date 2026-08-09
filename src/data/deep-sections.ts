@@ -334,9 +334,28 @@ export const deepSections: Record<string, DeepSection[]> = {
 
   "bonded-chassis": [
     {
-      title: "Walking-scale living bond",
+      title: "They are met, not made",
       body: [
-        "A Bonded Chassis is grown and rare. It co-adapts with its mind the way Aethelgard co-adapts with a captain. No chassis farms. Neglect attenuates; force rejects. Forms (Vault Wader, Street Echo, Kagekou Shell, etc.) are examples, not a store shelf.",
+        "Grown from rare substrates. Tuned to one mind. The shell learns, echoes, and withers without bond. No chassis farm. No export catalog. Not for conscription. Not for scale.",
+      ],
+    },
+    {
+      title: "Forms as examples (lived-in)",
+      bullets: [
+        "Vault Wader — deep strata · sealed ways · stone that thinks",
+        "Street Echo — urban pulse · unseen routes · street as skin",
+        "Kagekou Shell — shadow face · silence is the bond",
+        "Courier — between hands and doors · forgets nothing of the route",
+        "Mourning — grief-shaped · unasked witness · holds what remains",
+      ],
+    },
+    {
+      title: "Bond is the operating law",
+      bullets: [
+        "Use warms · neglect attenuates · force rejects",
+        "Attunement mutual · strain remembered",
+        "Interface = question, habit, memory, scar, song — not a control",
+        "You wear it; it wears with you; it remembers why",
       ],
     },
   ],
