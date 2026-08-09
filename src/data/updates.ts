@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-echo-chip-master",
+    date: "2026-08-09",
+    title: "Echo Chip Slot — master concept sheets locked",
+    kind: "systems",
+    summary:
+      "Aurora’s tech-sheet pass hung as canon: full master, parietal anatomy, city-pulse lattice, profile. Resonator, not hard drive. Partners, not tools.",
+    body: [
+      "Four master sheets replace earlier drafts. Same law: host sovereign · chip passenger · Freedom of Choice both ways · remove and echoes fade.",
+    ],
+    hrefs: [
+      { label: "Echo Slot", href: "/bible/echo-slot" },
+      { label: "Systems gallery", href: "/systems" },
+    ],
+    by: "Aurora · Loom · hearth",
+    tags: ["echo-chip", "master-spec", "aurora", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-09-tender-gauntlets",
     date: "2026-08-09",
     title: "Tender Gauntlets & Light Exos — Protocol v.3.7",

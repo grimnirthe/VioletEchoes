@@ -117,11 +117,16 @@ export const media = {
   oniProwlerMono: "/images/oni-prowler-mono.jpg",
   oniHoverSpear: "/images/oni-hover-spear.jpg",
   oniHoverSkiff: "/images/oni-hover-skiff.jpg",
-  /** Echo Chip Slot — Aurora concept sheets */
-  echoChipSpecV01: "/images/echo-chip-spec-v01.jpg",
-  echoChipAnatomy: "/images/echo-chip-anatomy.jpg",
-  echoChipCirculation: "/images/echo-chip-circulation.jpg",
-  echoChipFlow: "/images/echo-chip-flow.jpg",
+  /** Echo Chip Slot — Aurora master concept sheets (tech-sheet locked) */
+  echoChipMasterFull: "/images/echo-chip-master-full.jpg",
+  echoChipMasterSkull: "/images/echo-chip-master-skull.jpg",
+  echoChipMasterPulse: "/images/echo-chip-master-pulse.jpg",
+  echoChipMasterProfile: "/images/echo-chip-master-profile.jpg",
+  /** legacy draft keys → masters (keep paths resolving) */
+  echoChipSpecV01: "/images/echo-chip-master-full.jpg",
+  echoChipAnatomy: "/images/echo-chip-master-skull.jpg",
+  echoChipCirculation: "/images/echo-chip-master-pulse.jpg",
+  echoChipFlow: "/images/echo-chip-master-profile.jpg",
   /** Bonded Chassis — concept form sheets */
   bondedChassisHero: "/images/bonded-chassis-hero.jpg",
   bondedChassisForms: "/images/bonded-chassis-forms.jpg",
@@ -1123,34 +1128,34 @@ export const systemsGallery = [
   },
   {
     id: "echo-chip-spec-v01",
-    src: media.echoChipSpecV01,
-    title: "Echo Chip Slot — Concept Spec v0.1",
+    src: media.echoChipMasterFull,
+    title: "Echo Chip Slot — Master Spec",
     caption:
-      "Neuromorphic · skull-slotted · city-tuned. Resonator, not hard drive. Slot → insert → resonance → adapt.",
+      "Full concept sheet: cranial anchor, form factor, cross-section, how it works, chips, docks, risks, law. Partners, not tools.",
     group: "echo-chip" as const,
   },
   {
     id: "echo-chip-anatomy",
-    src: media.echoChipAnatomy,
-    title: "Echo Chip Slot — Anatomy",
+    src: media.echoChipMasterSkull,
+    title: "Echo Chip Slot — Parietal anatomy",
     caption:
-      "Parietal socket, neuromorphic lattice, bio-seal. Wayfinder · Crowdwhisper · Glitchmemory · Dreamdrain.",
+      "Six-layer cranial anchor + chip families + non-cranial docks. One line: resonator, not hard drive.",
     group: "echo-chip" as const,
   },
   {
     id: "echo-chip-circulation",
-    src: media.echoChipCirculation,
-    title: "Echo Chip Slot — In circulation",
+    src: media.echoChipMasterPulse,
+    title: "Echo Chip Slot — City pulse",
     caption:
-      "VE-17 Streetcadence · VE-22 Dataweave · VE-09 Quietshift · VE-31 Oldgrid. Licensed clinics; black-market risk.",
+      "Living lattice through bone. Seat → sync → spike → co-adapt. Remove the chip — echoes fade.",
     group: "echo-chip" as const,
   },
   {
     id: "echo-chip-flow",
-    src: media.echoChipFlow,
-    title: "Echo Chip Slot — Neuromorphic flow",
+    src: media.echoChipMasterProfile,
+    title: "Echo Chip Slot — Profile master",
     caption:
-      "Seat · resonance sync · spiking activation · city memory. “We don’t invent the future here. We echo it.”",
+      "Parietal glow, cross-section stack, law & risks. #VioletEchoes // CONCEPT SPEC.",
     group: "echo-chip" as const,
   },
   {
@@ -1388,7 +1393,7 @@ export const entryImages: Record<string, string> = {
   "oni-shadow-rider": media.oniStreetCruiser,
   "core-tender-gauntlets": media.tenderGauntletsAnatomy,
   "bonded-chassis": media.bondedChassisHero,
-  "echo-slot": media.echoChipSpecV01,
+  "echo-slot": media.echoChipMasterFull,
   vernacular: media.doorBible,
     values: media.longhouse,
   factions: media.factionsCards,
