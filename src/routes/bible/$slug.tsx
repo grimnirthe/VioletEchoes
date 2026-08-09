@@ -130,32 +130,6 @@ function BibleEntryPage() {
             ))}
           </section>
 
-          {deep.map((sec) => (
-            <section
-              key={sec.title}
-              className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-6 sm:p-7"
-            >
-              <h2 className="font-display text-2xl text-[var(--color-fg)]">{sec.title}</h2>
-              <div className="mt-4 space-y-3">
-                {sec.body?.map((para, i) => (
-                  <p key={i} className="leading-relaxed text-[var(--color-muted)]">
-                    {para}
-                  </p>
-                ))}
-              </div>
-              {sec.bullets?.length ? (
-                <ul className="mt-4 space-y-2.5">
-                  {sec.bullets.map((b) => (
-                    <li key={b} className="flex gap-2.5 text-sm leading-relaxed text-[var(--color-muted)]">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </section>
-          ))}
-
           {entry.id === "bonded-chassis" ? (
             <section className="space-y-8">
               <div className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-6 sm:p-7">
@@ -325,6 +299,72 @@ function BibleEntryPage() {
               ) : null}
             </section>
           ) : null}
+
+
+          {deep.map((sec) => (
+            <section
+              key={sec.title}
+              className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-6 sm:p-7"
+            >
+              <h2 className="font-display text-2xl text-[var(--color-fg)]">{sec.title}</h2>
+              <div className="mt-4 space-y-3">
+                {sec.body?.map((para, i) => (
+                  <p key={i} className="leading-relaxed text-[var(--color-muted)]">
+                    {para}
+                  </p>
+                ))}
+              </div>
+              {sec.bullets?.length ? (
+                <ul className="mt-4 space-y-2.5">
+                  {sec.bullets.map((b) => {
+                    const anchor = b.match(/→\s*(#[\w-]+)\s*$/);
+                    const label = anchor ? b.replace(/\s*→\s*#[\w-]+\s*$/, "") : b;
+                    return (
+                      <li key={b} className="flex gap-2.5 text-sm leading-relaxed text-[var(--color-muted)]">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]" />
+                        {anchor ? (
+                          <a
+                            href={anchor[1]}
+                            className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                          >
+                            {label}
+                          </a>
+                        ) : (
+                          <span>{b}</span>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : null}
+              {sec.images?.length ? (
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  {sec.images.map((img) => (
+                    <figure
+                      key={img.src}
+                      className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)]"
+                    >
+                      <MediaFrame
+                        src={img.src}
+                        alt={img.alt}
+                        aspect={img.kind === "sheet" ? "sheet" : "video"}
+                        fit={img.kind === "sheet" ? "contain" : "cover"}
+                        expandable={img.kind === "sheet"}
+                      />
+                      {img.caption ? (
+                        <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)]/40 px-3 py-2 text-xs text-[var(--color-subtle)]">
+                          {img.caption}
+                          {img.kind === "sheet" ? (
+                            <span className="mt-0.5 block">Tap for full sheet</span>
+                          ) : null}
+                        </figcaption>
+                      ) : null}
+                    </figure>
+                  ))}
+                </div>
+              ) : null}
+            </section>
+          ))}
 
           {entry.divergenceLens?.length ? (
             <section className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">

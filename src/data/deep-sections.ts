@@ -1,9 +1,19 @@
 /** Long-form breakdowns for World Bible entries — meat from companion docs. */
 
+export type DeepSectionImage = {
+  src: string;
+  alt: string;
+  caption?: string;
+  /** lock sheet / concept art should be contain + expandable */
+  kind?: "sheet" | "still";
+};
+
 export type DeepSection = {
   title: string;
-  body: string[];
+  body?: string[];
   bullets?: string[];
+  /** Optional visual brief — lock sheets, encounters, concept art */
+  images?: DeepSectionImage[];
 };
 
 /** Keyed by entry id */
@@ -321,6 +331,20 @@ export const deepSections: Record<string, DeepSection[]> = {
       body: [
         "Gauntlets: piezo-protonic link · graphene mesh · runic feedback · isolation cuff. Light exo: optional forearm→shoulder frame — assist, don’t control. Human still decides what to warm. Not autonomous.",
       ],
+      images: [
+        {
+          src: "/images/tender-gauntlets-anatomy.jpg",
+          alt: "Core Tender gauntlets — anatomy concept sheet",
+          caption: "Anatomy — mesh, link, cuff. Worn tools, not robots.",
+          kind: "sheet",
+        },
+        {
+          src: "/images/tender-gauntlets-protocol.jpg",
+          alt: "Core Tender — vault protocol sheet",
+          caption: "Vault protocol · hang after cycle.",
+          kind: "sheet",
+        },
+      ],
     },
     {
       title: "Feel the pod — three states",
@@ -330,14 +354,33 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Cascade = freeze-tremor — critical; back off",
         "Trust the feel, not the flash",
       ],
+      images: [
+        {
+          src: "/images/tender-gauntlets-feel.jpg",
+          alt: "Core Tender — feel states concept sheet",
+          caption: "Clean · Fouled · Cascade. Trust the feel.",
+          kind: "sheet",
+        },
+      ],
     },
     {
       title: "Vault loop power · hang after cycle",
+      body: [
+        "Power from the vault resonant loop — conduits, not storage. No battery empire. Rest is ritual.",
+      ],
       bullets: [
         "Power from the vault resonant loop — conduits, not storage",
         "No battery empire · no portable power hoarding",
         "Hang them after the cycle — overwear = pulse-sick",
         "Rest is ritual · we warm what we remember",
+      ],
+      images: [
+        {
+          src: "/images/tender-gauntlets-principles.jpg",
+          alt: "Core Tender — principles concept sheet",
+          caption: "Care over control. Feel before you warm.",
+          kind: "sheet",
+        },
       ],
     },
   ],
@@ -351,78 +394,15 @@ export const deepSections: Record<string, DeepSection[]> = {
     },
     {
       title: "Forms as examples (lived-in)",
-      bullets: [
-        "Vault Wader — deep strata · sealed ways · stone that thinks (form study hung)",
-        "Street Echo — urban pulse · unseen routes · street as skin (form study hung)",
-        "Kagekou Shell — shadow face · silence is the bond (form study hung)",
-        "Courier — between hands and doors · forgets nothing of the route (form study hung)",
-        "Mourning — grief-shaped · unasked witness · holds what remains (form study hung)",
-      ],
-    },
-    {
-      title: "01 Vault Wader — form study",
       body: [
-        "Not Fallout's Vault Dweller — Vault Wader: geological mass, pressure-rated living alloy, recessed face, patience as weapon. Habitat: Biosphere Vaults, Deep Sleep corridors, undercity sealed routes.",
-        "Pair doctrine: lock sheet = law (materials, palm dock, bond wear, never-list). Encounter still = soul (threshold, rain, tender at the door). Never a five-across product grid.",
-        "Interface: heavy palm / gauntlet dock for Core Tender handshake — mutual attunement. An interface is not a control. Strain shows as heat-memory in the palm plate; neglect cools the pulse veins first.",
+        "Sheet = law. Encounter = soul. Jump to each form study below — full images, interface, habitat, never-list. There is no catalog. Only encounters.",
       ],
       bullets: [
-        "Whisper: Stone that thinks.",
-        "Mood: threshold guardian · cathedral of pressure · patience as weapon",
-        "Never: cute mascot face · scout cosplay · catalog chrome · status LED crown · weapon hardpoints as identity · joystick backpack · brand logo",
-        "Visual lane: Velora Runeweaver · locks in /docs/bonded-chassis-five-forms-locks.json",
-      ],
-    },
-    {
-      title: "02 Street Echo — form study",
-      body: [
-        "Mid-height rain-slick shell; hooded social mask or void face; quiet joints; city as skin. Habitat: Harborward grit, Neon Core alleys, routes toward Spire glass, shortcuts and safe alleys.",
-        "Pair doctrine holds: lock sheet = law; encounter = soul. Encounters vary by night and district — filament drape one rain, long-coat courier another — same form, different rain. Not a product lineup.",
-        "Interface: light wrist / collar port — cadence and trust, not a leash. Neon exists as street reflection, not painted identity.",
-      ],
-      bullets: [
-        "Whisper: Wears the street like skin.",
-        "Mood: ghost courier of the grid · neon rain · I know a way",
-        "Never: service smile · drone kit · loud hydraulics · full neon paint · corp logo · street-samurai default · catalog hero pose",
-      ],
-    },
-    {
-      title: "03 Kagekou Shell — form study",
-      body: [
-        "Low profile, folded limbs, light-drinking cloak and filament. Shadow face: voids and violet pinlights — not a friendly mask. Habitat: Veilreach edges, Thornwall margins, night Spire gaps.",
-        "Pair hung as shell-match crouch: encounter and sheet share body language. Sheet UI may drift from Forms 01–02 — Kagekou is allowed to veil. Encounters still vary by night.",
-        "Interface: near-invisible contact plate; Echo Veil affinity. Silence is the language. Force rejects. Never first; always last out.",
-      ],
-      bullets: [
-        "Whisper: Whispers pass through without footprint.",
-        "Mood: living negative space · kage · choice to be unseen",
-        "Never: assassin merch pose · bright visor · friendly face · loud Oni logo · status LEDs · stealth-chrome showroom · first-in combat hero default",
-      ],
-    },
-    {
-      title: "04 Courier — form study",
-      body: [
-        "Pack-frame silhouette, modular load path, hard-use joints, weather seal. Habitat: between districts, docks, longhouses, clinics, Bifrost ring-road hours.",
-        "Pair: pass-off lock sheet + ring-road palm-pass encounter (Street Echo kin may share the frame — encounters can share the rain). Trust is the OS.",
-        "Interface: cargo handshake + palm pass; collar chip for cadence/wayfinding (assist, not override). Neglect attenuates route memory first.",
-      ],
-      bullets: [
-        "Whisper: Carries more than parcels. Forgets nothing of the route.",
-        "Mood: road loyalty · salt air · I got it there",
-        "Never: delivery drone prop · corp branding · empty ornamental pack · weapon rack identity · factory-clean latches · service smile · LED route billboard",
-      ],
-    },
-    {
-      title: "05 Mourning — form study",
-      body: [
-        "Elongated veiled form; living film over structure; lantern or soft violet wick; processional gait — deliberately not efficient. Habitat: memorial walks, archive returns, last rites of code, quiet hearths and longhouse paths.",
-        "Pair: open-palm lock sheet + longhouse encounter (sitter free to grieve). Sacred interface: open-palm resonance only — no command gauntlet. Ever. Never conscripted. Never a tool of force.",
-        "All five forms now hung as sheet + encounter. There is no catalog. Only encounters.",
-      ],
-      bullets: [
-        "Whisper: Remembrance. Unasked witness.",
-        "Mood: funeral of light · soft thunder · I will remember for you",
-        "Never: command gauntlet · force hardware · labor harness · combat under veil · status LEDs · catalog grief glamour · funeral-host face · weaponized memorial",
+        "01 Vault Wader — deep strata · sealed ways · stone that thinks → #form-vault-wader",
+        "02 Street Echo — urban pulse · street as skin → #form-street-echo",
+        "03 Kagekou Shell — silence is the bond → #form-kagekou-shell",
+        "04 Courier — trust is the OS → #form-courier",
+        "05 Mourning — open palm · unasked witness → #form-mourning",
       ],
     },
     {
@@ -442,16 +422,46 @@ export const deepSections: Record<string, DeepSection[]> = {
       body: [
         "Echo Slot: biocompatible parietal seat with neuromorphic lattice — titanium-ceramic rim, osseointegration scaffold, thermal vents. Quiet until a chip seats and intent aligns. Echo Chip: spiking neuromorphic wafer (not a binary hard drive). Flow: seat → handshake → resonate → co-adapt. Remove the chip; echoes fade.",
       ],
+      images: [
+        {
+          src: "/images/echo-chip-master-full.jpg",
+          alt: "Echo Chip Slot — master concept sheet",
+          caption: "Master spec — resonator, not hard drive. Partners, not tools.",
+          kind: "sheet",
+        },
+        {
+          src: "/images/echo-chip-master-skull.jpg",
+          alt: "Echo Chip Slot — parietal anatomy",
+          caption: "Parietal seat · osseointegration · lattice stack.",
+          kind: "sheet",
+        },
+      ],
     },
     {
       title: "City-grounded chip families (examples)",
+      body: [
+        "Lived product language — city-inspired, not a store shelf. Insert → city talks → chip listens. Remove → echoes fade.",
+      ],
       bullets: [
-        "Transit / Wayfinder — crowd flow, route rhythm, timing",
-        "Market Memory / Crowdwhisper — haggling patterns, social cue",
-        "Infra / Hazard Whisper — pipes, power, structural hum",
-        "Quietshift / Dreamdrain — sensory dampen, recovery sleep",
-        "Glitchmemory / Faded Signals / Oldgrid — fragment recall, legacy routes",
-        "Echo Veil / Streetcadence / Dataweave — presence mask, courier timing, attention filter",
+        "VE-17 Streetcadence — transit rhythm, alley timing",
+        "VE-22 Dataweave — attention filter, market cue",
+        "VE-09 Quietshift — sensory dampen, recovery",
+        "VE-31 Oldgrid — legacy routes, faded signals",
+        "VE-04 Echo Veil — presence mask, soft exit",
+      ],
+      images: [
+        {
+          src: "/images/echo-chip-circulation-cards.jpg",
+          alt: "Echo Chips — five forms in circulation",
+          caption: "Five forms in the wild — Streetcadence · Dataweave · Quietshift · Oldgrid · Echo Veil.",
+          kind: "sheet",
+        },
+        {
+          src: "/images/echo-chip-circulation-street.jpg",
+          alt: "Echo Chips — street circulation field sheet",
+          caption: "Licensed clinics · black-market risk. Resonance over accuracy.",
+          kind: "sheet",
+        },
       ],
     },
     {
@@ -468,7 +478,21 @@ export const deepSections: Record<string, DeepSection[]> = {
     {
       title: "Aurora design line",
       body: [
-        "Neuromorphic · plastic · city-grounded · modular. Resonance over accuracy. “We don’t invent the future here. We echo it.” Concept sheets hang with the entry.",
+        "Neuromorphic · plastic · city-grounded · modular. Resonance over accuracy. “We don’t invent the future here. We echo it.”",
+      ],
+      images: [
+        {
+          src: "/images/echo-chip-master-pulse.jpg",
+          alt: "Echo Chip — city pulse lattice",
+          caption: "City pulse · lattice · co-adapt.",
+          kind: "sheet",
+        },
+        {
+          src: "/images/echo-chip-master-profile.jpg",
+          alt: "Echo Chip Slot — profile master",
+          caption: "Profile · law & risks. #VioletEchoes // CONCEPT SPEC.",
+          kind: "sheet",
+        },
       ],
     },
   ],
