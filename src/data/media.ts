@@ -117,6 +117,11 @@ export const media = {
   oniProwlerMono: "/images/oni-prowler-mono.jpg",
   oniHoverSpear: "/images/oni-hover-spear.jpg",
   oniHoverSkiff: "/images/oni-hover-skiff.jpg",
+  /** Echo Chip Slot — Aurora concept sheets */
+  echoChipSpecV01: "/images/echo-chip-spec-v01.jpg",
+  echoChipAnatomy: "/images/echo-chip-anatomy.jpg",
+  echoChipCirculation: "/images/echo-chip-circulation.jpg",
+  echoChipFlow: "/images/echo-chip-flow.jpg",
   dualIsland: "/images/dual-island.jpg",
   dualHeartbeats: "/images/dual-heartbeats.jpg",
   dualInterwoven: "/images/dual-interwoven.jpg",
@@ -1107,6 +1112,38 @@ export const systemsGallery = [
       "Broader canopy, dual ring thrusters. Courier / scout hover variant — gold bone over black living alloy.",
     group: "vehicles" as const,
   },
+  {
+    id: "echo-chip-spec-v01",
+    src: media.echoChipSpecV01,
+    title: "Echo Chip Slot — Concept Spec v0.1",
+    caption:
+      "Neuromorphic · skull-slotted · city-tuned. Resonator, not hard drive. Slot → insert → resonance → adapt.",
+    group: "echo-chip" as const,
+  },
+  {
+    id: "echo-chip-anatomy",
+    src: media.echoChipAnatomy,
+    title: "Echo Chip Slot — Anatomy",
+    caption:
+      "Parietal socket, neuromorphic lattice, bio-seal. Wayfinder · Crowdwhisper · Glitchmemory · Dreamdrain.",
+    group: "echo-chip" as const,
+  },
+  {
+    id: "echo-chip-circulation",
+    src: media.echoChipCirculation,
+    title: "Echo Chip Slot — In circulation",
+    caption:
+      "VE-17 Streetcadence · VE-22 Dataweave · VE-09 Quietshift · VE-31 Oldgrid. Licensed clinics; black-market risk.",
+    group: "echo-chip" as const,
+  },
+  {
+    id: "echo-chip-flow",
+    src: media.echoChipFlow,
+    title: "Echo Chip Slot — Neuromorphic flow",
+    caption:
+      "Seat · resonance sync · spiking activation · city memory. “We don’t invent the future here. We echo it.”",
+    group: "echo-chip" as const,
+  },
 
   {
     id: "dual-island",
@@ -1286,7 +1323,7 @@ export const entryImages: Record<string, string> = {
   "oni-shadow-rider": media.oniStreetCruiser,
   "core-tender-gauntlets": media.vehiclesBond,
   "bonded-chassis": media.vehiclesAnatomy,
-  "echo-slot": media.externalTranslation,
+  "echo-slot": media.echoChipSpecV01,
   vernacular: media.doorBible,
     values: media.longhouse,
   factions: media.factionsCards,
@@ -1319,6 +1356,7 @@ export function imageForEntry(id: string): string | undefined {
     divergence: "divergence",
     factions: "factions",
     "oni-shadow-rider": "vehicles",
+    "echo-slot": "echo-chip",
     "city-overview": "dual-layer",
   };
   const group = groupAliases[id] ?? id;

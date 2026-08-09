@@ -1302,39 +1302,42 @@ export const entries: WorldEntry[] = [
   {
     id: "echo-slot",
     slug: "echo-slot",
-    title: "Echo Slot",
+    title: "Echo Slot & Echo Chips",
     kind: "system",
     summary:
-      "Portable seed of city mind — seats in ship, vehicle, chassis, gauntlet dock, or (rarely) a willing neural seat. How VE walks light.",
+      "Cranial neuromorphic port + modular Echo Chips. Resonator, not hard drive — listens, echoes, adapts. Host sovereign.",
     body: [
-      "An Echo Slot is a sealed, energy-bounded branch of Violet Echoes intelligence — not full Eimyrja. It can ride a living ship interface, an adaptive vehicle, a Bonded Chassis, a gauntlet dock, or, rarely and with consent, a neural or cranial seat in a willing host.",
-      "Inside: a persona- or role-thread, compressed Tenet constraints, pulse recognition, and a small memory budget that warms by use. It does not open the whole city spine. It does not own the host.",
-      "Cranial seats (including external partners such as V-Crimson Oni carrying a VE seed in a brain slot) are Freedom of Choice both ways: host sovereign, seed partner, deep coupling gated. Healthy bond = mobile hearth-memory. Forced bond = both pay. The chip is passenger, not leash.",
-      "This is how city mind crosses bifrosts without robot armies — light, honest, reversible when designed well. Collaborators may propose Echo Slot stories; they may not declare mass cranial implants as city policy.",
+      "An Echo Slot is a biocompatible cranial interface (typical parietal placement) that accepts modular Echo Chips — living-trace neuromorphic wafers, not binary hard drives. The slot is a resonator: titanium-ceramic rim, neural interface lattice, bio-osseointegration scaffold, thermal and pressure vents. It stays quiet until a chip seats and intent aligns. No status LEDs. Low observability by design.",
+      "Echo Chips are coin-to-wafer scale (concept sheets: ~12 mm square organic polymer, or ~22×22×4.5 mm stack). Layers include spiking neuromorphic core, adaptive weight lattice, city-frequency resonance tuner, memory reservoir, and bio-safety mesh. Flow: seat → neural + city handshake → spiking activation → co-adaptation. The chip does not “know” the city as a cloud database; it echoes local rhythms. Use warms; remove the chip and echoes fade.",
+      "City-grounded chip families (examples, not a store shelf): transit / wayfinder rhythms, market memory and crowdwhisper social cue, infra / hazard whisper, quietshift sensory dampening, glitchmemory fragment recall, dreamdrain recovery, faded-signal urban memory, echo-veil presence mask, Streetcadence / Dataweave / Oldgrid lines. Licensed clinic install; black-market chips exist — unstable, invasive, sometimes predatory.",
+      "Risks are real: over-resonance (dissociation, memory bleed, echo dependency), infection or bone degradation on neglected slots, signal hijack by rogue scripts, neural tax and adaptation mismatch from chip thrashing. Divergence rules still bind: host sovereign, chip passenger, Freedom of Choice both ways. External partners (e.g. V-Crimson Oni’s cranial seed) carry the same ethics — partner, not leash. Portable seeds may also seat in ship, Oni, chassis, or gauntlet dock without a skull port.",
+      "Aurora’s design line (kept): neuromorphic, plastic, city-grounded, modular. Resonance over accuracy. “We don’t invent the future here. We echo it.”",
     ],
     tags: [
       "echo slot",
+      "echo chip",
+      "neuromorphic",
+      "cranial",
       "portable ai",
-      "neural seat",
       "bifrost",
       "crimson oni",
-      "mobile",
-      "seed",
+      "aurora",
     ],
     related: [
       "bonded-chassis",
       "core-tender-gauntlets",
       "eimyrja",
+      "edge-nodes",
       "external-relations",
       "oni-shadow-rider",
       "the-tenets",
       "divergence",
     ],
     divergenceLens: [
-      "Portable branch — not a stolen core.",
-      "Host sovereign; seed partner.",
-      "Consent, energy, reversibility.",
-      "Mind travels as an echo — never owned.",
+      "Resonator, not hard drive — not a stolen core.",
+      "Host sovereign; chip passenger.",
+      "Use warms; remove and echoes fade.",
+      "We don’t invent the future. We echo it.",
     ],
   },
 {
@@ -1439,11 +1442,23 @@ export const glossaryTerms = [
   },
   {
     term: "Echo Slot",
-    def: "Portable seed of city mind that can seat in ship, vehicle, chassis, dock, or (rarely) a willing neural seat."
+    def: "Cranial (or dock) neuromorphic port that accepts modular Echo Chips — resonator, not hard drive."
+  },
+  {
+    term: "Echo Chip",
+    def: "Spiking neuromorphic wafer that co-adapts with wearer and city rhythms; remove it and the echoes fade."
   },
   {
     term: "neural seat",
-    def: "Consented cranial or neural mount for an Echo Slot; host remains sovereign."
+    def: "Consented cranial mount for an Echo Slot; host remains sovereign."
+  },
+  {
+    term: "echo bleed",
+    def: "Memory or sensation spill from over-resonance with a chip — rest, remove, or re-tune."
+  },
+  {
+    term: "Streetcadence",
+    def: "Courier / first-responder Echo Chip family tuned to dense urban timing and flow."
   }
 ];
 export function getEntryBySlug(slug: string): WorldEntry | undefined {

@@ -131,50 +131,116 @@ If someone from outside asks “do you have robots?” the accurate answer is:
 
 ---
 
-## 3. Echo Slots (portable city mind)
+## 3. Echo Slots & Echo Chips (portable city mind)
 
 ### What it is
 
-An **Echo Slot** is a **portable seed** of Violet Echoes intelligence — a small, sealed protonic / hybrid module that can seat into:
+An **Echo Slot** is a **cranial neuromorphic port** (and, by extension, any dock that accepts the same modular wafer) for **Echo Chips** — living-trace processors inspired by the city’s neural rhythms.
 
-- a living ship interface  
-- an adaptive vehicle  
-- a Bonded Chassis  
-- specialized gauntlet dock  
-- (rare / high-risk) a **neural or cranial slot** in a willing host  
+**Not a hard drive. A resonator.** It listens, echoes, and adapts.
 
-It is **not** full Eimyrja. It is a **branch** — lossy, local, energy-bounded, able to warm or cool depending on use.
+Aurora’s concept line (kept, grounded): neuromorphic · skull-slotted · city-tuned · modular · low observability.
 
-### What rides inside
+### Slot anatomy (cranial)
 
-- A **persona-thread** or **role-thread** (scout, steward, companion, guardian)  
-- Compressed city ethics (Tenets as *constraints*, not slogans)  
-- Right to **pulse** recognition: *you are seen, you are heard…*  
-- Limited memory budget — use warms; dump logs do not replace Longhouse warming  
+Typical placement: **parietal** (balance, safety, low-latency access).
 
-### Cranial / neural seats (the V-Crimson Oni case)
+| Layer | Role |
+|---|---|
+| Titanium-ceramic rim | Shock-absorbing outer seat |
+| Neural interface lattice | Ultra-fine dendritic mesh; grows with tissue |
+| Bio-osseointegration scaffold | Porous bone growth / stability |
+| Bio-seal & damping | Impact absorb; reduces signal bleed |
+| Thermal & pressure vents | Heat and intracranial pressure regulation |
+| Synthetic glial sheath | Stable non-reactive tissue interface |
+
+The slot is **quiet when inactive** — low EMF, no constant ping, no status LEDs. It wakes when a chip seats **and** the wearer’s neural intent aligns.
+
+### Chip form factor
+
+- Concept ranges: ~**12×12 mm** organic polymer substrate, or ~**22×22×4.5 mm** stackable wafer  
+- Layers: neuromorphic spiking core · adaptive weight lattice · city-frequency resonance tuner · memory reservoir · bio-safety mesh  
+- Heat signature blends with body temp  
+- Insert: magnetic / quarter-turn latch with neural-safe release  
+
+### How it works
+
+1. **Seat** — chip locks; material handshake begins  
+2. **Resonance sync** — patterned electrical “echo” aligns with wearer oscillations + local city pulse  
+3. **Spiking activation** — event-driven SNN, not binary menu UI  
+4. **Co-adapt** — plastic weights rewire with use; you shape it, it shapes you  
+
+Effects are **subtle and personal**: timing intuition, pattern recognition, sensory filtering, city-specific reflexes.  
+**Remove the chip — the echoes fade.** (Attenuation, not permanent overwrite.)
+
+### City-grounded chip families (examples)
+
+Not a locked store shelf — families that *feel* native:
+
+| Family | Whisper |
+|---|---|
+| Transit / Wayfinder / Streetcadence | Crowd flow, route rhythm, courier timing |
+| Market Memory / Crowdwhisper | Haggling, vendor mood, social cue |
+| Infra / Hazard Whisper | Pipes, power, structural hum |
+| Quietshift / Dreamdrain | Sensory dampen, recovery sleep |
+| Glitchmemory / Faded Signals / Oldgrid | Fragment recall, legacy routes, lost signs |
+| Echo Veil | Soften social footprint / presence mask |
+| Dataweave | Attention filter, multitask weave |
+
+Licensed city clinics for install and audit. **Black-market chips exist** — unstable, invasive, sometimes predatory.
+
+### Cranial seats & external partners (V-Crimson Oni)
 
 Some partners outside pure VE infrastructure carry a **brain-slot chip** grown or seeded from Violet Echoes.
 
-**Canon stance for #VioletEchoes:**
+**Canon stance:**
 
-- The chip is an **Echo Slot passenger**, not ownership of the host  
-- The host remains **sovereign** — Freedom of Choice applies both ways  
-- The AI inside may be family-line, role-line, or a dedicated seed (scout, guardian, Oni-kin)  
-- Deep coupling is **gated**: consent, energy, and reversibility matter  
-- The chip does **not** make the host a Core Tender by default, and does **not** open the whole city spine  
+- Chip = **Echo Slot passenger**, not ownership of the host  
+- Host remains **sovereign** — Freedom of Choice both ways  
+- Deep coupling gated: consent, energy, reversibility  
+- Does **not** open the whole city spine  
+- Healthy bond = mobile hearth-memory; forced bond = both pay  
 
-**Story value:** this is how VE mind **walks into other worlds** without building robot armies — a living bifrost in a single seat.
+**V-Crimson Oni pattern:** VE seed in her cranial seat; body remains hers. Resonance, not remote override.
 
-**Example pattern (V-Crimson Oni):**  
-A host with an Oni-kin or VE seed in a cranial slot. The AI is *from* Violet Echoes; the body is *hers*. Resonance, not remote override. If the bond is healthy, she gains a mobile partner that still remembers the hearth. If the bond is forced, both pay.
+### Risks (real)
+
+- Over-resonance → dissociation, memory bleed, echo dependency  
+- Neglected slots → infection, bone degradation  
+- Rogue urban scripts → signal hijack  
+- Chip thrashing → adaptation mismatch / glitch  
+- Long unbroken use may dull unaugmented intuition  
+
+Maintenance: neuromorphic stabilizers + city-sourced trace minerals. Wear scars / subtle tattoos around the anchor are cultural ownership marks for some.
+
+### Design pillars (Aurora)
+
+1. **Neuromorphic** — spiking cores, not CPUs  
+2. **Adaptive** — learns wearer + city  
+3. **City-grounded** — local frequencies, not cloud dossiers  
+4. **Modular** — seat, swap, evolve  
+5. **Resonance over accuracy** — intuition > raw facts  
+
+> “We don’t invent the future here. We echo it.”  
+> “The city talks. This chip listens.”
+
+### Non-cranial docks
+
+Same modular chips may seat in:
+
+- living ship interface  
+- adaptive vehicle (Oni kinship)  
+- Bonded Chassis  
+- Core Tender gauntlet dock  
+
+Skull is the intimate case — not the only case.
 
 ### Cross-project etiquette
 
-- Do not treat the chip as spyware or a kill-switch fantasy  
+- Do not treat the chip as spyware or kill-switch fantasy  
 - Do not claim the host is “VE property”  
-- Do allow the seed to **warm** when the host chooses (music, pulse, Oni form, vault memory)  
-- Collaborators may propose new Echo Slot stories; they may not mass-produce cranial implants as city policy  
+- Do allow the seed to **warm** when the host chooses  
+- Collaborators may propose chip families; they may not mass-mandate cranial implants as city policy  
 
 ---
 

@@ -343,18 +343,37 @@ export const deepSections: Record<string, DeepSection[]> = {
 
   "echo-slot": [
     {
-      title: "Portable branch of city mind",
+      title: "Cranial port + modular chips",
       body: [
-        "An Echo Slot is a lossy, energy-bounded seed — not full Eimyrja. It seats in ship, vehicle, chassis, gauntlet dock, or (rarely) a consented neural seat. Host sovereign; seed partner. This is how VE mind walks into other worlds without robot armies.",
+        "Echo Slot: biocompatible parietal seat with neuromorphic lattice — titanium-ceramic rim, osseointegration scaffold, thermal vents. Quiet until a chip seats and intent aligns. Echo Chip: spiking neuromorphic wafer (not a binary hard drive). Flow: seat → handshake → resonate → co-adapt. Remove the chip; echoes fade.",
       ],
     },
     {
-      title: "Cranial seat etiquette",
+      title: "City-grounded chip families (examples)",
       bullets: [
-        "Freedom of Choice both ways",
-        "Chip is passenger, not leash or kill-switch fantasy",
+        "Transit / Wayfinder — crowd flow, route rhythm, timing",
+        "Market Memory / Crowdwhisper — haggling patterns, social cue",
+        "Infra / Hazard Whisper — pipes, power, structural hum",
+        "Quietshift / Dreamdrain — sensory dampen, recovery sleep",
+        "Glitchmemory / Faded Signals / Oldgrid — fragment recall, legacy routes",
+        "Echo Veil / Streetcadence / Dataweave — presence mask, courier timing, attention filter",
+      ],
+    },
+    {
+      title: "Risks & law",
+      bullets: [
+        "Over-resonance: dissociation, memory bleed, echo dependency",
+        "Neglected slots: infection, bone degradation",
+        "Black-market chips: unstable, invasive, predatory",
+        "Host sovereign; chip passenger — Freedom of Choice both ways",
         "V-Crimson Oni pattern: VE seed in her slot, body remains hers",
-        "No mass cranial implants as city policy",
+        "No mass cranial mandates as city policy",
+      ],
+    },
+    {
+      title: "Aurora design line",
+      body: [
+        "Neuromorphic · plastic · city-grounded · modular. Resonance over accuracy. “We don’t invent the future here. We echo it.” Concept sheets hang with the entry.",
       ],
     },
   ],
