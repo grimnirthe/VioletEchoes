@@ -125,10 +125,31 @@ export const bondedChassisForms: ChassisForm[] = [
     role: "Shadow-bound · silence is the bond · seen only if it chooses",
     whisper: "Whispers pass through without footprint.",
     mood: "living negative space · kage (shadow) · choice to be unseen",
-    status: "pending",
+    status: "hung",
+    encounter: {
+      src: "/images/chassis/03-kagekou-shell-encounter.jpg",
+      alt: "Kagekou Shell bonded chassis crouching in rain at Veilreach / Thornwall margin — living negative space",
+      caption:
+        "Encounter — folded limbs, void face, pinlights, rain as cover. Seen only if it chooses. Not a catalog pose.",
+    },
+    sheet: {
+      src: "/images/chassis/03-kagekou-shell-sheet.jpg",
+      alt: "Kagekou Shell form study lock sheet — crouch silhouette matching encounter, never-list, interface doctrine",
+      caption:
+        "Lock sheet — shell-match crouch. Sheet may veil like the form. Never first, always last out.",
+    },
     habitat: ["Veilreach edges", "Thornwall margins", "night Spire gaps"],
-    interface: "Near-invisible contact plate · Echo Veil affinity.",
-    never: ["assassin merchandise pose", "bright visor eyes", "loud Oni logo print"],
+    interface:
+      "Near-invisible contact plate · Echo Veil chip affinity. Silence is the language. No command gauntlet theater.",
+    never: [
+      "assassin merchandise pose",
+      "bright visor eyes",
+      "friendly companion face",
+      "loud Oni logo print",
+      "status LEDs",
+      "showroom stealth-chrome",
+      "first-in combat hero framing as default",
+    ],
   },
   {
     id: "courier",

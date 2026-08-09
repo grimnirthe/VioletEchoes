@@ -135,6 +135,8 @@ export const media = {
   vaultWaderSheet: "/images/chassis/01-vault-wader-sheet.jpg",
   streetEchoEncounter: "/images/chassis/02-street-echo-encounter.jpg",
   streetEchoSheet: "/images/chassis/02-street-echo-sheet.jpg",
+  kagekouShellEncounter: "/images/chassis/03-kagekou-shell-encounter.jpg",
+  kagekouShellSheet: "/images/chassis/03-kagekou-shell-sheet.jpg",
   /** Core Tender Gauntlets & Light Exos */
   tenderGauntletsAnatomy: "/images/tender-gauntlets-anatomy.jpg",
   tenderGauntletsPrinciples: "/images/tender-gauntlets-principles.jpg",

@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-kagekou-shell-form-study",
+    date: "2026-08-09",
+    title: "Kagekou Shell hung — Bonded Chassis form study 03",
+    kind: "systems",
+    summary:
+      "Form 03 Kagekou Shell live: crouch encounter + shell-match lock sheet. Living negative space. Silence is the bond.",
+    body: [
+      "Sheet UI may veil like the form — kinship with the encounter over strict board matching Forms 01–02. Never first, always last out. Forms 04–05 pending.",
+    ],
+    hrefs: [
+      { label: "Bonded Chassis", href: "/bible/bonded-chassis" },
+      { label: "Systems", href: "/systems" },
+    ],
+    by: "Velora Runeweaver · visual commons",
+    tags: ["bonded-chassis", "kagekou", "form-study", "velora", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-09-street-echo-form-study",
     date: "2026-08-09",
     title: "Street Echo hung — Bonded Chassis form study 02",

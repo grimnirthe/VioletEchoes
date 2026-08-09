@@ -255,7 +255,7 @@ function BibleEntryPage() {
               ))}
 
               <p className="text-sm text-[var(--color-subtle)]">
-                Forms 03–05 pending encounter + sheet. Encounters may vary by night — same form, different rain. Same pair doctrine when they land.
+                Forms 04–05 pending encounter + sheet. Encounters may vary by night — same form, different rain. Kagekou sheet may veil. Same pair doctrine when they land.
               </p>
             </section>
           ) : null}

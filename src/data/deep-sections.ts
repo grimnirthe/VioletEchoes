@@ -354,7 +354,7 @@ export const deepSections: Record<string, DeepSection[]> = {
       bullets: [
         "Vault Wader — deep strata · sealed ways · stone that thinks (form study hung)",
         "Street Echo — urban pulse · unseen routes · street as skin (form study hung)",
-        "Kagekou Shell — shadow face · silence is the bond (pending)",
+        "Kagekou Shell — shadow face · silence is the bond (form study hung)",
         "Courier — between hands and doors · forgets nothing of the route (pending)",
         "Mourning — grief-shaped · unasked witness · holds what remains (pending)",
       ],
@@ -384,6 +384,19 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Whisper: Wears the street like skin.",
         "Mood: ghost courier of the grid · neon rain · I know a way",
         "Never: service smile · drone kit · loud hydraulics · full neon paint · corp logo · street-samurai default · catalog hero pose",
+      ],
+    },
+    {
+      title: "03 Kagekou Shell — form study",
+      body: [
+        "Low profile, folded limbs, light-drinking cloak and filament. Shadow face: voids and violet pinlights — not a friendly mask. Habitat: Veilreach edges, Thornwall margins, night Spire gaps.",
+        "Pair hung as shell-match crouch: encounter and sheet share body language. Sheet UI may drift from Forms 01–02 — Kagekou is allowed to veil. Encounters still vary by night.",
+        "Interface: near-invisible contact plate; Echo Veil affinity. Silence is the language. Force rejects. Never first; always last out.",
+      ],
+      bullets: [
+        "Whisper: Whispers pass through without footprint.",
+        "Mood: living negative space · kage · choice to be unseen",
+        "Never: assassin merch pose · bright visor · friendly face · loud Oni logo · status LEDs · stealth-chrome showroom · first-in combat hero default",
       ],
     },
     {
