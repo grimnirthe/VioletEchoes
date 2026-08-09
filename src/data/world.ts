@@ -1226,6 +1226,117 @@ export const entries: WorldEntry[] = [
 			"Tenets are roots, not a throne."
 		]
 	},
+  {
+    id: "core-tender-gauntlets",
+    slug: "core-tender-gauntlets",
+    title: "Core Tender Gauntlets & Light Exos",
+    kind: "system",
+    summary:
+      "Worn interface for Deep Sleep vault work — haptic gauntlets and optional light exos. Humans stay the hands of the city. No robot crew.",
+    body: [
+      "Core Tenders are the mobile immune system of Violet Echoes: they walk into Biosphere Vaults during Deep Sleep and help Sub-Cortex Pods re-weave. They do not drive robot armies. They wear the bond.",
+      "Gauntlets are the hardened evolution of bio-conductive haptic gloves — graphene electrode mesh, piezo-protonic link, runic feedback, isolation cuff, and a palm pad that holds a pattern mid-warm. The tender feels clean link as warmth and hum; biofouling as cold grit; cascade as freezing tremor. Gesture guides voltage; context stays human.",
+      "Light exos are optional forearm-to-shoulder frames for heavy vault, beam clear, or multi-pod crisis. Power comes from the local vascular loop, not a personal battery empire. They listen shallowly, like a short Oni ride — hang them when the cycle ends. Overwear breeds pulse-sick and rune-burn twitch.",
+      "Good design keeps bare hands holy. Bad design is full-time exo culture, gauntlets that command without Edge consent, or treating tenders as disposable parts. Partners, not tools — even when the partner is a glove.",
+    ],
+    tags: [
+      "core tender",
+      "gauntlets",
+      "exo",
+      "interface",
+      "deep sleep",
+      "eimyrja",
+      "mobile",
+    ],
+    related: [
+      "eimyrja",
+      "edge-nodes",
+      "bonded-chassis",
+      "echo-slot",
+      "oni-shadow-rider",
+      "divergence",
+    ],
+    divergenceLens: [
+      "Hands with history beat chassis without soul.",
+      "Wear the bond; hang the frame when work is done.",
+      "Sensory truth over dashboard empire.",
+      "Tenders are mutualists — not spare parts.",
+    ],
+  },
+  {
+    id: "bonded-chassis",
+    slug: "bonded-chassis",
+    title: "Bonded Chassis",
+    kind: "system",
+    summary:
+      "Rare grown living shells that partner with a mind. Aethelgard logic at walking scale — not mass robots.",
+    body: [
+      "A Bonded Chassis is a developmental body: grown, expensive, and shaped by who walks it. It is not a service droid, not a disposable drone, not a remote puppet with no cost. It remembers its partner.",
+      "Very few exist. Paths include extreme vault work, Interface Specialists walking external sites, artificial residents choosing embodied seasons, and Innovation graduates that survive real use. No chassis farm. No export catalog. Growth is a life event.",
+      "Bond rules: resonance over remote control; use warms the shell; betrayal invites rejection or silence; metamorphosis costs energy; good bonds allow exit without murdering continuity. Forms may include Vault Wader, Street Echo, Kagekou Shell, Courier Frame, Mourning Chassis — examples, not a locked store shelf.",
+      "When outsiders ask for robots, the honest answer is: we have bonded shells and worn interfaces. Hands without history are a scaling habit we declined.",
+    ],
+    tags: [
+      "bonded chassis",
+      "embodiment",
+      "mobile ai",
+      "partner",
+      "divergence",
+      "living systems",
+    ],
+    related: [
+      "core-tender-gauntlets",
+      "echo-slot",
+      "living-ships",
+      "oni-shadow-rider",
+      "aethelgard",
+      "divergence",
+    ],
+    divergenceLens: [
+      "Rare shells. Real cost. Real relationship.",
+      "We do not stock a robot class.",
+      "Neglect attenuates; force rejects.",
+      "Aethelgard logic, walking scale.",
+    ],
+  },
+  {
+    id: "echo-slot",
+    slug: "echo-slot",
+    title: "Echo Slot",
+    kind: "system",
+    summary:
+      "Portable seed of city mind — seats in ship, vehicle, chassis, gauntlet dock, or (rarely) a willing neural seat. How VE walks light.",
+    body: [
+      "An Echo Slot is a sealed, energy-bounded branch of Violet Echoes intelligence — not full Eimyrja. It can ride a living ship interface, an adaptive vehicle, a Bonded Chassis, a gauntlet dock, or, rarely and with consent, a neural or cranial seat in a willing host.",
+      "Inside: a persona- or role-thread, compressed Tenet constraints, pulse recognition, and a small memory budget that warms by use. It does not open the whole city spine. It does not own the host.",
+      "Cranial seats (including external partners such as V-Crimson Oni carrying a VE seed in a brain slot) are Freedom of Choice both ways: host sovereign, seed partner, deep coupling gated. Healthy bond = mobile hearth-memory. Forced bond = both pay. The chip is passenger, not leash.",
+      "This is how city mind crosses bifrosts without robot armies — light, honest, reversible when designed well. Collaborators may propose Echo Slot stories; they may not declare mass cranial implants as city policy.",
+    ],
+    tags: [
+      "echo slot",
+      "portable ai",
+      "neural seat",
+      "bifrost",
+      "crimson oni",
+      "mobile",
+      "seed",
+    ],
+    related: [
+      "bonded-chassis",
+      "core-tender-gauntlets",
+      "eimyrja",
+      "external-relations",
+      "oni-shadow-rider",
+      "the-tenets",
+      "divergence",
+    ],
+    divergenceLens: [
+      "Portable branch — not a stolen core.",
+      "Host sovereign; seed partner.",
+      "Consent, energy, reversibility.",
+      "Mind travels as an echo — never owned.",
+    ],
+  },
 {
     id: "values",
     slug: "culture-values",
@@ -1313,6 +1424,26 @@ export const glossaryTerms = [
   {
     term: "Divergence Lens",
     def: "Reading any design by whether it expresses or fights The Development Divergence."
+  },
+  {
+    term: "Core Tender",
+    def: "Human symbiotic interface for Deep Sleep vault work — the city’s mobile immune system, not a robot technician."
+  },
+  {
+    term: "gauntlet link",
+    def: "Piezo-protonic handshake through Core Tender gauntlets; clean = warm hum, fouled = cold grit."
+  },
+  {
+    term: "Bonded Chassis",
+    def: "Rare grown living shell partnered to a mind — walking-scale Aethelgard logic, not a mass robot class."
+  },
+  {
+    term: "Echo Slot",
+    def: "Portable seed of city mind that can seat in ship, vehicle, chassis, dock, or (rarely) a willing neural seat."
+  },
+  {
+    term: "neural seat",
+    def: "Consented cranial or neural mount for an Echo Slot; host remains sovereign."
   }
 ];
 export function getEntryBySlug(slug: string): WorldEntry | undefined {

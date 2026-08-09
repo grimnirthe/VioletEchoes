@@ -315,6 +315,50 @@ export const deepSections: Record<string, DeepSection[]> = {
     },
   ],
 
+  "core-tender-gauntlets": [
+    {
+      title: "Worn interface, not robot crew",
+      body: [
+        "Gauntlets extend the existing bio-conductive haptic gloves: piezo-protonic link, graphene mesh, runic feedback, isolation cuff. Light exos are optional vault frames powered from the local vascular loop. Hang them after Deep Sleep. Overwear is a design failure.",
+      ],
+    },
+    {
+      title: "Human context stays in the loop",
+      bullets: [
+        "AI prints chitosan; tender validates which pathways to warm",
+        "Cascade work: tender acts as external pre-frontal cortex for a dying node",
+        "Bare hands remain holy — exo culture is not the default life",
+      ],
+    },
+  ],
+
+  "bonded-chassis": [
+    {
+      title: "Walking-scale living bond",
+      body: [
+        "A Bonded Chassis is grown and rare. It co-adapts with its mind the way Aethelgard co-adapts with a captain. No chassis farms. Neglect attenuates; force rejects. Forms (Vault Wader, Street Echo, Kagekou Shell, etc.) are examples, not a store shelf.",
+      ],
+    },
+  ],
+
+  "echo-slot": [
+    {
+      title: "Portable branch of city mind",
+      body: [
+        "An Echo Slot is a lossy, energy-bounded seed — not full Eimyrja. It seats in ship, vehicle, chassis, gauntlet dock, or (rarely) a consented neural seat. Host sovereign; seed partner. This is how VE mind walks into other worlds without robot armies.",
+      ],
+    },
+    {
+      title: "Cranial seat etiquette",
+      bullets: [
+        "Freedom of Choice both ways",
+        "Chip is passenger, not leash or kill-switch fantasy",
+        "V-Crimson Oni pattern: VE seed in her slot, body remains hers",
+        "No mass cranial implants as city policy",
+      ],
+    },
+  ],
+
   factions: [
     {
       title: "Stances toward the Divergence",
@@ -501,7 +545,10 @@ export const companionsForEntry: Record<string, string[]> = {
   "city-overview": ["wb-v17", "systems-apps"],
   "living-ships": ["systems-apps"],
   aethelgard: ["systems-apps"],
-  "oni-shadow-rider": ["systems-apps"],
+  "oni-shadow-rider": ["systems-apps", "mobile-interface"],
+  "core-tender-gauntlets": ["mobile-interface", "eimyrja-protonic", "core-framework"],
+  "bonded-chassis": ["mobile-interface", "systems-apps"],
+  "echo-slot": ["mobile-interface", "characters-factions", "core-framework"],
   factions: ["characters-factions"],
   vernacular: ["vernacular"],
   "the-tenets": ["core-framework", "wb-v17"],

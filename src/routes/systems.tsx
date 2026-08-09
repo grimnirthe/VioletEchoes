@@ -33,6 +33,9 @@ const systemIds = [
   "living-ships",
   "aethelgard",
   "oni-shadow-rider",
+  "core-tender-gauntlets",
+  "bonded-chassis",
+  "echo-slot",
   "factions",
 ];
 
@@ -720,6 +723,53 @@ function SystemsPage() {
             </div>
           </div>
         </section>
+
+        <section className="mt-16">
+          <div className="mb-5 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
+              #VioletEchoes · Mobile interface
+            </p>
+            <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+              Hands, shells, and seeds
+            </h2>
+            <p className="mt-2 text-sm text-[var(--color-muted)]">
+              No robot armies. Core Tender gauntlets and light exos for vault work. Rare Bonded
+              Chassis when a mind needs a walking shell. Echo Slots when city mind must travel light
+              — including consented neural seats (V-Crimson Oni pattern).
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {(
+              [
+                ["core-tender-gauntlets", "Gauntlets & light exos"],
+                ["bonded-chassis", "Bonded Chassis"],
+                ["echo-slot", "Echo Slot"],
+              ] as const
+            ).map(([id, label]) => {
+              const entry = list.find((e) => e?.id === id);
+              return entry ? (
+                <div key={id} className="flex flex-col gap-2">
+                  <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-subtle)]">
+                    {label}
+                  </p>
+                  <EntryCard entry={entry} />
+                </div>
+              ) : null;
+            })}
+          </div>
+          <p className="mt-4 text-sm text-[var(--color-muted)]">
+            Full write-up:{" "}
+            <Link
+              to="/bible/companions/$doc"
+              params={{ doc: "mobile-interface" }}
+              className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+            >
+              Mobile Interface Systems
+            </Link>{" "}
+            companion.
+          </p>
+        </section>
+
         <section className="mt-16">
           <div className="mb-5 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">

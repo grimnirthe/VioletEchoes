@@ -83,6 +83,16 @@ export const companionDocs: CompanionDoc[] = [
     kind: "structure",
     pagesHint: "Master outline",
   },
+  {
+    id: "mobile-interface",
+    title: "Mobile Interface Systems",
+    blurb:
+      "Core Tender gauntlets & light exos, Bonded Chassis, and Echo Slots — how mind moves without robot armies. Includes cranial-seat / V-Crimson Oni pattern.",
+    href: "/docs/mobile-interface-systems.md",
+    to: "/bible/companions/mobile-interface",
+    kind: "systems",
+    pagesHint: "Gauntlets · chassis · echo slots",
+  },
 ];
 
 export function getCompanion(id: string) {
