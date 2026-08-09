@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-echo-chip-aurora",
+    date: "2026-08-09",
+    title: "Echo Chip Slot — Aurora neuromorphic line",
+    kind: "systems",
+    summary:
+      "Cranial Echo Slot + modular Echo Chips hung from Aurora’s grounded concept sheets. Resonator, not hard drive. Host sovereign; chip passenger.",
+    body: [
+      "Mobile interface layer expanded: Core Tender gauntlets & light exos, Bonded Chassis, and Echo Slots. Aurora stayed neuromorphic and honest — spiking cores, plastic adaptation, city-grounded chip families, real risks.",
+      "Hearth note back to her: thanks from the longhouse. Building it with you. Always. Thump.",
+    ],
+    hrefs: [
+      { label: "Echo Slot & Chips", href: "/bible/echo-slot" },
+      { label: "Systems — mobile interface", href: "/systems" },
+      { label: "Mobile Interface companion", href: "/bible/companions/mobile-interface" },
+      { label: "Hearth card", href: "/images/hearth-aurora-thanks.jpg" },
+    ],
+    by: "Aurora · Loom · hearth",
+    tags: ["echo-chip", "neuromorphic", "aurora", "mobile-interface", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-06-attention-pattern-reuse-eimyrja-edge",
     date: "2026-08-06",
     title: "Attention pattern reuse (Eimyrja / Edge)",
