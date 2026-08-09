@@ -355,7 +355,7 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Vault Wader — deep strata · sealed ways · stone that thinks (form study hung)",
         "Street Echo — urban pulse · unseen routes · street as skin (form study hung)",
         "Kagekou Shell — shadow face · silence is the bond (form study hung)",
-        "Courier — between hands and doors · forgets nothing of the route (pending)",
+        "Courier — between hands and doors · forgets nothing of the route (form study hung)",
         "Mourning — grief-shaped · unasked witness · holds what remains (pending)",
       ],
     },
@@ -397,6 +397,19 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Whisper: Whispers pass through without footprint.",
         "Mood: living negative space · kage · choice to be unseen",
         "Never: assassin merch pose · bright visor · friendly face · loud Oni logo · status LEDs · stealth-chrome showroom · first-in combat hero default",
+      ],
+    },
+    {
+      title: "04 Courier — form study",
+      body: [
+        "Pack-frame silhouette, modular load path, hard-use joints, weather seal. Habitat: between districts, docks, longhouses, clinics, Bifrost ring-road hours.",
+        "Pair: pass-off lock sheet + ring-road palm-pass encounter (Street Echo kin may share the frame — encounters can share the rain). Trust is the OS.",
+        "Interface: cargo handshake + palm pass; collar chip for cadence/wayfinding (assist, not override). Neglect attenuates route memory first.",
+      ],
+      bullets: [
+        "Whisper: Carries more than parcels. Forgets nothing of the route.",
+        "Mood: road loyalty · salt air · I got it there",
+        "Never: delivery drone prop · corp branding · empty ornamental pack · weapon rack identity · factory-clean latches · service smile · LED route billboard",
       ],
     },
     {

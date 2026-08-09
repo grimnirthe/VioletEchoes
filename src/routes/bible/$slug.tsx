@@ -255,7 +255,7 @@ function BibleEntryPage() {
               ))}
 
               <p className="text-sm text-[var(--color-subtle)]">
-                Forms 04–05 pending encounter + sheet. Encounters may vary by night — same form, different rain. Kagekou sheet may veil. Same pair doctrine when they land.
+                Form 05 Mourning pending encounter + sheet. Encounters may vary by night — same form, different rain. Courier may share the frame with Street Echo kin. Same pair doctrine when they land.
               </p>
             </section>
           ) : null}

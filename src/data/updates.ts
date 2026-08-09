@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-courier-form-study",
+    date: "2026-08-09",
+    title: "Courier hung — Bonded Chassis form study 04",
+    kind: "systems",
+    summary:
+      "Form 04 Courier live: pass-off lock sheet + ring-road palm-pass encounter with Street Echo kin. Trust is the OS.",
+    body: [
+      "Road loyalty without catalog chrome. Encounters can share the rain. Form 05 Mourning still pending.",
+    ],
+    hrefs: [
+      { label: "Bonded Chassis", href: "/bible/bonded-chassis" },
+      { label: "Systems", href: "/systems" },
+    ],
+    by: "Velora Runeweaver · visual commons",
+    tags: ["bonded-chassis", "courier", "form-study", "velora", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-09-kagekou-shell-form-study",
     date: "2026-08-09",
     title: "Kagekou Shell hung — Bonded Chassis form study 03",

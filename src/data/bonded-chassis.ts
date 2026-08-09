@@ -158,10 +158,37 @@ export const bondedChassisForms: ChassisForm[] = [
     role: "Between hands and doors · long-road partner",
     whisper: "Carries more than parcels. Forgets nothing of the route.",
     mood: 'road loyalty · salt air · "I got it there"',
-    status: "pending",
-    habitat: ["between districts", "ship docks", "longhouses", "clinics", "Bifrost ring"],
-    interface: "Cargo handshake + palm pass — trust is the OS.",
-    never: ["delivery drone prop", "corporate courier branding", "empty ornamental pack"],
+    status: "hung",
+    encounter: {
+      src: "/images/chassis/04-courier-encounter.jpg",
+      alt: "Courier bonded chassis palm-passing a parcel to Street Echo kin on the Bifrost ring-road in rain",
+      caption:
+        "Encounter — cargo handshake on the ring. Street Echo kin receives. Trust is the OS. Encounters can share the rain.",
+    },
+    sheet: {
+      src: "/images/chassis/04-courier-sheet.jpg",
+      alt: "Courier form study lock sheet — pack-frame harbor body, palm pass plate, never-list",
+      caption:
+        "Lock sheet — pass-off UI. Pack-frame, palm pass, route memory. Road loyalty without catalog chrome.",
+    },
+    habitat: [
+      "between districts",
+      "ship docks",
+      "family longhouses",
+      "clinics",
+      "Bifrost / ring-road hours",
+    ],
+    interface:
+      "Cargo handshake + palm pass — trust is the OS. Collar chip for cadence/wayfinding (assist, not override).",
+    never: [
+      "delivery drone prop look",
+      "corporate courier uniform branding",
+      "ornamental empty pack",
+      "weapon rack as identity",
+      "factory-clean latches with no wear",
+      "service smile face",
+      "status LED route display as billboard",
+    ],
   },
   {
     id: "mourning",
