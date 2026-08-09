@@ -791,7 +791,7 @@ function SystemsPage() {
           </div>
           <div className="mt-8">
             <p className="mb-3 text-xs uppercase tracking-[0.16em] text-[var(--color-subtle)]">
-              Bonded Chassis — form studies (01 Vault Wader hung · sheet + encounter)
+              Bonded Chassis — form studies (01 Vault Wader · 02 Street Echo hung)
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {systemsGallery

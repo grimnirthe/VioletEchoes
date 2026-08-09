@@ -133,6 +133,8 @@ export const media = {
   bondedChassisLaw: "/images/bonded-chassis-law.jpg",
   vaultWaderEncounter: "/images/chassis/01-vault-wader-encounter.jpg",
   vaultWaderSheet: "/images/chassis/01-vault-wader-sheet.jpg",
+  streetEchoEncounter: "/images/chassis/02-street-echo-encounter.jpg",
+  streetEchoSheet: "/images/chassis/02-street-echo-sheet.jpg",
   /** Core Tender Gauntlets & Light Exos */
   tenderGauntletsAnatomy: "/images/tender-gauntlets-anatomy.jpg",
   tenderGauntletsPrinciples: "/images/tender-gauntlets-principles.jpg",

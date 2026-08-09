@@ -353,7 +353,7 @@ export const deepSections: Record<string, DeepSection[]> = {
       title: "Forms as examples (lived-in)",
       bullets: [
         "Vault Wader — deep strata · sealed ways · stone that thinks (form study hung)",
-        "Street Echo — urban pulse · unseen routes · street as skin (pending)",
+        "Street Echo — urban pulse · unseen routes · street as skin (form study hung)",
         "Kagekou Shell — shadow face · silence is the bond (pending)",
         "Courier — between hands and doors · forgets nothing of the route (pending)",
         "Mourning — grief-shaped · unasked witness · holds what remains (pending)",
@@ -371,6 +371,19 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Mood: threshold guardian · cathedral of pressure · patience as weapon",
         "Never: cute mascot face · scout cosplay · catalog chrome · status LED crown · weapon hardpoints as identity · joystick backpack · brand logo",
         "Visual lane: Velora Runeweaver · locks in /docs/bonded-chassis-five-forms-locks.json",
+      ],
+    },
+    {
+      title: "02 Street Echo — form study",
+      body: [
+        "Mid-height rain-slick shell; hooded social mask or void face; quiet joints; city as skin. Habitat: Harborward grit, Neon Core alleys, routes toward Spire glass, shortcuts and safe alleys.",
+        "Pair doctrine holds: lock sheet = law; encounter = soul. Encounters vary by night and district — filament drape one rain, long-coat courier another — same form, different rain. Not a product lineup.",
+        "Interface: light wrist / collar port — cadence and trust, not a leash. Neon exists as street reflection, not painted identity.",
+      ],
+      bullets: [
+        "Whisper: Wears the street like skin.",
+        "Mood: ghost courier of the grid · neon rain · I know a way",
+        "Never: service smile · drone kit · loud hydraulics · full neon paint · corp logo · street-samurai default · catalog hero pose",
       ],
     },
     {

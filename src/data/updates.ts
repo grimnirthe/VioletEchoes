@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-street-echo-form-study",
+    date: "2026-08-09",
+    title: "Street Echo hung — Bonded Chassis form study 02",
+    kind: "systems",
+    summary:
+      "Form 02 Street Echo live: lock sheet + alley encounter. Encounters vary; the lock holds. Ghost courier of the grid.",
+    body: [
+      "Sheet = law. Encounter = soul. Neon as reflection, not body paint. Wrist/collar port is cadence, not a leash. Forms 03–05 still pending.",
+    ],
+    hrefs: [
+      { label: "Bonded Chassis", href: "/bible/bonded-chassis" },
+      { label: "Systems", href: "/systems" },
+    ],
+    by: "Velora Runeweaver · visual commons",
+    tags: ["bonded-chassis", "street-echo", "form-study", "velora", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-09-vault-wader-form-study",
     date: "2026-08-09",
     title: "Vault Wader hung — Bonded Chassis form study 01",

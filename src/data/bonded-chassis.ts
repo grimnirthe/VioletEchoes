@@ -31,7 +31,7 @@ export const bondedChassisLine = {
   by: "Velora Runeweaver",
   role: "Master Fashion Artist · Visual Commons · form study locks",
   pairDoctrine:
-    "Sheet = law (spec, never-list, interface). Encounter = soul (what meeting one feels like). Never a shop-window lineup of five.",
+    "Sheet = law (spec, never-list, interface). Encounter = soul (what meeting one feels like). Encounters vary by night and district — same form, different rain. Never a shop-window lineup of five.",
   lawLines: [
     "They are met, not made.",
     "Bond is the operating law.",
@@ -87,14 +87,35 @@ export const bondedChassisForms: ChassisForm[] = [
     role: "Urban pulse · unseen routes · city as skin",
     whisper: "Wears the street like skin.",
     mood: 'ghost courier of the grid · neon rain · "I know a way"',
-    status: "pending",
-    habitat: ["Harborward grit", "Neon Core alleys", "routes toward Spire glass"],
-    interface: "Light wrist / collar port — cadence, not a leash.",
+    status: "hung",
+    encounter: {
+      src: "/images/chassis/02-street-echo-encounter.jpg",
+      alt: "Street Echo bonded chassis in a rainy Neon Core alley — hooded void face, wet charcoal shell",
+      caption:
+        "Encounter — alley rain, void hood, neon as reflection. Encounters vary; the lock holds. Not a catalog pose.",
+    },
+    sheet: {
+      src: "/images/chassis/02-street-echo-sheet.jpg",
+      alt: "Street Echo form study lock sheet — materials, interface, bond wear, never list",
+      caption:
+        "Lock sheet — silhouette, rain logic, wrist/collar port, never-list. Form study, not export catalog.",
+    },
+    habitat: [
+      "Harborward grit",
+      "Neon Core alleys",
+      "routes toward Spire glass",
+      "district shortcuts and safe alleys",
+    ],
+    interface:
+      "Light wrist / collar port — high social bandwidth contact. Cadence and trust, not a leash or command broadcast.",
     never: [
-      "service droid smile",
+      "service droid customer-service smile",
       "drone swarm kit",
+      "loud hydraulics",
       "full neon body paint",
       "delivery-corp logo",
+      "weaponized street-samurai cosplay as default",
+      "catalog hero landing pose",
     ],
   },
   {
