@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-09-echo-chip-circulation",
+    date: "2026-08-09",
+    title: "Echo Chips — five forms in circulation",
+    kind: "systems",
+    summary:
+      "Streetcadence · Dataweave · Quietshift · Oldgrid · Echo Veil hung as in-circulation field sheets. City-inspired, not a store shelf.",
+    body: [
+      "Completes the master-spec pass with lived product language: licensed clinics, black-market risk, insert→listen→fade on remove.",
+    ],
+    hrefs: [
+      { label: "Echo Slot", href: "/bible/echo-slot" },
+      { label: "Systems gallery", href: "/systems" },
+    ],
+    by: "Aurora · Loom · hearth",
+    tags: ["echo-chip", "circulation", "streetcadence", "dataweave", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-09-chassis-line-chorus",
     date: "2026-08-09",
     title: "Bonded Chassis line chorus — five rains · one law",

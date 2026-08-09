@@ -122,10 +122,15 @@ export const media = {
   echoChipMasterSkull: "/images/echo-chip-master-skull.jpg",
   echoChipMasterPulse: "/images/echo-chip-master-pulse.jpg",
   echoChipMasterProfile: "/images/echo-chip-master-profile.jpg",
+  /** Echo Chip — In Circulation (five form line) */
+  echoChipCirculationStreet: "/images/echo-chip-circulation-street.jpg",
+  echoChipCirculationCards: "/images/echo-chip-circulation-cards.jpg",
+  echoChipCirculationCity: "/images/echo-chip-circulation-city.jpg",
+  echoChipCirculationCompact: "/images/echo-chip-circulation-compact.jpg",
   /** legacy draft keys → masters (keep paths resolving) */
   echoChipSpecV01: "/images/echo-chip-master-full.jpg",
   echoChipAnatomy: "/images/echo-chip-master-skull.jpg",
-  echoChipCirculation: "/images/echo-chip-master-pulse.jpg",
+  echoChipCirculation: "/images/echo-chip-circulation-street.jpg",
   echoChipFlow: "/images/echo-chip-master-profile.jpg",
   /** Bonded Chassis — concept form sheets */
   bondedChassisHero: "/images/bonded-chassis-hero.jpg",
@@ -1168,6 +1173,38 @@ export const systemsGallery = [
     title: "Echo Chip Slot — Profile master",
     caption:
       "Parietal glow, cross-section stack, law & risks. #VioletEchoes // CONCEPT SPEC.",
+    group: "echo-chip" as const,
+  },
+  {
+    id: "echo-chip-circulation-street",
+    src: media.echoChipCirculationStreet,
+    title: "Echo Chips — In Circulation (street)",
+    caption:
+      "VE-17 Streetcadence · VE-22 Dataweave · VE-09 Quietshift · VE-31 Oldgrid · VE-04 Echo Veil. Licensed clinics; black-market risk.",
+    group: "echo-chip" as const,
+  },
+  {
+    id: "echo-chip-circulation-cards",
+    src: media.echoChipCirculationCards,
+    title: "Echo Chips — Five forms in the wild",
+    caption:
+      "City-inspired · not a store shelf. Insert → city talks → chip listens. Remove → echoes fade.",
+    group: "echo-chip" as const,
+  },
+  {
+    id: "echo-chip-circulation-city",
+    src: media.echoChipCirculationCity,
+    title: "Echo Chips — City lines",
+    caption:
+      "Transit · market · quiet · memory · veil. Partners, not tools.",
+    group: "echo-chip" as const,
+  },
+  {
+    id: "echo-chip-circulation-compact",
+    src: media.echoChipCirculationCompact,
+    title: "Echo Chips — Compact field sheet",
+    caption:
+      "Five form line + clinic / black-market note. Resonance over accuracy.",
     group: "echo-chip" as const,
   },
   {
