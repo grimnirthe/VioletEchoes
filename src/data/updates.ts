@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-podcast-003-004-scaffold",
+    date: "2026-08-10",
+    title: "Broadcast #003–#004 scaffold — kinship & living truth",
+    kind: "culture",
+    summary:
+      "Roots series continues: Connection over control (#003) and Truth evolves (#004). Awaiting Gemini audio.",
+    body: [
+      "Cultivation / recommendation culture · Codex Aurora on unity without truth and freedom without responsibility. Drop 003-connection-over-control.mp3 and 004-truth-evolves.mp3 when ready.",
+    ],
+    hrefs: [
+      { label: "#003", href: "/podcast#003-connection-over-control" },
+      { label: "#004", href: "/podcast#004-truth-evolves" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["podcast", "003", "004", "tenets", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-podcast-002-scaffold",
     date: "2026-08-10",
     title: "Broadcast #002 scaffold — Curiosity is sacred",
