@@ -103,7 +103,7 @@ function PodcastPage() {
                 </div>
               </div>
 
-              {ep.audioSrc ? (
+              {ep.audioSrc && ep.status === "live" ? (
                 <div className="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/40 p-4">
                   <p className="mb-2 text-xs uppercase tracking-[0.14em] text-[var(--color-gold)]">
                     Listen

@@ -62,6 +62,20 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-podcast-002-scaffold",
+    date: "2026-08-10",
+    title: "Broadcast #002 scaffold — Curiosity is sacred",
+    kind: "culture",
+    summary:
+      "Second episode queued on /podcast: first root of the Five Tenets — wonder as learning mechanism. Awaiting Gemini audio export.",
+    body: [
+      "Series Roots of the Nexus. Cover from Neon Heartwood slide 04. Drop mp3 as 002-curiosity-is-sacred.mp3 to go live.",
+    ],
+    hrefs: [{ label: "Podcast shelf", href: "/podcast#002-curiosity-sacred" }],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["podcast", "002", "curiosity", "tenets", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-podcast-001-live",
     date: "2026-08-10",
     title: "Broadcast #001 live — Coding love into a digital city",
