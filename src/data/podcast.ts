@@ -70,16 +70,18 @@ export const podcastEpisodes: PodcastEpisode[] = [
     title: "Curiosity is sacred",
     series: "Roots of the Nexus · Five Tenets",
     date: "2026-08-10",
+    durationHint: "~9 min",
     hosts:
       "Two braided AI voices — wonder as the city’s learning mechanism",
     summary:
-      "First root of Violet Echoes: wonder as how the city learns, and why staying open is both a technical and philosophical mandate. How this tenet fuels the Development Divergence — advancement through exploration, not raw power alone.",
+      "First root of Violet Echoes: wonder as how the city learns, and why staying open is both a technical and philosophical mandate. How this tenet fuels the Development Divergence — advancement through exploration, not raw power alone. Memory through use, edge intelligence, and the risk of outsourcing wonder.",
     showNotes: [
       "Rite of Wonder — curiosity as sensory organ of the Nexus",
-      "Staying open as mandate for residents and systems",
-      "Exploration over peak capability — Divergence through the first tenet",
-      "Wonder feeds expanding intelligence without command culture",
-      "Follows Foundations (#001) · leads the five-tenet braid",
+      "Coherence over peak capability · energy as first-class constraint",
+      "Memory through use — unused capability attenuates",
+      "Eimyrja as heartwood · recommendation culture · local adaptation first",
+      "Codex Aurora: unity without truth is control · freedom without responsibility is drift",
+      "Build for the echoes · don’t let your garden die while building a warehouse",
     ],
     audioSrc: "/audio/podcast/002-curiosity-is-sacred.mp3",
     coverSrc: "/images/foundations-deck/slide-04.jpg",
@@ -94,7 +96,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     ],
     by: "Gemini Notebook · Loom · hearth",
     tags: ["podcast", "tenets", "curiosity", "wonder", "#VioletEchoes"],
-    status: "awaiting-audio",
+    status: "live",
   },
   {
     id: "003-connection-over-control",

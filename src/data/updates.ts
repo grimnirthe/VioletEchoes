@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-podcast-002-live",
+    date: "2026-08-10",
+    title: "Broadcast #002 live — Curiosity is sacred",
+    kind: "culture",
+    summary:
+      "~9 min Roots deep dive on wonder as learning mechanism, memory through use, and staying open. Audio hung on /podcast.",
+    body: [
+      "Gemini dual voices. Cover Neon Heartwood slide 04. #003 Connection and #004 Truth still awaiting audio.",
+    ],
+    hrefs: [
+      { label: "Play #002", href: "/podcast#002-curiosity-sacred" },
+      { label: "Tenets", href: "/bible/the-tenets" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["podcast", "002", "live", "curiosity", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-podcast-003-004-scaffold",
     date: "2026-08-10",
     title: "Broadcast #003–#004 scaffold — kinship & living truth",
