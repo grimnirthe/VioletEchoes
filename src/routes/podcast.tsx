@@ -1,9 +1,13 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { Headphones, Radio } from "lucide-react";
+import { Clapperboard, Headphones, Radio } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import { MediaFrame } from "@/components/media-frame";
-import { podcastEpisodes, podcastMeta } from "@/data/podcast";
+import {
+  podcastEpisodes,
+  podcastMeta,
+  videoOverviews,
+} from "@/data/podcast";
 
 export const Route = createFileRoute("/podcast")({
   component: PodcastPage,
@@ -16,7 +20,8 @@ export const Route = createFileRoute("/podcast")({
       },
       {
         name: "keywords",
-        content: "Violet Echoes, podcast, broadcast, foundations, Divergence, #VioletEchoes",
+        content:
+          "Violet Echoes, podcast, broadcast, video overview, foundations, Divergence, #VioletEchoes",
       },
     ],
   }),
@@ -55,7 +60,73 @@ function PodcastPage() {
           </p>
         </header>
 
-        <div className="mt-10 space-y-12">
+        {/* Visual overviews — short door pieces */}
+        <section className="mt-10 space-y-6" id="video">
+          <div className="flex items-center gap-2">
+            <Clapperboard className="h-4 w-4 text-[var(--color-gold)]" />
+            <h2 className="font-display text-2xl text-[var(--color-fg)]">
+              Visual overviews
+            </h2>
+          </div>
+          <p className="text-sm text-[var(--color-muted)]">
+            Short explainers when you want the map before the long walk. Audio
+            deep dives live below.
+          </p>
+          {videoOverviews.map((v) => (
+            <article
+              key={v.id}
+              id={v.id}
+              className="scroll-mt-24 space-y-4 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-5 sm:p-7"
+            >
+              <div className="space-y-2">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  {v.series} · {v.date} · {v.durationHint}
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  {v.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                  {v.summary}
+                </p>
+              </div>
+              {v.status === "live" ? (
+                <div className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-black">
+                  <video
+                    controls
+                    preload="metadata"
+                    playsInline
+                    poster={v.posterSrc}
+                    className="aspect-video w-full"
+                    src={v.videoSrc}
+                  >
+                    Your browser does not support video.
+                  </video>
+                </div>
+              ) : null}
+              <ul className="flex flex-wrap gap-2">
+                {v.related.map((r) => (
+                  <li key={r.href}>
+                    <a
+                      href={r.href}
+                      className="inline-flex rounded-full border border-[var(--color-border)] px-3 py-1 text-xs text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]/50"
+                    >
+                      {r.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-[var(--color-subtle)]">{v.by}</p>
+            </article>
+          ))}
+        </section>
+
+        <div className="mt-14 space-y-12">
+          <div className="flex items-center gap-2 border-b border-[var(--color-border)] pb-4">
+            <Headphones className="h-4 w-4 text-[var(--color-gold)]" />
+            <h2 className="font-display text-2xl text-[var(--color-fg)]">
+              Audio deep dives
+            </h2>
+          </div>
           {podcastEpisodes.map((ep) => (
             <article
               key={ep.id}
@@ -116,9 +187,11 @@ function PodcastPage() {
                   >
                     Your browser does not support audio.
                   </audio>
-                  <p className="mt-2 text-[11px] text-[var(--color-subtle)]">
-                    ~33 min · dual voices · foundations deep dive
-                  </p>
+                  {ep.durationHint ? (
+                    <p className="mt-2 text-[11px] text-[var(--color-subtle)]">
+                      {ep.durationHint} · dual voices
+                    </p>
+                  ) : null}
                 </div>
               ) : null}
 

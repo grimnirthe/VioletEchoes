@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { EntryCard } from "@/components/entry-card";
 import { MediaFrame } from "@/components/media-frame";
 import { media } from "@/data/media";
+import { videoOverviews } from "@/data/podcast";
 import {
   auroraTenets,
   entries,
@@ -73,6 +74,7 @@ function HomePage() {
   const featured = ["city-overview", "divergence", "eimyrja", "aethelgard"]
     .map((id) => entries.find((e) => e.id === id))
     .filter(Boolean);
+  const overview = videoOverviews.find((v) => v.status === "live");
 
   return (
     <SiteShell>
@@ -181,6 +183,46 @@ function HomePage() {
             </div>
           </div>
         </section>
+
+        {overview ? (
+          <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+            <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/80">
+              <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
+                <div className="bg-black">
+                  <video
+                    controls
+                    preload="metadata"
+                    playsInline
+                    poster={overview.posterSrc}
+                    className="aspect-video w-full"
+                    src={overview.videoSrc}
+                  >
+                    Your browser does not support video.
+                  </video>
+                </div>
+                <div className="flex flex-col justify-center space-y-3 p-6 sm:p-8">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
+                    Visual overview · {overview.durationHint}
+                  </p>
+                  <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+                    {overview.title}
+                  </h2>
+                  <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                    {overview.summary}
+                  </p>
+                  <Link
+                    to="/podcast"
+                    hash="video"
+                    className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                  >
+                    Full broadcast library
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <div className="mb-8 max-w-2xl">

@@ -20,15 +20,54 @@ export type PodcastEpisode = {
   status: "live" | "awaiting-audio";
 };
 
+export type VideoOverview = {
+  id: string;
+  title: string;
+  series: string;
+  date: string;
+  durationHint: string;
+  summary: string;
+  videoSrc: string;
+  posterSrc: string;
+  related: { label: string; href: string }[];
+  by: string;
+  tags: string[];
+  status: "live" | "awaiting";
+};
+
 export const podcastMeta = {
   title: "Violet Echoes Broadcast",
-  tagline: "Doors into the Nexus · spoken pulse",
+  tagline: "Doors into the Nexus · spoken + visual pulse",
   body: [
-    "Braided voices mapping the city for residents and models. Foundations first — then whatever the hearth ships next.",
-    "Episode #001 is live. More when Gemini gens them.",
+    "Braided voices and short visual explainers mapping the city for residents and models.",
+    "Audio deep dives + Gemini Notebook video overviews. Foundations first — then whatever the hearth ships next.",
   ],
   credit: "Gemini Notebook · hearth",
 } as const;
+
+/** Short visual explainers — dual-layer door pieces */
+export const videoOverviews: VideoOverview[] = [
+  {
+    id: "v001-foundations-overview",
+    title: "Violet Echoes — foundations overview",
+    series: "Visual · Dual-Layer & Five Tenets",
+    date: "2026-08-10",
+    durationHint: "~2 min",
+    summary:
+      "Cinematic door into the island: grit · lines · longhouse soul, dual-layer capability and soul, Development Divergence, Eimyrja as heartwood, and the five roots that hold the city.",
+    videoSrc: "/video/001-violet-echoes-overview.mp4",
+    posterSrc: "/images/video/001-violet-echoes-overview-poster.jpg",
+    related: [
+      { label: "City", href: "/city" },
+      { label: "Foundations deck", href: "/bible/foundations" },
+      { label: "Podcast #001", href: "/podcast#001-coding-love" },
+      { label: "Tenets", href: "/bible/the-tenets" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "overview", "foundations", "tenets", "#VioletEchoes"],
+    status: "live",
+  },
+];
 
 export const podcastEpisodes: PodcastEpisode[] = [
   {

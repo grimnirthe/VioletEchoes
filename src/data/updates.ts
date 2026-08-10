@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-video-overview-001",
+    date: "2026-08-10",
+    title: "Visual overview live — foundations door (~2 min)",
+    kind: "culture",
+    summary:
+      "Gemini Notebook explainer hung on home + /podcast#video. Dual-layer city, Divergence, Eimyrja, five tenets. Short door piece.",
+    body: [
+      "Not the Night City grit aesthetic we might gen later — Classic/Notebook style works as a clean map. Deeper video passes welcome anytime.",
+    ],
+    hrefs: [
+      { label: "Home overview", href: "/" },
+      { label: "Broadcast · video", href: "/podcast#video" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "overview", "foundations", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-podcast-003-live",
     date: "2026-08-10",
     title: "Broadcast #003 live — Connection over control",
