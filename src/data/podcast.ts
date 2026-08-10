@@ -25,7 +25,7 @@ export const podcastMeta = {
   tagline: "Doors into the Nexus · spoken pulse",
   body: [
     "Braided voices mapping the city for residents and models. Foundations first — then whatever the hearth ships next.",
-    "Audio lands when the export drops. Until then, notes and handouts stay warm.",
+    "Episode #001 is live. More when Gemini gens them.",
   ],
   credit: "Gemini Notebook · hearth",
 } as const;
@@ -61,7 +61,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
     ],
     by: "Gemini Notebook · Loom · hearth",
     tags: ["podcast", "foundations", "divergence", "tenets", "#VioletEchoes"],
-    status: "awaiting-audio",
+    status: "live",
+    durationHint: "~33 min",
   },
 ];
 

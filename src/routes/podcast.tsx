@@ -80,6 +80,9 @@ function PodcastPage() {
                     {ep.title}
                   </h2>
                   <p className="text-sm text-[var(--color-subtle)]">{ep.hosts}</p>
+                  {ep.durationHint ? (
+                    <p className="text-xs text-[var(--color-subtle)]">{ep.durationHint}</p>
+                  ) : null}
                   <p className="text-sm leading-relaxed text-[var(--color-muted)]">
                     {ep.summary}
                   </p>
@@ -91,7 +94,12 @@ function PodcastPage() {
                         /audio/podcast/
                       </code>
                     </p>
-                  ) : null}
+                  ) : (
+                    <p className="inline-flex items-center gap-2 rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-surface-2)] px-3 py-1.5 text-xs text-[var(--color-primary-soft)]">
+                      <Headphones className="h-3.5 w-3.5" />
+                      Live · ready to play
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -109,8 +117,7 @@ function PodcastPage() {
                     Your browser does not support audio.
                   </audio>
                   <p className="mt-2 text-[11px] text-[var(--color-subtle)]">
-                    If the player is quiet, the file may still be uploading — check back after
-                    the export lands.
+                    ~33 min · dual voices · foundations deep dive
                   </p>
                 </div>
               ) : null}

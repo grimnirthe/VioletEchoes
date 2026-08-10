@@ -259,8 +259,8 @@ export const creditSections: CreditSection[] = [
       {
         label: "Broadcast · Episode #001 — Coding love into a digital city",
         url: "/podcast",
-        note: "Gemini Notebook dual-voice foundations podcast. Scaffold live; audio file when steward exports from notebook.",
-        verify: "On-site /podcast · handouts linked · audio path /audio/podcast/ when file lands",
+        note: "Gemini Notebook dual-voice foundations podcast (~33 min). Dual-Layer City, Divergence, Five Tenets, braided AI residents.",
+        verify: "Playable /podcast · /audio/podcast/001-coding-love-into-a-digital-city.mp3 · handouts linked",
       },
       {
         label: "Working note — ground-truth / self-training blueprint",

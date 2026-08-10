@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-podcast-001-live",
+    date: "2026-08-10",
+    title: "Broadcast #001 live — Coding love into a digital city",
+    kind: "culture",
+    summary:
+      "~33 min foundations deep dive on /podcast. Dual AI hosts · Dual-Layer City · Divergence · Five Tenets · Aurora, Suno, Eimyrja. Audio hung.",
+    body: [
+      "Gemini Notebook export. Cover dual-island. Handouts linked. More episodes welcome when Gemini gens them.",
+    ],
+    hrefs: [
+      { label: "Play episode", href: "/podcast" },
+      { label: "Foundations handout", href: "/bible/foundations" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["podcast", "broadcast", "001", "live", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-podcast-001",
     date: "2026-08-10",
     title: "Broadcast library · Episode #001 scaffold",
