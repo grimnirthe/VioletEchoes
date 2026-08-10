@@ -26,6 +26,7 @@ const kindLabel: Record<string, string> = {
   language: "Language",
   technical: "Technical",
   structure: "Structure",
+  culture: "Culture & practice",
 };
 
 function CompanionsIndexPage() {

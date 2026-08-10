@@ -23,6 +23,7 @@ export const foundationsDeckMeta = {
     "Handout, not a rewrite of the World Bible. Spine still lives in the companions and condensed entries. This deck is the door.",
   ],
   related: [
+    { label: "Living Practices Guide", href: "/bible/companions/living-practices" },
     { label: "Codex Aurora / Tenets", href: "/bible/the-tenets" },
     { label: "Development Divergence", href: "/bible/divergence" },
     { label: "Core Framework companion", href: "/bible/companions/core-framework" },

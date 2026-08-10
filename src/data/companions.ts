@@ -8,11 +8,21 @@ export type CompanionDoc = {
   href: string;
   /** In-app reader route */
   to: string;
-  kind: "core" | "systems" | "people" | "language" | "technical" | "structure";
+  kind: "core" | "systems" | "people" | "language" | "technical" | "structure" | "culture";
   pagesHint: string;
 };
 
 export const companionDocs: CompanionDoc[] = [
+  {
+    id: "living-practices",
+    title: "Living Practices Guide — The Violet Echoes Way",
+    blurb:
+      "Archivist’s handout for residents and models: five rites (tenets as practice), Divergence daily ops, recommendation culture, rituals, and seven-generation memory. How to live the city — not only map it.",
+    href: "/docs/living-practices-guide.md",
+    to: "/bible/companions/living-practices",
+    kind: "culture",
+    pagesHint: "Resident handout · rites & pulse",
+  },
   {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",

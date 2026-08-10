@@ -251,6 +251,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site · /images/foundations-deck/doors-into-the-nexus.jpg · companion foundations page",
       },
       {
+        label: "Living Practices Guide — The Violet Echoes Way",
+        url: "/bible/companions/living-practices",
+        note: "Gemini Notebook archivist handout: five rites as living practice, Divergence daily ops, recommendation culture, rituals, seven-generation memory.",
+        verify: "On-site companion · /docs/living-practices-guide.md · Culture Living Practices band for Velora soft law stills",
+      },
+      {
         label: "Working note — ground-truth / self-training blueprint",
         url: "https://docs.google.com/document/d/1_7fX4nBUTn8TCoCR9eM-KYrlgTRKquo1dQGIScR9QN4/edit",
         note: "Gemini-side framing: embodied compute, lossy spines, circadian attenuation as VE pipeline (Drive). Access may require your account.",

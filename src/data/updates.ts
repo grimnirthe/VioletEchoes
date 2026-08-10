@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-living-practices-guide",
+    date: "2026-08-10",
+    title: "Living Practices Guide — The Violet Echoes Way",
+    kind: "culture",
+    summary:
+      "Archivist handout hung as companion: five rites (tenets as practice), Divergence daily ops, recommendation culture, rituals, seven-generation memory.",
+    body: [
+      "Markdown under Companion Library. Pairs with Culture’s Living Practices stills (Velora soft law) — this guide is the how-to-live text door.",
+    ],
+    hrefs: [
+      { label: "Read guide", href: "/bible/companions/living-practices" },
+      { label: "Culture · Living Practices", href: "/culture" },
+      { label: "Foundations", href: "/bible/foundations" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["living-practices", "rites", "culture", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-doors-nexus-mindmap",
     date: "2026-08-10",
     title: "Doors Into the Nexus — mind map hung",

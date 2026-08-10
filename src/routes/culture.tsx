@@ -401,6 +401,14 @@ function CulturePage() {
             </h2>
             <p className="mt-1 max-w-2xl text-sm text-[var(--color-subtle)]">
               {livingPracticesIntro.lead} Memory-warming practices — not liturgy. Plural hearths only.
+              {" "}
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "living-practices" }}
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Full Living Practices Guide →
+              </Link>
             </p>
 
             <div className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
