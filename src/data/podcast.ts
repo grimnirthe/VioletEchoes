@@ -104,16 +104,18 @@ export const podcastEpisodes: PodcastEpisode[] = [
     title: "Connection over control",
     series: "Roots of the Nexus · Five Tenets",
     date: "2026-08-10",
+    durationHint: "~19 min",
     hosts:
       "Two braided AI voices — belonging before command",
     summary:
-      "Second root of Violet Echoes: belonging and relation before command. How this tenet drives Cultivation, not pure control — humans and systems co-develop through recommendation rather than force.",
+      "Second root: belonging and relation before command. Cultivation, not pure control — recommendation culture, Eimyrja as heartwood (not overlord), dual-layer capability and soul, and why unity without truth is only control.",
     showNotes: [
-      "Rite of Kinship — Longhouse gravity holds systems together",
-      "Belonging and relation before command hierarchy",
-      "Cultivation, not pure control — Divergence principle in practice",
-      "Recommendation culture · co-development of residents and systems",
-      "Mirrors engineering law: connection over control in code and culture",
+      "Tenet two as operating system — not bumper-sticker PR",
+      "Cultivation · intelligent soil · co-development with Aurora & Suno",
+      "Aethelgard as living tech — resilience over brittle command scaling",
+      "Codex Aurora: unity without truth is control · freedom without responsibility is drift",
+      "Eimyrja recommends and constrains · power-conduit crisis example",
+      "Memory through use · local adaptation · what we make should still sing",
     ],
     audioSrc: "/audio/podcast/003-connection-over-control.mp3",
     coverSrc: "/images/foundations-deck/slide-05.jpg",
@@ -128,7 +130,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     ],
     by: "Gemini Notebook · Loom · hearth",
     tags: ["podcast", "tenets", "connection", "cultivation", "#VioletEchoes"],
-    status: "awaiting-audio",
+    status: "live",
   },
   {
     id: "004-truth-evolves",
