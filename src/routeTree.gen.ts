@@ -24,6 +24,7 @@ import { Route as ApiUpdatesDotjsonRouteImport } from './routes/api/updates[.]js
 import { Route as ApiWorldDotjsonRouteImport } from './routes/api/world[.]json'
 import { Route as BibleIndexRouteImport } from './routes/bible/index'
 import { Route as BibleSlugRouteImport } from './routes/bible/$slug'
+import { Route as BibleFoundationsRouteImport } from './routes/bible/foundations'
 import { Route as GalleryIndexRouteImport } from './routes/gallery/index'
 import { Route as GallerySlugRouteImport } from './routes/gallery/$slug'
 import { Route as GalleryPackRouteImport } from './routes/gallery/pack'
@@ -105,6 +106,11 @@ const BibleSlugRoute = BibleSlugRouteImport.update({
   path: '/bible/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BibleFoundationsRoute = BibleFoundationsRouteImport.update({
+  id: '/bible/foundations',
+  path: '/bible/foundations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GalleryIndexRoute = GalleryIndexRouteImport.update({
   id: '/gallery/',
   path: '/gallery/',
@@ -146,6 +152,7 @@ export interface FileRoutesByFullPath {
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
+  '/bible/foundations': typeof BibleFoundationsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/gallery/pack': typeof GalleryPackRoute
   '/bible/': typeof BibleIndexRoute
@@ -168,6 +175,7 @@ export interface FileRoutesByTo {
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
+  '/bible/foundations': typeof BibleFoundationsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/gallery/pack': typeof GalleryPackRoute
   '/bible': typeof BibleIndexRoute
@@ -191,6 +199,7 @@ export interface FileRoutesById {
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
+  '/bible/foundations': typeof BibleFoundationsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/gallery/pack': typeof GalleryPackRoute
   '/bible/': typeof BibleIndexRoute
@@ -215,6 +224,7 @@ export interface FileRouteTypes {
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
+    | '/bible/foundations'
     | '/gallery/$slug'
     | '/gallery/pack'
     | '/bible/'
@@ -237,6 +247,7 @@ export interface FileRouteTypes {
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
+    | '/bible/foundations'
     | '/gallery/$slug'
     | '/gallery/pack'
     | '/bible'
@@ -259,6 +270,7 @@ export interface FileRouteTypes {
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
+    | '/bible/foundations'
     | '/gallery/$slug'
     | '/gallery/pack'
     | '/bible/'
@@ -282,6 +294,7 @@ export interface RootRouteChildren {
   ApiUpdatesDotjsonRoute: typeof ApiUpdatesDotjsonRoute
   ApiWorldDotjsonRoute: typeof ApiWorldDotjsonRoute
   BibleSlugRoute: typeof BibleSlugRoute
+  BibleFoundationsRoute: typeof BibleFoundationsRoute
   GallerySlugRoute: typeof GallerySlugRoute
   GalleryPackRoute: typeof GalleryPackRoute
   BibleIndexRoute: typeof BibleIndexRoute
@@ -397,6 +410,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BibleSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bible/foundations': {
+      id: '/bible/foundations'
+      path: '/bible/foundations'
+      fullPath: '/bible/foundations'
+      preLoaderRoute: typeof BibleFoundationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gallery/': {
       id: '/gallery/'
       path: '/gallery'
@@ -450,6 +470,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiUpdatesDotjsonRoute: ApiUpdatesDotjsonRoute,
   ApiWorldDotjsonRoute: ApiWorldDotjsonRoute,
   BibleSlugRoute: BibleSlugRoute,
+  BibleFoundationsRoute: BibleFoundationsRoute,
   GallerySlugRoute: GallerySlugRoute,
   GalleryPackRoute: GalleryPackRoute,
   BibleIndexRoute: BibleIndexRoute,

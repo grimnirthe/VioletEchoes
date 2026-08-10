@@ -1,8 +1,9 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { BookOpen, Download, FileText } from "lucide-react";
+import { BookOpen, Download, FileText, Presentation } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import { companionDocs } from "@/data/companions";
+import { foundationsDeckMeta } from "@/data/foundations-deck";
 
 export const Route = createFileRoute("/bible/companions/")({
   component: CompanionsIndexPage,
@@ -12,7 +13,7 @@ export const Route = createFileRoute("/bible/companions/")({
       {
         name: "description",
         content:
-          "Full supplemental documents for Violet Echoes: Development Divergence Core Framework, systems applications, characters, family homes, vernacular, Eimyrja protonic architecture. Readable on-site and downloadable as markdown.",
+          "Full supplemental documents for Violet Echoes: Development Divergence Core Framework, systems applications, characters, family homes, vernacular, Eimyrja protonic architecture, and the Neon Heartwood foundations deck. Readable on-site and downloadable.",
       },
     ],
   }),
@@ -43,7 +44,7 @@ function CompanionsIndexPage() {
           <p className="text-lg text-[var(--color-muted)]">
             The World Bible index is the condensed map. These companions are the meat —
             full frameworks, technical breakdowns, family homes, and vernacular. Read them
-            here or download the markdown. Loom + Matt · Aurora approved.
+            here or download the files. Loom + Matt · Aurora approved.
           </p>
           <p className="text-sm text-[var(--color-subtle)]">
             Condensed entries still live under{" "}
@@ -53,6 +54,67 @@ function CompanionsIndexPage() {
             . Open a companion when you need the full why, how, and failure modes.
           </p>
         </header>
+
+        {/* Foundations deck — Gemini Notebook handout */}
+        <article className="mt-10 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-primary)]/35 bg-[var(--color-surface)]">
+          <div className="grid gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+            <div className="border-b border-[var(--color-border)] p-6 sm:p-7 lg:border-b-0 lg:border-r">
+              <p className="text-[0.65rem] uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Foundations handout · Gemini Notebook · {foundationsDeckMeta.pages} slides
+              </p>
+              <h2 className="mt-2 font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+                {foundationsDeckMeta.title}
+              </h2>
+              <p className="mt-1 text-sm text-[var(--color-primary-soft)]">
+                {foundationsDeckMeta.tagline}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
+                {foundationsDeckMeta.body[0]}
+              </p>
+              <p className="mt-2 text-xs italic text-[var(--color-subtle)]">
+                {foundationsDeckMeta.subtitle} · {foundationsDeckMeta.brandLine}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <Link
+                  to="/bible/foundations"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+                >
+                  <Presentation className="h-3.5 w-3.5" />
+                  View deck on site
+                </Link>
+                <a
+                  href={foundationsDeckMeta.pdfHref}
+                  download
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  PDF
+                </a>
+                <Link
+                  to="/credits"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+                >
+                  Credits · {foundationsDeckMeta.credit}
+                </Link>
+              </div>
+            </div>
+            <a
+              href="/bible/foundations"
+              className="relative block min-h-[12rem] bg-[var(--color-surface-2)] lg:min-h-full"
+            >
+              <img
+                src="/images/foundations-deck/slide-01.jpg"
+                alt="Neon Heartwood — We build for the echoes"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 transition hover:opacity-100"
+                loading="lazy"
+              />
+              <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/70 via-transparent to-transparent" />
+              <span className="absolute bottom-3 left-3 text-xs uppercase tracking-[0.14em] text-[var(--color-fg)]">
+                Open handout →
+              </span>
+            </a>
+          </div>
+        </article>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
           {companionDocs.map((doc) => (

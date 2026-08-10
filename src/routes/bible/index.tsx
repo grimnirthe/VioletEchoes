@@ -89,6 +89,13 @@ function BibleIndexPage() {
               Open companion library →
             </Link>
             <span className="text-[var(--color-subtle)]">·</span>
+            <Link
+              to="/bible/foundations"
+              className="text-xs font-medium text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+            >
+              Neon Heartwood foundations
+            </Link>
+            <span className="text-[var(--color-subtle)]">·</span>
             <a
               href="/api/world.json"
               className="text-xs text-[var(--color-muted)] hover:text-[var(--color-fg)]"

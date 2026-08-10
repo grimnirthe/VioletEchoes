@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-neon-heartwood",
+    date: "2026-08-10",
+    title: "Neon Heartwood — foundations deck hung",
+    kind: "bible",
+    summary:
+      "Gemini Notebook handout on site: 13-slide foundations deck (tenets · Divergence · dual-layer) + full PDF download. Door for residents and agents.",
+    body: [
+      "Not a bible rewrite — a grounded entry point. Companion library features the deck; Credits name Gemini Notebook + hearth.",
+    ],
+    hrefs: [
+      { label: "View deck", href: "/bible/foundations" },
+      { label: "PDF", href: "/docs/neon-heartwood.pdf" },
+      { label: "Companions", href: "/bible/companions" },
+      { label: "Credits", href: "/credits" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["foundations", "neon-heartwood", "gemini", "tenets", "divergence", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-09-echo-chip-circulation",
     date: "2026-08-09",
     title: "Echo Chips — five forms in circulation",

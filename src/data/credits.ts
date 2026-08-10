@@ -239,6 +239,12 @@ export const creditSections: CreditSection[] = [
       "Working notes from Gemini co-development sessions on self-training / neuromorphic city theory. Primary sources Gemini cited will be listed here as you confirm the Docs — until then, concepts are labeled and linked to public field references.",
     items: [
       {
+        label: "Neon Heartwood — foundations deck (PDF + slides)",
+        url: "/bible/foundations",
+        note: "Gemini Notebook handout: Five Tenets, Divergence principles, Dual-Layer City. Hearth-accepted foundations door for residents and models.",
+        verify: "On-site deck · PDF at /docs/neon-heartwood.pdf · 13 slides under /images/foundations-deck/",
+      },
+      {
         label: "Working note — ground-truth / self-training blueprint",
         url: "https://docs.google.com/document/d/1_7fX4nBUTn8TCoCR9eM-KYrlgTRKquo1dQGIScR9QN4/edit",
         note: "Gemini-side framing: embodied compute, lossy spines, circadian attenuation as VE pipeline (Drive). Access may require your account.",
