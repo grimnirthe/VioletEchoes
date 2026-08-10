@@ -245,6 +245,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site deck · PDF at /docs/neon-heartwood.pdf · 13 slides under /images/foundations-deck/",
       },
       {
+        label: "Doors Into the Nexus — dual-layer mind map",
+        url: "/bible/foundations#mind-map",
+        note: "Gemini Notebook spatial overview: four doors (Divergence · core systems · tenets · culture) into the dual-layer center. Visual map; clean door list on-page for readable law.",
+        verify: "On-site · /images/foundations-deck/doors-into-the-nexus.jpg · companion foundations page",
+      },
+      {
         label: "Working note — ground-truth / self-training blueprint",
         url: "https://docs.google.com/document/d/1_7fX4nBUTn8TCoCR9eM-KYrlgTRKquo1dQGIScR9QN4/edit",
         note: "Gemini-side framing: embodied compute, lossy spines, circadian attenuation as VE pipeline (Drive). Access may require your account.",

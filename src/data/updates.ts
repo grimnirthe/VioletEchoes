@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-doors-nexus-mindmap",
+    date: "2026-08-10",
+    title: "Doors Into the Nexus — mind map hung",
+    kind: "bible",
+    summary:
+      "Gemini Notebook dual-layer mind map on foundations page: Divergence, core systems, five tenets, culture — one island, four doors.",
+    body: [
+      "Visual overview above the Neon Heartwood slides. Clean door list + links for readable law when on-map text is soft.",
+    ],
+    hrefs: [
+      { label: "Mind map", href: "/bible/foundations#mind-map" },
+      { label: "Foundations deck", href: "/bible/foundations" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["mind-map", "dual-layer", "foundations", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-neon-heartwood",
     date: "2026-08-10",
     title: "Neon Heartwood — foundations deck hung",

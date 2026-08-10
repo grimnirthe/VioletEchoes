@@ -69,7 +69,11 @@ function CompanionsIndexPage() {
                 {foundationsDeckMeta.tagline}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
-                {foundationsDeckMeta.body[0]}
+                {foundationsDeckMeta.body[0]} Includes the{" "}
+                <strong className="font-medium text-[var(--color-fg)]">
+                  Doors Into the Nexus
+                </strong>{" "}
+                mind map — four doors into the dual-layer center.
               </p>
               <p className="mt-2 text-xs italic text-[var(--color-subtle)]">
                 {foundationsDeckMeta.subtitle} · {foundationsDeckMeta.brandLine}

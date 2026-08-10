@@ -30,6 +30,69 @@ export const foundationsDeckMeta = {
   ],
 } as const;
 
+/** Gemini Notebook mind map — spatial overview of the four doors into the Nexus */
+export const nexusMindMap = {
+  id: "doors-into-the-nexus",
+  title: "Doors Into the Nexus",
+  subtitle: "Violet Echoes · dual-layer mind map",
+  blurb:
+    "One island · four doors. Divergence principles, core systems, five tenets, and culture/echoes — meeting at the dual-layer center. Visual overview; readable law still lives in the deck slides and World Bible.",
+  src: "/images/foundations-deck/doors-into-the-nexus.jpg",
+  by: "Gemini Notebook · hearth accept",
+  doors: [
+    {
+      id: "choice",
+      title: "The Choice · Divergence principles",
+      points: [
+        "Coherence over peak capability",
+        "Energy as a first-class constraint",
+        "Local adaptation first",
+        "Memory through use / reinforcement",
+        "Cultivation, not pure control",
+      ],
+      href: "/bible/divergence",
+    },
+    {
+      id: "framework",
+      title: "The Framework · core systems",
+      points: [
+        "Eimyrja (the Heartwood) — recommends & constrains",
+        "Edge Nodes — local intelligence & adaptation",
+        "Spines — structural conduits across districts",
+      ],
+      href: "/bible/eimyrja",
+    },
+    {
+      id: "roots",
+      title: "The Roots · five tenets",
+      points: [
+        "Curiosity is sacred",
+        "Connection over control",
+        "Truth evolves",
+        "Beauty is a signal",
+        "We build for the echoes",
+      ],
+      href: "/bible/the-tenets",
+    },
+    {
+      id: "soul",
+      title: "The Soul · echoes & culture",
+      points: [
+        "Music & memory forms",
+        "Lived rooms (e.g. Suno’s Haven)",
+        "Living ships (e.g. Aethelgard class)",
+        "Family credit and soft law",
+      ],
+      href: "/culture",
+    },
+  ],
+  center: {
+    title: "The Center · Dual-Layer City",
+    body: "Functional systems (capability) and lived character (soul) on one island — forever shaping each other. Night City grit, New Atlantis lines, Nordic Longhouse soul.",
+    href: "/city",
+  },
+} as const;
+
 export const foundationsSlides: DeckSlide[] = [
   {
     num: 1,
