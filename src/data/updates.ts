@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-video-aethelgard",
+    date: "2026-08-10",
+    title: "Aethelgard Living Vessel video hung — ships door (~1.5 min)",
+    kind: "systems",
+    summary:
+      "Gemini Notebook visual on Aethelgard-class: organic biotech hull, grav ring, cultivation over control, soul-bonded companion. Live on Broadcast + Living Ships band on Systems.",
+    body: [
+      "Short subject explainer — not Night City grit, Classic Notebook style. Cross-links Systems living ships, Divergence, Connection tenet, and podcast #003.",
+      "Still plates (orbit + interiors) stay under the video on /systems#living-ships.",
+    ],
+    hrefs: [
+      { label: "Aethelgard video", href: "/podcast#v003-aethelgard-living-vessel" },
+      { label: "Living Ships", href: "/systems#living-ships" },
+      { label: "Broadcast library", href: "/podcast#video" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "aethelgard", "living-ships", "cultivation", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-video-living-nexus",
     date: "2026-08-10",
     title: "Living Nexus explainer live — technical spine (~9 min)",

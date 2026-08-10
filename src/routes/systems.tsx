@@ -5,6 +5,7 @@ import { PageNav } from "@/components/page-nav";
 import { MediaFrame } from "@/components/media-frame";
 import { media, systemsGallery } from "@/data/media";
 import { entries } from "@/data/world";
+import { getVideoOverview } from "@/data/podcast";
 
 export const Route = createFileRoute("/systems")({
   component: SystemsPage,
@@ -53,6 +54,7 @@ function SystemsPage() {
   const lhShots = systemsGallery.filter((s) => s.group === "longhouse");
   const dlhShots = systemsGallery.filter((s) => s.group === "district-lh");
   const shipShots = systemsGallery.filter((s) => s.group === "ships");
+  const aethelgardVideo = getVideoOverview("v003-aethelgard-living-vessel");
 
   return (
     <SiteShell>
@@ -467,7 +469,7 @@ function SystemsPage() {
           </div>
         </section>
 
-        <section className="mt-14">
+        <section className="mt-14" id="living-ships">
           <div className="mb-5 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
               #VioletEchoes · Living Ships
@@ -483,6 +485,46 @@ function SystemsPage() {
               hull.
             </p>
           </div>
+          {aethelgardVideo?.status === "live" ? (
+            <div
+              id="aethelgard-video"
+              className="mb-6 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Visual overview · {aethelgardVideo.durationHint} · Gemini Notebook
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)]">
+                  {aethelgardVideo.title}
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  {aethelgardVideo.summary}
+                </p>
+              </div>
+              <div className="bg-black">
+                <video
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={aethelgardVideo.posterSrc}
+                  className="aspect-video w-full"
+                  src={aethelgardVideo.videoSrc}
+                >
+                  Your browser does not support video.
+                </video>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+                <p className="text-xs text-[var(--color-subtle)]">{aethelgardVideo.by}</p>
+                <Link
+                  to="/podcast"
+                  hash="v003-aethelgard-living-vessel"
+                  className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+                >
+                  Full broadcast library →
+                </Link>
+              </div>
+            </div>
+          ) : null}
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame
               src={media.shipsAnatomy}
@@ -512,7 +554,10 @@ function SystemsPage() {
                 </figure>
               ))}
           </div>
-          <div className="mt-4 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
+          <div
+            id="aethelgard"
+            className="mt-4 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+          >
             <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
               <MediaFrame
                 src={media.aethelgardFront}

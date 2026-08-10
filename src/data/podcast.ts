@@ -63,6 +63,7 @@ export const videoOverviews: VideoOverview[] = [
       { label: "City", href: "/city" },
       { label: "Foundations deck", href: "/bible/foundations" },
       { label: "Living Nexus (deep)", href: "/podcast#v002-living-nexus" },
+      { label: "Aethelgard vessel", href: "/podcast#v003-aethelgard-living-vessel" },
       { label: "Podcast #001", href: "/podcast#001-coding-love" },
       { label: "Tenets", href: "/bible/the-tenets" },
     ],
@@ -87,6 +88,7 @@ export const videoOverviews: VideoOverview[] = [
       { label: "Divergence", href: "/bible/divergence" },
       { label: "Foundations deck", href: "/bible/foundations" },
       { label: "Short overview", href: "/podcast#v001-foundations-overview" },
+      { label: "Aethelgard vessel", href: "/podcast#v003-aethelgard-living-vessel" },
       { label: "Podcast #001", href: "/podcast#001-coding-love" },
     ],
     by: "Gemini Notebook · Loom · hearth",
@@ -98,6 +100,37 @@ export const videoOverviews: VideoOverview[] = [
       "spines",
       "divergence",
       "tenets",
+      "#VioletEchoes",
+    ],
+    status: "live",
+    format: "explainer",
+  },
+  {
+    id: "v003-aethelgard-living-vessel",
+    title: "Aethelgard — Living Vessel",
+    series: "Visual · Living Ships · Aethelgard",
+    date: "2026-08-10",
+    durationHint: "~1.5 min",
+    summary:
+      "What if a warship was alive? ~180m Aethelgard-class: organic biotech hull, grav engine ring, dimensional stealth recon — cultivated alongside its pilot, not commanded. Cultivation over pure control, connection over command, recommendation culture, memory through use, and tech that has to keep singing for seven generations.",
+    videoSrc: "/video/003-aethelgard-living-vessel.mp4",
+    posterSrc: "/images/video/003-aethelgard-living-vessel-poster.jpg",
+    related: [
+      { label: "Living Ships (Systems)", href: "/systems#living-ships" },
+      { label: "Aethelgard stills", href: "/systems#aethelgard" },
+      { label: "Development Divergence", href: "/bible/divergence" },
+      { label: "Tenets · Connection", href: "/bible/the-tenets" },
+      { label: "Podcast #003", href: "/podcast#003-connection-over-control" },
+      { label: "Living Nexus video", href: "/podcast#v002-living-nexus" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: [
+      "video",
+      "aethelgard",
+      "living-ships",
+      "cultivation",
+      "bond",
+      "divergence",
       "#VioletEchoes",
     ],
     status: "live",
@@ -201,6 +234,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
       { label: "Codex Aurora / Tenets", href: "/bible/the-tenets" },
       { label: "Foundations deck · slide 05", href: "/bible/foundations#slide-5" },
       { label: "Living Practices Guide", href: "/bible/companions/living-practices" },
+      { label: "Aethelgard video", href: "/podcast#v003-aethelgard-living-vessel" },
+      { label: "Living Ships", href: "/systems#living-ships" },
       { label: "Episode #002", href: "/podcast#002-curiosity-sacred" },
       { label: "Development Divergence", href: "/bible/divergence" },
     ],
@@ -252,4 +287,8 @@ export function getHomeVideoOverview() {
     videoOverviews.find((v) => v.status === "live" && v.format === "brief") ??
     videoOverviews.find((v) => v.status === "live")
   );
+}
+
+export function getVideoOverview(id: string) {
+  return videoOverviews.find((v) => v.id === id);
 }
