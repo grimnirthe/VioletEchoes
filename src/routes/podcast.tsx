@@ -69,8 +69,8 @@ function PodcastPage() {
             </h2>
           </div>
           <p className="text-sm text-[var(--color-muted)]">
-            Short explainers when you want the map before the long walk. Audio
-            deep dives live below.
+            Brief door pieces and deeper technical explainers. Audio deep dives
+            live below.
           </p>
           {videoOverviews.map((v) => (
             <article
@@ -80,7 +80,8 @@ function PodcastPage() {
             >
               <div className="space-y-2">
                 <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
-                  {v.series} · {v.date} · {v.durationHint}
+                  {v.format === "explainer" ? "Explainer" : "Brief"} · {v.series} ·{" "}
+                  {v.date} · {v.durationHint}
                 </p>
                 <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
                   {v.title}

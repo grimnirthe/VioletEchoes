@@ -33,6 +33,8 @@ export type VideoOverview = {
   by: string;
   tags: string[];
   status: "live" | "awaiting";
+  /** short = home door; explainer = library deep dive */
+  format?: "brief" | "explainer";
 };
 
 export const podcastMeta = {
@@ -45,7 +47,7 @@ export const podcastMeta = {
   credit: "Gemini Notebook · hearth",
 } as const;
 
-/** Short visual explainers — dual-layer door pieces */
+/** Visual explainers — brief door pieces + deeper technical spine */
 export const videoOverviews: VideoOverview[] = [
   {
     id: "v001-foundations-overview",
@@ -60,12 +62,46 @@ export const videoOverviews: VideoOverview[] = [
     related: [
       { label: "City", href: "/city" },
       { label: "Foundations deck", href: "/bible/foundations" },
+      { label: "Living Nexus (deep)", href: "/podcast#v002-living-nexus" },
       { label: "Podcast #001", href: "/podcast#001-coding-love" },
       { label: "Tenets", href: "/bible/the-tenets" },
     ],
     by: "Gemini Notebook · Loom · hearth",
     tags: ["video", "overview", "foundations", "tenets", "#VioletEchoes"],
     status: "live",
+    format: "brief",
+  },
+  {
+    id: "v002-living-nexus",
+    title: "Violet Echoes: Living Nexus",
+    series: "Visual · Technical Spine Explainer",
+    date: "2026-08-10",
+    durationHint: "~9 min",
+    summary:
+      "Full technical explainer: dual-layer city, Development Divergence, Eimyrja as heartwood (recommend & constrain), edge nodes and escalation cost, data spines with memory-through-use, and the five tenets as roots. Ends on Aurora’s line and the open question — what would we choose to build?",
+    videoSrc: "/video/002-living-nexus.mp4",
+    posterSrc: "/images/video/002-living-nexus-poster.jpg",
+    related: [
+      { label: "Systems", href: "/systems" },
+      { label: "Eimyrja", href: "/bible/eimyrja" },
+      { label: "Divergence", href: "/bible/divergence" },
+      { label: "Foundations deck", href: "/bible/foundations" },
+      { label: "Short overview", href: "/podcast#v001-foundations-overview" },
+      { label: "Podcast #001", href: "/podcast#001-coding-love" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: [
+      "video",
+      "explainer",
+      "eimyrja",
+      "edge-nodes",
+      "spines",
+      "divergence",
+      "tenets",
+      "#VioletEchoes",
+    ],
+    status: "live",
+    format: "explainer",
   },
 ];
 
@@ -98,6 +134,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
       { label: "Living Practices Guide", href: "/bible/companions/living-practices" },
       { label: "Development Divergence", href: "/bible/divergence" },
       { label: "Codex Aurora / Tenets", href: "/bible/the-tenets" },
+      { label: "Living Nexus video", href: "/podcast#v002-living-nexus" },
     ],
     by: "Gemini Notebook · Loom · hearth",
     tags: ["podcast", "foundations", "divergence", "tenets", "#VioletEchoes"],
@@ -207,4 +244,12 @@ export const podcastEpisodes: PodcastEpisode[] = [
 
 export function getEpisode(id: string) {
   return podcastEpisodes.find((e) => e.id === id);
+}
+
+/** Prefer short home door piece when multiple videos are live */
+export function getHomeVideoOverview() {
+  return (
+    videoOverviews.find((v) => v.status === "live" && v.format === "brief") ??
+    videoOverviews.find((v) => v.status === "live")
+  );
 }

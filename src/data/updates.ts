@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-video-living-nexus",
+    date: "2026-08-10",
+    title: "Living Nexus explainer live — technical spine (~9 min)",
+    kind: "systems",
+    summary:
+      "Gemini Notebook deep video hung on Broadcast: dual-layer city, Divergence, Eimyrja recommend/constrain, edge nodes + escalation cost, spines (memory through use), five tenets. Short foundations overview still on home.",
+    body: [
+      "Classic Notebook style, full explainer format. Cross-links Systems, Eimyrja, Divergence, foundations deck, and podcast #001.",
+      "Home keeps the ~2 min brief door; this one lives under Broadcast · Visual overviews as the technical spine walk.",
+    ],
+    hrefs: [
+      { label: "Living Nexus video", href: "/podcast#v002-living-nexus" },
+      { label: "Broadcast library", href: "/podcast#video" },
+      { label: "Systems", href: "/systems" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "explainer", "eimyrja", "spines", "divergence", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-video-overview-001",
     date: "2026-08-10",
     title: "Visual overview live — foundations door (~2 min)",

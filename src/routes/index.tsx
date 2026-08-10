@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { EntryCard } from "@/components/entry-card";
 import { MediaFrame } from "@/components/media-frame";
 import { media } from "@/data/media";
-import { videoOverviews } from "@/data/podcast";
+import { getHomeVideoOverview } from "@/data/podcast";
 import {
   auroraTenets,
   entries,
@@ -74,7 +74,7 @@ function HomePage() {
   const featured = ["city-overview", "divergence", "eimyrja", "aethelgard"]
     .map((id) => entries.find((e) => e.id === id))
     .filter(Boolean);
-  const overview = videoOverviews.find((v) => v.status === "live");
+  const overview = getHomeVideoOverview();
 
   return (
     <SiteShell>
@@ -210,14 +210,24 @@ function HomePage() {
                   <p className="text-sm leading-relaxed text-[var(--color-muted)]">
                     {overview.summary}
                   </p>
-                  <Link
-                    to="/podcast"
-                    hash="video"
-                    className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
-                  >
-                    Full broadcast library
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
+                  <div className="flex flex-wrap gap-x-4 gap-y-2">
+                    <Link
+                      to="/podcast"
+                      hash="video"
+                      className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                    >
+                      Full broadcast library
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
+                      to="/podcast"
+                      hash="v002-living-nexus"
+                      className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                    >
+                      Living Nexus · ~9 min deep
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
