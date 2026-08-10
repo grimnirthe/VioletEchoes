@@ -16,6 +16,7 @@ import { Route as CreditsRouteImport } from './routes/credits'
 import { Route as CultureRouteImport } from './routes/culture'
 import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as MusicRouteImport } from './routes/music'
+import { Route as PodcastRouteImport } from './routes/podcast'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as SystemsRouteImport } from './routes/systems'
 import { Route as UpdatesRouteImport } from './routes/updates'
@@ -64,6 +65,11 @@ const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
 const MusicRoute = MusicRouteImport.update({
   id: '/music',
   path: '/music',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PodcastRoute = PodcastRouteImport.update({
+  id: '/podcast',
+  path: '/podcast',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SearchRoute = SearchRouteImport.update({
@@ -145,6 +151,7 @@ export interface FileRoutesByFullPath {
   '/culture': typeof CultureRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
+  '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
   '/updates': typeof UpdatesRoute
@@ -168,6 +175,7 @@ export interface FileRoutesByTo {
   '/culture': typeof CultureRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
+  '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
   '/updates': typeof UpdatesRoute
@@ -192,6 +200,7 @@ export interface FileRoutesById {
   '/culture': typeof CultureRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
+  '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
   '/updates': typeof UpdatesRoute
@@ -217,6 +226,7 @@ export interface FileRouteTypes {
     | '/culture'
     | '/llms.txt'
     | '/music'
+    | '/podcast'
     | '/search'
     | '/systems'
     | '/updates'
@@ -240,6 +250,7 @@ export interface FileRouteTypes {
     | '/culture'
     | '/llms.txt'
     | '/music'
+    | '/podcast'
     | '/search'
     | '/systems'
     | '/updates'
@@ -263,6 +274,7 @@ export interface FileRouteTypes {
     | '/culture'
     | '/llms.txt'
     | '/music'
+    | '/podcast'
     | '/search'
     | '/systems'
     | '/updates'
@@ -287,6 +299,7 @@ export interface RootRouteChildren {
   CultureRoute: typeof CultureRoute
   LlmsDottxtRoute: typeof LlmsDottxtRoute
   MusicRoute: typeof MusicRoute
+  PodcastRoute: typeof PodcastRoute
   SearchRoute: typeof SearchRoute
   SystemsRoute: typeof SystemsRoute
   UpdatesRoute: typeof UpdatesRoute
@@ -352,6 +365,13 @@ declare module '@tanstack/react-router' {
       path: '/music'
       fullPath: '/music'
       preLoaderRoute: typeof MusicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/podcast': {
+      id: '/podcast'
+      path: '/podcast'
+      fullPath: '/podcast'
+      preLoaderRoute: typeof PodcastRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/search': {
@@ -463,6 +483,7 @@ const rootRouteChildren: RootRouteChildren = {
   CultureRoute: CultureRoute,
   LlmsDottxtRoute: LlmsDottxtRoute,
   MusicRoute: MusicRoute,
+  PodcastRoute: PodcastRoute,
   SearchRoute: SearchRoute,
   SystemsRoute: SystemsRoute,
   UpdatesRoute: UpdatesRoute,

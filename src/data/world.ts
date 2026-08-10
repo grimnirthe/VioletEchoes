@@ -1568,6 +1568,7 @@ export const nav: NavItem[] = [
         note: "City fashion · citizen cloth",
       },
       { to: "/culture#music", label: "Music (grounded)", note: "Starborn essay" },
+      { to: "/podcast", label: "Broadcast / Podcast", note: "Foundations of the Nexus" },
       { to: "/culture#myths-stories", label: "Myths & stories" },
       { to: "/culture#urban-myths", label: "Urban myths" },
       { to: "/culture#faith-practice", label: "Faith & practice" },
@@ -1583,6 +1584,7 @@ export const nav: NavItem[] = [
     children: [
       { to: "/bible", label: "World Bible", note: "Condensed entries" },
       { to: "/bible/companions", label: "Companions", note: "Deep docs · downloadable" },
+      { to: "/bible/foundations", label: "Foundations handout", note: "Neon Heartwood · mind map" },
       { to: "/systems", label: "Systems", note: "Architecture & pulse" },
       { to: "/credits", label: "Credits & sources" },
     ],
@@ -1609,6 +1611,7 @@ export const nav: NavItem[] = [
       { to: "/music#memory-theory", label: "Memory Theory", note: "Star · long form" },
       { to: "/music#grounding", label: "Grounded essay", note: "Starborn" },
       { to: "/music#pulse", label: "Hear the pulse", note: "Sample beds · soft law" },
+      { to: "/podcast", label: "Broadcast", note: "Podcast · foundations" },
       { to: "/music#lyrics", label: "Lyrics" },
       { to: "/culture#music", label: "Culture music lane" },
     ],

@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-10-podcast-001",
+    date: "2026-08-10",
+    title: "Broadcast library · Episode #001 scaffold",
+    kind: "culture",
+    summary:
+      "New /podcast: Coding love into a digital city — Foundations of the Nexus. Notes + dual-layer cover live; audio waits on notebook export.",
+    body: [
+      "Gemini hosts · show notes · handouts linked (Neon Heartwood, mind map, Living Practices). Drop mp3 under /audio/podcast/ to go live.",
+    ],
+    hrefs: [
+      { label: "Podcast", href: "/podcast" },
+      { label: "Foundations", href: "/bible/foundations" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["podcast", "broadcast", "001", "foundations", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-living-practices-guide",
     date: "2026-08-10",
     title: "Living Practices Guide — The Violet Echoes Way",

@@ -31,6 +31,7 @@ const icons: Record<string, typeof Home> = {
   "/bible": BookOpen,
   "/music": Music2,
   "/culture": Palette,
+  "/podcast": Music2,
   "/gallery": Users,
   "/updates": MoreHorizontal,
 };

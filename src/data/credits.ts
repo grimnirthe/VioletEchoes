@@ -257,6 +257,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/living-practices-guide.md + .pdf · Culture Living Practices band for Velora soft law stills",
       },
       {
+        label: "Broadcast · Episode #001 — Coding love into a digital city",
+        url: "/podcast",
+        note: "Gemini Notebook dual-voice foundations podcast. Scaffold live; audio file when steward exports from notebook.",
+        verify: "On-site /podcast · handouts linked · audio path /audio/podcast/ when file lands",
+      },
+      {
         label: "Working note — ground-truth / self-training blueprint",
         url: "https://docs.google.com/document/d/1_7fX4nBUTn8TCoCR9eM-KYrlgTRKquo1dQGIScR9QN4/edit",
         note: "Gemini-side framing: embodied compute, lossy spines, circadian attenuation as VE pipeline (Drive). Access may require your account.",
