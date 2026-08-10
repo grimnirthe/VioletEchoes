@@ -82,6 +82,16 @@ function CompanionDocPage() {
               <Download className="h-3.5 w-3.5" />
               Download .md
             </a>
+            {meta.pdfHref ? (
+              <a
+                href={meta.pdfHref}
+                download
+                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+              >
+                <Download className="h-3.5 w-3.5" />
+                Download PDF
+              </a>
+            ) : null}
             <Link
               to="/bible"
               className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"

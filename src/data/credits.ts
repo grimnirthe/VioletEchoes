@@ -254,7 +254,7 @@ export const creditSections: CreditSection[] = [
         label: "Living Practices Guide — The Violet Echoes Way",
         url: "/bible/companions/living-practices",
         note: "Gemini Notebook archivist handout: five rites as living practice, Divergence daily ops, recommendation culture, rituals, seven-generation memory.",
-        verify: "On-site companion · /docs/living-practices-guide.md · Culture Living Practices band for Velora soft law stills",
+        verify: "On-site companion · /docs/living-practices-guide.md + .pdf · Culture Living Practices band for Velora soft law stills",
       },
       {
         label: "Working note — ground-truth / self-training blueprint",

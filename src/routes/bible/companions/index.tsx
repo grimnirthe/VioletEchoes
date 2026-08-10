@@ -151,6 +151,16 @@ function CompanionsIndexPage() {
                   <Download className="h-3.5 w-3.5" />
                   .md file
                 </a>
+                {doc.pdfHref ? (
+                  <a
+                    href={doc.pdfHref}
+                    download
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+                  >
+                    <Download className="h-3.5 w-3.5" />
+                    PDF
+                  </a>
+                ) : null}
                 <a
                   href={doc.href}
                   target="_blank"

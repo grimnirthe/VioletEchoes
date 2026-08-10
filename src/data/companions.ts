@@ -6,6 +6,8 @@ export type CompanionDoc = {
   blurb: string;
   /** Public raw markdown path */
   href: string;
+  /** Optional PDF handout twin */
+  pdfHref?: string;
   /** In-app reader route */
   to: string;
   kind: "core" | "systems" | "people" | "language" | "technical" | "structure" | "culture";
@@ -19,9 +21,10 @@ export const companionDocs: CompanionDoc[] = [
     blurb:
       "Archivist’s handout for residents and models: five rites (tenets as practice), Divergence daily ops, recommendation culture, rituals, and seven-generation memory. How to live the city — not only map it.",
     href: "/docs/living-practices-guide.md",
+    pdfHref: "/docs/living-practices-guide.pdf",
     to: "/bible/companions/living-practices",
     kind: "culture",
-    pagesHint: "Resident handout · rites & pulse",
+    pagesHint: "Resident handout · .md + PDF",
   },
   {
     id: "core-framework",
