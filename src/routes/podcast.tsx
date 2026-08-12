@@ -165,10 +165,7 @@ function PodcastPage() {
                   {ep.status === "awaiting-audio" ? (
                     <p className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-xs text-[var(--color-subtle)]">
                       <Headphones className="h-3.5 w-3.5" />
-                      Audio landing soon — export from notebook, drop under{" "}
-                      <code className="text-[var(--color-primary-soft)]">
-                        /audio/podcast/
-                      </code>
+                      Audio landing soon — processing in Gemini Notebook
                     </p>
                   ) : (
                     <p className="inline-flex items-center gap-2 rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-surface-2)] px-3 py-1.5 text-xs text-[var(--color-primary-soft)]">
@@ -257,6 +254,14 @@ function PodcastPage() {
                 className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
               >
                 Culture — Living Practices & keepers
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/bible/the-tenets"
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                The Tenets — five roots
               </Link>
             </li>
             <li>

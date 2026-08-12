@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-podcast-005-006-scaffold",
+    date: "2026-08-12",
+    title: "Roots series closing — #005 and #006 processing",
+    kind: "culture",
+    summary:
+      "Last two tenet broadcasts initiated: Beauty is a signal (#005) and We build for the echoes (#006). Cards hung on Broadcast as awaiting-audio.",
+    body: [
+      "Spoken Roots #001–#004 live. #005 walks tenet four — coherence made visible, Longhouse soul, Suno's room. #006 walks tenet five — seven generations, long-term continuity, what we make should still sing.",
+      "Gemini Notebook processing. Audio hangs the moment Studio drops the exports. That finishes the spoken library next to the visual foundations.",
+    ],
+    hrefs: [
+      { label: "#005 Beauty is a signal", href: "/podcast#005-beauty-is-a-signal" },
+      { label: "#006 We build for the echoes", href: "/podcast#006-we-build-for-the-echoes" },
+      { label: "Tenets", href: "/bible/the-tenets" },
+      { label: "Broadcast library", href: "/podcast" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["podcast", "005", "006", "tenets", "processing", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-video-home-door",
     date: "2026-08-12",
     title: "Home Door landing video hung — rain-lit brief (~1.7 min)",
@@ -107,10 +127,12 @@ export const cityUpdates: CityUpdate[] = [
       "~17 min on tenet three: truth as a muscle, not an archive. Unity without truth is control; freedom without responsibility is drift. Live on /podcast.",
     body: [
       "Gemini dual voices. Export title: The Cyberpunk City of Evolving Truth. Roots spoken set #001–#004 complete. Home Door + City Soul videos now live on Broadcast.",
-      "Closes on tenet four — beauty as a signal of coherence — as a door, not a new episode.",
+      "Closed on tenet four as a door. #005 Beauty is a signal and #006 We build for the echoes now processing to finish the Roots series.",
     ],
     hrefs: [
       { label: "Play #004", href: "/podcast#004-truth-evolves" },
+      { label: "#005 processing", href: "/podcast#005-beauty-is-a-signal" },
+      { label: "#006 processing", href: "/podcast#006-we-build-for-the-echoes" },
       { label: "Home Door video", href: "/podcast#v004-violet-echoes-landing" },
       { label: "City Soul video", href: "/podcast#v005-city-soul" },
       { label: "Tenets", href: "/bible/the-tenets" },
