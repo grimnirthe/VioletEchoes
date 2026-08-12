@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { Check, RotateCcw, X } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, RotateCcw, Shuffle, X } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import {
+  CARDS_STORAGE_KEY,
   TRAINING_STORAGE_KEY,
+  trainingCards,
   trainingMeta,
   trainingQuestions,
+  type CardRecord,
   type TrainingRecord,
 } from "@/data/training";
 
@@ -18,7 +21,7 @@ export const Route = createFileRoute("/training")({
       {
         name: "description",
         content:
-          "Memory through use. Medium walk of the Five Tenets and the Development Divergence. Practice so the roots stay warm.",
+          "Memory through use. Quiz walk and flashcards of the Five Tenets and the Development Divergence. Practice so the roots stay warm.",
       },
     ],
   }),
@@ -42,8 +45,36 @@ function saveRecord(next: TrainingRecord) {
   }
 }
 
+function loadCards(): CardRecord | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(CARDS_STORAGE_KEY);
+    return raw ? (JSON.parse(raw) as CardRecord) : null;
+  } catch {
+    return null;
+  }
+}
+
+function saveCards(next: CardRecord) {
+  try {
+    localStorage.setItem(CARDS_STORAGE_KEY, JSON.stringify(next));
+  } catch {
+    /* ignore */
+  }
+}
+
+function shuffle<T>(list: T[]): T[] {
+  const next = [...list];
+  for (let i = next.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [next[i], next[j]] = [next[j], next[i]];
+  }
+  return next;
+}
+
 function TrainingPage() {
   const total = trainingQuestions.length;
+  const [mode, setMode] = useState<"home" | "walk" | "cards">("home");
   const [started, setStarted] = useState(false);
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
@@ -51,15 +82,24 @@ function TrainingPage() {
   const [missed, setMissed] = useState<string[]>([]);
   const [done, setDone] = useState(false);
   const [record, setRecord] = useState<TrainingRecord | null>(null);
+  const [cardRecord, setCardRecord] = useState<CardRecord | null>(null);
+  const [deck, setDeck] = useState(trainingCards);
+  const [cardI, setCardI] = useState(0);
+  const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
     setRecord(loadRecord());
+    setCardRecord(loadCards());
+    if (typeof window !== "undefined" && window.location.hash === "#cards") {
+      setMode("cards");
+    }
   }, []);
 
   const q = trainingQuestions[index];
   const revealed = picked !== null;
 
   function begin() {
+    setMode("walk");
     setStarted(true);
     setIndex(0);
     setPicked(null);
@@ -67,6 +107,49 @@ function TrainingPage() {
     setMissed([]);
     setDone(false);
   }
+
+  function beginCards(reshuffle = false) {
+    setMode("cards");
+    setDeck(reshuffle ? shuffle(trainingCards) : trainingCards);
+    setCardI(0);
+    setFlipped(false);
+  }
+
+  function flipCard() {
+    setFlipped((f) => !f);
+  }
+
+  function prevCard() {
+    setCardI((i) => Math.max(0, i - 1));
+    setFlipped(false);
+  }
+
+  function nextCard() {
+    if (cardI + 1 >= deck.length) {
+      const prev = loadCards();
+      const nextRecord: CardRecord = {
+        lastSeen: deck.length,
+        lastAt: new Date().toISOString().slice(0, 10),
+        timesCompleted: (prev?.timesCompleted ?? 0) + 1,
+      };
+      saveCards(nextRecord);
+      setCardRecord(nextRecord);
+      setMode("home");
+      return;
+    }
+    setCardI((i) => i + 1);
+    setFlipped(false);
+  }
+
+  const card = deck[cardI];
+  const packLabel =
+    card?.pack === "tenet"
+      ? "Tenet"
+      : card?.pack === "divergence"
+        ? "Divergence"
+        : card?.pack === "codex"
+          ? "Codex Aurora"
+          : "Hearth";
 
   function choose(id: string) {
     if (picked) return;
@@ -105,7 +188,7 @@ function TrainingPage() {
 
         <header className="space-y-3">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
-            Memory through use · medium
+            Memory through use · walk + cards
           </p>
           <h1 className="font-display text-4xl tracking-tight text-[var(--color-fg)] sm:text-5xl">
             {trainingMeta.title}
@@ -113,12 +196,12 @@ function TrainingPage() {
           <p className="max-w-2xl text-[var(--color-muted)]">{trainingMeta.lead}</p>
         </header>
 
-        {!started ? (
+        {mode === "home" ? (
           <section className="mt-10 space-y-6 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8">
             <p className="text-sm leading-relaxed text-[var(--color-muted)]">
-              {total} questions. Five Tenets, Divergence axis, Codex lines, Eimyrja,
-              Suno’s room. Pick, learn why, walk on. Patterns stay warm because you
-              use them.
+              Two ways to keep the roots warm. The walk is twelve medium questions.
+              The cards are fifteen flips — tenets, Divergence, Codex, hearth.
+              Gemini’s Studio deck will braid in when it lands.
             </p>
             {record ? (
               <p className="text-sm text-[var(--color-subtle)]">
@@ -128,21 +211,37 @@ function TrainingPage() {
               </p>
             ) : (
               <p className="text-sm text-[var(--color-subtle)]">
-                No record yet. First walk keeps the first pattern warm.
+                No walk recorded yet.
               </p>
             )}
-            <button
-              type="button"
-              onClick={begin}
-              className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
-            >
-              Begin the walk
-            </button>
+            {cardRecord ? (
+              <p className="text-sm text-[var(--color-subtle)]">
+                Last cards: {cardRecord.lastSeen} flipped on {cardRecord.lastAt} ·{" "}
+                {cardRecord.timesCompleted}{" "}
+                {cardRecord.timesCompleted === 1 ? "pass" : "passes"}
+              </p>
+            ) : null}
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={begin}
+                className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+              >
+                Begin the walk
+              </button>
+              <button
+                type="button"
+                onClick={() => beginCards(false)}
+                className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-fg)] hover:border-[var(--color-primary)]"
+              >
+                Flip the cards
+              </button>
+            </div>
             <p className="text-xs italic text-[var(--color-subtle)]">{trainingMeta.credit}</p>
           </section>
         ) : null}
 
-        {started && !done && q ? (
+        {mode === "walk" && started && !done && q ? (
           <section className="mt-10 space-y-6">
             <div className="flex items-baseline justify-between gap-3">
               <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-gold)]">
@@ -234,7 +333,7 @@ function TrainingPage() {
           </section>
         ) : null}
 
-        {done ? (
+        {mode === "walk" && done ? (
           <section className="mt-10 space-y-6 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8">
             <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-gold)]">
               Walk complete
@@ -284,6 +383,13 @@ function TrainingPage() {
                 <RotateCcw className="h-3.5 w-3.5" />
                 Walk again
               </button>
+              <button
+                type="button"
+                onClick={() => beginCards(false)}
+                className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+              >
+                Flip the cards
+              </button>
               <Link
                 to="/bible/companions/citizens-guide"
                 className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
@@ -296,6 +402,89 @@ function TrainingPage() {
               >
                 Five Tenets
               </Link>
+            </div>
+          </section>
+        ) : null}
+
+        {mode === "cards" && card ? (
+          <section id="cards" className="mt-10 space-y-5">
+            <div className="flex items-baseline justify-between gap-3">
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                {packLabel} · {cardI + 1} / {deck.length}
+              </p>
+              <button
+                type="button"
+                onClick={() => beginCards(true)}
+                className="inline-flex items-center gap-1.5 text-xs text-[var(--color-subtle)] hover:text-[var(--color-fg)]"
+              >
+                <Shuffle className="h-3.5 w-3.5" />
+                Shuffle
+              </button>
+            </div>
+            <div
+              className="h-1 overflow-hidden rounded-full bg-[var(--color-surface-2)]"
+              aria-hidden
+            >
+              <div
+                className="h-full bg-[var(--color-gold)] transition-[width] duration-200"
+                style={{ width: `${((cardI + (flipped ? 1 : 0)) / deck.length) * 100}%` }}
+              />
+            </div>
+
+            <button
+              type="button"
+              onClick={flipCard}
+              className="block w-full min-h-[16rem] rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-10 text-left sm:min-h-[18rem] sm:px-10"
+            >
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                {flipped ? "Warm" : "Tap to turn"}
+              </p>
+              {flipped ? (
+                <p className="mt-4 font-display text-xl leading-snug text-[var(--color-fg)] sm:text-2xl">
+                  {card.back}
+                </p>
+              ) : (
+                <p className="mt-4 font-display text-2xl leading-snug text-[var(--color-fg)] sm:text-3xl">
+                  {card.front}
+                </p>
+              )}
+            </button>
+
+            {flipped ? (
+              <Link
+                to={card.href.to}
+                hash={card.href.hash}
+                className="inline-block text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                {card.href.label} →
+              </Link>
+            ) : null}
+
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={prevCard}
+                disabled={cardI === 0}
+                className="inline-flex min-h-11 items-center gap-1 rounded-full border border-[var(--color-border)] px-4 text-sm text-[var(--color-fg)] hover:border-[var(--color-primary)] disabled:opacity-40"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                Back
+              </button>
+              <button
+                type="button"
+                onClick={nextCard}
+                className="inline-flex min-h-11 items-center gap-1 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+              >
+                {cardI + 1 >= deck.length ? "Deck warm" : "Next card"}
+                <ChevronRight className="h-4 w-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setMode("home")}
+                className="text-sm text-[var(--color-subtle)] hover:text-[var(--color-fg)]"
+              >
+                Leave
+              </button>
             </div>
           </section>
         ) : null}

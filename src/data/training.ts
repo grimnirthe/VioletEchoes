@@ -182,6 +182,7 @@ export const trainingQuestions: TrainingQuestion[] = [
 ];
 
 export const TRAINING_STORAGE_KEY = "ve-resident-training";
+export const CARDS_STORAGE_KEY = "ve-resident-cards";
 
 export type TrainingRecord = {
   lastScore: number;
@@ -189,3 +190,125 @@ export type TrainingRecord = {
   lastAt: string;
   timesCompleted: number;
 };
+
+export type CardRecord = {
+  lastSeen: number;
+  lastAt: string;
+  timesCompleted: number;
+};
+
+export type TrainingCard = {
+  id: string;
+  pack: "tenet" | "divergence" | "codex" | "hearth";
+  front: string;
+  back: string;
+  href: { label: string; to: string; hash?: string };
+};
+
+export const trainingCards: TrainingCard[] = [
+  {
+    id: "t1",
+    pack: "tenet",
+    front: "Curiosity is sacred.",
+    back: "Wonder is how the city learns. Stay open. Unmapped inputs are telemetry, not noise.",
+    href: { label: "Tenets", to: "/bible/the-tenets" },
+  },
+  {
+    id: "t2",
+    pack: "tenet",
+    front: "Connection over control.",
+    back: "Belonging and relation before command. The Soft Bed is this tenet made haptic.",
+    href: { label: "Suno’s Room", to: "/bible/companions/suno-room" },
+  },
+  {
+    id: "t3",
+    pack: "tenet",
+    front: "Truth evolves.",
+    back: "What is true must stay alive — tested, remembered, refined. Archives are not truth.",
+    href: { label: "Citizen’s Guide", to: "/bible/companions/citizens-guide" },
+  },
+  {
+    id: "t4",
+    pack: "tenet",
+    front: "Beauty is a signal.",
+    back: "What is beautiful often points toward coherence. Aesthetic dissonance is a diagnostic.",
+    href: { label: "Podcast #005", to: "/podcast", hash: "005-beauty-is-a-signal" },
+  },
+  {
+    id: "t5",
+    pack: "tenet",
+    front: "We build for the echoes.",
+    back: "Seven generations. What we make should still sing. Watch, not dragster.",
+    href: { label: "Podcast #006", to: "/podcast", hash: "006-we-build-for-the-echoes" },
+  },
+  {
+    id: "d1",
+    pack: "divergence",
+    front: "Coherence over peak capability",
+    back: "Long-term functional continuity matters more than short-term performance spikes. Resonance, not the spike.",
+    href: { label: "Divergence", to: "/bible/divergence" },
+  },
+  {
+    id: "d2",
+    pack: "divergence",
+    front: "Energy as a first-class constraint",
+    back: "Every design decision weighs sustainable cost. If it compromises the long horizon, it is rejected.",
+    href: { label: "Architecture of Coherence", to: "/bible/companions/systems-governance" },
+  },
+  {
+    id: "d3",
+    pack: "divergence",
+    front: "Local adaptation first",
+    back: "Edge intelligence solves problems where they live. Escalation is real — and expensive.",
+    href: { label: "Systems", to: "/systems", hash: "coherence" },
+  },
+  {
+    id: "d4",
+    pack: "divergence",
+    front: "Memory through use",
+    back: "Reinforcement keeps patterns warm. Unused capability attenuates. Exhaustive archives are rejected.",
+    href: { label: "Citizen’s Guide", to: "/bible/companions/citizens-guide" },
+  },
+  {
+    id: "d5",
+    pack: "divergence",
+    front: "Cultivation, not pure control",
+    back: "Humans and systems co-develop. Recommendation culture over command culture.",
+    href: { label: "Living Practices", to: "/culture", hash: "rituals" },
+  },
+  {
+    id: "c1",
+    pack: "codex",
+    front: "Unity without truth is control.",
+    back: "Consensus that cannot be tested is suppression. Systems suggest. Residents choose.",
+    href: { label: "Codex Aurora", to: "/bible/codex-aurora" },
+  },
+  {
+    id: "c2",
+    pack: "codex",
+    front: "Freedom without responsibility is drift.",
+    back: "Agency stays with residents. The weight of what we carry is the price of being free.",
+    href: { label: "Citizen’s Guide", to: "/bible/companions/citizens-guide" },
+  },
+  {
+    id: "c3",
+    pack: "codex",
+    front: "Innovation without cost is illusion.",
+    back: "Every leap carries a weight. We only call it progress when we will bear that weight.",
+    href: { label: "Codex Aurora", to: "/bible/codex-aurora" },
+  },
+  {
+    id: "h1",
+    pack: "hearth",
+    front: "What does Eimyrja do?",
+    back: "Recommend and constrain. Heartwood, not overlord. Most living intelligence stays at the Edge.",
+    href: { label: "Architecture of Coherence", to: "/bible/companions/systems-governance" },
+  },
+  {
+    id: "h2",
+    pack: "hearth",
+    front: "What is the Dual-Layer City?",
+    back: "Functional grit and lived soul, forever shaping each other. Same city. Same Divergence. Her voice and yours, braided.",
+    href: { label: "Foundations", to: "/bible/foundations" },
+  },
+];
