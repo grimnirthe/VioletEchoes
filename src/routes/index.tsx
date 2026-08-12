@@ -185,7 +185,7 @@ function HomePage() {
         </section>
 
         {overview ? (
-          <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+          <section id="home-door" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-10 sm:px-6">
             <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/80">
               <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
                 <div className="bg-black">
@@ -202,7 +202,7 @@ function HomePage() {
                 </div>
                 <div className="flex flex-col justify-center space-y-3 p-6 sm:p-8">
                   <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
-                    Visual overview · {overview.durationHint}
+                    {overview.home ? "Home door" : "Visual overview"} · {overview.durationHint}
                   </p>
                   <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
                     {overview.title}
@@ -217,6 +217,14 @@ function HomePage() {
                       className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
                     >
                       Full broadcast library
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
+                      to="/podcast"
+                      hash="v005-city-soul"
+                      className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                    >
+                      City Soul · watercolor
                       <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
                     <Link

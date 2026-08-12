@@ -62,6 +62,43 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-video-home-door",
+    date: "2026-08-12",
+    title: "Home Door landing video hung — rain-lit brief (~1.7 min)",
+    kind: "city",
+    summary:
+      "Gemini Notebook cinematic takes the home player: grit · lines · longhouse soul, Pillars of Home, Divergence, five tenets, Eimyrja, doors into the Nexus. Ends — where do you want to walk?",
+    body: [
+      "Landing is now the home door (home: true). The ~2 min foundations overview stays in the Broadcast library as a second brief.",
+      "Foundations visual set complete: overview, Living Nexus, Aethelgard, Home Door, City Soul. Spoken set #001–#004 already live.",
+    ],
+    hrefs: [
+      { label: "Home Door", href: "/#home-door" },
+      { label: "Landing on Broadcast", href: "/podcast#v004-violet-echoes-landing" },
+      { label: "Broadcast library", href: "/podcast#video" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "home-door", "landing", "foundations", "#VioletEchoes"],
+  },
+  {
+    id: "2026-08-12-video-city-soul",
+    date: "2026-08-12",
+    title: "Soul of the City watercolor hung — Living Practices (~1.6 min)",
+    kind: "culture",
+    summary:
+      "Gemini Notebook watercolor on the beating heart: dual-layer braid, Eimyrja as heartwood, Suno's room, Living Practices. Live on Broadcast + Culture · Living Practices.",
+    body: [
+      "Not the home door — that slot is Landing. This one sits next to the Living Practices plates: co-develop, memory, recommend. Closes — Not just a city. Home.",
+    ],
+    hrefs: [
+      { label: "City Soul video", href: "/podcast#v005-city-soul" },
+      { label: "Living Practices", href: "/culture#rituals" },
+      { label: "Broadcast library", href: "/podcast#video" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "city-soul", "watercolor", "living-practices", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-podcast-004-live",
     date: "2026-08-12",
     title: "Broadcast #004 live — Truth evolves",
@@ -69,11 +106,13 @@ export const cityUpdates: CityUpdate[] = [
     summary:
       "~17 min on tenet three: truth as a muscle, not an archive. Unity without truth is control; freedom without responsibility is drift. Live on /podcast.",
     body: [
-      "Gemini dual voices. Export title: The Cyberpunk City of Evolving Truth. Roots spoken set #001–#004 now complete; Soul of the City + Home Door videos still processing.",
+      "Gemini dual voices. Export title: The Cyberpunk City of Evolving Truth. Roots spoken set #001–#004 complete. Home Door + City Soul videos now live on Broadcast.",
       "Closes on tenet four — beauty as a signal of coherence — as a door, not a new episode.",
     ],
     hrefs: [
       { label: "Play #004", href: "/podcast#004-truth-evolves" },
+      { label: "Home Door video", href: "/podcast#v004-violet-echoes-landing" },
+      { label: "City Soul video", href: "/podcast#v005-city-soul" },
       { label: "Tenets", href: "/bible/the-tenets" },
       { label: "Foundations · slide 06", href: "/bible/foundations#slide-6" },
     ],

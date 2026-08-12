@@ -17,6 +17,7 @@ import {
 } from "@/data/culture";
 import { fashionLine, fashionLooks, fashionLooksWave } from "@/data/fashion";
 import { musicGrounding, musicMemoryForm } from "@/data/music";
+import { getVideoOverview } from "@/data/podcast";
 import { HASHTAG } from "@/data/world";
 
 
@@ -172,6 +173,7 @@ function CulturePage() {
   const myths = cultureTales.filter((t) => t.kind === "myth");
   const stories = cultureTales.filter((t) => t.kind === "story");
   const urban = cultureTales.filter((t) => t.kind === "urban-myth");
+  const citySoul = getVideoOverview("v005-city-soul");
 
   return (
     <SiteShell>
@@ -422,6 +424,47 @@ function CulturePage() {
                 {livingPracticesIntro.hero.caption}
               </p>
             </div>
+
+            {citySoul?.status === "live" ? (
+              <div
+                id="city-soul-video"
+                className="mt-6 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+              >
+                <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                  <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                    Soul of the City · {citySoul.durationHint} · Gemini Notebook
+                  </p>
+                  <h3 className="font-display text-xl text-[var(--color-fg)]">
+                    {citySoul.title}
+                  </h3>
+                  <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                    {citySoul.summary}
+                  </p>
+                </div>
+                <div className="bg-black">
+                  <video
+                    controls
+                    preload="metadata"
+                    playsInline
+                    poster={citySoul.posterSrc}
+                    className="aspect-video w-full"
+                    src={citySoul.videoSrc}
+                  >
+                    Your browser does not support video.
+                  </video>
+                </div>
+                <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+                  <p className="text-xs text-[var(--color-subtle)]">{citySoul.by}</p>
+                  <Link
+                    to="/podcast"
+                    hash="v005-city-soul"
+                    className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+                  >
+                    Full broadcast library →
+                  </Link>
+                </div>
+              </div>
+            ) : null}
 
             {livingFeatured.length ? (
               <div className="mt-8">

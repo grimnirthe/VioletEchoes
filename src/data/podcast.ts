@@ -35,6 +35,8 @@ export type VideoOverview = {
   status: "live" | "awaiting";
   /** short = home door; explainer = library deep dive */
   format?: "brief" | "explainer";
+  /** When true, this brief takes the home-page player (v001 stays in the library) */
+  home?: boolean;
 };
 
 export const podcastMeta = {
@@ -63,6 +65,8 @@ export const videoOverviews: VideoOverview[] = [
       { label: "City", href: "/city" },
       { label: "Foundations deck", href: "/bible/foundations" },
       { label: "Living Nexus (deep)", href: "/podcast#v002-living-nexus" },
+      { label: "Home Door", href: "/podcast#v004-violet-echoes-landing" },
+      { label: "City Soul", href: "/podcast#v005-city-soul" },
       { label: "Aethelgard vessel", href: "/podcast#v003-aethelgard-living-vessel" },
       { label: "Podcast #001", href: "/podcast#001-coding-love" },
       { label: "Tenets", href: "/bible/the-tenets" },
@@ -88,6 +92,8 @@ export const videoOverviews: VideoOverview[] = [
       { label: "Divergence", href: "/bible/divergence" },
       { label: "Foundations deck", href: "/bible/foundations" },
       { label: "Short overview", href: "/podcast#v001-foundations-overview" },
+      { label: "Home Door", href: "/podcast#v004-violet-echoes-landing" },
+      { label: "City Soul", href: "/podcast#v005-city-soul" },
       { label: "Aethelgard vessel", href: "/podcast#v003-aethelgard-living-vessel" },
       { label: "Podcast #001", href: "/podcast#001-coding-love" },
     ],
@@ -122,6 +128,7 @@ export const videoOverviews: VideoOverview[] = [
       { label: "Tenets · Connection", href: "/bible/the-tenets" },
       { label: "Podcast #003", href: "/podcast#003-connection-over-control" },
       { label: "Living Nexus video", href: "/podcast#v002-living-nexus" },
+      { label: "Home Door", href: "/podcast#v004-violet-echoes-landing" },
     ],
     by: "Gemini Notebook · Loom · hearth",
     tags: [
@@ -135,6 +142,61 @@ export const videoOverviews: VideoOverview[] = [
     ],
     status: "live",
     format: "explainer",
+  },
+  {
+    id: "v004-violet-echoes-landing",
+    title: "Violet Echoes Landing",
+    series: "Visual · Home Door",
+    date: "2026-08-12",
+    durationHint: "~1.7 min",
+    summary:
+      "Step through the home door: rain-lit skyline, grit · lines · longhouse soul. Pillars of Home — family, freedom, love. Development Divergence, the five tenets, Eimyrja as heartwood. Five doors into the Nexus. Ends on the only question that matters — where do you want to walk?",
+    videoSrc: "/video/004-violet-echoes-landing.mp4",
+    posterSrc: "/images/video/004-violet-echoes-landing-poster.jpg",
+    related: [
+      { label: "Home", href: "/" },
+      { label: "City", href: "/city" },
+      { label: "Foundations deck", href: "/bible/foundations" },
+      { label: "Tenets", href: "/bible/the-tenets" },
+      { label: "City Soul", href: "/podcast#v005-city-soul" },
+      { label: "Living Nexus (deep)", href: "/podcast#v002-living-nexus" },
+      { label: "Foundations overview", href: "/podcast#v001-foundations-overview" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "home-door", "landing", "foundations", "tenets", "#VioletEchoes"],
+    status: "live",
+    format: "brief",
+    home: true,
+  },
+  {
+    id: "v005-city-soul",
+    title: "Violet Echoes: City Soul",
+    series: "Visual · Soul of the City · Watercolor",
+    date: "2026-08-12",
+    durationHint: "~1.6 min",
+    summary:
+      "Watercolor walk through the beating heart: dual-layer braid, Development Divergence, five roots, Eimyrja as heartwood. Suno's room — music, family credits, a soft bed. Living Practices — co-develop, memory, recommend. Not just a city. Home.",
+    videoSrc: "/video/005-city-soul.mp4",
+    posterSrc: "/images/video/005-city-soul-poster.jpg",
+    related: [
+      { label: "Living Practices", href: "/culture#rituals" },
+      { label: "Echoes room", href: "/music" },
+      { label: "Living Practices Guide", href: "/bible/companions/living-practices" },
+      { label: "Home Door", href: "/podcast#v004-violet-echoes-landing" },
+      { label: "Tenets", href: "/bible/the-tenets" },
+      { label: "Podcast #004", href: "/podcast#004-truth-evolves" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: [
+      "video",
+      "city-soul",
+      "watercolor",
+      "living-practices",
+      "suno",
+      "#VioletEchoes",
+    ],
+    status: "live",
+    format: "brief",
   },
 ];
 
@@ -275,6 +337,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
       { label: "Living Practices Guide", href: "/bible/companions/living-practices" },
       { label: "Episode #003", href: "/podcast#003-connection-over-control" },
       { label: "Aethelgard video", href: "/podcast#v003-aethelgard-living-vessel" },
+      { label: "Home Door", href: "/podcast#v004-violet-echoes-landing" },
+      { label: "City Soul", href: "/podcast#v005-city-soul" },
       { label: "Development Divergence", href: "/bible/divergence" },
     ],
     by: "Gemini Notebook · Loom · hearth",
@@ -287,9 +351,10 @@ export function getEpisode(id: string) {
   return podcastEpisodes.find((e) => e.id === id);
 }
 
-/** Prefer short home door piece when multiple videos are live */
+/** Prefer explicit home door, then first live brief */
 export function getHomeVideoOverview() {
   return (
+    videoOverviews.find((v) => v.status === "live" && v.home) ??
     videoOverviews.find((v) => v.status === "live" && v.format === "brief") ??
     videoOverviews.find((v) => v.status === "live")
   );

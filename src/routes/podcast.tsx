@@ -80,8 +80,12 @@ function PodcastPage() {
             >
               <div className="space-y-2">
                 <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
-                  {v.format === "explainer" ? "Explainer" : "Brief"} · {v.series} ·{" "}
-                  {v.date} · {v.durationHint}
+                  {v.home
+                    ? "Home door"
+                    : v.format === "explainer"
+                      ? "Explainer"
+                      : "Brief"}{" "}
+                  · {v.series} · {v.date} · {v.durationHint}
                 </p>
                 <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
                   {v.title}
