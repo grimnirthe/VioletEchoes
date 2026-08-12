@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-video-rain-lit-tour",
+    date: "2026-08-12",
+    title: "Rain-lit tour hung — city walk (~8 min)",
+    kind: "city",
+    summary:
+      "Gemini Notebook cinematic tour of the island: grit · lines · longhouse soul, dual-layer, Eimyrja, edge intelligence, Aethelgard, Family · Freedom · Love, five tenets. Live on City + Broadcast.",
+    body: [
+      "The walk that sits next to the Districts of the Nexus deck. Deck is the pie. This is the rain-lit door through it.",
+      "Does not replace the Home Door landing — that brief stays on home. This one lives under City and Broadcast · Visual overviews.",
+    ],
+    hrefs: [
+      { label: "Play the tour", href: "/podcast#v006-rain-lit-tour" },
+      { label: "City · tour band", href: "/city#rain-lit-tour" },
+      { label: "Districts deck", href: "/bible/districts" },
+      { label: "Broadcast library", href: "/podcast#video" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "tour", "districts", "city", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-districts-deck",
     date: "2026-08-12",
     title: "Districts of the Nexus deck hung — spatial master plan",
@@ -70,12 +90,13 @@ export const cityUpdates: CityUpdate[] = [
       "Gemini Notebook 13-slide anatomy of the pie: Edge Perimeter, Memory Spines, Industrial Lattice, Cultivation Wards, Eimyrja Heartwood, plus Aethelgard at sea. Live on /bible/districts and City.",
     body: [
       "Sister to Neon Heartwood. Readable district matrix on-page. Named districts stay on the City map — this deck is how the slices work together.",
-      "PDF download at /docs/districts-of-the-nexus.pdf. Videos still welcome as district doors.",
+      "PDF download at /docs/districts-of-the-nexus.pdf. Rain-lit tour (~8 min) now hung beside it.",
     ],
     hrefs: [
       { label: "Open the deck", href: "/bible/districts" },
       { label: "District matrix", href: "/bible/districts#matrix" },
       { label: "City map", href: "/city#districts-deck" },
+      { label: "Rain-lit tour", href: "/city#rain-lit-tour" },
       { label: "Neon Heartwood", href: "/bible/foundations" },
     ],
     by: "Gemini Notebook · Loom · hearth",

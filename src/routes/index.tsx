@@ -229,6 +229,14 @@ function HomePage() {
                     </Link>
                     <Link
                       to="/podcast"
+                      hash="v006-rain-lit-tour"
+                      className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                    >
+                      Rain-lit tour · ~8 min
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
+                      to="/podcast"
                       hash="v002-living-nexus"
                       className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
                     >

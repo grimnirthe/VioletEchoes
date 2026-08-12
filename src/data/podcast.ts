@@ -44,7 +44,7 @@ export const podcastMeta = {
   tagline: "Doors into the Nexus · spoken + visual pulse",
   body: [
     "Braided voices and short visual explainers mapping the city for residents and models.",
-    "Audio deep dives + Gemini Notebook video overviews. Roots spoken series #001–#006 live. Visual foundations hung. Then whatever the hearth ships next.",
+    "Audio deep dives + Gemini Notebook video overviews. Roots spoken series #001–#006 live. Visual foundations + rain-lit city tour hung. Then whatever the hearth ships next.",
   ],
   credit: "Gemini Notebook · hearth",
 } as const;
@@ -159,6 +159,7 @@ export const videoOverviews: VideoOverview[] = [
       { label: "Foundations deck", href: "/bible/foundations" },
       { label: "Tenets", href: "/bible/the-tenets" },
       { label: "City Soul", href: "/podcast#v005-city-soul" },
+      { label: "Rain-lit tour", href: "/podcast#v006-rain-lit-tour" },
       { label: "Living Nexus (deep)", href: "/podcast#v002-living-nexus" },
       { label: "Foundations overview", href: "/podcast#v001-foundations-overview" },
     ],
@@ -183,6 +184,7 @@ export const videoOverviews: VideoOverview[] = [
       { label: "Echoes room", href: "/music" },
       { label: "Living Practices Guide", href: "/bible/companions/living-practices" },
       { label: "Home Door", href: "/podcast#v004-violet-echoes-landing" },
+      { label: "Rain-lit tour", href: "/podcast#v006-rain-lit-tour" },
       { label: "Tenets", href: "/bible/the-tenets" },
       { label: "Podcast #004", href: "/podcast#004-truth-evolves" },
     ],
@@ -197,6 +199,38 @@ export const videoOverviews: VideoOverview[] = [
     ],
     status: "live",
     format: "brief",
+  },
+  {
+    id: "v006-rain-lit-tour",
+    title: "Violet Echoes — rain-lit tour",
+    series: "Visual · City Tour · Districts",
+    date: "2026-08-12",
+    durationHint: "~8 min",
+    summary:
+      "Cinematic rain-lit walk of the island: grit · lines · longhouse soul. Dual-layer grit and soul, braided voices, Eimyrja as heartwood, edge intelligence, Aethelgard as living companion. Family · Freedom · Love. Five tenets. Codex Aurora. Ends on the question — what will you choose to carry?",
+    videoSrc: "/video/006-rain-lit-tour.mp4",
+    posterSrc: "/images/video/006-rain-lit-tour-poster.jpg",
+    related: [
+      { label: "City", href: "/city#rain-lit-tour" },
+      { label: "Districts of the Nexus", href: "/bible/districts" },
+      { label: "Eimyrja", href: "/bible/eimyrja" },
+      { label: "Aethelgard video", href: "/podcast#v003-aethelgard-living-vessel" },
+      { label: "Tenets", href: "/bible/the-tenets" },
+      { label: "Home Door", href: "/podcast#v004-violet-echoes-landing" },
+      { label: "Living Nexus (deep)", href: "/podcast#v002-living-nexus" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: [
+      "video",
+      "tour",
+      "districts",
+      "eimyrja",
+      "aethelgard",
+      "tenets",
+      "#VioletEchoes",
+    ],
+    status: "live",
+    format: "explainer",
   },
 ];
 

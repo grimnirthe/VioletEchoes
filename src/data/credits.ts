@@ -251,6 +251,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site deck · PDF at /docs/districts-of-the-nexus.pdf · 13 slides under /images/districts-deck/",
       },
       {
+        label: "Rain-lit tour — city walk video (~8 min)",
+        url: "/podcast#v006-rain-lit-tour",
+        note: "Gemini Notebook cinematic tour: grit · lines · longhouse soul, dual-layer, Eimyrja, Aethelgard, tenets. Walk that sits next to the Districts deck.",
+        verify: "On-site · /video/006-rain-lit-tour.mp4 · City #rain-lit-tour + Broadcast library",
+      },
+      {
         label: "Doors Into the Nexus — dual-layer mind map",
         url: "/bible/foundations#mind-map",
         note: "Gemini Notebook spatial overview: four doors (Divergence · core systems · tenets · culture) into the dual-layer center. Visual map; clean door list on-page for readable law.",

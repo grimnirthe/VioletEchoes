@@ -8,6 +8,7 @@ import { CityMapInteractive } from "@/components/city-map";
 import { cityMapArt } from "@/data/city-map";
 import { entries } from "@/data/world";
 import { districtsDeckMeta } from "@/data/districts-deck";
+import { getVideoOverview } from "@/data/podcast";
 
 export const Route = createFileRoute("/city")({
   component: CityPage,
@@ -48,6 +49,7 @@ function CityPage() {
   const list = districtIds
     .map((id) => entries.find((e) => e.id === id))
     .filter(Boolean);
+  const rainLitTour = getVideoOverview("v006-rain-lit-tour");
 
   return (
     <SiteShell>
@@ -81,6 +83,47 @@ function CityPage() {
         <div className="mt-12">
           <CityMapInteractive />
         </div>
+
+        {rainLitTour?.status === "live" ? (
+          <div
+            id="rain-lit-tour"
+            className="mt-10 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+          >
+            <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Visual tour · {rainLitTour.durationHint} · Gemini Notebook
+              </p>
+              <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+                {rainLitTour.title}
+              </h2>
+              <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                {rainLitTour.summary}
+              </p>
+            </div>
+            <div className="bg-black">
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                poster={rainLitTour.posterSrc}
+                className="aspect-video w-full"
+                src={rainLitTour.videoSrc}
+              >
+                Your browser does not support video.
+              </video>
+            </div>
+            <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+              <p className="text-xs text-[var(--color-subtle)]">{rainLitTour.by}</p>
+              <Link
+                to="/podcast"
+                hash="v006-rain-lit-tour"
+                className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+              >
+                Full broadcast library →
+              </Link>
+            </div>
+          </div>
+        ) : null}
 
         <section
           id="districts-deck"

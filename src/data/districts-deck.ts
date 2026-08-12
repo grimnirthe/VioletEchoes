@@ -15,10 +15,11 @@ export const districtsDeckMeta = {
   pages: 13,
   body: [
     "The pie as law: five slices of the dual-layer island — Edge Perimeter, Memory Spines, Industrial Lattice, Cultivation Wards, and Eimyrja Heartwood — plus Aethelgard as the living perimeter at sea.",
-    "Handout, not a rewrite of the named-district entries. Walk the City map for Veilreach, Harborward, the Warrens. This deck is how the slices work together.",
+    "Handout, not a rewrite of the named-district entries. Walk the City map for Veilreach, Harborward, the Warrens. This deck is how the slices work together. Rain-lit tour (~8 min) is the walk.",
   ],
   related: [
     { label: "City map & named districts", href: "/city" },
+    { label: "Rain-lit tour", href: "/podcast#v006-rain-lit-tour" },
     { label: "Neon Heartwood foundations", href: "/bible/foundations" },
     { label: "Eimyrja", href: "/bible/eimyrja" },
     { label: "Development Divergence", href: "/bible/divergence" },
