@@ -1546,6 +1546,7 @@ export const nav: NavItem[] = [
     label: "City",
     children: [
       { to: "/city", label: "City overview", note: "Districts · dual-layer" },
+      { to: "/bible/districts", label: "Districts of the Nexus", note: "Spatial master plan" },
       { to: "/systems", label: "Systems", note: "Spines · Eimyrja · Bifrost" },
       { to: "/bible", label: "World Bible", note: "Public entries" },
       { to: "/bible/companions", label: "Companion docs", note: "Full frameworks" },
@@ -1585,6 +1586,7 @@ export const nav: NavItem[] = [
       { to: "/bible", label: "World Bible", note: "Condensed entries" },
       { to: "/bible/companions", label: "Companions", note: "Deep docs · downloadable" },
       { to: "/bible/foundations", label: "Foundations handout", note: "Neon Heartwood · mind map" },
+      { to: "/bible/districts", label: "Districts of the Nexus", note: "Spatial master plan" },
       { to: "/systems", label: "Systems", note: "Architecture & pulse" },
       { to: "/credits", label: "Credits & sources" },
     ],

@@ -24,6 +24,7 @@ export const foundationsDeckMeta = {
   ],
   related: [
     { label: "Living Practices Guide", href: "/bible/companions/living-practices" },
+    { label: "Districts of the Nexus", href: "/bible/districts" },
     { label: "Codex Aurora / Tenets", href: "/bible/the-tenets" },
     { label: "Development Divergence", href: "/bible/divergence" },
     { label: "Core Framework companion", href: "/bible/companions/core-framework" },

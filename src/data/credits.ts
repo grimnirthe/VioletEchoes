@@ -245,6 +245,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site deck · PDF at /docs/neon-heartwood.pdf · 13 slides under /images/foundations-deck/",
       },
       {
+        label: "Districts of the Nexus — spatial master plan (PDF + slides)",
+        url: "/bible/districts",
+        note: "Gemini Notebook handout: five slices of the pie (Edge, Spines, Lattice, Wards, Heartwood) plus Aethelgard as living perimeter. Sister to Neon Heartwood.",
+        verify: "On-site deck · PDF at /docs/districts-of-the-nexus.pdf · 13 slides under /images/districts-deck/",
+      },
+      {
         label: "Doors Into the Nexus — dual-layer mind map",
         url: "/bible/foundations#mind-map",
         note: "Gemini Notebook spatial overview: four doors (Divergence · core systems · tenets · culture) into the dual-layer center. Visual map; clean door list on-page for readable law.",

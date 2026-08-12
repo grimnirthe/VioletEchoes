@@ -4,6 +4,7 @@ import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import { companionDocs } from "@/data/companions";
 import { foundationsDeckMeta } from "@/data/foundations-deck";
+import { districtsDeckMeta } from "@/data/districts-deck";
 
 export const Route = createFileRoute("/bible/companions/")({
   component: CompanionsIndexPage,
@@ -116,6 +117,60 @@ function CompanionsIndexPage() {
               <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/70 via-transparent to-transparent" />
               <span className="absolute bottom-3 left-3 text-xs uppercase tracking-[0.14em] text-[var(--color-fg)]">
                 Open handout →
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <article className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
+          <div className="grid gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+            <div className="border-b border-[var(--color-border)] p-6 sm:p-7 lg:border-b-0 lg:border-r">
+              <p className="text-[0.65rem] uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Spatial handout · Gemini Notebook · {districtsDeckMeta.pages} slides
+              </p>
+              <h2 className="mt-2 font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+                {districtsDeckMeta.title}
+              </h2>
+              <p className="mt-1 text-sm text-[var(--color-primary-soft)]">
+                {districtsDeckMeta.tagline}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
+                {districtsDeckMeta.body[0]}
+              </p>
+              <p className="mt-2 text-xs italic text-[var(--color-subtle)]">
+                {districtsDeckMeta.auroraLine}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <Link
+                  to="/bible/districts"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+                >
+                  <Presentation className="h-3.5 w-3.5" />
+                  View deck on site
+                </Link>
+                <a
+                  href={districtsDeckMeta.pdfHref}
+                  download
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  PDF
+                </a>
+              </div>
+            </div>
+            <a
+              href="/bible/districts"
+              className="relative block min-h-[12rem] bg-[var(--color-surface-2)] lg:min-h-full"
+            >
+              <img
+                src="/images/districts-deck/slide-01.jpg"
+                alt="Districts of the Nexus — the pie"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 transition hover:opacity-100"
+                loading="lazy"
+              />
+              <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/70 via-transparent to-transparent" />
+              <span className="absolute bottom-3 left-3 text-xs uppercase tracking-[0.14em] text-[var(--color-fg)]">
+                Open the pie →
               </span>
             </a>
           </div>

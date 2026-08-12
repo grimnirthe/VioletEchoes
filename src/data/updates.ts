@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-districts-deck",
+    date: "2026-08-12",
+    title: "Districts of the Nexus deck hung — spatial master plan",
+    kind: "city",
+    summary:
+      "Gemini Notebook 13-slide anatomy of the pie: Edge Perimeter, Memory Spines, Industrial Lattice, Cultivation Wards, Eimyrja Heartwood, plus Aethelgard at sea. Live on /bible/districts and City.",
+    body: [
+      "Sister to Neon Heartwood. Readable district matrix on-page. Named districts stay on the City map — this deck is how the slices work together.",
+      "PDF download at /docs/districts-of-the-nexus.pdf. Videos still welcome as district doors.",
+    ],
+    hrefs: [
+      { label: "Open the deck", href: "/bible/districts" },
+      { label: "District matrix", href: "/bible/districts#matrix" },
+      { label: "City map", href: "/city#districts-deck" },
+      { label: "Neon Heartwood", href: "/bible/foundations" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["deck", "districts", "spatial", "eimyrja", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-podcast-005-006-live",
     date: "2026-08-12",
     title: "Roots spoken series complete — #005 and #006 live",

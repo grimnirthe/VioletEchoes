@@ -7,6 +7,7 @@ import { media, systemsGallery } from "@/data/media";
 import { CityMapInteractive } from "@/components/city-map";
 import { cityMapArt } from "@/data/city-map";
 import { entries } from "@/data/world";
+import { districtsDeckMeta } from "@/data/districts-deck";
 
 export const Route = createFileRoute("/city")({
   component: CityPage,
@@ -80,6 +81,51 @@ function CityPage() {
         <div className="mt-12">
           <CityMapInteractive />
         </div>
+
+        <section
+          id="districts-deck"
+          className="mt-10 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+        >
+          <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="space-y-3 p-6 sm:p-8">
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                Spatial handout · {districtsDeckMeta.pages} slides · Gemini Notebook
+              </p>
+              <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+                {districtsDeckMeta.title}
+              </h2>
+              <p className="text-sm text-[var(--color-primary-soft)]">
+                {districtsDeckMeta.tagline}
+              </p>
+              <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                {districtsDeckMeta.body[0]}
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1">
+                <Link
+                  to="/bible/districts"
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Open the deck →
+                </Link>
+                <Link
+                  to="/bible/districts"
+                  hash="matrix"
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  District matrix
+                </Link>
+              </div>
+            </div>
+            <Link to="/bible/districts" className="relative block min-h-[12rem] bg-black lg:min-h-full">
+              <img
+                src="/images/districts-deck/slide-01.jpg"
+                alt="Districts of the Nexus — the pie"
+                className="absolute inset-0 h-full w-full object-cover object-center"
+                loading="lazy"
+              />
+            </Link>
+          </div>
+        </section>
 
         <section className="mt-10 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
           <div className="grid gap-0 lg:grid-cols-2">
