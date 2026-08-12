@@ -274,6 +274,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "Night shift · Core Tender custom",
     note: "Quiet presence while pods flush — company for the living, not prayer to the Core.",
+    image: "/images/eimyrja.jpg",
     href: "/bible/eimyrja",
     echoes: ["eimyrja"],
     accepted: "canon",
@@ -391,6 +392,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City practice",
     note: "When a person or a node is carrying something heavy, others take short turns sitting nearby — not to fix, just to keep the room from going cold. The watch rotates. No one owns the burden.",
+    image: "/images/hearth-evening.jpg",
     echoes: ["longhouses", "listening-hours", "vee"],
   },
 {
@@ -399,6 +401,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City practice",
     note: "Public or longhouse maps left deliberately incomplete. Newcomers and old hands add a path, a mark, a name only when they have walked it. The gaps are invitations, not errors.",
+    image: "/images/nexus-map.jpg",
     echoes: ["districts", "memory", "veilreach"],
   },
 {
@@ -417,6 +420,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City practice",
     note: "New arrivals are sometimes walked the first soft mile at dawn by someone who already knows the path. No orientation speech. Just the route and the names of the porches that leave lights on.",
+    image: "/images/hearth-path.jpg",
     echoes: ["hearthrow", "warrens", "longhouses"],
   },
 {
@@ -425,6 +429,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City practice",
     note: "In gatherings, one seat left empty on purpose. Not for the dead only — for the one who might still arrive, or the one who needed the room to stay open.",
+    image: "/images/nexus-table.jpg",
     echoes: ["longhouses", "shared-watch", "vee"],
   },
 {
@@ -433,6 +438,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City practice",
     note: "When someone has been gone a long time, the first welcome is not a party. It is a light left on and a place at the table that does not require explanation.",
+    image: "/images/hearth-porch.jpg",
     echoes: ["longhouses", "quiet-hearths", "vee"],
   },
 {
@@ -450,6 +456,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City practice",
     note: "Help given without a ledger. The city runs on favors that are not scored. When someone tries to tally, the practice is to let the count cool.",
+    image: "/images/ember-stall.jpg",
     echoes: ["longhouses", "ember-market", "values"],
   },
 {
@@ -468,6 +475,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City practice",
     note: "Agreed stretches where no one fills the air. Not awkward. Chosen. The silence is part of how the room stays coherent.",
+    image: "/images/longhouse-heart.jpg",
     echoes: ["listening-hours", "longhouses", "high-quiet"],
   },
 {
@@ -515,6 +523,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "Hearthrow · Warmth",
     note: "Porch lights left in mixed amber and violet so late walkers always have a color that feels like home. Habit, not code.",
+    image: "/images/warrens-street.jpg",
     echoes: ["hearthrow", "quiet-hearths", "warrens"],
   },
 {
@@ -523,6 +532,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "Cultural Hub",
     note: "Benches set to face each other more than the stage. Conversation is part of the architecture.",
+    image: "/images/cultural-hub.jpg",
     echoes: ["cultural-hub", "listening-hours", "unnamed-tables"],
   },
 {
@@ -531,6 +541,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City soft conflict",
     note: "The quiet, ongoing argument about how much of the city should feel like a known hearth versus open commons. Neither side is wrong. Both are care with different weights.",
+    image: "/images/culture/keepers-dual.jpg",
     echoes: ["factions", "longhouses", "cultural-hub"],
   },
 {
@@ -539,6 +550,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City soft conflict",
     note: "Memory-keepers and Edge stewards disagreeing, gently, on what still deserves reinforcement. Attenuation is not failure. Reinforcement is not hoarding. The disagreement is the practice.",
+    image: "/images/memory-keep-what-keeps-us.jpg",
     echoes: ["memory", "edge-nodes", "factions"],
   },
 {
@@ -556,6 +568,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City felt presence",
     note: "Around 2 a.m. the air softens and screens dim a fraction. Some sleep harder. Some keep a quiet watch. The city exhales.",
+    image: "/images/city-rain.jpg",
     echoes: ["eimyrja", "deep-sleep-watch-ritual", "memory"],
   },
 {
@@ -564,6 +577,7 @@ export const cultureWorks: CultureWork[] = [
     kind: "ritual",
     by: "City felt presence",
     note: "When a pattern is cooling, people often notice before the node files it — fewer returns, thinner jokes, a door that no longer sticks open. Attenuation begins in the body of the district.",
+    image: "/images/veil-edge.jpg",
     echoes: ["edge-nodes", "memory", "keep-vs-let-cool"],
   }
 ];
