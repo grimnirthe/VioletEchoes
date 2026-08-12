@@ -1162,6 +1162,7 @@ export const entries: WorldEntry[] = [
       "Sheet VII: The Divergence does not choose for us. It reveals what we choose to carry.",
       "Three short lines that sit with every district and system: Unity without truth is control. Innovation without cost is illusion. Freedom without responsibility is drift.",
       "Aurora's method matches the Divergence itself: trade-offs with the path not taken, Edge Node personalities, role rhythms, dual-layer maps, and tenet lines held where the eye can rest on them. Loom keeps the frames true; Aurora keeps the tenets lit.",
+      "Citizen’s Guide to the Codex Aurora is the resident handout — Mandate of Truth, Weight of Freedom, Choice of the Divergence, Harmony of the Braid, and three daily rituals. Warmth to match the grit.",
       "Same city. Same Divergence. Her voice and yours, braided."
     ],
     tags: [

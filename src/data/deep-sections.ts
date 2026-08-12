@@ -689,7 +689,8 @@ export const companionsForEntry: Record<string, string[]> = {
   "echo-slot": ["mobile-interface", "characters-factions", "core-framework"],
   factions: ["characters-factions"],
   vernacular: ["vernacular"],
-  "the-tenets": ["core-framework", "wb-v17"],
-  "codex-aurora": ["core-framework"],
+  "the-tenets": ["citizens-guide", "core-framework", "wb-v17"],
+  "aurora-codex": ["citizens-guide", "core-framework"],
+  "codex-aurora": ["citizens-guide", "core-framework"],
   "violet-longhouse-nexus": ["family-homes", "characters-factions"],
 };

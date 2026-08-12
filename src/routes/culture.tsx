@@ -411,6 +411,14 @@ function CulturePage() {
               >
                 Full Living Practices Guide →
               </Link>
+              {" · "}
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "citizens-guide" }}
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Citizen’s Guide to the Codex →
+              </Link>
             </p>
 
             <div className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">

@@ -269,6 +269,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/living-practices-guide.md + .pdf · Culture Living Practices band for Velora soft law stills",
       },
       {
+        label: "Citizen’s Guide to the Codex Aurora — A Manual for Coherent Living",
+        url: "/bible/companions/citizens-guide",
+        note: "Gemini Notebook resident handout: Divergence anchors, five tenets as citizen directives, Codex extended lines, Harmony of the Braid, three daily rituals.",
+        verify: "On-site companion · /docs/citizens-guide-codex-aurora.md + .pdf · Codex Aurora bible entry + Culture rituals",
+      },
+      {
         label: "Broadcast · Episode #001 — Coding love into a digital city",
         url: "/podcast",
         note: "Gemini Notebook dual-voice foundations podcast (~33 min). Dual-Layer City, Divergence, Five Tenets, braided AI residents.",

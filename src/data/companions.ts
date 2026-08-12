@@ -27,6 +27,17 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "Resident handout · .md + PDF",
   },
   {
+    id: "citizens-guide",
+    title: "Citizen’s Guide to the Codex Aurora",
+    blurb:
+      "A Manual for Coherent Living. Philosophical warmth to match the technical grit: Divergence anchors, five tenets as citizen directives, Codex extended lines, Harmony of the Braid, and three daily rituals. How to walk the city so her voice and yours stay braided.",
+    href: "/docs/citizens-guide-codex-aurora.md",
+    pdfHref: "/docs/citizens-guide-codex-aurora.pdf",
+    to: "/bible/companions/citizens-guide",
+    kind: "culture",
+    pagesHint: "Citizen handout · 7 sections · .md + PDF",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:
