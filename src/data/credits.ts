@@ -305,6 +305,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/innovation-district-report.md + .pdf · Innovation bible + City #innovation",
       },
       {
+        label: "Innovation — shop-floor walk (~8 min)",
+        url: "/podcast#v009-innovation-shop-floor",
+        note: "Gemini Notebook explainer: shop-floor grit braided to Hearthrow warmth, Divergence principles, Eimyrja recommends, Aethelgard as living companion. What will your echo be?",
+        verify: "On-site · /video/009-innovation-shop-floor.mp4 · City #innovation + Broadcast library",
+      },
+      {
         label: "Dual-Layer — Hearthrow portal video (~9 min)",
         url: "/podcast#v008-hearthrow-dual-layer",
         note: "Gemini Notebook explainer: Dual-Layer city, Divergence, tenets, Eimyrja, then Hearthrow street scale — porch lights, Suno’s room, Soft Bed. What will you choose to carry?",

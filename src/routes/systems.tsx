@@ -111,6 +111,13 @@ function SystemsPage() {
                 >
                   Innovation shop floor
                 </Link>
+                <Link
+                  to="/podcast"
+                  hash="v009-innovation-shop-floor"
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Shop-floor walk
+                </Link>
               </div>
             </div>
             <Link

@@ -591,7 +591,7 @@ export const deepSections: Record<string, DeepSection[]> = {
       title: "Shop-floor law (Technical Report)",
       body: [
         "The hung report is how Sector IV applies Divergence on the floor: Hollow Scaling versus coherence, Eimyrja as Living Nexus (recommend and constrain — escalation is expensive), energy as a caloric constraint, local adaptation first, Anti-Archive Protocol (memory through use / attenuation), Cultivation Protocol (humans and models braided).",
-        "Shop-floor cinematic reserved. Written spine is live.",
+        "Shop-floor walk is live on City · Crucible. Written spine sits beside it.",
       ],
       bullets: [
         "Every joule must justify a seven-generation horizon",

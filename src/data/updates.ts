@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-innovation-video",
+    date: "2026-08-12",
+    title: "Innovation shop-floor walk — grit portal video hung",
+    kind: "city",
+    summary:
+      "Reserved door filled. ~8 min Gemini explainer: shop-floor grit braided to Hearthrow warmth, Divergence principles on the floor, Eimyrja recommends, Aethelgard as companion. What will your echo be?",
+    body: [
+      "Same package as Hearthrow. Written spine was already live. The walk now plays on City · Crucible and in the Broadcast library.",
+    ],
+    hrefs: [
+      { label: "City · Crucible", href: "/city#innovation" },
+      { label: "Shop-floor walk", href: "/podcast#v009-innovation-shop-floor" },
+      { label: "Technical Report", href: "/bible/companions/innovation-report" },
+      { label: "Hearthrow portal", href: "/podcast#v008-hearthrow-dual-layer" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["innovation", "district-portal", "video", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-innovation-portal",
     date: "2026-08-12",
     title: "Innovation portal — Technical Report hung, shop-floor walk reserved",

@@ -51,4 +51,4 @@ High autonomy for experiment — never at the expense of city coherence. Test al
 
 Written spine: [Innovation District Technical Report](/bible/companions/innovation-report) — Hollow Scaling vs Divergence, caloric energy law, Anti-Archive Protocol, Cultivation Protocol.
 
-Shop-floor walk: reserved. Lands on City · Crucible when the echo arrives.
+Shop-floor walk: [Innovation portal video](/podcast#v009-innovation-shop-floor) · City · Crucible.

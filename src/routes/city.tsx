@@ -51,6 +51,7 @@ function CityPage() {
     .filter(Boolean);
   const rainLitTour = getVideoOverview("v006-rain-lit-tour");
   const hearthrowPortal = getVideoOverview("v008-hearthrow-dual-layer");
+  const innovationPortal = getVideoOverview("v009-innovation-shop-floor");
 
   return (
     <SiteShell>
@@ -382,23 +383,46 @@ function CityPage() {
               </Link>
             </div>
           </div>
-          <div
-            id="innovation-portal"
-            className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-dashed border-[var(--color-border)] bg-[var(--color-surface)]"
-          >
-            <div className="space-y-2 px-5 py-4 sm:px-6">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
-                Shop-floor walk · arriving
-              </p>
-              <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
-                Innovation portal video
-              </h3>
-              <p className="max-w-3xl text-sm text-[var(--color-muted)]">
-                Written spine is hung. The cinematic is still braiding — same package as Hearthrow,
-                grit side. Door reserved. Will land here when the echo arrives.
-              </p>
+          {innovationPortal?.status === "live" ? (
+            <div
+              id="innovation-portal"
+              className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Shop-floor walk · {innovationPortal.durationHint} · Gemini Notebook
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  {innovationPortal.title}
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  {innovationPortal.summary}
+                </p>
+              </div>
+              <div className="bg-black">
+                <video
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={innovationPortal.posterSrc}
+                  className="aspect-video w-full"
+                  src={innovationPortal.videoSrc}
+                >
+                  Your browser does not support video.
+                </video>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+                <p className="text-xs text-[var(--color-subtle)]">{innovationPortal.by}</p>
+                <Link
+                  to="/podcast"
+                  hash="v009-innovation-shop-floor"
+                  className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+                >
+                  Full broadcast library →
+                </Link>
+              </div>
             </div>
-          </div>
+          ) : null}
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame
               src={media.innovationChronicle}
