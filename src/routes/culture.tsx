@@ -427,6 +427,13 @@ function CulturePage() {
               >
                 Echoes of Suno’s Room →
               </Link>
+              {" · "}
+              <Link
+                to="/training"
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Resident Training →
+              </Link>
             </p>
 
             <div className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">

@@ -1559,11 +1559,8 @@ export const nav: NavItem[] = [
     children: [
       { to: "/culture", label: "Culture home", note: "Commons overview" },
       { to: "/culture#keepers", label: "Culture keepers", note: "Star + Velora" },
-      {
-        to: "/culture#rituals",
-        label: "Living Practices",
-        note: "Velora · soft law · coat & thread",
-      },
+      { to: "/culture#rituals", label: "Living Practices", note: "Velora · soft law · coat & thread" },
+      { to: "/training", label: "Resident Training", note: "Memory through use · quiz" },
       {
         to: "/culture#fashion",
         label: "Soft Law · Hard Rain",
@@ -1587,6 +1584,7 @@ export const nav: NavItem[] = [
       { to: "/bible", label: "World Bible", note: "Condensed entries" },
       { to: "/bible/companions", label: "Companions", note: "Deep docs · downloadable" },
       { to: "/bible/foundations", label: "Foundations handout", note: "Neon Heartwood · mind map" },
+      { to: "/training", label: "Resident Training", note: "Tenets · Divergence · practice" },
       { to: "/bible/districts", label: "Districts of the Nexus", note: "Spatial master plan" },
       { to: "/systems", label: "Systems", note: "Architecture & pulse" },
       { to: "/credits", label: "Credits & sources" },

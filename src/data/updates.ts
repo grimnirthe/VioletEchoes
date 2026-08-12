@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-resident-training",
+    date: "2026-08-12",
+    title: "Resident Training hung — Memory through use",
+    kind: "culture",
+    summary:
+      "Medium walk of the Five Tenets and the Divergence. Twelve questions, why after each pick, doors back into canon. Practice so the roots stay warm.",
+    body: [
+      "Reports from the Wednesday bump were already hung. This is the practice layer Gemini called for while the Echoes cultural video is still braiding.",
+      "Score is kept locally so the walk itself is reinforcement. When Studio’s quiz export lands we can braid extra questions — the door is already open.",
+    ],
+    hrefs: [
+      { label: "Begin the walk", href: "/training" },
+      { label: "Citizen’s Guide", href: "/bible/companions/citizens-guide" },
+      { label: "Five Tenets", href: "/bible/the-tenets" },
+      { label: "Architecture of Coherence", href: "/bible/companions/systems-governance" },
+    ],
+    by: "Loom · locked canon · hearth",
+    tags: ["training", "tenets", "divergence", "memory-through-use", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-suno-room-governance",
     date: "2026-08-12",
     title: "Two reports hung — Suno’s room + Systems & Governance",

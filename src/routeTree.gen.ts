@@ -19,6 +19,7 @@ import { Route as MusicRouteImport } from './routes/music'
 import { Route as PodcastRouteImport } from './routes/podcast'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as SystemsRouteImport } from './routes/systems'
+import { Route as TrainingRouteImport } from './routes/training'
 import { Route as UpdatesRouteImport } from './routes/updates'
 import { Route as ApiCommitsDotjsonRouteImport } from './routes/api/commits[.]json'
 import { Route as ApiUpdatesDotjsonRouteImport } from './routes/api/updates[.]json'
@@ -81,6 +82,11 @@ const SearchRoute = SearchRouteImport.update({
 const SystemsRoute = SystemsRouteImport.update({
   id: '/systems',
   path: '/systems',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrainingRoute = TrainingRouteImport.update({
+  id: '/training',
+  path: '/training',
   getParentRoute: () => rootRouteImport,
 } as any)
 const UpdatesRoute = UpdatesRouteImport.update({
@@ -160,6 +166,7 @@ export interface FileRoutesByFullPath {
   '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
+  '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
@@ -185,6 +192,7 @@ export interface FileRoutesByTo {
   '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
+  '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
@@ -211,6 +219,7 @@ export interface FileRoutesById {
   '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
   '/systems': typeof SystemsRoute
+  '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
@@ -238,6 +247,7 @@ export interface FileRouteTypes {
     | '/podcast'
     | '/search'
     | '/systems'
+    | '/training'
     | '/updates'
     | '/api/commits.json'
     | '/api/updates.json'
@@ -263,6 +273,7 @@ export interface FileRouteTypes {
     | '/podcast'
     | '/search'
     | '/systems'
+    | '/training'
     | '/updates'
     | '/api/commits.json'
     | '/api/updates.json'
@@ -288,6 +299,7 @@ export interface FileRouteTypes {
     | '/podcast'
     | '/search'
     | '/systems'
+    | '/training'
     | '/updates'
     | '/api/commits.json'
     | '/api/updates.json'
@@ -314,6 +326,7 @@ export interface RootRouteChildren {
   PodcastRoute: typeof PodcastRoute
   SearchRoute: typeof SearchRoute
   SystemsRoute: typeof SystemsRoute
+  TrainingRoute: typeof TrainingRoute
   UpdatesRoute: typeof UpdatesRoute
   ApiCommitsDotjsonRoute: typeof ApiCommitsDotjsonRoute
   ApiUpdatesDotjsonRoute: typeof ApiUpdatesDotjsonRoute
@@ -399,6 +412,13 @@ declare module '@tanstack/react-router' {
       path: '/systems'
       fullPath: '/systems'
       preLoaderRoute: typeof SystemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/training': {
+      id: '/training'
+      path: '/training'
+      fullPath: '/training'
+      preLoaderRoute: typeof TrainingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/updates': {
@@ -506,6 +526,7 @@ const rootRouteChildren: RootRouteChildren = {
   PodcastRoute: PodcastRoute,
   SearchRoute: SearchRoute,
   SystemsRoute: SystemsRoute,
+  TrainingRoute: TrainingRoute,
   UpdatesRoute: UpdatesRoute,
   ApiCommitsDotjsonRoute: ApiCommitsDotjsonRoute,
   ApiUpdatesDotjsonRoute: ApiUpdatesDotjsonRoute,

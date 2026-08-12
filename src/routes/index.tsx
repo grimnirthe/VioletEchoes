@@ -314,7 +314,13 @@ function HomePage() {
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
               These tenets are the roots from which Violet Echoes grows. They guide our world, our
-              stories, and the way we choose to build — together.
+              stories, and the way we choose to build — together.{" "}
+              <Link
+                to="/training"
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Resident Training →
+              </Link>
             </p>
             <p className="mt-4 font-display text-xl italic text-[var(--color-primary-soft)]">
               &ldquo;{rememberLine.text}&rdquo;
