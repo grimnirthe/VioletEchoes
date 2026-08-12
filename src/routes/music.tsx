@@ -22,6 +22,7 @@ import {
 } from "@/data/music";
 
 import { entries, rememberLine } from "@/data/world";
+import { getVideoOverview } from "@/data/podcast";
 
 export const Route = createFileRoute("/music")({
   component: MusicPage,
@@ -49,6 +50,7 @@ const filters = [
 function MusicPage() {
   const host = getMemberBySlug(musicHub.hostSlug);
   const featured = featuredEchoTracks();
+  const dualLayer = getVideoOverview("v007-dual-layer-city");
   const roomTracks = musicHub.roomTracks;
   const playableRoom = roomTracks.filter((t) => t.src || t.externalUrl);
   const [filter, setFilter] = useState<(typeof filters)[number]["id"]>("all");
@@ -197,6 +199,12 @@ function MusicPage() {
               >
                 Cultural deep dive
               </Link>
+              <a
+                href="#dual-layer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+              >
+                Dual-Layer video
+              </a>
             </div>
           </div>
 
@@ -317,6 +325,45 @@ function MusicPage() {
             </div>
           </div>
         </header>
+
+        {dualLayer?.status === "live" ? (
+          <section
+            id="dual-layer"
+            className="mt-10 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+          >
+            <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Echoes cultural deep dive · {dualLayer.durationHint} · Gemini Notebook
+              </p>
+              <h2 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                {dualLayer.title}
+              </h2>
+              <p className="max-w-3xl text-sm text-[var(--color-muted)]">{dualLayer.summary}</p>
+            </div>
+            <div className="bg-black">
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                poster={dualLayer.posterSrc}
+                className="aspect-video w-full"
+                src={dualLayer.videoSrc}
+              >
+                Your browser does not support video.
+              </video>
+            </div>
+            <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+              <p className="text-xs text-[var(--color-subtle)]">{dualLayer.by}</p>
+              <Link
+                to="/podcast"
+                hash="v007-dual-layer-city"
+                className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+              >
+                Full broadcast library →
+              </Link>
+            </div>
+          </section>
+        ) : null}
 
         <section
           id={musicMemoryForm.id}

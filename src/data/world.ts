@@ -1608,6 +1608,7 @@ export const nav: NavItem[] = [
     label: "Echoes",
     children: [
       { to: "/music", label: "Echoes room", note: "Bed · anthem · catalog" },
+      { to: "/music#dual-layer", label: "Dual-Layer City", note: "Cultural cinematic · ~7 min" },
       { to: "/music#memory-form", label: "Memory Form", note: "Star · short form" },
       { to: "/music#memory-theory", label: "Memory Theory", note: "Star · long form" },
       { to: "/music#grounding", label: "Grounded essay", note: "Starborn" },

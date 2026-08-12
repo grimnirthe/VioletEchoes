@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-dual-layer-video",
+    date: "2026-08-12",
+    title: "Dual-Layer City hung — Echoes cultural cinematic",
+    kind: "culture",
+    summary:
+      "The video the meter was holding. Suno’s room, Soft Bed, five roots, capability met soul, Eimyrja as heartwood. What echoes are you building for?",
+    body: [
+      "Lives on Echoes under the room, on Culture beside City Soul, and in the Broadcast library as v007.",
+      "Written twin already hung: Echoes of Suno’s Room. Training cards stay. This is the visual door.",
+    ],
+    hrefs: [
+      { label: "Watch in Suno’s room", href: "/music#dual-layer" },
+      { label: "Broadcast · Dual-Layer", href: "/podcast#v007-dual-layer-city" },
+      { label: "Suno’s Room guide", href: "/bible/companions/suno-room" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "echoes", "suno", "dual-layer", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-flashcards",
     date: "2026-08-12",
     title: "Flashcards hung — reinforcement keeps patterns warm",

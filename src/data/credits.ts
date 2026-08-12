@@ -281,6 +281,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/echoes-of-sunos-room.md + .pdf · Echoes #suno-room + Culture",
       },
       {
+        label: "Dual-Layer City — Echoes cultural cinematic",
+        url: "/podcast#v007-dual-layer-city",
+        note: "Gemini Notebook video: Suno’s room, Soft Bed, five tenets, capability met soul, Eimyrja recommends and constrains. What echoes are you building for?",
+        verify: "On-site · /video/007-dual-layer-city.mp4 · Echoes #dual-layer + Culture + Broadcast",
+      },
+      {
         label: "Systems & Governance — Architecture of Coherence",
         url: "/bible/companions/systems-governance",
         note: "Gemini Notebook: Eimyrja recommends and constrains, Edge first, escalation expensive, Memory through use, tenets as systemic constraints.",

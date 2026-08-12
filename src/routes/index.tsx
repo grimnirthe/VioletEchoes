@@ -236,6 +236,14 @@ function HomePage() {
                       <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
                     <Link
+                      to="/music"
+                      hash="dual-layer"
+                      className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                    >
+                      Dual-Layer City · Echoes · ~7 min
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link
                       to="/podcast"
                       hash="v002-living-nexus"
                       className="inline-flex items-center gap-1 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"

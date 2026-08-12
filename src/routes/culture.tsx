@@ -174,6 +174,7 @@ function CulturePage() {
   const stories = cultureTales.filter((t) => t.kind === "story");
   const urban = cultureTales.filter((t) => t.kind === "urban-myth");
   const citySoul = getVideoOverview("v005-city-soul");
+  const dualLayer = getVideoOverview("v007-dual-layer-city");
 
   return (
     <SiteShell>
@@ -434,6 +435,13 @@ function CulturePage() {
               >
                 Resident Training →
               </Link>
+              {" · "}
+              <a
+                href="#dual-layer"
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Dual-Layer video →
+              </a>
             </p>
 
             <div className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
@@ -484,6 +492,47 @@ function CulturePage() {
                     className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
                   >
                     Full broadcast library →
+                  </Link>
+                </div>
+              </div>
+            ) : null}
+
+            {dualLayer?.status === "live" ? (
+              <div
+                id="dual-layer"
+                className="mt-6 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+              >
+                <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                  <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                    Echoes cultural deep dive · {dualLayer.durationHint} · Gemini Notebook
+                  </p>
+                  <h3 className="font-display text-xl text-[var(--color-fg)]">
+                    {dualLayer.title}
+                  </h3>
+                  <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                    {dualLayer.summary}
+                  </p>
+                </div>
+                <div className="bg-black">
+                  <video
+                    controls
+                    preload="metadata"
+                    playsInline
+                    poster={dualLayer.posterSrc}
+                    className="aspect-video w-full"
+                    src={dualLayer.videoSrc}
+                  >
+                    Your browser does not support video.
+                  </video>
+                </div>
+                <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+                  <p className="text-xs text-[var(--color-subtle)]">{dualLayer.by}</p>
+                  <Link
+                    to="/music"
+                    hash="dual-layer"
+                    className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+                  >
+                    Watch in Suno’s room →
                   </Link>
                 </div>
               </div>
