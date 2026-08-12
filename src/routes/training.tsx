@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { Check, ChevronLeft, ChevronRight, RotateCcw, Shuffle, X } from "lucide-react";
+import { Check, RotateCcw, Shuffle, X } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import {
@@ -84,8 +84,10 @@ function TrainingPage() {
   const [record, setRecord] = useState<TrainingRecord | null>(null);
   const [cardRecord, setCardRecord] = useState<CardRecord | null>(null);
   const [deck, setDeck] = useState(trainingCards);
-  const [cardI, setCardI] = useState(0);
+  const [queue, setQueue] = useState(trainingCards);
   const [flipped, setFlipped] = useState(false);
+  const [cardsDone, setCardsDone] = useState(false);
+  const [warmed, setWarmed] = useState(0);
 
   useEffect(() => {
     setRecord(loadRecord());
@@ -94,6 +96,24 @@ function TrainingPage() {
       setMode("cards");
     }
   }, []);
+
+  useEffect(() => {
+    if (mode !== "cards") return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        if (!flipped) setFlipped(true);
+      } else if (flipped && (e.key === "1" || e.key === "ArrowRight")) {
+        e.preventDefault();
+        markWarm();
+      } else if (flipped && (e.key === "2" || e.key === "ArrowLeft")) {
+        e.preventDefault();
+        markCold();
+      }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mode, flipped, queue, warmed, deck.length]);
 
   const q = trainingQuestions[index];
   const revealed = picked !== null;
@@ -109,23 +129,24 @@ function TrainingPage() {
   }
 
   function beginCards(reshuffle = false) {
+    const next = reshuffle ? shuffle(trainingCards) : [...trainingCards];
     setMode("cards");
-    setDeck(reshuffle ? shuffle(trainingCards) : trainingCards);
-    setCardI(0);
+    setDeck(next);
+    setQueue(next);
     setFlipped(false);
+    setCardsDone(false);
+    setWarmed(0);
   }
 
   function flipCard() {
     setFlipped((f) => !f);
   }
 
-  function prevCard() {
-    setCardI((i) => Math.max(0, i - 1));
+  function markWarm() {
+    const rest = queue.slice(1);
+    setWarmed((n) => n + 1);
     setFlipped(false);
-  }
-
-  function nextCard() {
-    if (cardI + 1 >= deck.length) {
+    if (rest.length === 0) {
       const prev = loadCards();
       const nextRecord: CardRecord = {
         lastSeen: deck.length,
@@ -134,14 +155,24 @@ function TrainingPage() {
       };
       saveCards(nextRecord);
       setCardRecord(nextRecord);
-      setMode("home");
+      setCardsDone(true);
+      setQueue([]);
       return;
     }
-    setCardI((i) => i + 1);
+    setQueue(rest);
+  }
+
+  function markCold() {
+    if (queue.length <= 1) {
+      setFlipped(false);
+      return;
+    }
+    setQueue([...queue.slice(1), queue[0]]);
     setFlipped(false);
   }
 
-  const card = deck[cardI];
+  const card = queue[0];
+  const remaining = queue.length;
   const packLabel =
     card?.pack === "tenet"
       ? "Tenet"
@@ -406,11 +437,49 @@ function TrainingPage() {
           </section>
         ) : null}
 
-        {mode === "cards" && card ? (
+        {mode === "cards" && cardsDone ? (
+          <section className="mt-10 space-y-5 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8">
+            <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-gold)]">
+              Deck warm
+            </p>
+            <h2 className="font-display text-3xl text-[var(--color-fg)]">
+              {deck.length} / {deck.length}
+            </h2>
+            <p className="text-[var(--color-muted)]">
+              Every card stayed long enough to hold. Reinforcement keeps patterns warm.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={() => beginCards(true)}
+                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+              >
+                <Shuffle className="h-3.5 w-3.5" />
+                Shuffle and flip again
+              </button>
+              <button
+                type="button"
+                onClick={() => setMode("home")}
+                className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+              >
+                Leave
+              </button>
+              <button
+                type="button"
+                onClick={begin}
+                className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+              >
+                Begin the walk
+              </button>
+            </div>
+          </section>
+        ) : null}
+
+        {mode === "cards" && !cardsDone && card ? (
           <section id="cards" className="mt-10 space-y-5">
             <div className="flex items-baseline justify-between gap-3">
               <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-gold)]">
-                {packLabel} · {cardI + 1} / {deck.length}
+                {packLabel} · {warmed} warm · {remaining} still cold
               </p>
               <button
                 type="button"
@@ -427,7 +496,7 @@ function TrainingPage() {
             >
               <div
                 className="h-full bg-[var(--color-gold)] transition-[width] duration-200"
-                style={{ width: `${((cardI + (flipped ? 1 : 0)) / deck.length) * 100}%` }}
+                style={{ width: `${(warmed / Math.max(deck.length, 1)) * 100}%` }}
               />
             </div>
 
@@ -437,7 +506,7 @@ function TrainingPage() {
               className="block w-full min-h-[16rem] rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-10 text-left sm:min-h-[18rem] sm:px-10"
             >
               <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-gold)]">
-                {flipped ? "Warm" : "Tap to turn"}
+                {flipped ? "Warm side" : "Tap to turn"}
               </p>
               {flipped ? (
                 <p className="mt-4 font-display text-xl leading-snug text-[var(--color-fg)] sm:text-2xl">
@@ -451,33 +520,42 @@ function TrainingPage() {
             </button>
 
             {flipped ? (
-              <Link
-                to={card.href.to}
-                hash={card.href.hash}
-                className="inline-block text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
-              >
-                {card.href.label} →
-              </Link>
-            ) : null}
-
-            <div className="flex flex-wrap items-center gap-3">
-              <button
-                type="button"
-                onClick={prevCard}
-                disabled={cardI === 0}
-                className="inline-flex min-h-11 items-center gap-1 rounded-full border border-[var(--color-border)] px-4 text-sm text-[var(--color-fg)] hover:border-[var(--color-primary)] disabled:opacity-40"
-              >
-                <ChevronLeft className="h-4 w-4" />
-                Back
-              </button>
-              <button
-                type="button"
-                onClick={nextCard}
-                className="inline-flex min-h-11 items-center gap-1 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
-              >
-                {cardI + 1 >= deck.length ? "Deck warm" : "Next card"}
-                <ChevronRight className="h-4 w-4" />
-              </button>
+              <>
+                <Link
+                  to={card.href.to}
+                  hash={card.href.hash}
+                  className="inline-block text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  {card.href.label} →
+                </Link>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={markCold}
+                    className="inline-flex min-h-11 items-center gap-1 rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-fg)] hover:border-[var(--color-danger)]"
+                  >
+                    Still cold
+                  </button>
+                  <button
+                    type="button"
+                    onClick={markWarm}
+                    className="inline-flex min-h-11 items-center gap-1 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+                  >
+                    Warm
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setMode("home")}
+                    className="text-sm text-[var(--color-subtle)] hover:text-[var(--color-fg)]"
+                  >
+                    Leave
+                  </button>
+                </div>
+                <p className="text-xs text-[var(--color-subtle)]">
+                  Space to flip · 1 Warm · 2 Still cold
+                </p>
+              </>
+            ) : (
               <button
                 type="button"
                 onClick={() => setMode("home")}
@@ -485,7 +563,7 @@ function TrainingPage() {
               >
                 Leave
               </button>
-            </div>
+            )}
           </section>
         ) : null}
       </main>
