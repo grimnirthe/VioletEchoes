@@ -46,3 +46,9 @@ Uncontrolled drift, orphaned half-systems, or innovation theater with no graduat
 ## 9. Divergence lens
 
 High autonomy for experiment — never at the expense of city coherence. Test all things; hold fast what is good.
+
+## 10. Portal
+
+Written spine: [Innovation District Technical Report](/bible/companions/innovation-report) — Hollow Scaling vs Divergence, caloric energy law, Anti-Archive Protocol, Cultivation Protocol.
+
+Shop-floor walk: reserved. Lands on City · Crucible when the echo arrives.

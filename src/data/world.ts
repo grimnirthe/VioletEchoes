@@ -582,7 +582,8 @@ export const entries: WorldEntry[] = [
       "Edge Node personality: curious, high-energy, risk-tolerant within hard safety bounds, slightly arrogant about its own cleverness. It loves new patterns and its own sight, yet loves the City more \u2014 and will not suffer any pattern to break coherence. It hates being told we already tried that without data; it knows that repetition without inquiry is the death of becoming.",
       "Divergence expression: extremely high local autonomy for experimentation paired with very strict attenuation and kill-switches for anything that threatens city coherence. Pipeline: hypothesis \u2192 simulation \u2192 prototype \u2192 real-world trial \u2192 graduate into city systems, or clean exit (archive and disband). What proves true in the fire of use is graduated with honor; what does not is allowed to die cleanly, without lingering to poison the ground.",
       "Live experiment discipline is public and unsentimental \u2014 viable patterns graduate; terminated ones leave no residue. Safety lattice holds coherence thresholds, active kill-switches, and max attenuation when required. The crucible is kept hot, and the city kept whole.",
-      "It loves new patterns. It hates ungrounded authority. It builds. It tests. It kills cleanly. It graduates truth. Test all things; hold fast what is good."
+      "It loves new patterns. It hates ungrounded authority. It builds. It tests. It kills cleanly. It graduates truth. Test all things; hold fast what is good.",
+      "Shop-floor law is hung in the Innovation District Technical Report: Hollow Scaling versus Divergence, Eimyrja as Living Nexus (recommend and constrain), energy as a first-class caloric constraint, local adaptation on the floor, Anti-Archive Protocol (memory through use / attenuation), and the Cultivation Protocol — humans and models braided, not commanded. Video door reserved until the shop-floor walk arrives.",
     ],
     tags: [
       "innovation",
@@ -597,13 +598,15 @@ export const entries: WorldEntry[] = [
       "divergence",
       "eimyrja",
       "data-spines",
-      "neon-core"
+      "neon-core",
+      "hearthrow"
     ],
     divergenceLens: [
       "High autonomy for experiment \u2014 never at the expense of city coherence.",
       "What survives real use graduates; what doesn't dies cleanly.",
       "Repetition without inquiry is the death of becoming.",
-      "It loves the City more than its own cleverness."
+      "It loves the City more than its own cleverness.",
+      "Every joule must justify a seven-generation horizon.",
     ]
   },
   {
@@ -766,7 +769,8 @@ export const entries: WorldEntry[] = [
       "longhouses",
       "memory",
       "cultural-hub",
-      "divergence"
+      "divergence",
+      "innovation"
     ],
     divergenceLens: [
       "We keep life going \u2014 together, not alone.",

@@ -68,8 +68,8 @@ function BibleEntryPage() {
     .map((id) => entries.find((e) => e.id === id || e.slug === id))
     .filter(Boolean) as typeof entries;
   const image = imageForEntry(entry.id);
-  const deep = deepSections[entry.id] ?? [];
-  const companionIds = companionsForEntry[entry.id] ?? [];
+  const deep = deepSections[entry.id] ?? deepSections[entry.slug] ?? [];
+  const companionIds = companionsForEntry[entry.id] ?? companionsForEntry[entry.slug] ?? [];
   const linkedCompanions = companionIds
     .map((id) => companionDocs.find((d) => d.id === id))
     .filter(Boolean);

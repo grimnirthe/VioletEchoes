@@ -79,7 +79,7 @@ export const mapPins: MapPin[] = [
     x: 64,
     y: 28,
     slug: "innovation-district",
-    blurb: "The Sandbox — research, simulation, hard kill-switches.",
+    blurb: "The Crucible — coherence over peak capability. Kill-switches. Memory through use.",
     layer: "district",
   },
   {

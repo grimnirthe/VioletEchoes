@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-innovation-portal",
+    date: "2026-08-12",
+    title: "Innovation portal — Technical Report hung, shop-floor walk reserved",
+    kind: "city",
+    summary:
+      "Second district zoom. The grit door opposite Hearthrow. Innovation District Technical Report: Hollow Scaling vs Divergence, caloric energy law, Anti-Archive Protocol, Cultivation Protocol. Video door reserved.",
+    body: [
+      "Hearthrow is why the city stays warm. Innovation is how it refuses to scale itself hollow. Same Dual-Layer. Opposite boot.",
+      "Report hangs as a companion on Sector IV. Shop-floor cinematic will land on City · Crucible when the echo arrives.",
+    ],
+    hrefs: [
+      { label: "Innovation District", href: "/bible/innovation-district" },
+      { label: "Technical Report", href: "/bible/companions/innovation-report" },
+      { label: "City · Crucible", href: "/city#innovation" },
+      { label: "Hearthrow · Warmth", href: "/city#hearthrow" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["innovation", "district-portal", "divergence", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-hearthrow-portal",
     date: "2026-08-12",
     title: "Hearthrow portal — Dual-Layer walk + Resident’s Guide",

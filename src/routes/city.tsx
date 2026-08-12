@@ -346,18 +346,58 @@ function CityPage() {
         </section>
 
 
-        <section className="mt-14">
+        <section id="innovation" className="mt-14 scroll-mt-24">
           <div className="mb-5 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
-              #VioletEchoes · Innovation District
+              #VioletEchoes · Innovation District · second district portal
             </p>
             <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
               Sector IV · The Crucible
             </h2>
             <p className="mt-2 text-sm text-[var(--color-muted)]">
-              The Sandbox. High local autonomy for experiment; strict kill-switches for city
+              The grit door. High local autonomy for experiment; strict kill-switches for city
               coherence. What survives real use graduates. What doesn't is allowed to die cleanly.
             </p>
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "innovation-report" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Innovation Technical Report →
+              </Link>
+              <Link
+                to="/bible/$slug"
+                params={{ slug: "innovation-district" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Bible entry
+              </Link>
+              <Link
+                to="/city"
+                hash="hearthrow"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Hearthrow · Warmth
+              </Link>
+            </div>
+          </div>
+          <div
+            id="innovation-portal"
+            className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-dashed border-[var(--color-border)] bg-[var(--color-surface)]"
+          >
+            <div className="space-y-2 px-5 py-4 sm:px-6">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Shop-floor walk · arriving
+              </p>
+              <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                Innovation portal video
+              </h3>
+              <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                Written spine is hung. The cinematic is still braiding — same package as Hearthrow,
+                grit side. Door reserved. Will land here when the echo arrives.
+              </p>
+            </div>
           </div>
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame

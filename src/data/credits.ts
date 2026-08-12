@@ -299,6 +299,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/hearthrow-residents-guide.md + .pdf · Hearthrow bible + City #hearthrow",
       },
       {
+        label: "Innovation District Technical Report — Functional Systems and the Divergence Framework",
+        url: "/bible/companions/innovation-report",
+        note: "Gemini Notebook district portal: Hollow Scaling vs Divergence, Eimyrja as Living Nexus, energy as caloric constraint, shop-floor edge, Anti-Archive, Cultivation Protocol. Grit counterpart to Hearthrow.",
+        verify: "On-site companion · /docs/innovation-district-report.md + .pdf · Innovation bible + City #innovation",
+      },
+      {
         label: "Dual-Layer — Hearthrow portal video (~9 min)",
         url: "/podcast#v008-hearthrow-dual-layer",
         note: "Gemini Notebook explainer: Dual-Layer city, Divergence, tenets, Eimyrja, then Hearthrow street scale — porch lights, Suno’s room, Soft Bed. What will you choose to carry?",

@@ -104,6 +104,13 @@ function SystemsPage() {
                 >
                   Protonic core
                 </Link>
+                <Link
+                  to="/bible/companions/$doc"
+                  params={{ doc: "innovation-report" }}
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Innovation shop floor
+                </Link>
               </div>
             </div>
             <Link

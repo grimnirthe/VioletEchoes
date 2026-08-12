@@ -587,6 +587,19 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Uncontrolled drift, “just one more experiment” syndrome, or over-isolation that starves the rest of the city of useful advances.",
       ],
     },
+    {
+      title: "Shop-floor law (Technical Report)",
+      body: [
+        "The hung report is how Sector IV applies Divergence on the floor: Hollow Scaling versus coherence, Eimyrja as Living Nexus (recommend and constrain — escalation is expensive), energy as a caloric constraint, local adaptation first, Anti-Archive Protocol (memory through use / attenuation), Cultivation Protocol (humans and models braided).",
+        "Shop-floor cinematic reserved. Written spine is live.",
+      ],
+      bullets: [
+        "Every joule must justify a seven-generation horizon",
+        "Problems are killed where they live",
+        "Unused capability is allowed to attenuate",
+        "Beauty is treated as a technical proxy for low-friction systems",
+      ],
+    },
   ],
   "public-services-grid": [
     {
@@ -679,15 +692,15 @@ export const deepSections: Record<string, DeepSection[]> = {
 /** Companion doc ids relevant to an entry */
 
 export const companionsForEntry: Record<string, string[]> = {
-  divergence: ["core-framework", "systems-apps", "wb-v17"],
-  eimyrja: ["systems-governance", "eimyrja-protonic", "core-framework", "systems-apps"],
-  "edge-nodes": ["systems-governance", "systems-apps", "core-framework"],
+  divergence: ["core-framework", "systems-apps", "wb-v17", "innovation-report"],
+  eimyrja: ["systems-governance", "eimyrja-protonic", "core-framework", "innovation-report"],
+  "edge-nodes": ["systems-governance", "systems-apps", "innovation-report"],
   "data-spines": ["systems-governance", "systems-apps", "core-framework"],
   "memory-archives": ["core-framework", "systems-apps"],
   governance: ["systems-governance", "core-framework", "systems-apps"],
   "external-relations": ["core-framework", "systems-apps"],
   longhouses: ["family-homes", "hearthrow-guide", "systems-apps"],
-  "city-overview": ["wb-v17", "systems-apps", "hearthrow-guide"],
+  "city-overview": ["wb-v17", "systems-apps", "hearthrow-guide", "innovation-report"],
   "living-ships": ["systems-apps"],
   aethelgard: ["systems-apps"],
   "oni-shadow-rider": ["systems-apps", "mobile-interface"],
@@ -701,4 +714,6 @@ export const companionsForEntry: Record<string, string[]> = {
   "codex-aurora": ["citizens-guide", "core-framework"],
   "violet-longhouse-nexus": ["family-homes", "characters-factions", "hearthrow-guide"],
   hearthrow: ["hearthrow-guide", "suno-room", "citizens-guide", "living-practices"],
+  innovation: ["innovation-report", "systems-governance", "core-framework", "systems-apps"],
+  "innovation-district": ["innovation-report", "systems-governance", "core-framework", "systems-apps"],
 };

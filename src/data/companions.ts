@@ -60,6 +60,17 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "District portal · 7 sections · .md + PDF",
   },
   {
+    id: "innovation-report",
+    title: "Innovation District Technical Report",
+    blurb:
+      "Second district portal — the grit door. Hollow Scaling vs Divergence, Eimyrja as Living Nexus, energy as caloric constraint, shop-floor edge intelligence, Anti-Archive Protocol, Cultivation Protocol. How Sector IV refuses to scale itself hollow.",
+    href: "/docs/innovation-district-report.md",
+    pdfHref: "/docs/innovation-district-report.pdf",
+    to: "/bible/companions/innovation-report",
+    kind: "technical",
+    pagesHint: "District portal · 7 sections · .md + PDF",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:
