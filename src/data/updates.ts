@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-podcast-004-live",
+    date: "2026-08-12",
+    title: "Broadcast #004 live — Truth evolves",
+    kind: "culture",
+    summary:
+      "~17 min on tenet three: truth as a muscle, not an archive. Unity without truth is control; freedom without responsibility is drift. Live on /podcast.",
+    body: [
+      "Gemini dual voices. Export title: The Cyberpunk City of Evolving Truth. Roots spoken set #001–#004 now complete; Soul of the City + Home Door videos still processing.",
+      "Closes on tenet four — beauty as a signal of coherence — as a door, not a new episode.",
+    ],
+    hrefs: [
+      { label: "Play #004", href: "/podcast#004-truth-evolves" },
+      { label: "Tenets", href: "/bible/the-tenets" },
+      { label: "Foundations · slide 06", href: "/bible/foundations#slide-6" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["podcast", "004", "live", "truth", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-10-video-aethelgard",
     date: "2026-08-10",
     title: "Aethelgard Living Vessel video hung — ships door (~1.5 min)",
@@ -124,7 +143,7 @@ export const cityUpdates: CityUpdate[] = [
     summary:
       "~19 min on belonging before command, cultivation vs pure control, Eimyrja as heartwood, dual-layer soul. Live on /podcast.",
     body: [
-      "Gemini dual voices. #004 Truth evolves still awaiting audio. Roots braid continues.",
+      "Gemini dual voices. #004 Truth evolves now live. Roots braid continues.",
     ],
     hrefs: [
       { label: "Play #003", href: "/podcast#003-connection-over-control" },
