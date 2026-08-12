@@ -104,6 +104,14 @@ function BibleIndexPage() {
             </Link>
             <span className="text-[var(--color-subtle)]">·</span>
             <Link
+              to="/bible/foundations"
+              hash="timeline"
+              className="text-xs font-medium text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+            >
+              Timeline of the Divergence
+            </Link>
+            <span className="text-[var(--color-subtle)]">·</span>
+            <Link
               to="/training"
               className="text-xs font-medium text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
             >

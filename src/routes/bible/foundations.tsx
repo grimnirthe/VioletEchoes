@@ -7,6 +7,7 @@ import {
   foundationsDeckMeta as meta,
   foundationsSlides,
   nexusMindMap,
+  divergenceTimeline,
 } from "@/data/foundations-deck";
 
 export const Route = createFileRoute("/bible/foundations")({
@@ -58,6 +59,12 @@ function FoundationsDeckPage() {
               className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
             >
               Mind map
+            </a>
+            <a
+              href="#timeline"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+            >
+              Timeline
             </a>
             <a
               href={meta.pdfHref}
@@ -163,6 +170,62 @@ function FoundationsDeckPage() {
                 <a
                   href={door.href}
                   className="mt-4 inline-block text-xs text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Open on site →
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Timeline — historical weight of the Divergence */}
+        <section
+          id="timeline"
+          className="mt-10 scroll-mt-24 space-y-5 border-b border-[var(--color-border)] pb-12"
+        >
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+              Infographic · {divergenceTimeline.by}
+            </p>
+            <h2 className="mt-1 font-display text-3xl text-[var(--color-fg)]">
+              {divergenceTimeline.title}
+            </h2>
+            <p className="mt-1 text-sm text-[var(--color-primary-soft)]">
+              {divergenceTimeline.subtitle}
+            </p>
+            <p className="mt-3 max-w-2xl text-sm text-[var(--color-muted)]">
+              {divergenceTimeline.blurb}
+            </p>
+          </div>
+
+          <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
+            <MediaFrame
+              src={divergenceTimeline.src}
+              alt="Timeline of the Divergence — The Foundation of Violet Echoes"
+              aspect="sheet"
+              fit="contain"
+              expandable
+            />
+            <figcaption className="border-t border-[var(--color-border)] px-4 py-3 text-xs text-[var(--color-subtle)]">
+              Tap for full sheet · five echoes left to right. If on-art text is soft, use the
+              readable milestones below.
+            </figcaption>
+          </figure>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {divergenceTimeline.milestones.map((m, i) => (
+              <article
+                key={m.id}
+                className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-4"
+              >
+                <p className="text-[0.65rem] uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-1 font-display text-base text-[var(--color-fg)]">{m.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">{m.body}</p>
+                <a
+                  href={m.href}
+                  className="mt-3 inline-block text-xs text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
                 >
                   Open on site →
                 </a>

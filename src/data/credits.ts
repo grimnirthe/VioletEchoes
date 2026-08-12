@@ -263,6 +263,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site · /images/foundations-deck/doors-into-the-nexus.jpg · companion foundations page",
       },
       {
+        label: "Timeline of the Divergence — The Foundation of Violet Echoes",
+        url: "/bible/foundations#timeline",
+        note: "Gemini Notebook horizontal infographic: Choice, Living Nexus founding, Eimyrja integration, Aethelgard commissioning, Seventh Generation Commitment.",
+        verify: "On-site · /images/foundations-deck/timeline-of-the-divergence.jpg · Foundations #timeline + City #timeline",
+      },
+      {
         label: "Living Practices Guide — The Violet Echoes Way",
         url: "/bible/companions/living-practices",
         note: "Gemini Notebook archivist handout: five rites as living practice, Divergence daily ops, recommendation culture, rituals, seven-generation memory.",

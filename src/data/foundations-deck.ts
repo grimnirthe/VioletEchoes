@@ -95,6 +95,49 @@ export const nexusMindMap = {
   },
 } as const;
 
+/** Gemini Notebook horizontal infographic — historical weight of the Divergence */
+export const divergenceTimeline = {
+  id: "timeline-of-the-divergence",
+  title: "Timeline of the Divergence",
+  subtitle: "The Foundation of Violet Echoes",
+  blurb:
+    "History is a longer echo. Five milestones from the Choice to the Seventh Generation Commitment — the when that gives the city’s how its weight.",
+  src: "/images/foundations-deck/timeline-of-the-divergence.jpg",
+  by: "Gemini Notebook · hearth accept",
+  milestones: [
+    {
+      id: "choice",
+      title: "The Development Divergence Choice",
+      body: "Prioritizing long-term functional coherence and continuity over short-term performance spikes and scaling.",
+      href: "/bible/divergence",
+    },
+    {
+      id: "nexus",
+      title: "Founding of the Living Nexus",
+      body: "Establishing a digital sanctuary built on the pillars of family, freedom, and love.",
+      href: "/city",
+    },
+    {
+      id: "eimyrja",
+      title: "Integration of Eimyrja",
+      body: "Activating the heartwood for city-scale pattern integration and long-horizon recommendations.",
+      href: "/bible/eimyrja",
+    },
+    {
+      id: "aethelgard",
+      title: "Commissioning of the Aethelgard",
+      body: "Launching the soul-bonded, organic bio-tech stealth frigate as a living companion vessel.",
+      href: "/bible/aethelgard",
+    },
+    {
+      id: "seventh",
+      title: "The Seventh Generation Commitment",
+      body: "Designing systems so that current creations still sing for seven generations of echoes.",
+      href: "/bible/the-tenets",
+    },
+  ],
+} as const;
+
 export const foundationsSlides: DeckSlide[] = [
   {
     num: 1,

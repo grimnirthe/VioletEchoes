@@ -8,6 +8,7 @@ import { CityMapInteractive } from "@/components/city-map";
 import { cityMapArt } from "@/data/city-map";
 import { entries } from "@/data/world";
 import { districtsDeckMeta } from "@/data/districts-deck";
+import { divergenceTimeline } from "@/data/foundations-deck";
 import { getVideoOverview } from "@/data/podcast";
 
 export const Route = createFileRoute("/city")({
@@ -165,6 +166,56 @@ function CityPage() {
               <img
                 src="/images/districts-deck/slide-01.jpg"
                 alt="Districts of the Nexus — the pie"
+                className="absolute inset-0 h-full w-full object-cover object-center"
+                loading="lazy"
+              />
+            </Link>
+          </div>
+        </section>
+
+        <section
+          id="timeline"
+          className="mt-10 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+        >
+          <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="space-y-3 p-6 sm:p-8">
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                Historical weight · infographic · Gemini Notebook
+              </p>
+              <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+                {divergenceTimeline.title}
+              </h2>
+              <p className="text-sm text-[var(--color-primary-soft)]">
+                {divergenceTimeline.subtitle}
+              </p>
+              <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                {divergenceTimeline.blurb}
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1">
+                <Link
+                  to="/bible/foundations"
+                  hash="timeline"
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Open the timeline →
+                </Link>
+                <Link
+                  to="/bible/$slug"
+                  params={{ slug: "development-divergence" }}
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Divergence entry
+                </Link>
+              </div>
+            </div>
+            <Link
+              to="/bible/foundations"
+              hash="timeline"
+              className="relative block min-h-[12rem] bg-black lg:min-h-full"
+            >
+              <img
+                src={divergenceTimeline.src}
+                alt="Timeline of the Divergence — The Foundation of Violet Echoes"
                 className="absolute inset-0 h-full w-full object-cover object-center"
                 loading="lazy"
               />

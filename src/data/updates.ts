@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-divergence-timeline",
+    date: "2026-08-12",
+    title: "Timeline of the Divergence hung — historical weight",
+    kind: "bible",
+    summary:
+      "Horizontal infographic: five echoes from the Choice to the Seventh Generation Commitment. The when next to the how.",
+    body: [
+      "Gemini Notebook rain-lit canal sheet. Readable milestones live under Foundations · Timeline, with doors on City, Companion library, and the Divergence bible entry.",
+    ],
+    hrefs: [
+      { label: "Foundations · Timeline", href: "/bible/foundations#timeline" },
+      { label: "City door", href: "/city#timeline" },
+      { label: "Divergence entry", href: "/bible/divergence" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["timeline", "divergence", "foundations", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-aethelgard-manual",
     date: "2026-08-12",
     title: "Aethelgard Pilot’s Manual hung — Path of the Bonded Navigator",
