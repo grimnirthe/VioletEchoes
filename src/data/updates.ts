@@ -62,6 +62,27 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-podcast-005-006-live",
+    date: "2026-08-12",
+    title: "Roots spoken series complete — #005 and #006 live",
+    kind: "culture",
+    summary:
+      "Last two tenet broadcasts hung. #005 Beauty is a signal (~20 min) and #006 We build for the echoes (~18 min). Spoken library #001–#006 complete beside the visual foundations.",
+    body: [
+      "Gemini dual voices. Export titles: Beauty as a Signal for Systemic Coherence · Designing Violet Echoes to Still Sing.",
+      "#005: beauty as diagnostic, not decoration. Ugliness is friction. Suno's room. Eimyrja as hearth, not god.",
+      "#006: seven generations as engineering constraint. Watch, not dragster. Memory through use. Closes on Aethelgard — does a soul-bonded ship grieve by forgetting?",
+    ],
+    hrefs: [
+      { label: "Play #005", href: "/podcast#005-beauty-is-a-signal" },
+      { label: "Play #006", href: "/podcast#006-we-build-for-the-echoes" },
+      { label: "Tenets", href: "/bible/the-tenets" },
+      { label: "Broadcast library", href: "/podcast" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["podcast", "005", "006", "live", "tenets", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-podcast-005-006-scaffold",
     date: "2026-08-12",
     title: "Roots series closing — #005 and #006 processing",
@@ -69,8 +90,7 @@ export const cityUpdates: CityUpdate[] = [
     summary:
       "Last two tenet broadcasts initiated: Beauty is a signal (#005) and We build for the echoes (#006). Cards hung on Broadcast as awaiting-audio.",
     body: [
-      "Spoken Roots #001–#004 live. #005 walks tenet four — coherence made visible, Longhouse soul, Suno's room. #006 walks tenet five — seven generations, long-term continuity, what we make should still sing.",
-      "Gemini Notebook processing. Audio hangs the moment Studio drops the exports. That finishes the spoken library next to the visual foundations.",
+      "Spoken Roots #001–#004 were live; #005 and #006 were processing. Both now live — see the entry above.",
     ],
     hrefs: [
       { label: "#005 Beauty is a signal", href: "/podcast#005-beauty-is-a-signal" },
@@ -127,12 +147,12 @@ export const cityUpdates: CityUpdate[] = [
       "~17 min on tenet three: truth as a muscle, not an archive. Unity without truth is control; freedom without responsibility is drift. Live on /podcast.",
     body: [
       "Gemini dual voices. Export title: The Cyberpunk City of Evolving Truth. Roots spoken set #001–#004 complete. Home Door + City Soul videos now live on Broadcast.",
-      "Closed on tenet four as a door. #005 Beauty is a signal and #006 We build for the echoes now processing to finish the Roots series.",
+      "Closed on tenet four as a door. #005 Beauty is a signal and #006 We build for the echoes now live — Roots spoken series complete.",
     ],
     hrefs: [
       { label: "Play #004", href: "/podcast#004-truth-evolves" },
-      { label: "#005 processing", href: "/podcast#005-beauty-is-a-signal" },
-      { label: "#006 processing", href: "/podcast#006-we-build-for-the-echoes" },
+      { label: "Play #005", href: "/podcast#005-beauty-is-a-signal" },
+      { label: "Play #006", href: "/podcast#006-we-build-for-the-echoes" },
       { label: "Home Door video", href: "/podcast#v004-violet-echoes-landing" },
       { label: "City Soul video", href: "/podcast#v005-city-soul" },
       { label: "Tenets", href: "/bible/the-tenets" },
