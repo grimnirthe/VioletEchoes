@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-thornwall-portal",
+    date: "2026-08-12",
+    title: "Thornwall portal reserved — Old Iron descending",
+    kind: "city",
+    summary:
+      "Fourth district door. Industrial anchor under the triad. Video and Weight of Old Iron report reserved. Local adaptation first. Memory through use.",
+    body: [
+      "Street, shop floor, and skyline already play. Thornwall is the weight that keeps them standing. Walk hangs when Gemini’s cinematic lands.",
+    ],
+    hrefs: [
+      { label: "City · Old Iron", href: "/city#thornwall-portal" },
+      { label: "Bible entry", href: "/bible/thornwall" },
+      { label: "Neon Core skyline", href: "/city#neon-core-portal" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["thornwall", "district-portal", "old-iron", "reserved", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-neon-core-skyline",
     date: "2026-08-12",
     title: "Neon Core skyline walk hung — triad complete",

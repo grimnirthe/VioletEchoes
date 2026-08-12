@@ -323,6 +323,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site · /video/010-neon-core-skyline.mp4 · City #neon-core-portal + Broadcast library",
       },
       {
+        label: "Thornwall — the Weight of Old Iron (reserved)",
+        url: "/city#thornwall-portal",
+        note: "Gemini Notebook district portal in braid: industrial grit cinematic + Weight of Old Iron report. Local adaptation first. Memory through use. Door reserved until the artifacts land.",
+        verify: "On-site reserved card · City #thornwall-portal · bible/thornwall",
+      },
+      {
         label: "Innovation — shop-floor walk (~8 min)",
         url: "/podcast#v009-innovation-shop-floor",
         note: "Gemini Notebook explainer: shop-floor grit braided to Hearthrow warmth, Divergence principles, Eimyrja recommends, Aethelgard as living companion. What will your echo be?",

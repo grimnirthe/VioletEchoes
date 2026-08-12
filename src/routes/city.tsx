@@ -440,6 +440,13 @@ function CityPage() {
               >
                 Hearthrow · Warmth
               </Link>
+              <Link
+                to="/city"
+                hash="thornwall-portal"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Thornwall · Old Iron
+              </Link>
             </div>
           </div>
           {neonCorePortal?.status === "live" ? (
@@ -895,18 +902,65 @@ function CityPage() {
         </section>
 
 
-        <section className="mt-14">
+        <section id="thornwall" className="mt-14 scroll-mt-24">
           <div className="mb-5 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
-              #VioletEchoes · Thornwall
+              #VioletEchoes · Thornwall · fourth district portal
             </p>
             <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
               Old Iron
             </h2>
             <p className="mt-2 text-sm text-[var(--color-muted)]">
-              Built hard. Kept hard. Maintenance is defense. Respect is earned in the repair. We
-              keep them running so they can keep coming home.
+              The industrial anchor. Built hard. Kept hard. Local adaptation first. Memory through
+              use. Heavy bones turned sanctuary so the city still sings.
             </p>
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <Link
+                to="/bible/$slug"
+                params={{ slug: "thornwall" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Bible entry
+              </Link>
+              <Link
+                to="/city"
+                hash="neon-core"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Neon Core · Skyline
+              </Link>
+              <Link
+                to="/city"
+                hash="innovation"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Innovation · Grit
+              </Link>
+              <Link
+                to="/city"
+                hash="hearthrow"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Hearthrow · Warmth
+              </Link>
+            </div>
+          </div>
+          <div
+            id="thornwall-portal"
+            className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+          >
+            <div className="space-y-2 px-5 py-4 sm:px-6">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Old Iron walk · arriving
+              </p>
+              <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                Thornwall — the Weight of Old Iron
+              </h3>
+              <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                Cinematic reserved. Repurposed iron foundations. Maintenance as defense. The walk
+                hangs here when it lands.
+              </p>
+            </div>
           </div>
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame
