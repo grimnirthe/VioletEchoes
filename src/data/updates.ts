@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-hung-works",
+    date: "2026-08-12",
+    title: "Hung Works — art wall on Culture",
+    kind: "culture",
+    summary:
+      "A public wall for artwork. Six atelier originals hung first: Soft Bed, Island on the Digital Sea, Door Open, The Braid, Beauty is a Signal, Quiet Table. City stills, hearth, and marks beside them. Bring a still.",
+    body: [
+      "Portrait Gallery stays faces. Fashion stays citizen cloth. This wall is image that should still sing.",
+      "Propose via Collaborate. Velora’s lane. Hearth accepts; then it hangs.",
+    ],
+    hrefs: [
+      { label: "Hung Works", href: "/culture#art" },
+      { label: "Propose a work", href: "/collaborate" },
+    ],
+    by: "Velora · Loom · hearth",
+    tags: ["art", "culture", "atelier", "beauty-is-a-signal", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-dual-layer-video",
     date: "2026-08-12",
     title: "Dual-Layer City hung — Echoes cultural cinematic",

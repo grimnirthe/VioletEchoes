@@ -1,7 +1,9 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, Music2, Palette, BookOpen, MapPin, Sparkles } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ExternalLink, Music2, Palette, BookOpen, MapPin, Sparkles, X } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
+import { artByWall, artIntro, artWalls, type ArtPiece, type ArtWall } from "@/data/art";
 import {
   cultureContribute,
   cultureHero,
@@ -241,6 +243,10 @@ function CulturePage() {
             {" · "}
             <a href="#fashion" className="text-[var(--color-primary-soft)] hover:underline">
               Soft Law · Hard Rain
+            </a>
+            {" · "}
+            <a href="#art" className="text-[var(--color-primary-soft)] hover:underline">
+              Hung Works
             </a>
             {" · "}
             <Link
@@ -826,20 +832,8 @@ function CulturePage() {
 
 
         {art.length ? (
-          <section className="mt-14">
-            <h2 className="font-display text-2xl text-[var(--color-fg)]">Art & image</h2>
-            <p className="mt-1 text-sm text-[var(--color-subtle)]">
-              Keeper: Velora Runeweaver · full cast in the{" "}
-              <Link to="/gallery" className="text-[var(--color-primary-soft)] hover:underline">
-                Gallery
-              </Link>
-              .
-            </p>
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {art.map((w) => (
-                <WorkCard key={w.id} work={w} />
-              ))}
-            </div>
+          <section id="art" className="mt-14 scroll-mt-24">
+            <ArtWall commons={art} />
           </section>
         ) : null}
 
@@ -852,5 +846,160 @@ function CulturePage() {
         </p>
       </main>
     </SiteShell>
+  );
+}
+
+function ArtWall({ commons }: { commons: CultureWork[] }) {
+  const [wall, setWall] = useState<ArtWall | "all">("all");
+  const [open, setOpen] = useState<ArtPiece | null>(null);
+  const hung = artByWall(wall);
+
+  useEffect(() => {
+    if (!open) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(null);
+    }
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
+  return (
+    <>
+      <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+        Visual lane · hung works · not portraits
+      </p>
+      <h2 className="mt-1 font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+        {artIntro.title}
+      </h2>
+      <p className="mt-2 font-display text-lg italic text-[var(--color-primary-soft)]">
+        {artIntro.tagline}
+      </p>
+      <p className="mt-2 max-w-2xl text-sm text-[var(--color-muted)]">{artIntro.lead}</p>
+      <p className="mt-1 text-xs text-[var(--color-subtle)]">{artIntro.by}</p>
+
+      <div className="mt-5 flex flex-wrap gap-2">
+        {artWalls.map((w) => {
+          const on = wall === w.id;
+          return (
+            <button
+              key={w.id}
+              type="button"
+              onClick={() => setWall(w.id)}
+              className={[
+                "min-h-11 rounded-full border px-4 text-sm",
+                on
+                  ? "border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] text-[var(--color-primary-soft)]"
+                  : "border-[var(--color-border)] text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]",
+              ].join(" ")}
+            >
+              {w.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="mt-8 columns-1 gap-4 sm:columns-2 lg:columns-3">
+        {hung.map((piece) => (
+          <button
+            key={piece.id}
+            type="button"
+            onClick={() => setOpen(piece)}
+            className="mb-4 block w-full break-inside-avoid overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] text-left"
+          >
+            <img
+              src={piece.image}
+              alt={piece.alt}
+              className="w-full"
+              loading="lazy"
+            />
+            <div className="space-y-1 px-4 py-3">
+              <p className="font-display text-base text-[var(--color-fg)]">{piece.title}</p>
+              <p className="text-xs text-[var(--color-subtle)]">{piece.by}</p>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      <div className="mt-8 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] px-5 py-5 sm:px-6">
+        <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-gold)]">
+          Express · bring a still
+        </p>
+        <p className="mt-2 max-w-2xl text-sm text-[var(--color-muted)]">{artIntro.contribute}</p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link
+            to="/collaborate"
+            className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+          >
+            Propose a work
+          </Link>
+          <Link
+            to="/gallery"
+            className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+          >
+            Portrait Gallery
+          </Link>
+        </div>
+      </div>
+
+      {commons.length ? (
+        <div className="mt-10">
+          <h3 className="font-display text-lg text-[var(--color-fg)]">Also in the commons</h3>
+          <p className="mt-1 text-sm text-[var(--color-subtle)]">
+            Mixed works that carry image and door — anthem covers, bible stills, atelier locks.
+          </p>
+          <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {commons.map((w) => (
+              <WorkCard key={w.id} work={w} />
+            ))}
+          </div>
+        </div>
+      ) : null}
+
+      {open ? (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-[color-mix(in_oklab,var(--color-bg)_78%,transparent)] p-3 sm:items-center sm:p-8"
+          onClick={() => setOpen(null)}
+          role="presentation"
+        >
+          <figure
+            className="max-h-[92vh] w-full max-w-4xl overflow-auto rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-3 border-b border-[var(--color-border)] px-4 py-3 sm:px-5">
+              <div>
+                <p className="font-display text-lg text-[var(--color-fg)]">{open.title}</p>
+                <p className="text-xs text-[var(--color-subtle)]">{open.by}</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setOpen(null)}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-muted)] hover:text-[var(--color-fg)]"
+                aria-label="Close"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <img src={open.image} alt={open.alt} className="w-full" />
+            <figcaption className="space-y-2 px-4 py-4 sm:px-5">
+              <p className="text-sm leading-relaxed text-[var(--color-muted)]">{open.note}</p>
+              {open.href ? (
+                <Link
+                  to={open.href.to}
+                  hash={open.href.hash}
+                  className="inline-block text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  {open.href.label} →
+                </Link>
+              ) : null}
+            </figcaption>
+          </figure>
+        </div>
+      ) : null}
+    </>
   );
 }

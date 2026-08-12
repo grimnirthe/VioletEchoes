@@ -1561,6 +1561,7 @@ export const nav: NavItem[] = [
       { to: "/culture#keepers", label: "Culture keepers", note: "Star + Velora" },
       { to: "/culture#rituals", label: "Living Practices", note: "Velora · soft law · coat & thread" },
       { to: "/training", label: "Resident Training", note: "Walk + flashcards" },
+      { to: "/culture#art", label: "Hung Works", note: "Art wall · atelier originals" },
       {
         to: "/culture#fashion",
         label: "Soft Law · Hard Rain",
