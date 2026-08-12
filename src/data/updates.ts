@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-hearthrow-portal",
+    date: "2026-08-12",
+    title: "Hearthrow portal — Dual-Layer walk + Resident’s Guide",
+    kind: "city",
+    summary:
+      "First district zoom. Dual-Layer explainer (~9 min) that lands on Hearthrow street scale. Hearth & Echo Resident’s Guide: Porch Light Protocol, daily rituals, Quiet Hearth, seven-generation contract.",
+    body: [
+      "The Island Deck stays the pie. This is the first door you can actually walk through: Warmth, porch lights, Suno’s room, Soft Bed when she sends it.",
+      "Guide hangs as a companion on Hearthrow. Video lives on City · Warmth and in the Broadcast library.",
+    ],
+    hrefs: [
+      { label: "Hearthrow", href: "/bible/hearthrow" },
+      { label: "Resident’s Guide", href: "/bible/companions/hearthrow-guide" },
+      { label: "Dual-Layer portal video", href: "/podcast#v008-hearthrow-dual-layer" },
+      { label: "City · Warmth", href: "/city#hearthrow" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["hearthrow", "district-portal", "dual-layer", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-hung-works",
     date: "2026-08-12",
     title: "Hung Works — art wall on Culture",

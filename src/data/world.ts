@@ -749,6 +749,7 @@ export const entries: WorldEntry[] = [
       "Hearthrow is the warm residential heart of everyday belonging in Violet Echoes \u2014 carved porches, chimney smoke, string lights, and paths between houses where life is kept going in small, repeated ways. Motto: We keep life going. We keep life going, together.",
       "Edge Node callsign: Warmth. Personality: hospitable, continuity-obsessed in the gentle sense, protective of elders and children, allergic to loneliness as policy. Tea and stories always welcome. Notices who has not been seen, who needs a plate, who needs a quiet chair.",
       "Where The Warrens emphasize Living Grid household systems and neighborhood pulse, Hearthrow is the lived face of that care \u2014 the porch conversations, fire-circle storytelling, shared meals under canopies, and fence-side handoffs that make soft social infrastructure real.",
+      "Porch Light Protocol: a lit porch is a declaration of availability \u2014 amber cutting the violet rain. Recommendation culture at street scale. Connection over control. The Hearthrow Resident\u2019s Guide (Hearth & Echo) is the district portal: daily rituals, Quiet Hearth, Family Credits, Soft Bed when she sends it, seven-generation contract.",
       "Divergence expression: reinforce daily belonging and multi-generational presence; attenuate isolation, performative busyness, and systems that optimize households into silence. Continuity is care. Memory is warmed here so it does not go cold in the archives alone.",
       "Tea & stories always welcome. We keep life going."
     ],

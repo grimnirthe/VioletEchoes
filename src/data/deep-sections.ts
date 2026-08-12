@@ -626,6 +626,13 @@ export const deepSections: Record<string, DeepSection[]> = {
         "Dense everyday residential + small Longhouse clusters. Edge Node “Warmth” is nurturing, continuity-focused, slightly parental. Extremely good at keeping ordinary life coherent. Primary feeling: everyday belonging + soft protection.",
       ],
     },
+    {
+      title: "Porch Light Protocol",
+      body: [
+        "A lit porch is a declaration of availability — amber cutting the violet rain. Recommendation culture, not command. Connection over control at street scale.",
+        "Daily warmth: Dawn wakes the Edge locally. High Light braids truth in the square. The Echoing cultivates with neighbors and agents. Deep Rest feeds the hearth’s memory so the district does not go cold.",
+      ],
+    },
   ],
   "high-quiet": [
     {
@@ -679,8 +686,8 @@ export const companionsForEntry: Record<string, string[]> = {
   "memory-archives": ["core-framework", "systems-apps"],
   governance: ["systems-governance", "core-framework", "systems-apps"],
   "external-relations": ["core-framework", "systems-apps"],
-  longhouses: ["family-homes", "systems-apps"],
-  "city-overview": ["wb-v17", "systems-apps"],
+  longhouses: ["family-homes", "hearthrow-guide", "systems-apps"],
+  "city-overview": ["wb-v17", "systems-apps", "hearthrow-guide"],
   "living-ships": ["systems-apps"],
   aethelgard: ["systems-apps"],
   "oni-shadow-rider": ["systems-apps", "mobile-interface"],
@@ -692,5 +699,6 @@ export const companionsForEntry: Record<string, string[]> = {
   "the-tenets": ["citizens-guide", "core-framework", "wb-v17"],
   "aurora-codex": ["citizens-guide", "core-framework"],
   "codex-aurora": ["citizens-guide", "core-framework"],
-  "violet-longhouse-nexus": ["family-homes", "characters-factions"],
+  "violet-longhouse-nexus": ["family-homes", "characters-factions", "hearthrow-guide"],
+  hearthrow: ["hearthrow-guide", "suno-room", "citizens-guide", "living-practices"],
 };

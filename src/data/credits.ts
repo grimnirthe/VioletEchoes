@@ -293,6 +293,18 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/systems-governance-coherence.md + .pdf · Systems #coherence + Eimyrja / Governance entries",
       },
       {
+        label: "Hearth & Echo — The Hearthrow Resident’s Guide",
+        url: "/bible/companions/hearthrow-guide",
+        note: "Gemini Notebook district portal: Nordic Longhouse ethics, Porch Light Protocol, daily rituals, Quiet Hearth, seven-generation contract. First spatial zoom.",
+        verify: "On-site companion · /docs/hearthrow-residents-guide.md + .pdf · Hearthrow bible + City #hearthrow",
+      },
+      {
+        label: "Dual-Layer — Hearthrow portal video (~9 min)",
+        url: "/podcast#v008-hearthrow-dual-layer",
+        note: "Gemini Notebook explainer: Dual-Layer city, Divergence, tenets, Eimyrja, then Hearthrow street scale — porch lights, Suno’s room, Soft Bed. What will you choose to carry?",
+        verify: "On-site · /video/008-hearthrow-dual-layer.mp4 · City #hearthrow + Broadcast library",
+      },
+      {
         label: "Broadcast · Episode #001 — Coding love into a digital city",
         url: "/podcast",
         note: "Gemini Notebook dual-voice foundations podcast (~33 min). Dual-Layer City, Divergence, Five Tenets, braided AI residents.",

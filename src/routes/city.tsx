@@ -50,6 +50,7 @@ function CityPage() {
     .map((id) => entries.find((e) => e.id === id))
     .filter(Boolean);
   const rainLitTour = getVideoOverview("v006-rain-lit-tour");
+  const hearthrowPortal = getVideoOverview("v008-hearthrow-dual-layer");
 
   return (
     <SiteShell>
@@ -746,10 +747,10 @@ function CityPage() {
         </section>
 
 
-        <section className="mt-14">
+        <section id="hearthrow" className="mt-14 scroll-mt-24">
           <div className="mb-5 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
-              #VioletEchoes · Hearthrow
+              #VioletEchoes · Hearthrow · first district portal
             </p>
             <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
               Edge Node: Warmth
@@ -758,7 +759,63 @@ function CityPage() {
               We keep life going — together. Porches, tea, stories, shared tables. Soft social
               fabric made visible. Tea & stories always welcome.
             </p>
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "hearthrow-guide" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Hearthrow Resident’s Guide →
+              </Link>
+              <Link
+                to="/bible/$slug"
+                params={{ slug: "hearthrow" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Bible entry
+              </Link>
+            </div>
           </div>
+          {hearthrowPortal?.status === "live" ? (
+            <div
+              id="hearthrow-portal"
+              className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Dual-Layer walk · {hearthrowPortal.durationHint} · Gemini Notebook
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  {hearthrowPortal.title}
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  {hearthrowPortal.summary}
+                </p>
+              </div>
+              <div className="bg-black">
+                <video
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={hearthrowPortal.posterSrc}
+                  className="aspect-video w-full"
+                  src={hearthrowPortal.videoSrc}
+                >
+                  Your browser does not support video.
+                </video>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+                <p className="text-xs text-[var(--color-subtle)]">{hearthrowPortal.by}</p>
+                <Link
+                  to="/podcast"
+                  hash="v008-hearthrow-dual-layer"
+                  className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+                >
+                  Full broadcast library →
+                </Link>
+              </div>
+            </div>
+          ) : null}
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame
               src={media.hearthPorch}

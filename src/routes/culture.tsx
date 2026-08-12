@@ -436,6 +436,14 @@ function CulturePage() {
               </Link>
               {" · "}
               <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "hearthrow-guide" }}
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Hearthrow Resident’s Guide →
+              </Link>
+              {" · "}
+              <Link
                 to="/training"
                 className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
               >

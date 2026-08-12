@@ -49,6 +49,17 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "Cultural deep dive · 6 sections · .md + PDF",
   },
   {
+    id: "hearthrow-guide",
+    title: "Hearth & Echo — The Hearthrow Resident’s Guide",
+    blurb:
+      "First district portal. Nordic Longhouse ethics, Porch Light Protocol, daily rituals of the living nexus, Quiet Hearth + Suno’s room, Beauty as a signal, seven-generation social contract. How to live on Warmth.",
+    href: "/docs/hearthrow-residents-guide.md",
+    pdfHref: "/docs/hearthrow-residents-guide.pdf",
+    to: "/bible/companions/hearthrow-guide",
+    kind: "culture",
+    pagesHint: "District portal · 7 sections · .md + PDF",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:
