@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-aethelgard-manual",
+    date: "2026-08-12",
+    title: "Aethelgard Pilot’s Manual hung — Path of the Bonded Navigator",
+    kind: "systems",
+    summary:
+      "Written how next to the living-vessel cinematic. Organic hull care, Grav Ring calibration, Ritual of Mutual Selection, memory through use. A silent ship is a dying ship.",
+    body: [
+      "Same package as the district portals: cinematic already lived; the manual now says how you keep a soul-bonded hull singing. Seven sections. Companion + PDF.",
+    ],
+    hrefs: [
+      { label: "Pilot’s Manual", href: "/bible/companions/aethelgard-manual" },
+      { label: "Living Ships", href: "/systems#living-ships" },
+      { label: "Living Vessel video", href: "/podcast#v003-aethelgard-living-vessel" },
+      { label: "Aethelgard entry", href: "/bible/aethelgard" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["aethelgard", "living-ships", "pilot-manual", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-innovation-video",
     date: "2026-08-12",
     title: "Innovation shop-floor walk — grit portal video hung",

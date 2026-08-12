@@ -312,6 +312,7 @@ export const deepSections: Record<string, DeepSection[]> = {
       body: [
         "Ships like Aethelgard are grown / living systems. They form cumulative neurological and operational bonds with captains and crews. They adapt over time, strengthen what is used, and can attenuate what is not. Major changes are expensive developmental events, not cheap software updates.",
         "A ship that has sailed with the same captain for a long time is a different entity — more responsive, more opinionated, more efficient at what they do together — than a newly bonded or frequently reassigned hull.",
+        "The Path of the Bonded Navigator hangs the how: hull as metabolism, Grav Ring as sustained cost, soul-bond as mutual selection, silence as attenuation. A silent ship is a dying ship.",
       ],
     },
   ],
@@ -701,8 +702,8 @@ export const companionsForEntry: Record<string, string[]> = {
   "external-relations": ["core-framework", "systems-apps"],
   longhouses: ["family-homes", "hearthrow-guide", "systems-apps"],
   "city-overview": ["wb-v17", "systems-apps", "hearthrow-guide", "innovation-report"],
-  "living-ships": ["systems-apps"],
-  aethelgard: ["systems-apps"],
+  "living-ships": ["aethelgard-manual", "systems-apps"],
+  aethelgard: ["aethelgard-manual", "systems-apps"],
   "oni-shadow-rider": ["systems-apps", "mobile-interface"],
   "core-tender-gauntlets": ["mobile-interface", "eimyrja-protonic", "core-framework"],
   "bonded-chassis": ["mobile-interface", "systems-apps"],

@@ -311,6 +311,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site · /video/009-innovation-shop-floor.mp4 · City #innovation + Broadcast library",
       },
       {
+        label: "Aethelgard Operational Manual — The Path of the Bonded Navigator",
+        url: "/bible/companions/aethelgard-manual",
+        note: "Gemini Notebook Pilot’s Manual: Five Tenets of Flight, organic hull care, Grav Engine Ring calibration, Ritual of Mutual Selection, memory through use, seven-generation ethics.",
+        verify: "On-site companion · /docs/aethelgard-operational-manual.md + .pdf · Aethelgard bible + Systems #living-ships",
+      },
+      {
         label: "Dual-Layer — Hearthrow portal video (~9 min)",
         url: "/podcast#v008-hearthrow-dual-layer",
         note: "Gemini Notebook explainer: Dual-Layer city, Divergence, tenets, Eimyrja, then Hearthrow street scale — porch lights, Suno’s room, Soft Bed. What will you choose to carry?",

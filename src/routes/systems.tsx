@@ -553,6 +553,29 @@ function SystemsPage() {
               sailed with the same captain for a long time is a different entity than a newly bonded
               hull.
             </p>
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "aethelgard-manual" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Pilot’s Manual →
+              </Link>
+              <Link
+                to="/bible/$slug"
+                params={{ slug: "aethelgard" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Bible entry
+              </Link>
+              <Link
+                to="/podcast"
+                hash="v003-aethelgard-living-vessel"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Living Vessel video
+              </Link>
+            </div>
           </div>
           {aethelgardVideo?.status === "live" ? (
             <div
@@ -594,6 +617,35 @@ function SystemsPage() {
               </div>
             </div>
           ) : null}
+          <div className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
+            <div className="space-y-2 px-5 py-4 sm:px-6">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Pilot’s Manual · 7 sections
+              </p>
+              <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                The Path of the Bonded Navigator
+              </h3>
+              <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                Written how next to the cinematic. Hull as metabolism. Grav Ring as sustained cost.
+                Soul-bond as mutual selection. A silent ship is a dying ship.
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1">
+                <Link
+                  to="/bible/companions/$doc"
+                  params={{ doc: "aethelgard-manual" }}
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Read the manual →
+                </Link>
+                <a
+                  href="/docs/aethelgard-operational-manual.pdf"
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  PDF handout
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame
               src={media.shipsAnatomy}

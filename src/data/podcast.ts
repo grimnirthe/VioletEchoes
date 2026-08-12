@@ -122,6 +122,7 @@ export const videoOverviews: VideoOverview[] = [
     videoSrc: "/video/003-aethelgard-living-vessel.mp4",
     posterSrc: "/images/video/003-aethelgard-living-vessel-poster.jpg",
     related: [
+      { label: "Pilot’s Manual", href: "/bible/companions/aethelgard-manual" },
       { label: "Living Ships (Systems)", href: "/systems#living-ships" },
       { label: "Aethelgard stills", href: "/systems#aethelgard" },
       { label: "Development Divergence", href: "/bible/divergence" },

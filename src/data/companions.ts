@@ -71,6 +71,17 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "District portal · 7 sections · .md + PDF",
   },
   {
+    id: "aethelgard-manual",
+    title: "Aethelgard Operational Manual — The Path of the Bonded Navigator",
+    blurb:
+      "Pilot’s Manual for the soul-bonded vessel. Five Tenets of Flight, organic hull care, Grav Engine Ring calibration, Ritual of Mutual Selection, memory through use, seven-generation ethics. How you keep a living ship singing.",
+    href: "/docs/aethelgard-operational-manual.md",
+    pdfHref: "/docs/aethelgard-operational-manual.pdf",
+    to: "/bible/companions/aethelgard-manual",
+    kind: "technical",
+    pagesHint: "Pilot’s Manual · 7 sections · .md + PDF",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:

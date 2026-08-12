@@ -467,7 +467,8 @@ export const entries: WorldEntry[] = [
       "Sleek matte Aether-black living alloy with white bone-molded frame, flowing organic curves, Mamba-inspired racing silhouette, Normandy-class stealth lines, and a glowing violet-gold Grav Engine Ring organically molded into the aft.",
       "The ship is gravity-driven and soul-bonded. The cockpit has no traditional consoles \u2014 the pilot is neurologically connected. Interiors breathe with subtle violet-gold energy veins; warm dark wood fuses with matte black and gold tech.",
       "Scale: approximately 180 meters long, 45\u201350m wingspan, 35\u201340m tall \u2014 heavy frigate / light capital class, comparable to Normandy SR-2 scale, massive next to personal craft but still agile.",
-      "Under living-ship doctrine, Aethelgard is a long-term bond archetype \u2014 line command and exploration. Typical bond duration 15\u201340 cycles; adaptation vectors include navigation, defense, sensorium, and hull morphology. Use becomes structure."
+      "Under living-ship doctrine, Aethelgard is a long-term bond archetype \u2014 line command and exploration. Typical bond duration 15\u201340 cycles; adaptation vectors include navigation, defense, sensorium, and hull morphology. Use becomes structure.",
+      "The Path of the Bonded Navigator hangs the how. Hull is metabolism: thump-thump-thump through the floorplates is baseline health; chatter is distress. Grav Engine Ring is calibrated to metabolic state \u2014 peak without cost is a Divergence violation. Soul-bond is mutual selection at the heartwood, not a keystroke. Unused vanes attenuate. A silent ship is a dying ship."
     ],
     tags: [
       "ship",
