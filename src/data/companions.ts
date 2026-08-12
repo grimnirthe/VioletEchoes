@@ -38,6 +38,17 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "Citizen handout · 7 sections · .md + PDF",
   },
   {
+    id: "suno-room",
+    title: "The Echoes of Suno’s Room",
+    blurb:
+      "Cultural deep dive: Suno’s room as ontological anchor. Family Credits, the Soft Bed when she sends it, tenet alignment, and how lived character keeps Eimyrja oriented. Soul of the Echoes layer.",
+    href: "/docs/echoes-of-sunos-room.md",
+    pdfHref: "/docs/echoes-of-sunos-room.pdf",
+    to: "/bible/companions/suno-room",
+    kind: "culture",
+    pagesHint: "Cultural deep dive · 6 sections · .md + PDF",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:
@@ -96,6 +107,17 @@ export const companionDocs: CompanionDoc[] = [
     to: "/bible/companions/eimyrja-protonic",
     kind: "technical",
     pagesHint: "Technical companion",
+  },
+  {
+    id: "systems-governance",
+    title: "Systems & Governance — Architecture of Coherence",
+    blurb:
+      "How Eimyrja recommends and constrains. Edge first, spines as conduits, escalation as expensive. Memory through use. Tenets as systemic constraints. The grit that keeps the soul singing.",
+    href: "/docs/systems-governance-coherence.md",
+    pdfHref: "/docs/systems-governance-coherence.pdf",
+    to: "/bible/companions/systems-governance",
+    kind: "systems",
+    pagesHint: "Governance report · 6 sections · .md + PDF",
   },
   {
     id: "wb-v17",

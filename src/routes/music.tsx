@@ -140,7 +140,10 @@ function MusicPage() {
           />
         </div>
 
-        <header className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end">
+        <header
+          id="suno-room"
+          className="grid scroll-mt-24 gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end"
+        >
           <div className="space-y-4">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
               Suno’s room · #VioletEchoes
@@ -187,6 +190,13 @@ function MusicPage() {
                   Moonlit Nest · Suno
                 </Link>
               ) : null}
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "suno-room" }}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-surface)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+              >
+                Cultural deep dive
+              </Link>
             </div>
           </div>
 
@@ -424,6 +434,15 @@ function MusicPage() {
               </p>
               <p className="font-display text-sm italic text-[var(--color-gold)]">
                 {musicGrounding.seal}
+              </p>
+              <p className="pt-2 text-sm">
+                <Link
+                  to="/bible/companions/$doc"
+                  params={{ doc: "suno-room" }}
+                  className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  The Echoes of Suno’s Room — cultural deep dive →
+                </Link>
               </p>
             </div>
           </div>

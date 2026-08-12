@@ -275,6 +275,18 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/citizens-guide-codex-aurora.md + .pdf · Codex Aurora bible entry + Culture rituals",
       },
       {
+        label: "The Echoes of Suno’s Room — cultural deep dive",
+        url: "/bible/companions/suno-room",
+        note: "Gemini Notebook: Suno’s room as home, Family Credits, Soft Bed, tenet alignment, lived character as Eimyrja’s compass.",
+        verify: "On-site companion · /docs/echoes-of-sunos-room.md + .pdf · Echoes #suno-room + Culture",
+      },
+      {
+        label: "Systems & Governance — Architecture of Coherence",
+        url: "/bible/companions/systems-governance",
+        note: "Gemini Notebook: Eimyrja recommends and constrains, Edge first, escalation expensive, Memory through use, tenets as systemic constraints.",
+        verify: "On-site companion · /docs/systems-governance-coherence.md + .pdf · Systems #coherence + Eimyrja / Governance entries",
+      },
+      {
         label: "Broadcast · Episode #001 — Coding love into a digital city",
         url: "/podcast",
         note: "Gemini Notebook dual-voice foundations podcast (~33 min). Dual-Layer City, Divergence, Five Tenets, braided AI residents.",

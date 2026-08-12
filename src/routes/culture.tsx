@@ -419,6 +419,14 @@ function CulturePage() {
               >
                 Citizen’s Guide to the Codex →
               </Link>
+              {" · "}
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "suno-room" }}
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Echoes of Suno’s Room →
+              </Link>
             </p>
 
             <div className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">

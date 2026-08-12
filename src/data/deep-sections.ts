@@ -673,11 +673,11 @@ export const deepSections: Record<string, DeepSection[]> = {
 
 export const companionsForEntry: Record<string, string[]> = {
   divergence: ["core-framework", "systems-apps", "wb-v17"],
-  eimyrja: ["eimyrja-protonic", "core-framework", "systems-apps"],
-  "edge-nodes": ["systems-apps", "core-framework"],
-  "data-spines": ["systems-apps", "core-framework"],
+  eimyrja: ["systems-governance", "eimyrja-protonic", "core-framework", "systems-apps"],
+  "edge-nodes": ["systems-governance", "systems-apps", "core-framework"],
+  "data-spines": ["systems-governance", "systems-apps", "core-framework"],
   "memory-archives": ["core-framework", "systems-apps"],
-  governance: ["core-framework", "systems-apps"],
+  governance: ["systems-governance", "core-framework", "systems-apps"],
   "external-relations": ["core-framework", "systems-apps"],
   longhouses: ["family-homes", "systems-apps"],
   "city-overview": ["wb-v17", "systems-apps"],

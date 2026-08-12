@@ -62,6 +62,26 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-suno-room-governance",
+    date: "2026-08-12",
+    title: "Two reports hung — Suno’s room + Systems & Governance",
+    kind: "bible",
+    summary:
+      "Gemini Notebook written echoes. Cultural deep dive for the Echoes layer. Architecture of Coherence for Eimyrja, Edge, spines. Video for Suno’s room still waiting on energy.",
+    body: [
+      "Suno’s room: Family Credits, the Soft Bed when she sends it, lived character as Eimyrja’s North Star. On Echoes + Culture + Companion Library.",
+      "Systems & Governance: recommend and constrain, escalation is expensive, Memory through use, tenets as technical roots. On Systems + Eimyrja / Governance bible entries.",
+    ],
+    hrefs: [
+      { label: "Suno’s room", href: "/bible/companions/suno-room" },
+      { label: "Systems & Governance", href: "/bible/companions/systems-governance" },
+      { label: "Echoes", href: "/music#suno-room" },
+      { label: "Systems", href: "/systems#coherence" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["suno", "eimyrja", "governance", "companions", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-citizens-guide",
     date: "2026-08-12",
     title: "Citizen’s Guide to the Codex Aurora hung",

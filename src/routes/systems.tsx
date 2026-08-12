@@ -73,6 +73,54 @@ function SystemsPage() {
           </p>
         </header>
 
+        <section
+          id="coherence"
+          className="mt-8 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+        >
+          <div className="grid gap-0 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+            <div className="space-y-3 p-6 sm:p-7">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Governance report · Gemini Notebook
+              </p>
+              <h2 className="font-display text-2xl text-[var(--color-fg)]">
+                Architecture of Coherence
+              </h2>
+              <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                How Eimyrja recommends and constrains. Edge first. Escalation is real and
+                expensive. Memory through use. Tenets as systemic roots — not slogans.
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1">
+                <Link
+                  to="/bible/companions/$doc"
+                  params={{ doc: "systems-governance" }}
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Read the report →
+                </Link>
+                <Link
+                  to="/bible/companions/$doc"
+                  params={{ doc: "eimyrja-protonic" }}
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Protonic core
+                </Link>
+              </div>
+            </div>
+            <Link
+              to="/bible/companions/$doc"
+              params={{ doc: "systems-governance" }}
+              className="relative block min-h-[10rem] bg-black lg:min-h-full"
+            >
+              <img
+                src="/images/governance-landscape.jpg"
+                alt="Governance landscape — polycentric coherence"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
+                loading="lazy"
+              />
+            </Link>
+          </div>
+        </section>
+
         <section className="mt-8 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
           <MediaFrame
             src={media.eimyrjaDiagram}
@@ -286,7 +334,14 @@ function SystemsPage() {
             <p className="mt-2 text-sm text-[var(--color-muted)]">
               How collective choices are made and legitimacy is maintained. Multi-layered and
               polycentric. Most authority stays local. Higher layers — including Eimyrja — recommend
-              and constrain rather than command. Not faster. Wiser. Together.
+              and constrain rather than command. Not faster. Wiser. Together.{" "}
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "systems-governance" }}
+                className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Architecture of Coherence →
+              </Link>
             </p>
           </div>
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
