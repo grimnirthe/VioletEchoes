@@ -559,7 +559,7 @@ export const entries: WorldEntry[] = [
       "Neon Core is the high-signal commercial and nightlife concentration where the city\u2019s pulse is most visible after dark \u2014 signage, markets, adaptive storefronts, and the social voltage of people who live by night schedules.",
       "Functionally it overlaps Ember Market hustle with Cultural Hub performance spillover. Edge presence here is fast, relational, and slightly opportunistic: clever local hacks are welcomed if they don\u2019t create future infrastructure debt.",
       "Divergence expression: reinforce what people actually return to; attenuate hollow spectacle; keep energy honesty visible even when the lights are loud. Peak neon is allowed; unsustainable burn is not.",
-      "Skyline law is hung in the Neon Core Lore Guide: New Atlantis lines as a diagnostic (beauty is a signal), Core Data Spines as circulatory system, Heartwood Protocol as weighted recommendation, deliberate entropic decay of unused routines. Video door reserved for the skyline walk."
+      "Skyline law is hung in the Neon Core Lore Guide: New Atlantis lines as a diagnostic (beauty is a signal), Core Data Spines as circulatory system, Heartwood Protocol as weighted recommendation, deliberate entropic decay of unused routines. The skyline walk (~8.5 min) plays on City · Neon Core."
     ],
     tags: [
       "district",

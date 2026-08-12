@@ -317,6 +317,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/neon-core-lore-guide.md + .pdf · Neon Core bible + City #neon-core-portal",
       },
       {
+        label: "Neon Core — skyline walk (~8.5 min)",
+        url: "/podcast#v010-neon-core-skyline",
+        note: "Gemini Notebook cinematic: New Atlantis lines over Longhouse soul, Divergence principles, Eimyrja as gardener, five roots. Skyline counterpart to Hearthrow and Innovation walks.",
+        verify: "On-site · /video/010-neon-core-skyline.mp4 · City #neon-core-portal + Broadcast library",
+      },
+      {
         label: "Innovation — shop-floor walk (~8 min)",
         url: "/podcast#v009-innovation-shop-floor",
         note: "Gemini Notebook explainer: shop-floor grit braided to Hearthrow warmth, Divergence principles, Eimyrja recommends, Aethelgard as living companion. What will your echo be?",

@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-neon-core-skyline",
+    date: "2026-08-12",
+    title: "Neon Core skyline walk hung — triad complete",
+    kind: "city",
+    summary:
+      "Third district cinematic. New Atlantis lines, Divergence as choice, Eimyrja as gardener. Street, shop floor, and skyline now all play.",
+    body: [
+      "Gemini Notebook explainer (~8.5 min) on the reserved Neon Core door. What world would we choose to carry?",
+    ],
+    hrefs: [
+      { label: "City · Skyline", href: "/city#neon-core-portal" },
+      { label: "Broadcast library", href: "/podcast#v010-neon-core-skyline" },
+      { label: "Lore Guide", href: "/bible/companions/neon-core-guide" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["neon-core", "video", "district-portal", "skyline", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-neon-core-portal",
     date: "2026-08-12",
     title: "Neon Core portal — Lore Guide hung, skyline walk reserved",
