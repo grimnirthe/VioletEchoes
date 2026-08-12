@@ -108,6 +108,13 @@ function DistrictsDeckPage() {
             >
               Innovation portal →
             </Link>
+            <Link
+              to="/bible/companions/$doc"
+              params={{ doc: "neon-core-guide" }}
+              className="inline-flex items-center rounded-full border border-[var(--color-primary)]/40 px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+            >
+              Neon Core portal →
+            </Link>
           </div>
         </header>
 

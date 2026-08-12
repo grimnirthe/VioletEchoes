@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-neon-core-portal",
+    date: "2026-08-12",
+    title: "Neon Core portal — Lore Guide hung, skyline walk reserved",
+    kind: "city",
+    summary:
+      "Third district zoom. The skyline door opposite Hearthrow warmth and Innovation grit. Neon Core Lore Guide: New Atlantis lines as diagnostic, Core Data Spines, Heartwood Protocol, deliberate entropic decay. Video door reserved.",
+    body: [
+      "Written spine is live. Skyline walk will hang on the reserved door when Gemini’s cinematic lands.",
+    ],
+    hrefs: [
+      { label: "City · Neon Core", href: "/city#neon-core-portal" },
+      { label: "Lore Guide", href: "/bible/companions/neon-core-guide" },
+      { label: "Hearthrow portal", href: "/city#hearthrow" },
+      { label: "Innovation portal", href: "/city#innovation" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["neon-core", "district-portal", "skyline", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-divergence-timeline",
     date: "2026-08-12",
     title: "Timeline of the Divergence hung — historical weight",

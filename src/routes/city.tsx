@@ -398,6 +398,77 @@ function CityPage() {
         </section>
 
 
+        <section id="neon-core" className="mt-14 scroll-mt-24">
+          <div className="mb-5 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
+              #VioletEchoes · Neon Core · third district portal
+            </p>
+            <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+              Skyline of Coherence
+            </h2>
+            <p className="mt-2 text-sm text-[var(--color-muted)]">
+              The high-altitude door. New Atlantis lines as a diagnostic — beauty is a signal.
+              Peak neon is allowed. Unsustainable burn is not.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "neon-core-guide" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Neon Core Lore Guide →
+              </Link>
+              <Link
+                to="/bible/$slug"
+                params={{ slug: "neon-core" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Bible entry
+              </Link>
+              <Link
+                to="/city"
+                hash="innovation"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Innovation · Grit
+              </Link>
+              <Link
+                to="/city"
+                hash="hearthrow"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Hearthrow · Warmth
+              </Link>
+            </div>
+          </div>
+          <div
+            id="neon-core-portal"
+            className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+          >
+            <div className="space-y-2 px-5 py-4 sm:px-6">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Skyline walk · arriving
+              </p>
+              <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                Neon Core — rain-lit skyline
+              </h3>
+              <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                Cinematic reserved. New Atlantis lines, long-horizon continuity, no short-term
+                spikes. The walk hangs here when it lands.
+              </p>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
+            <MediaFrame
+              src={media.neonCore}
+              alt="Neon Core — high-signal skyline and rain-slick streets"
+              aspect="wide"
+              veil="bottom"
+            />
+          </div>
+        </section>
+
+
         <section id="innovation" className="mt-14 scroll-mt-24">
           <div className="mb-5 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">

@@ -311,6 +311,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site companion · /docs/innovation-district-report.md + .pdf · Innovation bible + City #innovation",
       },
       {
+        label: "Neon Core — Technical and Philosophical Lore Guide",
+        url: "/bible/companions/neon-core-guide",
+        note: "Gemini Notebook district portal: New Atlantis lines as diagnostic, Core Data Spines, Heartwood Protocol, weighted recommendation, deliberate entropic decay. Skyline counterpart to Hearthrow and Innovation.",
+        verify: "On-site companion · /docs/neon-core-lore-guide.md + .pdf · Neon Core bible + City #neon-core-portal",
+      },
+      {
         label: "Innovation — shop-floor walk (~8 min)",
         url: "/podcast#v009-innovation-shop-floor",
         note: "Gemini Notebook explainer: shop-floor grit braided to Hearthrow warmth, Divergence principles, Eimyrja recommends, Aethelgard as living companion. What will your echo be?",

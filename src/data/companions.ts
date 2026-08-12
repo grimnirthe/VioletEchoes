@@ -82,6 +82,17 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "Pilot’s Manual · 7 sections · .md + PDF",
   },
   {
+    id: "neon-core-guide",
+    title: "Neon Core — Technical and Philosophical Lore Guide",
+    blurb:
+      "Third district portal — the skyline door. New Atlantis lines as diagnostic, Core Data Spines, Heartwood Protocol, weighted recommendation, deliberate entropic decay. How high-altitude capability stays coherent.",
+    href: "/docs/neon-core-lore-guide.md",
+    pdfHref: "/docs/neon-core-lore-guide.pdf",
+    to: "/bible/companions/neon-core-guide",
+    kind: "technical",
+    pagesHint: "District portal · 7 sections · .md + PDF",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:
