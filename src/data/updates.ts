@@ -74,6 +74,7 @@ export const cityUpdates: CityUpdate[] = [
     hrefs: [
       { label: "Culture · living loop", href: "/culture#aether-core" },
       { label: "Hung Works", href: "/culture#art" },
+      { label: "Download loop", href: "/video/012-aether-core.mp4" },
     ],
     by: "Hearth · Aurora · Loom",
     tags: ["aether-core", "art", "aurora", "living-mark", "#VioletEchoes"],

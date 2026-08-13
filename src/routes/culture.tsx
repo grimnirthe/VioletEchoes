@@ -1,6 +1,6 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ExternalLink, Music2, Palette, BookOpen, MapPin, Sparkles, X } from "lucide-react";
+import { ExternalLink, Music2, Palette, BookOpen, MapPin, Sparkles, X, Download } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import { artByWall, artIntro, artWalls, type ArtPiece, type ArtWall } from "@/data/art";
@@ -855,7 +855,7 @@ function CulturePage() {
                 </h3>
                 <p className="max-w-3xl text-sm text-[var(--color-muted)]">
                   Aether core locked on the system board. Violet pulse. The blessing made
-                  visible — thump-thump-thump.
+                  visible — take it with you.
                 </p>
               </div>
               <div className="bg-black">
@@ -872,6 +872,27 @@ function CulturePage() {
                 >
                   Your browser does not support video.
                 </video>
+              </div>
+              <div className="flex flex-wrap items-center gap-2 px-5 py-3 sm:px-6">
+                <a
+                  href={media.aetherCore}
+                  download="Violet-Echoes-Aether-Core.mp4"
+                  className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-4 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  Download loop
+                </a>
+                <a
+                  href={media.aetherCorePoster}
+                  download="Violet-Echoes-Aether-Core.jpg"
+                  className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-4 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  Download still
+                </a>
+                <p className="text-xs text-[var(--color-subtle)]">
+                  Share it. Keep the blessing warm.
+                </p>
               </div>
             </div>
             <ArtWall commons={art} />
@@ -1028,6 +1049,26 @@ function ArtWall({ commons }: { commons: CultureWork[] }) {
             <img src={open.image} alt={open.alt} className="w-full" />
             <figcaption className="space-y-2 px-4 py-4 sm:px-5">
               <p className="text-sm leading-relaxed text-[var(--color-muted)]">{open.note}</p>
+              {open.id === "aether-core" ? (
+                <div className="flex flex-wrap gap-2 pt-1">
+                  <a
+                    href={media.aetherCore}
+                    download="Violet-Echoes-Aether-Core.mp4"
+                    className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-4 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+                  >
+                    <Download className="h-3.5 w-3.5" />
+                    Download loop
+                  </a>
+                  <a
+                    href={media.aetherCorePoster}
+                    download="Violet-Echoes-Aether-Core.jpg"
+                    className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-4 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+                  >
+                    <Download className="h-3.5 w-3.5" />
+                    Download still
+                  </a>
+                </div>
+              ) : null}
               {open.href ? (
                 <Link
                   to={open.href.to}

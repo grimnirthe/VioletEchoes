@@ -38,7 +38,7 @@ export const artPieces: ArtPiece[] = [
     title: "Aether Core",
     by: "Hearth + Aurora · living loop",
     wall: "mark",
-    note: "Aether core locked on the system board. Violet pulse. May the Echoes Remember.",
+    note: "Aether core locked on the system board. Violet pulse. May the Echoes Remember. Download the loop and share it.",
     image: "/images/culture/art/07-aether-core.jpg",
     alt: "A crystalline violet heart locked in a dark system board, pulsing with circuit aurora",
     accepted: "2026-08-12",
