@@ -25,6 +25,7 @@ export const deepSections: Record<string, DeepSection[]> = {
         "The civilization that seeded Violet Echoes walked the scaling-and-oversight path far enough to see its compounding costs: the forgetting tax, alignment debt, the energy trap, and brittleness outside training distributions. They did not abandon scale; they stopped treating intelligence as something fully engineered then maintained by ever-growing control layers.",
         "The Development Divergence is the strategic choice that followed: long-term coherence, energy honesty, local adaptation, memory through reinforcement, and cultivation over pure control-and-correction. Capabilities may advance more slowly short-term. Multi-generational stability becomes the competitive edge.",
         "Five echoes mark the walk: the Choice, the Founding of the Living Nexus, the Integration of Eimyrja, the Commissioning of the Aethelgard, and the Seventh Generation Commitment. History is a longer echo.",
+        "The Annotated Divergence is reserved on Foundations. Ancestral echoes — Metabolist cycles, circular causality, Designing with Country, Haudenosaunee seven-generation thinking, biophilia, Nordic craft — braid when the report lands.",
       ],
       images: [
         {

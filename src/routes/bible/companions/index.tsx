@@ -227,6 +227,38 @@ function CompanionsIndexPage() {
           </div>
         </article>
 
+        <article className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]">
+          <div className="space-y-2 p-6 sm:p-7">
+            <p className="text-[0.65rem] uppercase tracking-[0.16em] text-[var(--color-gold)]">
+              Fourth door · Annotated Divergence · arriving
+            </p>
+            <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+              Ancestral echoes
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[var(--color-muted)]">
+              World Bible source discovery in braid. Metabolist cycles, circular causality,
+              Designing with Country, Haudenosaunee seven-generation thinking, biophilia, Nordic
+              craft. The companion hangs when Gemini’s report lands.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Link
+                to="/bible/foundations"
+                hash="annotated"
+                className="inline-flex items-center rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+              >
+                Foundations · reserved door
+              </Link>
+              <Link
+                to="/bible/$slug"
+                params={{ slug: "development-divergence" }}
+                className="inline-flex items-center rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
+              >
+                Divergence entry
+              </Link>
+            </div>
+          </div>
+        </article>
+
         <article className="mt-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-primary)]/25 bg-[var(--color-surface)]">
           <div className="grid gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
             <div className="border-b border-[var(--color-border)] p-6 sm:p-7 lg:border-b-0 lg:border-r">

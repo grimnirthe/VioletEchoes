@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-annotated-divergence",
+    date: "2026-08-12",
+    title: "Annotated Divergence reserved — fourth door opening",
+    kind: "bible",
+    summary:
+      "World Bible source discovery in braid. Ancestral echoes: Metabolist cycles, circular causality, Designing with Country, Haudenosaunee seven-generation, biophilia, Nordic craft.",
+    body: [
+      "The Divergence is not an isolated experiment. The report hangs on Foundations when Gemini’s braid lands.",
+    ],
+    hrefs: [
+      { label: "Foundations · Annotated", href: "/bible/foundations#annotated" },
+      { label: "Divergence entry", href: "/bible/development-divergence" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["annotated", "divergence", "foundations", "reserved", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-thornwall-old-iron",
     date: "2026-08-12",
     title: "Thornwall Old Iron hung — Codex + Metropolis walk",

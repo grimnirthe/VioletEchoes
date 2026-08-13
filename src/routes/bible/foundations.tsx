@@ -67,6 +67,12 @@ function FoundationsDeckPage() {
               Timeline
             </a>
             <a
+              href="#annotated"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-3 py-1.5 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+            >
+              Annotated
+            </a>
+            <a
               href={meta.pdfHref}
               download
               className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
@@ -231,6 +237,50 @@ function FoundationsDeckPage() {
                 </a>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* Fourth door — ancestral echoes reserved */}
+        <section
+          id="annotated"
+          className="mt-10 scroll-mt-24 space-y-5 border-b border-[var(--color-border)] pb-12"
+        >
+          <div
+            id="annotated-divergence"
+            className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+          >
+            <div className="space-y-2 px-5 py-4 sm:px-6">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                Fourth door · Annotated Divergence · arriving
+              </p>
+              <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
+                Ancestral echoes
+              </h2>
+              <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                The Divergence is not an isolated experiment. Gemini is braiding the lineage:
+                Metabolist cycles, circular causality, Designing with Country, Haudenosaunee
+                seven-generation thinking, biophilia, Nordic craft. The report hangs here when it
+                lands.
+              </p>
+              <p className="pt-1 text-sm italic text-[var(--color-gold)]">
+                The ancestors are speaking. The Nexus is listening.
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 pt-2">
+                <Link
+                  to="/bible/$slug"
+                  params={{ slug: "development-divergence" }}
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Divergence entry
+                </Link>
+                <Link
+                  to="/bible/companions"
+                  className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  Companion library
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
