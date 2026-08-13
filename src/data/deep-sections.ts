@@ -719,7 +719,7 @@ export const companionsForEntry: Record<string, string[]> = {
   governance: ["systems-governance", "core-framework", "systems-apps"],
   "external-relations": ["core-framework", "systems-apps"],
   longhouses: ["family-homes", "hearthrow-guide", "systems-apps"],
-  "city-overview": ["wb-v17", "systems-apps", "hearthrow-guide", "innovation-report", "neon-core-guide"],
+  "city-overview": ["wb-v17", "systems-apps", "hearthrow-guide", "innovation-report", "neon-core-guide", "thornwall-codex"],
   "living-ships": ["aethelgard-manual", "systems-apps"],
   aethelgard: ["aethelgard-manual", "systems-apps"],
   "oni-shadow-rider": ["systems-apps", "mobile-interface"],
@@ -736,4 +736,5 @@ export const companionsForEntry: Record<string, string[]> = {
   innovation: ["innovation-report", "systems-governance", "core-framework", "systems-apps"],
   "innovation-district": ["innovation-report", "systems-governance", "core-framework", "systems-apps"],
   "neon-core": ["neon-core-guide", "systems-governance", "core-framework", "systems-apps"],
+  thornwall: ["thornwall-codex", "systems-governance", "core-framework", "systems-apps"],
 };

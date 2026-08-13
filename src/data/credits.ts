@@ -323,10 +323,16 @@ export const creditSections: CreditSection[] = [
         verify: "On-site · /video/010-neon-core-skyline.mp4 · City #neon-core-portal + Broadcast library",
       },
       {
-        label: "Thornwall — the Weight of Old Iron (reserved)",
-        url: "/city#thornwall-portal",
-        note: "Gemini Notebook district portal in braid: industrial grit cinematic + Weight of Old Iron report. Local adaptation first. Memory through use. Door reserved until the artifacts land.",
-        verify: "On-site reserved card · City #thornwall-portal · bible/thornwall",
+        label: "Thornwall: The Old Iron Codex",
+        url: "/bible/companions/thornwall-codex",
+        note: "Gemini Notebook district portal: Weight of the Old Iron, local adaptation first, Memory through use, Guild rituals, seven-generation mandate. Industrial anchor under the triad.",
+        verify: "On-site companion · /docs/thornwall-old-iron-codex.md + .pdf · Thornwall bible + City #thornwall-portal",
+      },
+      {
+        label: "Thornwall — Metropolis / Old Iron walk (~9 min)",
+        url: "/podcast#v011-thornwall-old-iron",
+        note: "Gemini Notebook cinematic: Night City grit against New Atlantis lines, Divergence, five tenets, Dual-layer city, Old Iron bones turned sanctuary. What will you choose to carry?",
+        verify: "On-site · /video/011-thornwall-old-iron.mp4 · City #thornwall-portal + Broadcast library",
       },
       {
         label: "Innovation — shop-floor walk (~8 min)",

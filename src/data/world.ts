@@ -829,7 +829,7 @@ export const entries: WorldEntry[] = [
       "Divergence expression: maximum respect for maintenance as real work \u2014 maintenance is defense. Reinforce repair culture, spare-parts knowledge, and generational craft. Attenuate throwaway infrastructure and status without service. Respect is earned in the repair.",
       "Culture: Old Iron maintenance crews, giant bonded work-frames in purple gear, plaques that say what the floor believes \u2014 We keep it running so they can keep coming home. We keep them running. They keep us standing.",
       "Hard to break. Easy to fix. Built hard. Repaired right. We keep them safe.",
-      "The Weight of Old Iron report and industrial-grit cinematic are reserved on City · Thornwall. Local adaptation first. Memory through use. Heavy bones turned sanctuary so the seventh generation still finds a floor that holds."
+      "The Old Iron Codex and Metropolis cinematic hang on City · Thornwall. Local adaptation first. Memory through use. Heavy bones turned sanctuary so the seventh generation still finds a floor that holds."
     ],
     tags: [
       "thornwall",

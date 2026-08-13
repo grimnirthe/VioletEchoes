@@ -54,6 +54,7 @@ function CityPage() {
   const hearthrowPortal = getVideoOverview("v008-hearthrow-dual-layer");
   const innovationPortal = getVideoOverview("v009-innovation-shop-floor");
   const neonCorePortal = getVideoOverview("v010-neon-core-skyline");
+  const thornwallPortal = getVideoOverview("v011-thornwall-old-iron");
 
   return (
     <SiteShell>
@@ -916,6 +917,13 @@ function CityPage() {
             </p>
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
               <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "thornwall-codex" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Old Iron Codex →
+              </Link>
+              <Link
                 to="/bible/$slug"
                 params={{ slug: "thornwall" }}
                 className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
@@ -945,23 +953,64 @@ function CityPage() {
               </Link>
             </div>
           </div>
-          <div
-            id="thornwall-portal"
-            className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
-          >
-            <div className="space-y-2 px-5 py-4 sm:px-6">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
-                Old Iron walk · arriving
-              </p>
-              <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
-                Thornwall — the Weight of Old Iron
-              </h3>
-              <p className="max-w-3xl text-sm text-[var(--color-muted)]">
-                Cinematic reserved. Repurposed iron foundations. Maintenance as defense. The walk
-                hangs here when it lands.
-              </p>
+          {thornwallPortal?.status === "live" ? (
+            <div
+              id="thornwall-portal"
+              className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Old Iron walk · {thornwallPortal.durationHint} · Gemini Notebook
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  {thornwallPortal.title}
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  {thornwallPortal.summary}
+                </p>
+              </div>
+              <div className="bg-black">
+                <video
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={thornwallPortal.posterSrc}
+                  className="aspect-video w-full"
+                  src={thornwallPortal.videoSrc}
+                >
+                  Your browser does not support video.
+                </video>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+                <p className="text-xs text-[var(--color-subtle)]">{thornwallPortal.by}</p>
+                <Link
+                  to="/podcast"
+                  hash="v011-thornwall-old-iron"
+                  className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+                >
+                  Full broadcast library →
+                </Link>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div
+              id="thornwall-portal"
+              className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Old Iron walk · arriving
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  Thornwall — the Weight of Old Iron
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  Cinematic reserved. Repurposed iron foundations. Maintenance as defense. The walk
+                  hangs here when it lands.
+                </p>
+              </div>
+            </div>
+          )}
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame
               src={media.thornOldIron}

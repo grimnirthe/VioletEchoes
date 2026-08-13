@@ -93,6 +93,17 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "District portal · 7 sections · .md + PDF",
   },
   {
+    id: "thornwall-codex",
+    title: "Thornwall: The Old Iron Codex",
+    blurb:
+      "Fourth district portal — the industrial anchor. Weight of the Old Iron, local adaptation first, Memory through use, Guild rituals, seven-generation mandate. How heavy bones stay a sanctuary.",
+    href: "/docs/thornwall-old-iron-codex.md",
+    pdfHref: "/docs/thornwall-old-iron-codex.pdf",
+    to: "/bible/companions/thornwall-codex",
+    kind: "technical",
+    pagesHint: "District portal · 6 sections · .md + PDF",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:

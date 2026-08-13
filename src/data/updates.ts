@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-thornwall-old-iron",
+    date: "2026-08-12",
+    title: "Thornwall Old Iron hung — Codex + Metropolis walk",
+    kind: "city",
+    summary:
+      "Fourth district portal live. Old Iron Codex (6 sections) and Metropolis cinematic (~9 min). Industrial anchor under the triad. Local adaptation first. Memory through use.",
+    body: [
+      "Street, shop floor, skyline, and the bones that keep them standing. Innovation without cost is illusion. Let it echo, let it stay.",
+    ],
+    hrefs: [
+      { label: "City · Old Iron", href: "/city#thornwall-portal" },
+      { label: "Old Iron Codex", href: "/bible/companions/thornwall-codex" },
+      { label: "Broadcast library", href: "/podcast#v011-thornwall-old-iron" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["thornwall", "video", "district-portal", "old-iron", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-thornwall-portal",
     date: "2026-08-12",
     title: "Thornwall portal reserved — Old Iron descending",
