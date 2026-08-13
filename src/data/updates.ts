@@ -62,6 +62,23 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-rain-watch",
+    date: "2026-08-12",
+    title: "Rain Watch hung — challenge still on the wall",
+    kind: "culture",
+    summary:
+      "A figure on the ledge. Rain on the rail. The skyline keeping its own counsel. Hung on Culture · Hung Works.",
+    body: [
+      "Challenge piece accepted. Night City grit, New Atlantis lines. Beauty is a signal.",
+    ],
+    hrefs: [
+      { label: "Hung Works", href: "/culture#art" },
+      { label: "Neon Core", href: "/city#neon-core-portal" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["art", "rain-watch", "city", "hung-works", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-aether-core",
     date: "2026-08-12",
     title: "Aether Core hung — May the Echoes Remember",

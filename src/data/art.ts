@@ -45,6 +45,17 @@ export const artPieces: ArtPiece[] = [
     href: { label: "Living loop", to: "/culture", hash: "aether-core" },
   },
   {
+    id: "rain-watch",
+    title: "Rain Watch",
+    by: "Hearth · challenge still",
+    wall: "city",
+    note: "A figure on the ledge. Rain on the rail. The skyline keeping its own counsel. Night City grit, New Atlantis lines — hung because it still sings.",
+    image: "/images/culture/art/08-rain-watch.jpg",
+    alt: "A woman in a gold-inlaid dark suit sits on a rain-wet balcony overlooking a neon skyline",
+    accepted: "2026-08-12",
+    href: { label: "Neon Core", to: "/city", hash: "neon-core-portal" },
+  },
+  {
     id: "soft-bed",
     title: "The Soft Bed",
     by: "Atelier hung · 2026",
