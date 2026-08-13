@@ -104,6 +104,28 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "District portal · 6 sections · .md + PDF",
   },
   {
+    id: "membrane-codex",
+    title: "THE MEMBRANE CODEX — Protocols of Veilreach",
+    blurb:
+      "Fifth district portal — the membrane. W.A.R.D. stack: Watch · Adapt · Reverse · Disengage. Handshake, not a hook. Translation without importing foreign logic. How the city meets what is not the city.",
+    href: "/docs/membrane-codex.md",
+    pdfHref: "/docs/membrane-codex.pdf",
+    to: "/bible/companions/membrane-codex",
+    kind: "technical",
+    pagesHint: "District portal · 6 sections · .md + PDF",
+  },
+  {
+    id: "biophilic-lore-guide",
+    title: "Biophilic Lore Guide — The Living Lungs of Violet Echoes",
+    blurb:
+      "Sixth district portal — the Lungs. We do not decorate the world. We carry its breath. Soft fascination, co-benefit, Tequio of Care. Beauty is a signal that the city is still breathing.",
+    href: "/docs/biophilic-lore-guide.md",
+    pdfHref: "/docs/biophilic-lore-guide.pdf",
+    to: "/bible/companions/biophilic-lore-guide",
+    kind: "culture",
+    pagesHint: "District portal · 6 sections · .md + PDF",
+  },
+  {
     id: "annotated-divergence",
     title: "The Annotated Divergence — Foundational Echoes of the Nexus",
     blurb:

@@ -632,6 +632,7 @@ export const deepSections: Record<string, DeepSection[]> = {
       title: "Ecological heatsink",
       body: [
         "Patient, long-horizon Edge presence. Speaks in seasons more than minutes. Reinforcement through long-term health metrics rather than short-term output. Treats ecological stability as load-bearing infrastructure, not decoration.",
+        "The Biophilic Lore Guide hangs on City · Green Spaces. We do not decorate the world. We carry its breath. Soft fascination. Co-benefit. Tequio of Care. Video door reserved.",
       ],
     },
   ],
@@ -704,6 +705,7 @@ export const deepSections: Record<string, DeepSection[]> = {
       title: "Veil",
       body: [
         "Outer / transitional / boundary zones. Edge “Veil”: watchful, adaptable, boundary-aware. Excellent at interfaces with external systems. Values reversibility and clean disengagement.",
+        "The Membrane Codex hangs on City · Veilreach. W.A.R.D. stack. Handshake, not a hook. Translation without importing foreign logic. Video door reserved.",
       ],
     },
   ],
@@ -718,9 +720,9 @@ export const companionsForEntry: Record<string, string[]> = {
   "data-spines": ["systems-governance", "systems-apps", "core-framework"],
   "memory-archives": ["core-framework", "systems-apps"],
   governance: ["systems-governance", "core-framework", "systems-apps"],
-  "external-relations": ["core-framework", "systems-apps"],
+  "external-relations": ["membrane-codex", "core-framework", "systems-apps"],
   longhouses: ["family-homes", "hearthrow-guide", "systems-apps"],
-  "city-overview": ["wb-v17", "systems-apps", "hearthrow-guide", "innovation-report", "neon-core-guide", "thornwall-codex"],
+  "city-overview": ["wb-v17", "systems-apps", "hearthrow-guide", "innovation-report", "neon-core-guide", "thornwall-codex", "membrane-codex", "biophilic-lore-guide"],
   "living-ships": ["aethelgard-manual", "systems-apps"],
   aethelgard: ["aethelgard-manual", "systems-apps"],
   "oni-shadow-rider": ["systems-apps", "mobile-interface"],
@@ -738,4 +740,6 @@ export const companionsForEntry: Record<string, string[]> = {
   "innovation-district": ["innovation-report", "systems-governance", "core-framework", "systems-apps"],
   "neon-core": ["neon-core-guide", "systems-governance", "core-framework", "systems-apps"],
   thornwall: ["thornwall-codex", "systems-governance", "core-framework", "systems-apps"],
+  veilreach: ["membrane-codex", "annotated-divergence", "core-framework", "systems-apps"],
+  "green-spaces": ["biophilic-lore-guide", "annotated-divergence", "citizens-guide", "core-framework"],
 };

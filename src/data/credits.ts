@@ -335,6 +335,18 @@ export const creditSections: CreditSection[] = [
         verify: "On-site · /video/010-neon-core-skyline.mp4 · City #neon-core-portal + Broadcast library",
       },
       {
+        label: "THE MEMBRANE CODEX — Protocols of Veilreach",
+        url: "/bible/companions/membrane-codex",
+        note: "Gemini Notebook fifth district portal: W.A.R.D. stack, handshake not a hook, translation without importing foreign logic. Video reserved.",
+        verify: "On-site companion · /docs/membrane-codex.md + .pdf · Veilreach bible + City #veilreach-portal",
+      },
+      {
+        label: "Biophilic Lore Guide — The Living Lungs of Violet Echoes",
+        url: "/bible/companions/biophilic-lore-guide",
+        note: "Gemini Notebook sixth district portal: We do not decorate the world. We carry its breath. Soft fascination, co-benefit, Tequio of Care. Video reserved.",
+        verify: "On-site companion · /docs/biophilic-lore-guide.md + .pdf · Green Spaces bible + City #green-spaces-portal",
+      },
+      {
         label: "Thornwall: The Old Iron Codex",
         url: "/bible/companions/thornwall-codex",
         note: "Gemini Notebook district portal: Weight of the Old Iron, local adaptation first, Memory through use, Guild rituals, seven-generation mandate. Industrial anchor under the triad.",

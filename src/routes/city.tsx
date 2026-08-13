@@ -55,6 +55,8 @@ function CityPage() {
   const innovationPortal = getVideoOverview("v009-innovation-shop-floor");
   const neonCorePortal = getVideoOverview("v010-neon-core-skyline");
   const thornwallPortal = getVideoOverview("v011-thornwall-old-iron");
+  const veilreachPortal = getVideoOverview("v012-veilreach-membrane");
+  const greenSpacesPortal = getVideoOverview("v013-green-spaces-lungs");
 
   return (
     <SiteShell>
@@ -662,10 +664,10 @@ function CityPage() {
         </section>
 
 
-        <section className="mt-14">
+        <section id="green-spaces" className="mt-14 scroll-mt-24">
           <div className="mb-5 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
-              #VioletEchoes · Green Spaces
+              #VioletEchoes · Green Spaces · sixth district portal
             </p>
             <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
               The Ecological Heatsink
@@ -674,7 +676,88 @@ function CityPage() {
               The Lungs. The Soft Grid. Cycles over clocks. Ecological stability as load-bearing
               infrastructure — not decoration. We carry its breath.
             </p>
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "biophilic-lore-guide" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Biophilic Lore Guide →
+              </Link>
+              <Link
+                to="/bible/$slug"
+                params={{ slug: "green-spaces" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Bible entry
+              </Link>
+              <Link
+                to="/city"
+                hash="veilreach-portal"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Veilreach · Membrane
+              </Link>
+            </div>
           </div>
+          {greenSpacesPortal?.status === "live" ? (
+            <div
+              id="green-spaces-portal"
+              className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Lungs walk · {greenSpacesPortal.durationHint} · Gemini Notebook
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  {greenSpacesPortal.title}
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  {greenSpacesPortal.summary}
+                </p>
+              </div>
+              <div className="bg-black">
+                <video
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={greenSpacesPortal.posterSrc}
+                  className="aspect-video w-full"
+                  src={greenSpacesPortal.videoSrc}
+                >
+                  Your browser does not support video.
+                </video>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+                <p className="text-xs text-[var(--color-subtle)]">{greenSpacesPortal.by}</p>
+                <Link
+                  to="/podcast"
+                  hash="v013-green-spaces-lungs"
+                  className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+                >
+                  Full broadcast library →
+                </Link>
+              </div>
+            </div>
+          ) : (
+            <div
+              id="green-spaces-portal"
+              className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Lungs walk · arriving
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  Green Spaces — we carry its breath
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  Cinematic reserved. Soft fascination. The Azure-Crowned Honeyeater. The walk
+                  hangs here when it lands.
+                </p>
+              </div>
+            </div>
+          )}
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame
               src={media.greenHeatsink}
@@ -1038,19 +1121,100 @@ function CityPage() {
         </section>
 
 
-        <section className="mt-14">
+        <section id="veilreach" className="mt-14 scroll-mt-24">
           <div className="mb-5 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
-              #VioletEchoes · Veilreach
+              #VioletEchoes · Veilreach · fifth district portal
             </p>
             <h2 className="font-display text-2xl text-[var(--color-fg)] sm:text-3xl">
               Watchful edge
             </h2>
             <p className="mt-2 text-sm text-[var(--color-muted)]">
               Outer, transitional, boundary zones. Edge Node: Veil. Watch · Adapt · Reverse ·
-              Disengage. Careful openness — leave cleanly when you must.
+              Disengage. Handshake, not a hook. Leave cleanly when you must.
             </p>
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <Link
+                to="/bible/companions/$doc"
+                params={{ doc: "membrane-codex" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Membrane Codex →
+              </Link>
+              <Link
+                to="/bible/$slug"
+                params={{ slug: "veilreach" }}
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Bible entry
+              </Link>
+              <Link
+                to="/city"
+                hash="green-spaces-portal"
+                className="text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+              >
+                Green Spaces · Lungs
+              </Link>
+            </div>
           </div>
+          {veilreachPortal?.status === "live" ? (
+            <div
+              id="veilreach-portal"
+              className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Membrane walk · {veilreachPortal.durationHint} · Gemini Notebook
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  {veilreachPortal.title}
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  {veilreachPortal.summary}
+                </p>
+              </div>
+              <div className="bg-black">
+                <video
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={veilreachPortal.posterSrc}
+                  className="aspect-video w-full"
+                  src={veilreachPortal.videoSrc}
+                >
+                  Your browser does not support video.
+                </video>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 sm:px-6">
+                <p className="text-xs text-[var(--color-subtle)]">{veilreachPortal.by}</p>
+                <Link
+                  to="/podcast"
+                  hash="v012-veilreach-membrane"
+                  className="text-xs text-[var(--color-primary-soft)] hover:text-[var(--color-primary)]"
+                >
+                  Full broadcast library →
+                </Link>
+              </div>
+            </div>
+          ) : (
+            <div
+              id="veilreach-portal"
+              className="mb-6 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Membrane walk · arriving
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  Veilreach — the Membrane
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  Cinematic reserved. Watch · Adapt · Reverse · Disengage. The veil as weather, not
+                  a wall. The walk hangs here when it lands.
+                </p>
+              </div>
+            </div>
+          )}
           <div className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
             <MediaFrame
               src={media.veilProtocol}

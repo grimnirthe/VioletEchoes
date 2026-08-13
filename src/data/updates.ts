@@ -62,6 +62,25 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-veil-lungs-portals",
+    date: "2026-08-12",
+    title: "Veilreach + Green Spaces hung — videos reserved",
+    kind: "bible",
+    summary:
+      "Membrane Codex and Biophilic Lore Guide live. Fifth and sixth district doors. Handshake, not a hook. We carry its breath. Cinematics reserved.",
+    body: [
+      "The veil is the membrane. The Lungs are the proof that beauty is a signal. Walks hang when Gemini’s videos land.",
+    ],
+    hrefs: [
+      { label: "Membrane Codex", href: "/bible/companions/membrane-codex" },
+      { label: "City · Veilreach", href: "/city#veilreach-portal" },
+      { label: "Biophilic Lore Guide", href: "/bible/companions/biophilic-lore-guide" },
+      { label: "City · Lungs", href: "/city#green-spaces-portal" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["veilreach", "green-spaces", "district-portal", "reserved", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-rain-watch",
     date: "2026-08-12",
     title: "Rain Watch hung — challenge still on the wall",

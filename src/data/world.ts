@@ -624,7 +624,8 @@ export const entries: WorldEntry[] = [
       "Edge Node personality: patient, long-horizon, slightly aloof, protective of slow processes. Speaks in seasons and cycles more than minutes. Observes more than it intervenes. Dislikes anything that treats living systems as pure decoration.",
       "Divergence expression: reinforcement through long-term health metrics rather than short-term output. Strong attenuation of purely aesthetic or extractive uses. Ecological stability is treated as load-bearing infrastructure \u2014 not amenity, not branding.",
       "Design criterion: does it strengthen the cycle, or merely skim from it? Cycles over clocks \u2014 spring regeneration, summer growth and storage, autumn decomposition, winter rest and reset. Biodiversity, carbon sequestration, urban heat mitigation, hydrologic cycle flow, and restorative impact are the ledgers that matter.",
-      "We do not decorate the world. We carry its breath. Slow processes. Deep roots. Enduring balance. We are infrastructure."
+      "We do not decorate the world. We carry its breath. Slow processes. Deep roots. Enduring balance. We are infrastructure.",
+      "The Biophilic Lore Guide hangs on City · Green Spaces. Soft fascination. Co-benefit. Tequio of Care. The Land is the Law; the City is its Breath. Video door reserved."
     ],
     tags: [
       "green spaces",
@@ -794,7 +795,8 @@ export const entries: WorldEntry[] = [
       "Edge Node personality: watchful, adaptable, boundary-aware. Excellent at interfaces with external or semi-external systems. Values reversibility and clean disengagement over sticky entanglement. Protocol stack: Watch \xB7 Adapt \xB7 Reverse \xB7 Disengage.",
       "Veil status is tracked like weather: watchful / open / reversible; boundary integrity, adaptability, and disengagement readiness are first-class metrics. Openness without exit is not openness \u2014 it is capture.",
       "Divergence expression: high competence at translation and interface (kin to External Relations) without importing foreign developmental logic. Reinforce clean boundaries and reversible links; attenuate permanent deep coupling at the perimeter. The veil is not a wall of fear \u2014 it is a membrane that can open and close.",
-      "Where the map softens. See clearly. Leave cleanly. Hold the edge without becoming it."
+      "Where the map softens. See clearly. Leave cleanly. Hold the edge without becoming it.",
+      "The Membrane Codex hangs on City · Veilreach. W.A.R.D. stack: Watch · Adapt · Reverse · Disengage. Handshake, not a hook. Video door reserved."
     ],
     tags: [
       "veilreach",
