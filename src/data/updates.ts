@@ -69,7 +69,7 @@ export const cityUpdates: CityUpdate[] = [
     summary:
       "Aether Core blueprint on the share door. Crystal heart is brainstem: rhythm, balance, clean spikes. Edge thinks. Lattice still owed.",
     body: [
-      "The node is the invention. A heart that thinks for the city is an overlord. Footfall layer stays reserved for Gemini.",
+      "The node is the invention. A heart that thinks for the city is an overlord. Candidate family hung: single-crystal halide perovskite. Three papers, not one miracle stone. Footfall stays reserved for Gemini.",
     ],
     hrefs: [
       { label: "Share door · blueprint", href: "/aether-core#blueprint" },
