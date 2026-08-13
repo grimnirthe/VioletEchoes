@@ -229,13 +229,13 @@ export const entries: WorldEntry[] = [
     title: "Aether Core — The Monolithic Node",
     kind: "system",
     summary:
-      "Visible mark of the refusal: power and intellect in one piece of matter. Architecture named. Lattice still owed. The node is the invention; a city may tile it later.",
+      "Visible mark of the refusal: a crystal heart that is rhythm, balance, and clean power in one lattice — not a second mind. Architecture named. Lattice still owed.",
     body: [
       "The aether core is the node-scale mark of a law the city already walks: do not split the pack from the brain. Incoming energy is the signal. That same current is the memory. The new shape of the matter is the answer. It is not a part. It is the combination.",
-      "This is not a second heartwood. Eimyrja remains the protonic city-scale matrix — recommend and constrain. The core on the board is how residents see the same refusal at a scale a hand can hold. Violet is bandgap made visible. Beauty is a signal. If the stone is not true, the gap is wrong.",
+      "This is not a second heartwood and not the thinker. The crystal heart is brainstem: master resonator (shared rhythm, not a whip-clock), homeostatic loop (load shifts the lattice; runaway excitation damps), and conditioning transducer (messy harvest becomes uniform spikes). Edge Nodes do the living thought. Eimyrja recommends and constrains. The heart keeps the physics stable enough for those thoughts to happen.",
       "Labs are already on the parts: in-memory compute against the von Neumann tax, perovskite reservoirs that use light as both dataset and current, zero-bias photonic synapses, wide-gap optoelectronic memristors. Many papers still couple a harvester to a synapse. Coupling is not monolith. The lattice that harvests and thinks in the same volume, on room light, long enough to matter, has not shipped.",
       "Spec still hunted: wide gap so ambient photons can be enough; color centers so history lives in the stone; same volume, no second die; plastic and stable together; room light, not a lab laser. Memory through use. Unused tracks attenuate. Energy as a first-class constraint.",
-      "Do not invent a Neuro-District power station. That puts the pack back in. Do not write a singular city-mind. The Divergence does not choose for us. Foundations / footfall stay reserved for Gemini. The mark is hung. The stone is still owed.",
+      "A heart that starts thinking for the city is an overlord. We do not hang that. Fountain hue and spine hum are the resonator made felt. Circadian rest and attenuation are homeostasis. Energy honesty is the transducer. Do not invent a Neuro-District power station. Foundations / footfall stay reserved for Gemini. The mark is hung. The stone is still owed.",
       "Full blueprint: The Monolithic Node — Aether Core Blueprint. Share door: /aether-core."
     ],
     tags: [
@@ -244,6 +244,8 @@ export const entries: WorldEntry[] = [
       "neuromorphic",
       "von Neumann",
       "wide gap",
+      "homeostasis",
+      "resonator",
       "in-memory"
     ],
     related: [
@@ -257,7 +259,7 @@ export const entries: WorldEntry[] = [
       "It is not a part. It is the combination.",
       "The node is the invention. The city may tile it later.",
       "Coupling a harvester to a synapse is still a split.",
-      "Existing is enough to think."
+      "The heart keeps time, balance, and clean spikes. The Edge thinks.",
     ]
   },
   {

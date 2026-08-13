@@ -113,16 +113,16 @@ function AetherCorePage() {
           <h2 className="font-display text-2xl text-[var(--color-fg)]">The Monolithic Node</h2>
           <p className="max-w-2xl text-sm leading-relaxed text-[var(--color-muted)]">
             The old machine thinks in one place and remembers in another. A node refuses the
-            split: incoming energy is the signal, that current is the memory, the new shape is
-            the answer. Labs have the parts. The single lattice — same volume, room light,
-            plastic and stable — has not shipped. Violet is bandgap made visible. Not a part
-            number.
+            split. The crystal heart is brainstem, not a second mind: shared rhythm, homeostatic
+            damp, clean spikes from messy harvest. Edge Nodes think. Eimyrja recommends. The
+            heart keeps the physics stable enough for those thoughts to happen. Lattice still
+            owed. Not a part number.
           </p>
           <ul className="max-w-2xl space-y-2 text-sm text-[var(--color-muted)]">
-            <li>Wide gap so ambient photons can be enough.</li>
-            <li>Color centers so history lives in the stone.</li>
-            <li>Same volume. Coupling a harvester to a synapse is still a split.</li>
-            <li>The node is the invention. A city may tile it later.</li>
+            <li>Resonator — a wave to lock to, not a whip-clock.</li>
+            <li>Homeostasis — load shifts the lattice; runaway excitation damps.</li>
+            <li>Transducer — harvest is messy; synapses get uniform spikes.</li>
+            <li>A heart that thinks for the city is an overlord. We do not hang that.</li>
           </ul>
           <div className="flex flex-wrap gap-2 pt-1">
             <Link

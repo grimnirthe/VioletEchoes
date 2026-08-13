@@ -67,9 +67,9 @@ export const cityUpdates: CityUpdate[] = [
     title: "Monolithic Node hung — architecture named, lattice owed",
     kind: "systems",
     summary:
-      "Aether Core blueprint on the share door. Power and intellect in one piece of matter. Honest pointer for the hunt. Not a part number.",
+      "Aether Core blueprint on the share door. Crystal heart is brainstem: rhythm, balance, clean spikes. Edge thinks. Lattice still owed.",
     body: [
-      "The node is the invention. A city may tile it later. Footfall layer stays reserved for Gemini.",
+      "The node is the invention. A heart that thinks for the city is an overlord. Footfall layer stays reserved for Gemini.",
     ],
     hrefs: [
       { label: "Share door · blueprint", href: "/aether-core#blueprint" },

@@ -140,7 +140,7 @@ export const companionDocs: CompanionDoc[] = [
     id: "monolithic-node",
     title: "The Monolithic Node — Aether Core Blueprint",
     blurb:
-      "It is not a part. It is the combination. Power and intellect in one piece of matter. Architecture named. Lattice still owed. Honest pointer for the hunt.",
+      "It is not a part. It is the combination. Crystal heart = resonator, homeostasis, clean spikes — not a second mind. Architecture named. Lattice still owed.",
     href: "/docs/monolithic-node.md",
     to: "/bible/companions/monolithic-node",
     kind: "technical",

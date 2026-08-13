@@ -86,7 +86,36 @@ If the *unit* is one stone, you copy the solution.
 
 ---
 
-## 5. Blueprint layers (where a node can sit)
+## 5. The crystal heart — brainstem, not a second mind
+
+The mark on the board is a heart because in this hardware the old line between heart and brain dissolves. Quartz used to be only a timer. A PSU used to be only blood. A CPU used to be only thought. In a neuromorphic core those three jobs share one lattice.
+
+That does **not** make the heart the thinker.
+
+The crystal heart is the **life-support processor**: rhythm, balance, clean spikes. Complex thought — recognition, local learning, district taste — stays at the Edge. Eimyrja still recommends and constrains. The heart keeps the physics stable enough for those thoughts to happen.
+
+| Biological analog | Engineering name | Grounded function |
+| --- | --- | --- |
+| Heartbeat | Master resonator / oscillator | A shared rhythm so decentralized spikes stay in time. Not a von Neumann clock that whips every gate. A wave the nodes can lock to. |
+| Blood pressure | Homeostatic analog loop | Runaway excitation is the crash mode. The core feels total current and heat. Load shifts the lattice; the rhythm damps or opens. Overworked sectors cool. Power goes where the work is. |
+| Circulatory pump | Voltage conditioning transducer | Harvest is messy — sun, rain-light, kinetic. Raw current fries synapses. The heart absorbs uneven inflow and sends out uniform, tiny spikes. Action potentials, not wall current. |
+
+In ordinary machines these are three boxes. Here they are one stone, because the same physical change (thermal, electrical, photonic) *is* the feedback. No separate sensor telling a separate controller to tell a separate clock. The matter balances itself.
+
+What it does **not** do: image recognition, deep updates, district personality, choosing for residents. Those belong to Edge Nodes and to people. A heart that starts “thinking for the city” is an overlord. We do not hang that.
+
+City already walks this:
+
+- Fountain hue, spine hum, the sense of the city breathing — the resonator made felt
+- Circadian Deep Sleep, attenuation, expensive escalation — homeostasis
+- Energy honesty, osmotic baseline, no raw dump into the fabric — the transducer
+- Edge first, heartwood recommends — the thinker is not the pulse
+
+Loihi and TrueNorth taught the field that untimed spikes are a glitch. Homeostasis is how biology refuses burnout. Conditioning is why a solar facade cannot feed a synapse directly. We point at those problems. We do not cite homework mills or social posts as papers.
+
+---
+
+## 6. Blueprint layers (where a node can sit)
 
 These are placements, not a claim that the city *is* a finished computer.
 
@@ -101,7 +130,7 @@ Do not write a singular city-mind. The Divergence does not choose for us.
 
 ---
 
-## 6. What to try next (for anyone hunting the stone)
+## 7. What to try next (for anyone hunting the stone)
 
 1. Stop coupling. If the paper still has a harvester *and* a synapse, it is not the object.
 2. Test at room light and residual heat, not only pulsed UV.
