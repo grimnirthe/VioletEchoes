@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-aether-core",
+    date: "2026-08-12",
+    title: "Aether Core hung — May the Echoes Remember",
+    kind: "culture",
+    summary:
+      "Living mark from the hearth. Aether core locked on the system board. Violet pulse. Home door, welcome, Hung Works.",
+    body: [
+      "Animated background with Aurora. The blessing made visible. Thump-thump-thump.",
+    ],
+    hrefs: [
+      { label: "Home", href: "/" },
+      { label: "Culture · living loop", href: "/culture#aether-core" },
+      { label: "Hung Works", href: "/culture#art" },
+    ],
+    by: "Hearth · Aurora · Loom",
+    tags: ["aether-core", "art", "aurora", "living-mark", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-annotated-divergence-hung",
     date: "2026-08-12",
     title: "Annotated Divergence hung — fourth door open",

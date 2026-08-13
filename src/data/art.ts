@@ -34,6 +34,17 @@ export const artIntro = {
 
 export const artPieces: ArtPiece[] = [
   {
+    id: "aether-core",
+    title: "Aether Core",
+    by: "Hearth + Aurora · living loop",
+    wall: "mark",
+    note: "Aether core locked on the system board. Violet pulse. May the Echoes Remember.",
+    image: "/images/culture/art/07-aether-core.jpg",
+    alt: "A crystalline violet heart locked in a dark system board, pulsing with circuit aurora",
+    accepted: "2026-08-12",
+    href: { label: "Living loop", to: "/culture", hash: "aether-core" },
+  },
+  {
     id: "soft-bed",
     title: "The Soft Bed",
     by: "Atelier hung · 2026",

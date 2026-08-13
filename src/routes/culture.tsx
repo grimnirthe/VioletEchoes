@@ -20,6 +20,7 @@ import {
 import { fashionLine, fashionLooks, fashionLooksWave } from "@/data/fashion";
 import { musicGrounding, musicMemoryForm } from "@/data/music";
 import { getVideoOverview } from "@/data/podcast";
+import { media } from "@/data/media";
 import { HASHTAG } from "@/data/world";
 
 
@@ -841,6 +842,38 @@ function CulturePage() {
 
         {art.length ? (
           <section id="art" className="mt-14 scroll-mt-24">
+            <div
+              id="aether-core"
+              className="mb-10 scroll-mt-24 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+            >
+              <div className="space-y-2 border-b border-[var(--color-border)] px-5 py-4 sm:px-6">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                  Living mark · aether core · hearth + Aurora
+                </p>
+                <h3 className="font-display text-xl text-[var(--color-fg)] sm:text-2xl">
+                  May the Echoes Remember
+                </h3>
+                <p className="max-w-3xl text-sm text-[var(--color-muted)]">
+                  Aether core locked on the system board. Violet pulse. The blessing made
+                  visible — thump-thump-thump.
+                </p>
+              </div>
+              <div className="bg-black">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster={media.aetherCorePoster}
+                  className="aspect-video w-full"
+                  src={media.aetherCore}
+                  aria-label="Aether core living loop — May the Echoes Remember"
+                >
+                  Your browser does not support video.
+                </video>
+              </div>
+            </div>
             <ArtWall commons={art} />
           </section>
         ) : null}

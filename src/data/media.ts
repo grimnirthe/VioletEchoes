@@ -9,6 +9,8 @@ export const media = {
   mayTheEchoesRemember: "/images/may-the-echoes-remember.jpg",
   brandMark: "/images/brand-mark.jpg",
   brandVideo: "/videos/brand-ember.mp4",
+  aetherCore: "/video/012-aether-core.mp4",
+  aetherCorePoster: "/images/video/012-aether-core-poster.jpg",
 
   hero: "/images/city-aerial-nexus.jpg",
   heroIsland: "/images/hero-island.jpg",

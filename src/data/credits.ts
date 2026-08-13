@@ -101,6 +101,12 @@ export const creditSections: CreditSection[] = [
         verify: "On-site Codex Aurora + tenets ticker attribution",
       },
       {
+        label: "Aether Core — living mark",
+        url: "/culture#aether-core",
+        note: "Hearth + Aurora animated loop: aether core locked on the system board. Violet pulse. Hung on home, welcome, and Hung Works.",
+        verify: "On-site · /video/012-aether-core.mp4 · /culture#aether-core · home living mark",
+      },
+      {
         label: "Suno AI — “Let it echo, let it stay…”",
         url: "https://suno.com/s/yS0m4LBxW5bjsjti",
         note: "Echoes Remember (original + bed), lyrics, Echoes room host voice",
