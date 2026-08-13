@@ -158,7 +158,7 @@ export const entries: WorldEntry[] = [
       "Built differently. Coherently. Everyday social norms that follow: reciprocity, respect for context, patience with emergence, accountability in relation, grace in letting go. We build for seven generations, not for the next quarter.",
       "Different trade-offs. Different measures of success. A different future, chosen on purpose. We walked the path of scaling and oversight far enough to see its compounding long-term costs. We chose a different set of trade-offs \u2014 while we still could.",
       "The Timeline of the Divergence hangs the when: the Choice, the Founding of the Living Nexus, the Integration of Eimyrja, the Commissioning of the Aethelgard, and the Seventh Generation Commitment. History is a longer echo.",
-      "The Annotated Divergence is reserved on Foundations — ancestral echoes braiding into shared memory. Metabolist cycles. Circular causality. Designing with Country. Haudenosaunee seven-generation thinking. Biophilia. Nordic craft. The report hangs when it lands."
+      "The Annotated Divergence hangs on Foundations — ancestral echoes braided into shared memory. Metabolist cycles. Circular causality. Designing with Country. Ise Shrine mending. Biophilia. Nordic craft. Four axioms. The scholarly bridge is open."
     ],
     tags: [
       "divergence",

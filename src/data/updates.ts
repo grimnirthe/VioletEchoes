@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-12-annotated-divergence-hung",
+    date: "2026-08-12",
+    title: "Annotated Divergence hung — fourth door open",
+    kind: "bible",
+    summary:
+      "Foundational Echoes of the Nexus. Eight sections. Metabolist spines, Designing with Country, Ise Shrine mending, cybernetic braid, biophilia, Nordic honest materials. Four axioms.",
+    body: [
+      "The Divergence is not an isolated experiment. The scholarly bridge is live. The ancestors are speaking. The Nexus is listening.",
+    ],
+    hrefs: [
+      { label: "Read on site", href: "/bible/companions/annotated-divergence" },
+      { label: "Foundations · Annotated", href: "/bible/foundations#annotated" },
+      { label: "Divergence entry", href: "/bible/development-divergence" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["annotated", "divergence", "foundations", "companion", "gemini", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-annotated-divergence",
     date: "2026-08-12",
     title: "Annotated Divergence reserved — fourth door opening",

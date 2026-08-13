@@ -104,6 +104,17 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "District portal · 6 sections · .md + PDF",
   },
   {
+    id: "annotated-divergence",
+    title: "The Annotated Divergence — Foundational Echoes of the Nexus",
+    blurb:
+      "Fourth door. Ancestral echoes: Metabolist spines and Edge Nodes, Designing with Country, Ise Shrine mending, cybernetic braid, biophilia, Nordic honest materials. Four axioms. The scholarly bridge.",
+    href: "/docs/annotated-divergence.md",
+    pdfHref: "/docs/annotated-divergence.pdf",
+    to: "/bible/companions/annotated-divergence",
+    kind: "core",
+    pagesHint: "Fourth door · 8 sections · .md + PDF",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:

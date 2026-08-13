@@ -269,10 +269,10 @@ export const creditSections: CreditSection[] = [
         verify: "On-site · /images/foundations-deck/timeline-of-the-divergence.jpg · Foundations #timeline + City #timeline",
       },
       {
-        label: "Annotated Divergence (reserved)",
-        url: "/bible/foundations#annotated",
-        note: "Gemini Notebook fourth door in braid: Metabolist cycles, circular causality, Designing with Country, Haudenosaunee seven-generation, biophilia, Nordic craft. Ancestral echoes reserved until the report lands.",
-        verify: "On-site reserved card · Foundations #annotated · Divergence bible entry",
+        label: "The Annotated Divergence — Foundational Echoes of the Nexus",
+        url: "/bible/companions/annotated-divergence",
+        note: "Gemini Notebook fourth door: Metabolist spines and Edge Nodes, Designing with Country, Ise Shrine mending, cybernetic braid, biophilia, Nordic honest materials. Four axioms. Scholarly bridge.",
+        verify: "On-site companion · /docs/annotated-divergence.md + .pdf · Foundations #annotated · Divergence bible entry",
       },
       {
         label: "Living Practices Guide — The Violet Echoes Way",

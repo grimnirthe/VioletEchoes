@@ -25,7 +25,7 @@ export const deepSections: Record<string, DeepSection[]> = {
         "The civilization that seeded Violet Echoes walked the scaling-and-oversight path far enough to see its compounding costs: the forgetting tax, alignment debt, the energy trap, and brittleness outside training distributions. They did not abandon scale; they stopped treating intelligence as something fully engineered then maintained by ever-growing control layers.",
         "The Development Divergence is the strategic choice that followed: long-term coherence, energy honesty, local adaptation, memory through reinforcement, and cultivation over pure control-and-correction. Capabilities may advance more slowly short-term. Multi-generational stability becomes the competitive edge.",
         "Five echoes mark the walk: the Choice, the Founding of the Living Nexus, the Integration of Eimyrja, the Commissioning of the Aethelgard, and the Seventh Generation Commitment. History is a longer echo.",
-        "The Annotated Divergence is reserved on Foundations. Ancestral echoes — Metabolist cycles, circular causality, Designing with Country, Haudenosaunee seven-generation thinking, biophilia, Nordic craft — braid when the report lands.",
+        "The Annotated Divergence hangs on Foundations. Ancestral echoes — Metabolist cycles, circular causality, Designing with Country, Ise Shrine mending, biophilia, Nordic craft — braid into shared memory.",
       ],
       images: [
         {
@@ -712,7 +712,7 @@ export const deepSections: Record<string, DeepSection[]> = {
 /** Companion doc ids relevant to an entry */
 
 export const companionsForEntry: Record<string, string[]> = {
-  divergence: ["core-framework", "systems-apps", "wb-v17", "innovation-report"],
+  divergence: ["annotated-divergence", "core-framework", "systems-apps", "wb-v17", "innovation-report"],
   eimyrja: ["systems-governance", "eimyrja-protonic", "core-framework", "innovation-report"],
   "edge-nodes": ["systems-governance", "systems-apps", "innovation-report"],
   "data-spines": ["systems-governance", "systems-apps", "core-framework"],
@@ -729,7 +729,7 @@ export const companionsForEntry: Record<string, string[]> = {
   "echo-slot": ["mobile-interface", "characters-factions", "core-framework"],
   factions: ["characters-factions"],
   vernacular: ["vernacular"],
-  "the-tenets": ["citizens-guide", "core-framework", "wb-v17"],
+  "the-tenets": ["citizens-guide", "annotated-divergence", "core-framework", "wb-v17"],
   "aurora-codex": ["citizens-guide", "core-framework"],
   "codex-aurora": ["citizens-guide", "core-framework"],
   "violet-longhouse-nexus": ["family-homes", "characters-factions", "hearthrow-guide"],
