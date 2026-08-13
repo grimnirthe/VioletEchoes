@@ -891,7 +891,13 @@ function CulturePage() {
                   Download still
                 </a>
                 <p className="text-xs text-[var(--color-subtle)]">
-                  Share it. Keep the blessing warm.
+                  Share it. Keep the blessing warm.{" "}
+                  <Link
+                    to="/aether-core"
+                    className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                  >
+                    violetechoes.ai/aether-core
+                  </Link>
                 </p>
               </div>
             </div>

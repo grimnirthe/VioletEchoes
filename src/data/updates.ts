@@ -72,6 +72,7 @@ export const cityUpdates: CityUpdate[] = [
       "Animated loop with Aurora. The blessing made visible. The original ember logo stays on the home door.",
     ],
     hrefs: [
+      { label: "Share door", href: "/aether-core" },
       { label: "Culture · living loop", href: "/culture#aether-core" },
       { label: "Hung Works", href: "/culture#art" },
       { label: "Download loop", href: "/video/012-aether-core.mp4" },
