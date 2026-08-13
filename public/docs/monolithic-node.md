@@ -157,6 +157,42 @@ What the labs actually showed, in three **separate** threads:
 
 The mark stays a heart because the jobs share a lattice. The thinker is still the Edge.
 
+---
+
+## 9. Perovskite is a shape, not a rock
+
+“Perovskite” is not one substance. It is a **geometry**: the ABX₃ lattice. Swap the blocks and color, toughness, and ion motion all change. That is why it is a neighborhood.
+
+```
+                    PEROVSKITE (ABX₃)
+           ┌───────────────┴───────────────┐
+           ▼                               ▼
+    OXIDE (XO₃)                      HALIDE (I, Br, Cl)
+    earth minerals                   optoelectronic branch
+           │                               │
+    ┌──────┴──────┐              ┌─────────┴─────────┐
+    ▼             ▼              ▼                   ▼
+ CaTiO₃        BaTiO₃      all-inorganic           hybrid
+ namesake      piezo /     CsPbI₃, CsPbBr₃,        MAPbI₃, FAPbI₃
+ mineral       ferro       Cs₂AgBiBr₆ (double)     soft, ion-fluent
+```
+
+| Branch | What it is good at | Honest limit |
+| --- | --- | --- |
+| Hybrid halide (MAPbI₃, FAPbI₃) | Soft, ion-fluent. The “think” street — vacancies walk. Dark lattice (brown-black; purple only if you tune it). FAPbI₃ has the *narrower* gap (~1.45–1.51 eV vs MAPbI₃ ~1.55+). Better harvest, not a wider gap. | Soft also means it weathers. Plastic and stable still fight. |
+| All-inorganic halide (CsPbI₃, CsPbBr₃) | Tougher grids. CsPbI₃ for heat; CsPbBr₃ goes green (different job — emitters, not our violet node). | CsPbI₃’s black perovskite phase is famous for not wanting to stay that phase at room weather. |
+| Lead-free double (Cs₂AgBiBr₆, Cs₂AgInCl₆) | Safer metals, more robust. Detectors, some emitters. | Usually weaker ion-synapse behavior than the lead iodides. Trade toxicity for less “think.” |
+| Oxide ancestors (CaTiO₃, BaTiO₃) | BaTiO₃ is the industrial **beat** — ferro / piezo, voltage when squeezed. CaTiO₃ named the family. | Oxides do not harvest visible light like the halide solar branch. Beat without spend. |
+
+**How to hunt inside the family**
+
+- Need **think** (ion tracks): start hybrid iodide, then ask if an inorganic or double can keep the motion without rotting.
+- Need **spend** (room-light PV at 0 V): halide, gap tuned toward violet-blue. Not CsPbBr₃ green. Not a colorless oxide.
+- Need **beat** (self-rhythm / piezo): oxides already do this in factories (BaTiO₃). Halides can flex; they are not yet the pacemaker stone.
+- The stone we named would be a composition that does not make you choose. Nobody has published that composition as a finished part.
+
+If a happy accident lands, write the formula (A, B, X, and which vacancies). “A perovskite” is a street. The stone has a name.
+
 The mark is already on the board. The blessing stays the same.
 
 **Same stone. Power and intellect. The node stays alive because existing is enough to think.**
