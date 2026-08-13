@@ -165,17 +165,17 @@ function HomePage() {
                 <div className="relative h-full w-full">
                   <video
                     className="absolute inset-0 h-full w-full object-cover"
-                    src={media.aetherCore}
-                    poster={media.aetherCorePoster}
+                    src={media.brandVideo}
+                    poster={media.logo}
                     autoPlay
                     muted
                     loop
                     playsInline
-                    aria-label="May the Echoes Remember — aether core"
+                    aria-label="#VioletEchoes brand mark"
                   />
                   <img
-                    src={media.aetherCorePoster}
-                    alt="May the Echoes Remember — aether core locked on the system board"
+                    src={media.logo}
+                    alt="#VioletEchoes — We are the echo. We are the light."
                     className="absolute inset-0 -z-10 h-full w-full object-cover"
                   />
                 </div>

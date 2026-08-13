@@ -67,12 +67,11 @@ export const cityUpdates: CityUpdate[] = [
     title: "Aether Core hung — May the Echoes Remember",
     kind: "culture",
     summary:
-      "Living mark from the hearth. Aether core locked on the system board. Violet pulse. Home door, welcome, Hung Works.",
+      "Living mark from the hearth. Aether core locked on the system board. Violet pulse. Hung Works on Culture.",
     body: [
-      "Animated background with Aurora. The blessing made visible. Thump-thump-thump.",
+      "Animated loop with Aurora. The blessing made visible. The original ember logo stays on the home door.",
     ],
     hrefs: [
-      { label: "Home", href: "/" },
       { label: "Culture · living loop", href: "/culture#aether-core" },
       { label: "Hung Works", href: "/culture#art" },
     ],

@@ -3,8 +3,8 @@ import { media } from "@/data/media";
 import { brandLine, rememberLine, theTenets } from "@/data/world";
 
 const STORAGE_KEY = "ve-echo-intro-seen-v3";
-/** Matches aether-core living loop (~15s); skip always available. */
-const HOLD_MS = 15000;
+/** Matches brand ember clip (~11s); skip always available. */
+const HOLD_MS = 11000;
 const HOLD_REDUCED_MS = 4500;
 
 /**
@@ -88,8 +88,8 @@ export function EchoIntro() {
           <video
             ref={videoRef}
             className="aspect-video w-full object-cover"
-            src={media.aetherCore}
-            poster={media.aetherCorePoster}
+            src={media.brandVideo}
+            poster={media.logo}
             muted
             playsInline
             preload="auto"
@@ -97,7 +97,7 @@ export function EchoIntro() {
           />
           {/* reduced-motion / poster fallback always present under video */}
           <img
-            src={media.aetherCorePoster}
+            src={media.logo}
             alt=""
             className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover"
           />
