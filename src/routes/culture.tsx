@@ -1060,7 +1060,7 @@ function ArtWall({ commons }: { commons: CultureWork[] }) {
                     Download loop
                   </a>
                   <a
-                    href={media.aetherCorePoster}
+                    href={media.aetherCoreStill}
                     download="Violet-Echoes-Aether-Core.jpg"
                     className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[var(--color-border)] px-4 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
                   >
