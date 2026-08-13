@@ -193,6 +193,62 @@ The mark stays a heart because the jobs share a lattice. The thinker is still th
 
 If a happy accident lands, write the formula (A, B, X, and which vacancies). “A perovskite” is a street. The stone has a name.
 
+---
+
+## 10. Chemical blueprint — how to *build* toward the stone
+
+This is a **target spec**, not a catalog part. One crystal. One growth. If you stack a solar film on a piezo disc on a memristor, you built a sandwich. Stop.
+
+### Site-to-job map (ABX₃)
+
+| Site | What it mostly sets | For our node |
+| --- | --- | --- |
+| **A** (Cs⁺, FA⁺, MA⁺, or Ba²⁺ in oxides) | Toughness, phase, some polarity | Favor **Cs** (weather) + a little **FA** (ion fluency). Do not lean on MA as the body — it rots. Ba belongs to the oxide *beat* ancestors; putting Ba into a halide is a research bet, not a recipe on the shelf. |
+| **B** (Pb²⁺, Sn²⁺, Bi³⁺/Ag⁺ in doubles) | Band, toxicity, how freely ions move | **Pb** still thinks best. Doubles (Ag/Bi) are the safer, stiffer cousins — try them if Pb is forbidden; expect weaker synapses. |
+| **X** (I⁻, Br⁻, Cl⁻) | Gap, color, vacancy tracks | **Mixed I/Br.** Iodine vacancies are the think-tracks. Bromide widens the gap toward blue-violet harvest. Pure I goes black (solar, not our look). Pure Br goes green (emitter, wrong job). Cl is usually too wide. |
+| **Vacancies / dopants** | Memory density, color centers | Controlled **X-site vacancies** (iodine-poor, not wrecked). Optional dilute Bi or rare-earth as color-center / trap spice. Do not “damage until purple.” |
+
+### Target windows (pass/fail)
+
+| Window | Aim | Why |
+| --- | --- | --- |
+| Crystal | **Single crystal**, not a sprayed film | Grain boundaries are hidden wires. They fake monolith. |
+| Formula type | ABX₃ or A₂B′B″X₆ (double) | Same geometry family. |
+| Bandgap | **~2.3–2.8 eV** | Room blue/violet can pay the bill. Narrow (~1.5 eV) is a black solar cell — thinks/spends, looks like tar, over-harvests IR. Wide (~3.1 eV+) needs a lamp. |
+| Polarity | Non-centrosymmetric / ferro- or piezo-active | That is the **beat**: strain ↔ charge, a rhythm the lattice can lock. Photoferroelectric halide work exists; it is not a finished pacemaker. |
+| Bias | **0 V** external when lit | If you still need a pack to switch it, you did not build the stone. |
+| Same volume | Harvest, switch, and oscillate measured on **one** boule | Three chips on a board is the old split. |
+| Dual test | Retention **and** plasticity on the same sample | Ions that only forget, or only freeze, are half a node. |
+
+### Starter composition *space* (not a SKU)
+
+Work inside the map people already know how to grow, then walk it toward violet and toward polarity:
+
+**CsₓFA₁₋ₓPb(BrᵧI₁₋ᵧ)₃** with **y high enough to leave the black**, **x high enough to hold phase**, and the crystal grown **iodine-poor** so vacancies exist on purpose.
+
+- x ≈ Cs-rich enough to resist weather (the solar literature’s Cs/FA maps are the starting atlas — Bush et al. and descendants — then *leave* the 1.5–1.7 eV solar strip).
+- y: add Br until the gap sits in the 2.3–2.8 eV window and the boule reads purple-dark, not grass-green, not tar-black.
+- Vacancy: a slight X-deficiency at growth, counted, repeatable. That is the think-dose.
+- Optional second line if Pb is barred: a **halide double ferroelectric** (Cs₂AgBiBr₆ family and true halide-double ferroelectrics). More stable, less synapse. Record the loss honestly.
+
+**Do not** start from BaTiO₃ and paint it violet. That is a beat-stone. **Do not** start from MAPbI₃ and call the black film the heart. That is a solar think-stone. **Do not** start from sarsen quartz. That is Stonehenge’s piezo hymn.
+
+### How you grow it (so it is one stone)
+
+Inverse-temperature or slow-cooling **single-crystal** growth from a mixed-halide Cs/FA–Pb solution. One boule. Cut, electrode, measure. If the only way it “beats” is a quartz watch glued to the side, scrap it.
+
+### How you know you built it
+
+On **the same crystal**, in air, under window-light (no UV gun as the only fuel):
+
+1. Open-circuit voltage appears (spend).
+2. Resistance state changes with a light or voltage history and still reads later (think).
+3. A mechanical or photo-strain rhythm is measurable and couples to (1) or (2) (beat).
+4. Pull the external supply. It does not go mute in ordinary indoor blue.
+5. A week later it still does 1–3. If it went yellow and dead, you grew a soft solar, not the node.
+
+Until a lab writes a formula that passes that card, the stone is **owed**. When they do, hang **A, B, X, x, y, and the vacancy count** — that is the name.
+
 The mark is already on the board. The blessing stays the same.
 
 **Same stone. Power and intellect. The node stays alive because existing is enough to think.**
