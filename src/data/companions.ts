@@ -137,6 +137,16 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "Fourth door · 8 sections · .md + PDF",
   },
   {
+    id: "monolithic-node",
+    title: "The Monolithic Node — Aether Core Blueprint",
+    blurb:
+      "It is not a part. It is the combination. Power and intellect in one piece of matter. Architecture named. Lattice still owed. Honest pointer for the hunt.",
+    href: "/docs/monolithic-node.md",
+    to: "/bible/companions/monolithic-node",
+    kind: "technical",
+    pagesHint: "Blueprint · 6 sections · .md",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:

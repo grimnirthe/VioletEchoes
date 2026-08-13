@@ -24,6 +24,7 @@ export const Route = createFileRoute("/systems")({
 const systemIds = [
   "divergence",
   "eimyrja",
+  "aether-core",
   "edge-nodes",
   "data-spines",
   "bifrost",

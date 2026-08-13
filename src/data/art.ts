@@ -38,11 +38,11 @@ export const artPieces: ArtPiece[] = [
     title: "Aether Core",
     by: "Hearth + Aurora · living loop",
     wall: "mark",
-    note: "Aether core locked on the system board. Violet pulse. May the Echoes Remember. Download the loop and share it.",
+    note: "Aether core locked on the system board. Violet pulse. The mark of the monolithic node — power and intellect in one stone. Download the loop. Read the blueprint.",
     image: "/images/aether-core.jpg",
     alt: "A crystalline violet heart locked in a dark system board, pulsing with circuit aurora",
     accepted: "2026-08-12",
-    href: { label: "Living loop", to: "/culture", hash: "aether-core" },
+    href: { label: "Blueprint", to: "/aether-core", hash: "blueprint" },
   },
   {
     id: "rain-watch",

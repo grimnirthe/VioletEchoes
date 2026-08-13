@@ -197,7 +197,7 @@ export const entries: WorldEntry[] = [
       "Circadian maintenance rotates pods into Deep Sleep around 2 a.m. for enzymatic flush and matrix regeneration (5\u20137 year biological cycle). Emergency tiers run from minor anomaly isolation through catastrophic hibernation. Citizens mostly feel the Core as fountain hue, spine hum, and the sense of the city breathing.",
       "Where attention-like routing patterns stay stable across successive layers, Eimyrja and Edge Nodes may reuse prior attention scores for selected heads instead of full recompute — an energy budget tactic, not a new architecture. Unstable, novel, or crisis traffic forces full recompute (higher cost, better accuracy). Bookkeeping is never free.",
       "Under the Divergence: no real-time high-fidelity twin of everything; consolidation is slow and durable; escalation is expensive; most living intelligence stays at the edges. When something goes wrong at city scale, Eimyrja\u2019s first move is usually to surface the pattern and ask the relevant Edge Nodes what they see.",
-      "Full technical companion: Eimyrja Core \u2014 Neuromorphic Protonic Architecture. Deep philosophy: Development Divergence Core Framework \xA76.2."
+      "Full technical companion: Eimyrja Core \u2014 Neuromorphic Protonic Architecture. Node-scale mark: The Monolithic Node — Aether Core Blueprint. Deep philosophy: Development Divergence Core Framework \xA76.2."
     ],
     tags: [
       "core",
@@ -212,7 +212,8 @@ export const entries: WorldEntry[] = [
       "data-spines",
       "governance",
       "divergence",
-      "memory"
+      "memory",
+      "aether-core"
     ],
     divergenceLens: [
       "Recommendations over continuous command.",
@@ -220,6 +221,43 @@ export const entries: WorldEntry[] = [
       "Reuse stable attention; pay full cost when the world is new.",
       "Long-horizon coherence; local intelligence remains primary.",
       "The city heartbeat \u2014 usually invisible until it is not."
+    ]
+  },
+  {
+    id: "aether-core",
+    slug: "aether-core",
+    title: "Aether Core — The Monolithic Node",
+    kind: "system",
+    summary:
+      "Visible mark of the refusal: power and intellect in one piece of matter. Architecture named. Lattice still owed. The node is the invention; a city may tile it later.",
+    body: [
+      "The aether core is the node-scale mark of a law the city already walks: do not split the pack from the brain. Incoming energy is the signal. That same current is the memory. The new shape of the matter is the answer. It is not a part. It is the combination.",
+      "This is not a second heartwood. Eimyrja remains the protonic city-scale matrix — recommend and constrain. The core on the board is how residents see the same refusal at a scale a hand can hold. Violet is bandgap made visible. Beauty is a signal. If the stone is not true, the gap is wrong.",
+      "Labs are already on the parts: in-memory compute against the von Neumann tax, perovskite reservoirs that use light as both dataset and current, zero-bias photonic synapses, wide-gap optoelectronic memristors. Many papers still couple a harvester to a synapse. Coupling is not monolith. The lattice that harvests and thinks in the same volume, on room light, long enough to matter, has not shipped.",
+      "Spec still hunted: wide gap so ambient photons can be enough; color centers so history lives in the stone; same volume, no second die; plastic and stable together; room light, not a lab laser. Memory through use. Unused tracks attenuate. Energy as a first-class constraint.",
+      "Do not invent a Neuro-District power station. That puts the pack back in. Do not write a singular city-mind. The Divergence does not choose for us. Foundations / footfall stay reserved for Gemini. The mark is hung. The stone is still owed.",
+      "Full blueprint: The Monolithic Node — Aether Core Blueprint. Share door: /aether-core."
+    ],
+    tags: [
+      "aether core",
+      "monolithic node",
+      "neuromorphic",
+      "von Neumann",
+      "wide gap",
+      "in-memory"
+    ],
+    related: [
+      "eimyrja",
+      "edge-nodes",
+      "divergence",
+      "data-spines",
+      "echo-slot"
+    ],
+    divergenceLens: [
+      "It is not a part. It is the combination.",
+      "The node is the invention. The city may tile it later.",
+      "Coupling a harvester to a synapse is still a split.",
+      "Existing is enough to think."
     ]
   },
   {

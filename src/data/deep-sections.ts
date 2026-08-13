@@ -715,8 +715,8 @@ export const deepSections: Record<string, DeepSection[]> = {
 
 export const companionsForEntry: Record<string, string[]> = {
   divergence: ["annotated-divergence", "core-framework", "systems-apps", "wb-v17", "innovation-report"],
-  eimyrja: ["systems-governance", "eimyrja-protonic", "core-framework", "innovation-report"],
-  "edge-nodes": ["systems-governance", "systems-apps", "innovation-report"],
+  eimyrja: ["systems-governance", "eimyrja-protonic", "monolithic-node", "core-framework", "innovation-report"],
+  "edge-nodes": ["systems-governance", "systems-apps", "monolithic-node", "innovation-report"],
   "data-spines": ["systems-governance", "systems-apps", "core-framework"],
   "memory-archives": ["core-framework", "systems-apps"],
   governance: ["systems-governance", "core-framework", "systems-apps"],
@@ -728,7 +728,7 @@ export const companionsForEntry: Record<string, string[]> = {
   "oni-shadow-rider": ["systems-apps", "mobile-interface"],
   "core-tender-gauntlets": ["mobile-interface", "eimyrja-protonic", "core-framework"],
   "bonded-chassis": ["mobile-interface", "systems-apps"],
-  "echo-slot": ["mobile-interface", "characters-factions", "core-framework"],
+  "echo-slot": ["mobile-interface", "monolithic-node", "characters-factions", "core-framework"],
   factions: ["characters-factions"],
   vernacular: ["vernacular"],
   "the-tenets": ["citizens-guide", "annotated-divergence", "core-framework", "wb-v17"],
@@ -742,4 +742,5 @@ export const companionsForEntry: Record<string, string[]> = {
   thornwall: ["thornwall-codex", "systems-governance", "core-framework", "systems-apps"],
   veilreach: ["membrane-codex", "annotated-divergence", "core-framework", "systems-apps"],
   "green-spaces": ["biophilic-lore-guide", "annotated-divergence", "citizens-guide", "core-framework"],
+  "aether-core": ["monolithic-node", "eimyrja-protonic", "annotated-divergence", "core-framework"],
 };

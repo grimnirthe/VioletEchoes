@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-13-monolithic-node",
+    date: "2026-08-13",
+    title: "Monolithic Node hung — architecture named, lattice owed",
+    kind: "systems",
+    summary:
+      "Aether Core blueprint on the share door. Power and intellect in one piece of matter. Honest pointer for the hunt. Not a part number.",
+    body: [
+      "The node is the invention. A city may tile it later. Footfall layer stays reserved for Gemini.",
+    ],
+    hrefs: [
+      { label: "Share door · blueprint", href: "/aether-core#blueprint" },
+      { label: "Full blueprint", href: "/bible/companions/monolithic-node" },
+      { label: "Bible · Aether Core", href: "/bible/aether-core" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["aether-core", "monolithic-node", "neuromorphic", "blueprint", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-12-veil-lungs-portals",
     date: "2026-08-12",
     title: "Veilreach + Green Spaces hung — videos reserved",

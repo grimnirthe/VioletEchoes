@@ -103,8 +103,14 @@ export const creditSections: CreditSection[] = [
       {
         label: "Aether Core — living mark",
         url: "/culture#aether-core",
-        note: "Hearth + Aurora animated loop: aether core locked on the system board. Violet pulse. Hung on Culture and Hung Works. The original ember logo stays the home mark.",
-        verify: "On-site · /video/012-aether-core.mp4 · /culture#aether-core",
+        note: "Hearth + Aurora animated loop: aether core locked on the system board. Violet pulse. Monolithic Node blueprint hung on the share door. The original ember logo stays the home mark.",
+        verify: "On-site · /aether-core · /docs/monolithic-node.md · /video/012-aether-core.mp4",
+      },
+      {
+        label: "The Monolithic Node — Aether Core Blueprint",
+        url: "/bible/companions/monolithic-node",
+        note: "Architecture named, lattice owed. Power and intellect in one piece of matter. Honest pointer at in-memory, perovskite reservoirs, zero-bias photonic synapses, wide-gap memristors. Not a part number.",
+        verify: "On-site companion · /docs/monolithic-node.md · /bible/aether-core · /aether-core#blueprint",
       },
       {
         label: "Suno AI — “Let it echo, let it stay…”",
