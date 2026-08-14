@@ -24,8 +24,9 @@ export type FashionLook = {
   district: string;
   seed: string;
   note: string;
-  image: string;
-  wave: 1 | 2 | 3 | 4;
+  /** Lookbook still — omit while lock is hung and stills are in generation */
+  image?: string;
+  wave: 1 | 2 | 3 | 4 | 5;
   lock: FashionLock;
 };
 
@@ -37,13 +38,14 @@ export const fashionLine = {
   by: "Velora Runeweaver",
   byHref: "/gallery/velora",
   role: "Master Fashion Artist · Living Atelier · Visual Commons",
-  wave: "Waves 1–4 · twenty looks",
+  wave: "Waves 1–5 · twenty-one looks",
   accepted: "2026-08-04",
   body: [
     "Family fashion proves bloodline heat. Citizen samples prove the city.",
     "This line is street cloth — rain-ready without tactical cosplay, timber and circuit and cloth in the same body, violet and gold as accent only. Soft law in the cut: repairable, returnable, worn-in.",
     "Wave 1 proved the street. Wave 2 widened the map. Wave 3 fills gaps — Harborward oilcloth, High Quiet hush, Veilreach unfinished path, Grid Tender civic care.",
     "Wave 4 is the risk chapter: Innovation warmth, Neon Core rain-survived heat, Green Spaces living systems, and Assembly Soft — higher-up council cloth without corporate cosplay.",
+    "Wave 5 opens the archetype: Shield Maiden — a door that learned to walk. Citizen cloth, not Vesper armor reuse, not museum Viking.",
     "Anonymous fit. Cloth first. Face secondary. No regalia reuse, no Starborn master sheet, no fake brand text.",
   ],
   hardLocks: [
@@ -76,9 +78,13 @@ export const fashionLine = {
       title: "Wave 4 · the risk chapter",
       lead: "Innovation lab warmth, Neon Core without Night City cosplay, Green Field systems care, Assembly Soft higher-up cloth. Same law. Harder art direction.",
     },
+    5: {
+      title: "Wave 5 · the archetype",
+      lead: "Shield Maiden — power worn as care. Lock hung; lookbook still incoming. Not Vesper’s armor sheet. Not LARP.",
+    },
   },
   acceptedBy:
-    "Velora Runeweaver · visual-lane · waves 1–4 sealed · twenty looks citizen cloth · risk chapter accepted",
+    "Velora Runeweaver · visual-lane · waves 1–4 sealed · wave 5 Shield Maiden lock hung · stills pending",
 } as const;
 
 export const fashionLooks: FashionLook[] = [
@@ -741,9 +747,54 @@ export const fashionLooks: FashionLook[] = [
     },
   },
 
+  {
+    id: "shield-maiden",
+    num: "21",
+    title: "Shield Maiden",
+    slot: "Archetype · door that learned to walk",
+    district: "Commons · Longhouse edge · rain streets",
+    wave: 5,
+    seed: "Mid-calf wrap-coat, weather knit, one living-thread shield on back or forearm dock — cloth-and-alloy, violet pulse in rim and seams only. A maiden who holds the door, not a catalog Valkyrie.",
+    note: "Lock hung. Lookbook still incoming. Citizen cloth — not Vesper Armor reuse, not museum Viking, not Night City plate-cosplay. Power worn. Rain survived. Shield as care.",
+    lock: {
+      silhouette:
+        "Mid-calf layered wrap-coat over fitted weather knit; one living-thread shield (round or heater) worn on the back or forearm dock — cloth-and-alloy, not parade steel; practical trousers; rain boots that have walked",
+      materials: [
+        "weather-shed wool-blend",
+        "graphite seam-plate at shoulders",
+        "living filament binding the shield rim",
+        "repairable straps",
+        "timber-toggle or quiet clasp",
+      ],
+      colors:
+        "Charcoal / bone / iron; violet only as pulse in seams, shield rim, and one rune-adjacent stitch; gold almost absent (one stress-point only, if any)",
+      rainLogic:
+        "Coat seals; shield sheds; hem clears puddles; wet is legal — rain is the proving ground",
+      repair:
+        "Visible mend on strap or hem is correct; factory-new polish is wrong; shield rim re-binds",
+      accents:
+        "Living-thread shield rim + one violet seam pulse — never full-body paint, never horned helm as identity",
+      never: [
+        "horned helmet as identity",
+        "chainmail bikini / lingerie-armor",
+        "Marvel or LotR Valkyrie clone",
+        "museum Viking LARP",
+        "full-body violet paint",
+        "status LED crown",
+        "family crest as brand",
+        "fake VALKYRIE CO. text",
+        "chrome tactical plate as identity",
+        "Starborn master sheet",
+        "Vesper Armor portrait reuse",
+      ],
+      coverage:
+        "Full weather body; no bare-midriff battle-babe; shield is a habit not a logo",
+    },
+  },
+
 ];
 
-export const fashionLooksWave = (wave: 1 | 2 | 3 | 4) =>
+export const fashionLooksWave = (wave: 1 | 2 | 3 | 4 | 5) =>
   fashionLooks.filter((l) => l.wave === wave);
 
 export const fashionLookById = (id: string) =>

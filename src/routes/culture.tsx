@@ -629,7 +629,7 @@ function CulturePage() {
             </div>
           ) : null}
 
-          {([1, 2, 3, 4] as const).map((wave) => {
+          {([1, 2, 3, 4, 5] as const).map((wave) => {
             const looks = fashionLooksWave(wave);
             const note = fashionLine.waveNotes[wave];
             if (!looks.length) return null;
@@ -649,12 +649,26 @@ function CulturePage() {
                       className="flex scroll-mt-24 flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
                     >
                       <div className="aspect-[3/4] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-bg)]">
-                        <img
-                          src={look.image}
-                          alt={`${look.title} — ${look.slot}`}
-                          className="h-full w-full object-cover object-top"
-                          loading="lazy"
-                        />
+                        {look.image ? (
+                          <img
+                            src={look.image}
+                            alt={`${look.title} — ${look.slot}`}
+                            className="h-full w-full object-cover object-top"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="flex h-full flex-col items-center justify-center gap-2 px-6 text-center">
+                            <p className="font-display text-lg text-[var(--color-primary-soft)]">
+                              Lock hung
+                            </p>
+                            <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-subtle)]">
+                              Lookbook still incoming
+                            </p>
+                            <p className="max-w-[16rem] text-xs text-[var(--color-muted)]">
+                              Soft law is in the cut. The rain will prove the cloth.
+                            </p>
+                          </div>
+                        )}
                       </div>
                       <div className="flex flex-1 flex-col gap-2 p-4 sm:p-5">
                         <div className="flex flex-wrap items-baseline gap-2">

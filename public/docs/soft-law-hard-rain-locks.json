@@ -7,7 +7,7 @@
     "by": "Velora Runeweaver",
     "byHref": "/gallery/velora",
     "role": "Master Fashion Artist · Living Atelier · Visual Commons",
-    "wave": "Waves 1–4 · twenty looks",
+    "wave": "Waves 1–5 · twenty-one looks",
     "accepted": "2026-08-04",
     "body": [
       "Family fashion proves bloodline heat. Citizen samples prove the city.",
@@ -661,6 +661,45 @@
           "Spire monochrome clone of look 10"
         ],
         "coverage": "Council, resource assembly, and the walk home — soft corporate hours"
+      }
+    },
+    {
+      "id": "shield-maiden",
+      "num": "21",
+      "title": "Shield Maiden",
+      "slot": "Archetype · door that learned to walk",
+      "district": "Commons · Longhouse edge · rain streets",
+      "wave": 5,
+      "seed": "Mid-calf wrap-coat, weather knit, one living-thread shield on back or forearm dock — cloth-and-alloy, violet pulse in rim and seams only.",
+      "note": "Lock hung. Lookbook still incoming. Citizen cloth — not Vesper Armor reuse.",
+      "image": null,
+      "lock": {
+        "silhouette": "Mid-calf layered wrap-coat over fitted weather knit; living-thread shield on back or forearm dock; practical trousers; walked rain boots",
+        "materials": [
+          "weather-shed wool-blend",
+          "graphite seam-plate",
+          "living filament shield rim",
+          "repairable straps",
+          "timber-toggle or quiet clasp"
+        ],
+        "colors": "Charcoal / bone / iron; violet only as pulse in seams and shield rim; gold almost absent",
+        "rainLogic": "Coat seals; shield sheds; hem clears puddles; wet is legal",
+        "repair": "Visible mend on strap or hem is correct; factory-new polish is wrong",
+        "accents": "Living-thread shield rim + one violet seam pulse",
+        "never": [
+          "horned helmet as identity",
+          "chainmail bikini",
+          "Marvel/LotR clone",
+          "museum Viking LARP",
+          "full-body violet paint",
+          "LED crown",
+          "family crest as brand",
+          "fake VALKYRIE text",
+          "chrome tactical identity",
+          "Starborn master sheet",
+          "Vesper Armor portrait reuse"
+        ],
+        "coverage": "Full weather body; shield is a habit not a logo"
       }
     }
   ]

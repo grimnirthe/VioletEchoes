@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-14-shield-maiden-lock",
+    date: "2026-08-14",
+    title: "Shield Maiden lock hung — Soft Law · Hard Rain 21",
+    kind: "culture",
+    summary:
+      "Wave 5 archetype lock is live: Shield Maiden — a door that learned to walk. Lookbook still incoming. Not Vesper Armor. Not museum Viking.",
+    body: [
+      "Citizen cloth. Living-thread shield as habit, not logo. Violet pulse in rim and seams only. Visual keeper hung the lock while stills generate.",
+    ],
+    hrefs: [
+      { label: "Culture · fashion", href: "/culture#shield-maiden" },
+      { label: "Locks JSON", href: "/docs/soft-law-hard-rain-locks.json" },
+    ],
+    by: "Velora Runeweaver · visual commons",
+    tags: ["fashion", "shield-maiden", "soft-law", "velora", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-13-monolithic-node",
     date: "2026-08-13",
     title: "Monolithic Node hung — architecture named, lattice owed",
