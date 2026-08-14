@@ -80,11 +80,11 @@ export const fashionLine = {
     },
     5: {
       title: "Wave 5 · the archetype",
-      lead: "Shield Maiden — power worn as care. Lock hung; lookbook still incoming. Not Vesper’s armor sheet. Not LARP.",
+      lead: "Shield Maiden — power worn as care. Lookbook hung (back dock). Not Vesper’s armor sheet. Not LARP.",
     },
   },
   acceptedBy:
-    "Velora Runeweaver · visual-lane · waves 1–4 sealed · wave 5 Shield Maiden lock hung · stills pending",
+    "Velora Runeweaver · visual-lane · waves 1–4 sealed · wave 5 Shield Maiden lookbook hung",
 } as const;
 
 export const fashionLooks: FashionLook[] = [
@@ -755,7 +755,8 @@ export const fashionLooks: FashionLook[] = [
     district: "Commons · Longhouse edge · rain streets",
     wave: 5,
     seed: "Mid-calf wrap-coat, weather knit, one living-thread shield on back or forearm dock — cloth-and-alloy, violet pulse in rim and seams only. A maiden who holds the door, not a catalog Valkyrie.",
-    note: "Lock hung. Lookbook still incoming. Citizen cloth — not Vesper Armor reuse, not museum Viking, not Night City plate-cosplay. Power worn. Rain survived. Shield as care.",
+    note: "Lookbook hung — back dock still. Cloth first, hood, charcoal-iron, rim pulse only. Citizen cloth — not Vesper Armor, not museum Viking. Power worn. Rain survived. Shield as care.",
+    image: "/images/culture/fashion/21-shield-maiden.jpg",
     lock: {
       silhouette:
         "Mid-calf layered wrap-coat over fitted weather knit; one living-thread shield (round or heater) worn on the back or forearm dock — cloth-and-alloy, not parade steel; practical trousers; rain boots that have walked",

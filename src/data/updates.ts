@@ -62,6 +62,18 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-14-shield-maiden-still",
+    date: "2026-08-14",
+    title: "Shield Maiden lookbook hung — Look 21",
+    kind: "culture",
+    summary:
+      "Wave 5 still is live: back dock, hood, charcoal-iron wrap, living-thread rim pulse. Cloth first. Not a catalog Valkyrie.",
+    hrefs: [{ label: "Culture · Shield Maiden", href: "/culture#shield-maiden" }],
+    by: "Velora Runeweaver · visual commons",
+    tags: ["fashion", "shield-maiden", "soft-law", "velora", "#VioletEchoes"],
+  },
+
+  {
     id: "2026-08-14-shield-maiden-lock",
     date: "2026-08-14",
     title: "Shield Maiden lock hung — Soft Law · Hard Rain 21",
