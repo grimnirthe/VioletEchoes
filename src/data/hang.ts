@@ -7,8 +7,9 @@ export const hangMeta = {
   review: "We review before anything hangs. Nothing posts itself.",
 } as const;
 
-/** Published Google Form URL. Empty = show the copy and wait for the mailbox. */
-export const hangFormUrl = "";
+/** Published respondent URL. File upload requires a Google sign-in. */
+export const hangFormUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSejWo8iGybJtOsHqPu8PoG86NLecIQ-kcPSgY9wOgkyJKovrg/viewform";
 
 /** Private mailbox folder. Do not put this on the public page. */
 export const hangInboxFolderId = "1T9gXH5ITWTFICE8GUXNjMGNEmdPoRCqx";
