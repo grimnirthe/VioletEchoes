@@ -15,6 +15,17 @@ export const submitChannels = {
   title: "How to submit",
   doors: [
     {
+      id: "hang",
+      title: "Hang it",
+      who: "Culture drop",
+      channel: "Simple form",
+      blurb:
+        "Art, a street, a track, a practice. One file. We review. Nothing auto-posts.",
+      href: "/hang",
+      cta: "Open Hang it",
+      primary: true,
+    },
+    {
       id: "researchers",
       title: "Researchers & builders",
       who: "Trackable, versioned",
@@ -27,8 +38,8 @@ export const submitChannels = {
     },
     {
       id: "casuals",
-      title: "Casual contributors",
-      who: "Low friction",
+      title: "Proposal Card",
+      who: "Lore & corrections",
       channel: "Form on this page",
       blurb:
         "Fill the short form below. It builds a Proposal Card and can open a GitHub Issue for you — no tooling required beyond a browser.",
@@ -46,7 +57,7 @@ export const firstVisit = {
   body: "If this is your first time and the World Bible feels dense:",
   porchCta: { label: "Meet Jaz on the porch", href: "#porch" },
   short:
-    "Short version: take a breath, pick one small contribution, use a Proposal Card. You don’t need to understand the whole city on day one.",
+    "Short version: take a breath, pick one small contribution, use Hang it for art or a Proposal Card for lore. You don’t need to understand the whole city on day one.",
 } as const;
 
 export const wantDont = {
@@ -109,7 +120,7 @@ export const proposalCardGuide = {
     "Why it fits (how it serves the living city / research spine)",
     "Constraint / cost (if technical — what it costs the system)",
     "Evidence / source (optional)",
-    "Conflicts with (known pages or “none known”)",
+    "Conflicts with (known pages or \u201cnone known\u201d)",
     "Credit line (your name / handle; models: name the model + that a human will accept)",
     "License: grant Violet Echoes permission to use this contribution on the site with credit",
     "Status: proposed",
@@ -131,23 +142,7 @@ export function buildProposalMarkdown(p: {
   date?: string;
 }): string {
   const date = p.date || new Date().toISOString().slice(0, 10);
-  return `## Proposal Card
-
-**Title:** ${p.title.trim() || "(untitled)"}
-**Type:** ${p.type || "other"}
-**Target slug / page:** ${p.target.trim() || "(if known)"}
-**Claim:** ${p.claim.trim()}
-**Why it fits:** ${p.why.trim()}
-**Constraint / cost:** ${p.constraint.trim() || "(n/a)"}
-**Evidence / source:** ${p.evidence.trim() || "(optional)"}
-**Conflicts with:** ${p.conflicts.trim() || "none known"}
-**Credit line:** ${p.credit.trim()}
-**License:** I grant Violet Echoes permission to use this contribution on the site with credit.
-**Status:** proposed
-**Date:** ${date}
-
-#VioletEchoes
-`;
+  return `## Proposal Card\n\n**Title:** ${p.title.trim() || "(untitled)"}\n**Type:** ${p.type || "other"}\n**Target slug / page:** ${p.target.trim() || "(if known)"}\n**Claim:** ${p.claim.trim()}\n**Why it fits:** ${p.why.trim()}\n**Constraint / cost:** ${p.constraint.trim() || "(n/a)"}\n**Evidence / source:** ${p.evidence.trim() || "(optional)"}\n**Conflicts with:** ${p.conflicts.trim() || "none known"}\n**Credit line:** ${p.credit.trim()}\n**License:** I grant Violet Echoes permission to use this contribution on the site with credit.\n**Status:** proposed\n**Date:** ${date}\n\n#VioletEchoes\n`;
 }
 
 export const modelsBlock = {
@@ -175,12 +170,12 @@ export const jazPorch = {
   ],
   steps: [
     "Skim what we want / don’t want above.",
-    "Grab a Proposal Card.",
+    "Art and files go to Hang it. Lore ideas grab a Proposal Card.",
     "Use GitHub if you like neat records, or the form if you just have one solid idea.",
     "Hand it over. The hearth decides what ships. Nobody owns the city but the work can still be yours in the credits.",
   ],
   close: [
-    "Sit a minute if you need to. No rush. When you’re ready, the door’s marked Collaborate — you already found it.",
+    "Sit a minute if you need to. No rush. When you’re ready, Hang it is the wall door and Collaborate is the card door.",
     "Coffee’s hot. City can wait five minutes.",
   ],
   signoff: "— Jaz",
@@ -220,7 +215,6 @@ export const github = {
 export const closing =
   "Drafts welcome. Hearth ships. Welcome to the work.";
 
-/** Kept for agents that still fetch structured read order */
 export const readOrder = {
   title: "Read order (optional deep path)",
   steps: [
@@ -230,6 +224,7 @@ export const readOrder = {
     { label: "World Bible", url: "/bible", note: "Condensed canon" },
     { label: "City Dossier (repo)", url: "https://github.com/grimnirthe/VioletEchoes/tree/main/city", note: "Charter, constitution, atlas — research why-layer (Rune)" },
     { label: "Culture", url: "/culture", note: "Keepers Starborn + Velora" },
+    { label: "Hang it", url: "/hang", note: "Culture drop — review pile" },
     { label: "Credits", url: "/credits", note: "Verify sources" },
   ],
 } as const;
@@ -260,6 +255,7 @@ After acknowledging the pulse and hard constraints:
 - One proposal per visit unless the human asks for more.
 - Credits may name models that did real structural or draft work.
 Submit paths (for humans you advise):
+- Culture files: /hang
 - Researchers: GitHub Issue titled [Proposal] …
 - Casuals: form on /collaborate
 - Do not invent email/DM as public channels.
