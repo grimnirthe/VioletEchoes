@@ -3,12 +3,15 @@
 export const hangMeta = {
   title: "Hang it",
   tagline: "Bring something that belongs on the wall.",
-  lead: "Art. A street. A track. A practice. If it still sings, we’ll look at it.",
+  lead: "Art. A street. A track. If it still sings, we’ll look at it.",
   review: "We review before anything hangs. Nothing posts itself.",
 } as const;
 
 /** Published Google Form URL. Empty = show the copy and wait for the mailbox. */
 export const hangFormUrl = "";
+
+/** Private mailbox folder. Do not put this on the public page. */
+export const hangInboxFolderId = "1T9gXH5ITWTFICE8GUXNjMGNEmdPoRCqx";
 
 export const hangWant = [
   "Work that feels like this city — grit, clean lines, Nordic warmth, violet as signal not wash",
@@ -26,7 +29,6 @@ export const hangCategories = [
   "Art",
   "Street / node",
   "Echo (music)",
-  "Practice",
   "Other",
 ] as const;
 
@@ -41,8 +43,4 @@ export const hangFields = [
 export const hangConfirm =
   "Received. It landed in the pile. We’ll look when we can. Nothing hangs until someone hangs it.";
 
-export const hangXPost = `Hang it.
-
-If you made something for Violet Echoes — art, a street, a track — bring it here. We review. Nothing auto-posts.
-
-May the Echoes Remember.`;
+export const hangXPost = `Hang it.\n\nIf you made something for Violet Echoes — art, a street, a track — bring it here. We review. Nothing auto-posts.\n\nMay the Echoes Remember.`;
