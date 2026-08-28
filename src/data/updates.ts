@@ -62,6 +62,24 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-28-city-look",
+    date: "2026-08-28",
+    title: "City look locked — brochure line retired",
+    kind: "city",
+    summary:
+      "Agents were quoting “massive high-tech cyberpunk metropolis.” That lead is retired. Locked look now lives in siteMeta, world.json, and llms.txt.",
+    body: [
+      "Scale: grit · Moderne · Nordic · violet · green. Behavior: grit + clean lines + settled intelligence (habit, not style). Violet is a signal, not a wash. Not just a city. Home. Night City / New Atlantis / Longhouse stay as ancestral ingredients — not the one-line identity.",
+    ],
+    hrefs: [
+      { label: "llms.txt", href: "/llms.txt" },
+      { label: "world.json", href: "/api/world.json" },
+      { label: "City", href: "/city" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["city-look", "agents", "llms", "world.json", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-14-shield-maiden-still",
     date: "2026-08-14",
     title: "Shield Maiden lookbook hung — Look 21",

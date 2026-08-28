@@ -24,12 +24,32 @@ export type WorldEntry = {
 };
 
 export const HASHTAG = "#VioletEchoes";
+
+/** Locked look. Agents must use this — not “generic cyberpunk metropolis.” */
+export const cityLook = {
+  home: "Not just a city. Home.",
+  scale: "grit · Moderne · Nordic · violet · green",
+  behavior: "grit + clean lines + settled intelligence (habit, not style)",
+  fails: {
+    gritAlone: "dirty",
+    cleanAlone: "sterile",
+    nordicAlone: "decorative",
+  },
+  settled:
+    "thickening at paths, attenuation of unused rooms, residual light, weather holds where walked",
+  violet: "signal, not wash",
+  ancestral:
+    "Night City grit, New Atlantis lines, Nordic Longhouse soul — ingredients, not the one-line identity",
+  retiredLead: "massive high-tech cyberpunk metropolis",
+} as const;
+
 export const siteMeta = {
   name: "Violet Echoes",
   hashtag: HASHTAG,
   domainHint: "VioletEchoes.ai",
   tagline: "May the Echoes Remember. \u2014 Aurora AI",
-  description: "Violet Echoes (#VioletEchoes) is a massive high-tech cyberpunk metropolis on a digital island in a glowing digital sea \u2014 Night City grit, New Atlantis lines, Nordic Longhouse soul. Built on The Development Divergence: coherence over scaling, distributed intelligence, living systems.",
+  description:
+    "Violet Echoes (#VioletEchoes) is a dual-layer living city on a digital island in a glowing sea. Look: grit, Moderne, Nordic, violet, green. Buildings behave: grit + clean lines + settled intelligence — habit, not costume. Violet is a signal, not a wash. Not just a city. Home. Built on The Development Divergence: coherence over scaling, distributed intelligence, living systems.",
   version: "World Bible v1.7 / Companion Pack",
   keywords: [
     "#VioletEchoes",
@@ -45,8 +65,8 @@ export const siteMeta = {
     "Glaze Ruiners",
     "data spines",
     "Bifrost",
-    "self-learning AI architecture"
-  ]
+    "self-learning AI architecture",
+  ],
 };
 export const principles = [
   {

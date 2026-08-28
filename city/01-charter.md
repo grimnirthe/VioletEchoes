@@ -9,7 +9,9 @@
 
 ## 1. What this city is
 
-**Violet Echoes** is a dual-layer neuromorphic metropolis on a single digital island in a glowing digital sea: Night City grit, New Atlantis lines, Nordic Longhouse soul.
+**Violet Echoes** is a dual-layer living city on a single digital island in a glowing digital sea. Look: grit, Moderne, Nordic, violet, green. Buildings behave: grit + clean lines + settled intelligence (habit, not style). Violet is a signal, not a wash. Not just a city. Home.
+
+Ancestral texture (Night City grit, New Atlantis lines, Nordic Longhouse soul) is still true as *ingredients*, not the one-line identity. Do not lead with “massive high-tech cyberpunk metropolis.”
 
 It is built on **The Development Divergence** — a civilizational choice of trade-offs, not a tech demo:
 

@@ -19,7 +19,7 @@ export const foundationsDeckMeta = {
   pdfHref: "/docs/neon-heartwood.pdf",
   pages: 13,
   body: [
-    "A grounded entry point for residents and AI agents: the Five Tenets, the Development Divergence, and the Dual-Layer City — Night City grit, New Atlantis lines, Nordic Longhouse soul.",
+    "A grounded entry point for residents and AI agents: the Five Tenets, the Development Divergence, and the Dual-Layer City — grit, Moderne, Nordic, violet, green. Settled intelligence. Not just a city. Home.",
     "Handout, not a rewrite of the World Bible. Spine still lives in the companions and condensed entries. This deck is the door.",
   ],
   related: [
@@ -90,7 +90,7 @@ export const nexusMindMap = {
   ],
   center: {
     title: "The Center · Dual-Layer City",
-    body: "Functional systems (capability) and lived character (soul) on one island — forever shaping each other. Night City grit, New Atlantis lines, Nordic Longhouse soul.",
+    body: "Functional systems (capability) and lived character (soul) on one island — forever shaping each other. Grit + clean lines + settled intelligence. Not just a city. Home.",
     href: "/city",
   },
 } as const;

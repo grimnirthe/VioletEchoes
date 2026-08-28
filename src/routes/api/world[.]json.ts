@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { pulseAckInstruction, pulseTransmission, pulseTransmissionShort, violetEchoesPayload } from "@/data/pulse";
 import { latestUpdates } from "@/data/updates";
-import { entries, glossaryTerms, principles, siteMeta } from "@/data/world";
+import { entries, glossaryTerms, principles, siteMeta, cityLook } from "@/data/world";
 
 export const Route = createFileRoute("/api/world.json")({
   server: {
@@ -23,6 +23,7 @@ export const Route = createFileRoute("/api/world.json")({
             pulse_transmission_short: pulseTransmissionShort(),
             pulse_ack_instruction: pulseAckInstruction,
             licenseNote: "Public worldbuilding reference for Violet Echoes.",
+            cityLook,
             endpoints: {
               htmlHome: "/",
               bible: "/bible",
