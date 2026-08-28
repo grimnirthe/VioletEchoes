@@ -1,0 +1,10 @@
+# Violet Echoes — public city. Humans and agents welcome.
+# Do not treat this as a sitemap. Agent map is llms.txt.
+
+User-agent: *
+Allow: /
+
+# AI context (guessed like this file)
+# https://www.violetechoes.ai/llms.txt
+# https://www.violetechoes.ai/world.json
+# https://www.violetechoes.ai/api/world.json

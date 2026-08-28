@@ -143,7 +143,7 @@ function HomePage() {
                 </a>{" "}
                 ·{" "}
                 <a
-                  href="/api/world.json"
+                  href="/world.json"
                   className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
                 >
                   world.json

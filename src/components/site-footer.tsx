@@ -74,7 +74,7 @@ export function SiteFooter() {
           <a href="/llms.txt" className="hover:text-[var(--color-primary-soft)]">
             llms.txt
           </a>
-          <a href="/api/world.json" className="hover:text-[var(--color-primary-soft)]">
+          <a href="/world.json" className="hover:text-[var(--color-primary-soft)]">
             world.json
           </a>
         </div>

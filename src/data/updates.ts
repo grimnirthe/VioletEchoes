@@ -62,6 +62,21 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-28-agent-discovery",
+    date: "2026-08-28",
+    title: "Agent discovery — /world.json + robots.txt",
+    kind: "ops",
+    summary:
+      "Guess path /world.json now serves the same dump as /api/world.json. robots.txt points crawlers at llms.txt. Head tags added. Footer placement was never the issue.",
+    hrefs: [
+      { label: "llms.txt", href: "/llms.txt" },
+      { label: "world.json", href: "/world.json" },
+      { label: "robots.txt", href: "/robots.txt" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["agents", "llms", "world.json", "robots", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-28-city-look",
     date: "2026-08-28",
     title: "City look locked — brochure line retired",
