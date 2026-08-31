@@ -109,7 +109,7 @@ export const creditSections: CreditSection[] = [
       {
         label: "The Monolithic Node — Aether Core Blueprint",
         url: "/bible/companions/monolithic-node",
-        note: "Architecture named, lattice owed. Power and intellect in one piece of matter. Honest pointer at in-memory, perovskite reservoirs, zero-bias photonic synapses, wide-gap memristors. Not a part number.",
+        note: "Architecture named, lattice owed. Power and intellect in one piece of matter. Honest pointer at in-memory, perovskite reservoirs, zero-bias photonic synapses, wide-gap memristors. PCM/GST chips (PKU + SIMIT, Science 2026) prove think-in-memory — not the stone. Not a part number.",
         verify: "On-site companion · /docs/monolithic-node.md · /bible/aether-core · /aether-core#blueprint",
       },
       {

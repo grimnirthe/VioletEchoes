@@ -62,6 +62,20 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-08-31-pcm-not-the-stone",
+    date: "2026-08-31",
+    title: "Peking PCM chip — nearby, not the aether core",
+    kind: "ops",
+    summary:
+      "Cai, Yang, Song et al. (Science, 2 July 2026): 40 nm phase-change memristor array, 2.12 ms neural dynamics, drift used as the clock. Real compute-in-memory. Still a powered GST-family chip, not light-in = thought-in. Hung as a cousin, not the stone.",
+    hrefs: [
+      { label: "Monolithic Node", href: "/bible/companions/monolithic-node" },
+      { label: "Science paper (Semantic Scholar)", href: "https://www.semanticscholar.org/paper/A-sub-10-millisecond-neural-dynamical-system-based-Cai-Tao/8db07c8eb274b1c91487fc4c0ddc6a0a127ce041" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["aether-core", "memristor", "PCM", "not-the-stone", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-28-agent-discovery",
     date: "2026-08-28",
     title: "Agent discovery — /world.json + robots.txt",
