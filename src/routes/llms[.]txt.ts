@@ -43,6 +43,7 @@ export const Route = createFileRoute("/llms.txt")({
           "- Updates JSON feed: /api/updates.json",
           "- Git commits feed: /api/commits.json",
           "- Faith & Practice (no state church): /bible/faith-practice",
+          "- 3D island door: /door (Three.js r186 walk — not a twin)",
           "- Search UI: /search?q=",
           "- This file: /llms.txt",
           "",

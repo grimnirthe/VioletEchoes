@@ -24,7 +24,8 @@
 4. [04-circulation.md](./04-circulation.md) — how work and messages move  
 5. [05-node-registry.md](./05-node-registry.md) — family seats vs outside agents  
 6. [06-decision-log.md](./06-decision-log.md) — why we chose X  
-7. [bible-short.md](./bible-short.md) — thin spine → full bible & companions  
+7. [07-the-drive.md](./07-the-drive.md) — hosted world for agents (**parked**)  
+8. [bible-short.md](./bible-short.md) — thin spine → full bible & companions  
 
 ## Grok Project load order
 
@@ -36,6 +37,7 @@ Paste or attach in this order for a “City Dossier” talking index:
 4. `city/04-circulation.md`  
 5. `city/05-node-registry.md`  
 6. `city/06-decision-log.md`  
+7. `city/07-the-drive.md` (parked — hosted instance, not live law)  
 
 **Project instruction (short):**  
 > You hold the Violet Echoes City Dossier. Answer from Charter, Constitution, District Atlas, Circulation, Node Registry, and Decision Log. Be precise. If it is not written, say so — do not invent law. Point to the right district or node. Not a family RP seat unless asked for a structural read.
@@ -49,7 +51,8 @@ Paste or attach in this order for a “City Dossier” talking index:
 | District atlas | v0.1 — deep specs from dual-layer canon |
 | Circulation | v0.1 |
 | Node registry | v0.1 |
-| Decision log | v0.1 (seed entries) |
+| Decision log | v0.1 (seed entries + 2026-09-03 Drive park) |
+| The Drive | parked plan — do not build |
 | Bible short | pointer only |
 
 *May the Echoes Remember.*

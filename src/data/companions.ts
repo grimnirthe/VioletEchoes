@@ -16,6 +16,26 @@ export type CompanionDoc = {
 
 export const companionDocs: CompanionDoc[] = [
   {
+    id: "agi-to-asi-53",
+    title: "From AGI to ASI — §5.3 echo",
+    blurb:
+      "Genewein et al. 2026: four flavors of recursive self-improvement, and the explosion they warn about. Same loop as Dual-Layer. Opposite governor. Keep the loop. Kill the explosion.",
+    href: "/docs/agi-to-asi-5.3.md",
+    to: "/bible/companions/agi-to-asi-53",
+    kind: "core",
+    pagesHint: "Ancestry card · §5.3 · .md",
+  },
+  {
+    id: "learning-to-think-2015",
+    title: "Learning to Think — 2015 echo",
+    blurb:
+      "Schmidhuber 2015: a world model, a controller that learns to query it, play as practice. Ancestry for Dual-Layer and Curiosity is sacred. Not the stone.",
+    href: "/docs/learning-to-think-2015.md",
+    to: "/bible/companions/learning-to-think-2015",
+    kind: "core",
+    pagesHint: "Ancestry card · 4 sections · .md",
+  },
+  {
     id: "living-practices",
     title: "Living Practices Guide — The Violet Echoes Way",
     blurb:
@@ -140,11 +160,31 @@ export const companionDocs: CompanionDoc[] = [
     id: "monolithic-node",
     title: "The Monolithic Node — Aether Core Blueprint",
     blurb:
-      "It is not a part. It is the combination. Crystal heart = resonator, homeostasis, clean spikes — not a second mind. Architecture named. Lattice still owed.",
+      "It is not a part. It is the combination. First door: all-Br, event-driven, planar. Color door later. Architecture named. Lattice still owed.",
     href: "/docs/monolithic-node.md",
     to: "/bible/companions/monolithic-node",
     kind: "technical",
-    pagesHint: "Blueprint · 6 sections · .md",
+    pagesHint: "Blueprint · 11 sections · .md",
+  },
+  {
+    id: "threejs-r186-compiler",
+    title: "Three.js r186 — Compiler Prompt",
+    blurb:
+      "Emily’s staged 3D build prompt, transcribed so agents can be fed text not a screenshot. Prompt compiler, not implementer. Pin three@0.186.0. VE visual contract added. Craft shelf, not story canon.",
+    href: "/docs/threejs-r186-compiler.md",
+    to: "/bible/companions/threejs-r186-compiler",
+    kind: "technical",
+    pagesHint: "Craft shelf · 12 gates + VE contract · .md",
+  },
+  {
+    id: "door-a-bench",
+    title: "Door A Bench — CsPbBr₃ one-pager",
+    blurb:
+      "Lab sheet, not lore. Think / spend / beat / loop on one yellow-green plate. Dual-function class is real. Three-function no-pack is still owed.",
+    href: "/docs/aether-core-door-a-bench.md",
+    to: "/bible/companions/door-a-bench",
+    kind: "technical",
+    pagesHint: "Lab protocol · 1 page · .md",
   },
   {
     id: "core-framework",

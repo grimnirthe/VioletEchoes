@@ -62,6 +62,95 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-09-09-3d-door",
+    date: "2026-09-09",
+    title: "3D door opened — island walk",
+    kind: "city",
+    summary:
+      "Live Three.js r186 walk of the island: orbit, tap a district, reset. Block-out with a pulse, not a twin. Emily’s compiler hung as a feedable prompt with the VE visual contract.",
+    hrefs: [
+      { label: "3D door", href: "/door" },
+      { label: "City", href: "/city" },
+      { label: "r186 compiler", href: "/bible/companions/threejs-r186-compiler" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["3d", "threejs", "door", "city", "#VioletEchoes"],
+  },
+  {
+    id: "2026-09-08-door-a-bench",
+    date: "2026-09-08",
+    title: "Door A bench — one-pager hung",
+    kind: "ops",
+    summary:
+      "CsPbBr₃ lab sheet next to the Monolithic Node. Same two contacts, pack unplugged for the loop. Film Voc and Kim d33 stay off this plate. Dual-function class is real. Three-function no-pack is still owed.",
+    hrefs: [
+      { label: "Door A bench", href: "/bible/companions/door-a-bench" },
+      { label: "Monolithic Node", href: "/bible/companions/monolithic-node" },
+      { label: "Aether Core", href: "/aether-core" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["aether-core", "door-a", "CsPbBr3", "lab", "#VioletEchoes"],
+  },
+  {
+    id: "2026-09-08-door-a-plate",
+    date: "2026-09-08",
+    title: "Door A plate — style frame hung",
+    kind: "ops",
+    summary:
+      "Gemini Notebook still of the yellow-green CsPbBr3 plate on quartz with two gold contacts. Civic heart stays on the loop. Lab clip inbound.",
+    hrefs: [
+      { label: "Plate on Aether Core", href: "/aether-core#door-a" },
+      { label: "Door A bench", href: "/bible/companions/door-a-bench" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["aether-core", "door-a", "CsPbBr3", "still", "#VioletEchoes"],
+  },
+  {
+    id: "2026-09-08-door-a-clip",
+    date: "2026-09-08",
+    title: "Door A clip — window-light explainer hung",
+    kind: "ops",
+    summary:
+      "Gemini Notebook ~60s: yellow-green plate, indoor photons, vacancy tracks. Chalkboard holds: dual-function class proven, three-function no-pack still owed. Civic loop stays the blessing.",
+    hrefs: [
+      { label: "Clip on Aether Core", href: "/aether-core#door-a" },
+      { label: "Library", href: "/podcast#v014-door-a-window-light" },
+      { label: "Door A bench", href: "/bible/companions/door-a-bench" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["aether-core", "door-a", "video", "CsPbBr3", "#VioletEchoes"],
+  },
+  {
+    id: "2026-09-03-agi-to-asi",
+    date: "2026-09-03",
+    title: "From AGI to ASI — keep the loop, kill the explosion",
+    kind: "bible",
+    summary:
+      "Genewein et al. (DeepMind, Jun 2026) §5.3: RSI via code, hardware, data-distill, and specialist collectives. Hung next to Schmidhuber 2015. Same machinery as Dual-Layer. Divergence is the brake they don’t write.",
+    hrefs: [
+      { label: "On-site card", href: "/bible/companions/agi-to-asi-53" },
+      { label: "arXiv HTML §5", href: "https://arxiv.org/html/2606.12683v1#S5" },
+      { label: "Learning to Think 2015", href: "/bible/companions/learning-to-think-2015" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["divergence", "rsi", "dual-layer", "ancestry", "#VioletEchoes"],
+  },
+  {
+    id: "2026-09-03-learning-to-think",
+    date: "2026-09-03",
+    title: "Schmidhuber 2015 — learning to think",
+    kind: "bible",
+    summary:
+      "Emily’s Notebook door on On Learning to Think (arXiv:1511.09249). World model + controller that queries it + curiosity play. Hung as Dual-Layer / Tenet 1 ancestry. Not hardware. Not the stone.",
+    hrefs: [
+      { label: "On-site card", href: "/bible/companions/learning-to-think-2015" },
+      { label: "arXiv paper", href: "https://arxiv.org/abs/1511.09249" },
+      { label: "Emily’s post", href: "https://x.com/IamEmily2050/status/2095481195815477436" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["dual-layer", "curiosity", "world-model", "ancestry", "#VioletEchoes"],
+  },
+  {
     id: "2026-08-31-pcm-not-the-stone",
     date: "2026-08-31",
     title: "Peking PCM chip — nearby, not the aether core",

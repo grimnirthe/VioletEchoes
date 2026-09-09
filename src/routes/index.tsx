@@ -31,7 +31,7 @@ const doors = [
   {
     to: "/city" as const,
     title: "City",
-    blurb: "Walk districts, landmarks, and the rain-lit skyline.",
+    blurb: "Walk districts, the 3D island door, and the rain-lit skyline.",
     image: media.citySkyline,
     icon: Map,
     accent: "text-[var(--color-gold)]",

@@ -742,5 +742,5 @@ export const companionsForEntry: Record<string, string[]> = {
   thornwall: ["thornwall-codex", "systems-governance", "core-framework", "systems-apps"],
   veilreach: ["membrane-codex", "annotated-divergence", "core-framework", "systems-apps"],
   "green-spaces": ["biophilic-lore-guide", "annotated-divergence", "citizens-guide", "core-framework"],
-  "aether-core": ["monolithic-node", "eimyrja-protonic", "annotated-divergence", "core-framework"],
+  "aether-core": ["monolithic-node", "door-a-bench", "eimyrja-protonic", "annotated-divergence", "core-framework"],
 };

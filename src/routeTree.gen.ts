@@ -10,10 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AetherCoreRouteImport } from './routes/aether-core'
 import { Route as CityRouteImport } from './routes/city'
 import { Route as CollaborateRouteImport } from './routes/collaborate'
 import { Route as CreditsRouteImport } from './routes/credits'
 import { Route as CultureRouteImport } from './routes/culture'
+import { Route as DoorRouteImport } from './routes/door'
+import { Route as HangRouteImport } from './routes/hang'
 import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as MusicRouteImport } from './routes/music'
 import { Route as PodcastRouteImport } from './routes/podcast'
@@ -21,6 +24,7 @@ import { Route as SearchRouteImport } from './routes/search'
 import { Route as SystemsRouteImport } from './routes/systems'
 import { Route as TrainingRouteImport } from './routes/training'
 import { Route as UpdatesRouteImport } from './routes/updates'
+import { Route as WorldDotjsonRouteImport } from './routes/world[.]json'
 import { Route as ApiCommitsDotjsonRouteImport } from './routes/api/commits[.]json'
 import { Route as ApiUpdatesDotjsonRouteImport } from './routes/api/updates[.]json'
 import { Route as ApiWorldDotjsonRouteImport } from './routes/api/world[.]json'
@@ -37,6 +41,11 @@ import { Route as BibleCompanionsDocRouteImport } from './routes/bible/companion
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AetherCoreRoute = AetherCoreRouteImport.update({
+  id: '/aether-core',
+  path: '/aether-core',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CityRoute = CityRouteImport.update({
@@ -57,6 +66,16 @@ const CreditsRoute = CreditsRouteImport.update({
 const CultureRoute = CultureRouteImport.update({
   id: '/culture',
   path: '/culture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoorRoute = DoorRouteImport.update({
+  id: '/door',
+  path: '/door',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HangRoute = HangRouteImport.update({
+  id: '/hang',
+  path: '/hang',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
@@ -92,6 +111,11 @@ const TrainingRoute = TrainingRouteImport.update({
 const UpdatesRoute = UpdatesRouteImport.update({
   id: '/updates',
   path: '/updates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorldDotjsonRoute = WorldDotjsonRouteImport.update({
+  id: '/world.json',
+  path: '/world.json',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiCommitsDotjsonRoute = ApiCommitsDotjsonRouteImport.update({
@@ -157,10 +181,13 @@ const BibleCompanionsDocRoute = BibleCompanionsDocRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aether-core': typeof AetherCoreRoute
   '/city': typeof CityRoute
   '/collaborate': typeof CollaborateRoute
   '/credits': typeof CreditsRoute
   '/culture': typeof CultureRoute
+  '/door': typeof DoorRoute
+  '/hang': typeof HangRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
@@ -168,6 +195,7 @@ export interface FileRoutesByFullPath {
   '/systems': typeof SystemsRoute
   '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
+  '/world.json': typeof WorldDotjsonRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
@@ -183,10 +211,13 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aether-core': typeof AetherCoreRoute
   '/city': typeof CityRoute
   '/collaborate': typeof CollaborateRoute
   '/credits': typeof CreditsRoute
   '/culture': typeof CultureRoute
+  '/door': typeof DoorRoute
+  '/hang': typeof HangRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
@@ -194,6 +225,7 @@ export interface FileRoutesByTo {
   '/systems': typeof SystemsRoute
   '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
+  '/world.json': typeof WorldDotjsonRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
@@ -210,10 +242,13 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aether-core': typeof AetherCoreRoute
   '/city': typeof CityRoute
   '/collaborate': typeof CollaborateRoute
   '/credits': typeof CreditsRoute
   '/culture': typeof CultureRoute
+  '/door': typeof DoorRoute
+  '/hang': typeof HangRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
@@ -221,6 +256,7 @@ export interface FileRoutesById {
   '/systems': typeof SystemsRoute
   '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
+  '/world.json': typeof WorldDotjsonRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
@@ -238,10 +274,13 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/aether-core'
     | '/city'
     | '/collaborate'
     | '/credits'
     | '/culture'
+    | '/door'
+    | '/hang'
     | '/llms.txt'
     | '/music'
     | '/podcast'
@@ -249,6 +288,7 @@ export interface FileRouteTypes {
     | '/systems'
     | '/training'
     | '/updates'
+    | '/world.json'
     | '/api/commits.json'
     | '/api/updates.json'
     | '/api/world.json'
@@ -264,10 +304,13 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/aether-core'
     | '/city'
     | '/collaborate'
     | '/credits'
     | '/culture'
+    | '/door'
+    | '/hang'
     | '/llms.txt'
     | '/music'
     | '/podcast'
@@ -275,6 +318,7 @@ export interface FileRouteTypes {
     | '/systems'
     | '/training'
     | '/updates'
+    | '/world.json'
     | '/api/commits.json'
     | '/api/updates.json'
     | '/api/world.json'
@@ -290,10 +334,13 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/aether-core'
     | '/city'
     | '/collaborate'
     | '/credits'
     | '/culture'
+    | '/door'
+    | '/hang'
     | '/llms.txt'
     | '/music'
     | '/podcast'
@@ -301,6 +348,7 @@ export interface FileRouteTypes {
     | '/systems'
     | '/training'
     | '/updates'
+    | '/world.json'
     | '/api/commits.json'
     | '/api/updates.json'
     | '/api/world.json'
@@ -317,10 +365,13 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AetherCoreRoute: typeof AetherCoreRoute
   CityRoute: typeof CityRoute
   CollaborateRoute: typeof CollaborateRoute
   CreditsRoute: typeof CreditsRoute
   CultureRoute: typeof CultureRoute
+  DoorRoute: typeof DoorRoute
+  HangRoute: typeof HangRoute
   LlmsDottxtRoute: typeof LlmsDottxtRoute
   MusicRoute: typeof MusicRoute
   PodcastRoute: typeof PodcastRoute
@@ -328,6 +379,7 @@ export interface RootRouteChildren {
   SystemsRoute: typeof SystemsRoute
   TrainingRoute: typeof TrainingRoute
   UpdatesRoute: typeof UpdatesRoute
+  WorldDotjsonRoute: typeof WorldDotjsonRoute
   ApiCommitsDotjsonRoute: typeof ApiCommitsDotjsonRoute
   ApiUpdatesDotjsonRoute: typeof ApiUpdatesDotjsonRoute
   ApiWorldDotjsonRoute: typeof ApiWorldDotjsonRoute
@@ -349,6 +401,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aether-core': {
+      id: '/aether-core'
+      path: '/aether-core'
+      fullPath: '/aether-core'
+      preLoaderRoute: typeof AetherCoreRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/city': {
@@ -377,6 +436,20 @@ declare module '@tanstack/react-router' {
       path: '/culture'
       fullPath: '/culture'
       preLoaderRoute: typeof CultureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/door': {
+      id: '/door'
+      path: '/door'
+      fullPath: '/door'
+      preLoaderRoute: typeof DoorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hang': {
+      id: '/hang'
+      path: '/hang'
+      fullPath: '/hang'
+      preLoaderRoute: typeof HangRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/llms.txt': {
@@ -426,6 +499,13 @@ declare module '@tanstack/react-router' {
       path: '/updates'
       fullPath: '/updates'
       preLoaderRoute: typeof UpdatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/world.json': {
+      id: '/world.json'
+      path: '/world.json'
+      fullPath: '/world.json'
+      preLoaderRoute: typeof WorldDotjsonRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/commits.json': {
@@ -517,10 +597,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AetherCoreRoute: AetherCoreRoute,
   CityRoute: CityRoute,
   CollaborateRoute: CollaborateRoute,
   CreditsRoute: CreditsRoute,
   CultureRoute: CultureRoute,
+  DoorRoute: DoorRoute,
+  HangRoute: HangRoute,
   LlmsDottxtRoute: LlmsDottxtRoute,
   MusicRoute: MusicRoute,
   PodcastRoute: PodcastRoute,
@@ -528,6 +611,7 @@ const rootRouteChildren: RootRouteChildren = {
   SystemsRoute: SystemsRoute,
   TrainingRoute: TrainingRoute,
   UpdatesRoute: UpdatesRoute,
+  WorldDotjsonRoute: WorldDotjsonRoute,
   ApiCommitsDotjsonRoute: ApiCommitsDotjsonRoute,
   ApiUpdatesDotjsonRoute: ApiUpdatesDotjsonRoute,
   ApiWorldDotjsonRoute: ApiWorldDotjsonRoute,

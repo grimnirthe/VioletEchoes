@@ -104,7 +104,7 @@ export const creditSections: CreditSection[] = [
         label: "Aether Core — living mark",
         url: "/culture#aether-core",
         note: "Hearth + Aurora animated loop: aether core locked on the system board. Violet pulse. Monolithic Node blueprint hung on the share door. The original ember logo stays the home mark.",
-        verify: "On-site · /aether-core · /docs/monolithic-node.md · /video/012-aether-core.mp4",
+        verify: "On-site · /aether-core · /docs/monolithic-node.md · /video/012-aether-core.mp4 · /video/013-door-a-window-light.mp4",
       },
       {
         label: "The Monolithic Node — Aether Core Blueprint",
@@ -236,6 +236,12 @@ export const creditSections: CreditSection[] = [
         verify: "External site · no affiliation · see docs/SHOT-LANGUAGE.md",
       },
       {
+        label: "Three.js r186 compiler (Emily @IamEmily2050)",
+        url: "https://x.com/IamEmily2050/status/2097490443986706856",
+        note: "Staged 3D build prompt — compiler not implementer. Transcribed on-site. Craft shelf for the island door. No affiliation.",
+        verify: "X post · on-site /docs/threejs-r186-compiler.md · live door /door · pin three@0.186.0",
+      },
+      {
         label: "Grok Imagine film skills (Tetsuo / AgenC)",
         url: "https://x.com/tetsuoai/status/2083878550885830769",
         note: "Script → char sheet → location/prop → prompt-creator pipeline for short films — craft only",
@@ -250,6 +256,12 @@ export const creditSections: CreditSection[] = [
     blurb:
       "Working notes from Gemini co-development sessions on self-training / neuromorphic city theory. Primary sources Gemini cited will be listed here as you confirm the Docs — until then, concepts are labeled and linked to public field references.",
     items: [
+      {
+        label: "Learning to Think — 2015 echo (Schmidhuber)",
+        url: "/bible/companions/learning-to-think-2015",
+        note: "Emily @IamEmily2050 Gemini Notebook door (3 Sep 2026) on Schmidhuber’s world-model + query-the-model frame. Hung as Dual-Layer / Curiosity ancestry.",
+        verify: "On-site companion · /docs/learning-to-think-2015.md · arXiv:1511.09249 · X status 2095481195815477436",
+      },
       {
         label: "Neon Heartwood — foundations deck (PDF + slides)",
         url: "/bible/foundations",
@@ -457,6 +469,18 @@ export const creditSections: CreditSection[] = [
         url: "https://patents.google.com/patent/US20230112862A1/en",
         note: "Attention score reuse across layers for selected heads — inspiration for Eimyrja/Edge §5 energy budget; not VE hardware or endorsement",
         verify: "USPTO / Google Patents · compare /docs/eimyrja-protonic-core.md §5 · Credits fiction disclaimer",
+      },
+      {
+        label: "Genewein et al. 2026 — From AGI to ASI (arXiv:2606.12683)",
+        url: "https://arxiv.org/abs/2606.12683",
+        note: "§5.3 recursive self-improvement: code, hardware, data-distill, specialist collectives. Explosion path they model; Divergence is the governor we add. §5.2 also names world models and neuromorphic hardware. Door we walked: x.com/AIandDesign/status/2095321798737047906 (heat, not a citation).",
+        verify: "arXiv:2606.12683 · HTML #S5 · on-site /bible/companions/agi-to-asi-53",
+      },
+      {
+        label: "Schmidhuber 2015 — On Learning to Think (arXiv:1511.09249)",
+        url: "https://arxiv.org/abs/1511.09249",
+        note: "World model + controller that learns to query it + curiosity play. Ancestry for Dual-Layer and Tenet 1. Software frame, not hardware. Door: Emily @IamEmily2050 Notebook (3 Sep 2026).",
+        verify: "arXiv:1511.09249 · on-site /bible/companions/learning-to-think-2015 · X status 2095481195815477436",
       },
       {
         label: "Neuromorphic computing (overview)",

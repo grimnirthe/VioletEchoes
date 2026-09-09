@@ -12,6 +12,9 @@ export const media = {
   aetherCore: "/video/012-aether-core.mp4",
   aetherCorePoster: "/images/video/012-aether-core-poster.jpg",
   aetherCoreStill: "/images/aether-core.jpg",
+  doorAPlate: "/images/door-a-crystal-plate.png",
+  doorAVideo: "/video/013-door-a-window-light.mp4",
+  doorAPoster: "/images/video/013-door-a-window-light-poster.jpg",
 
   hero: "/images/city-aerial-nexus.jpg",
   heroIsland: "/images/hero-island.jpg",

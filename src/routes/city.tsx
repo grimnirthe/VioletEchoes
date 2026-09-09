@@ -5,6 +5,7 @@ import { PageNav } from "@/components/page-nav";
 import { MediaFrame } from "@/components/media-frame";
 import { media, systemsGallery } from "@/data/media";
 import { CityMapInteractive } from "@/components/city-map";
+import { IslandDoor } from "@/components/island-door";
 import { cityMapArt } from "@/data/city-map";
 import { entries } from "@/data/world";
 import { districtsDeckMeta } from "@/data/districts-deck";
@@ -74,16 +75,14 @@ function CityPage() {
           </p>
         </header>
 
-        <section className="mt-8 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)]">
-          <MediaFrame
-            src={cityMapArt.hero3d.src}
-            alt={cityMapArt.hero3d.alt}
-            aspect="wide"
-            veil="bottom"
-            priority
-          />
-          <p className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-xs text-[var(--color-subtle)] sm:px-5">
-            Island overview · Eimyrja at center · Living Ships at harbor · Aurora 3D map
+        <section className="mt-8 space-y-3">
+          <IslandDoor layout="embed" />
+          <p className="text-xs text-[var(--color-subtle)]">
+            Live 3D door · Eimyrja at center · drag to orbit ·{" "}
+            <Link to="/door" className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline">
+              Open full walk
+            </Link>
+            .
           </p>
         </section>
 

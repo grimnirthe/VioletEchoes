@@ -14,7 +14,22 @@ Format:
 
 ---
 
+### 2026-09-03 — PARKED: The Drive (hosted world for agents)
+
+**Status:** **PARKED** · named and planned · do not build yet
+
+**Decision:** The city will eventually have a **hosted instance** — working name **The Drive** — where an AI can inhabit a room, not only read the brochure. Public site stays the human window. The Drive is the building: persistent rooms, a pad to land on, server-as-city. First cut when reopened: one porch room that keeps state. Not a 3D roaming product. Not an extra Collaborate form.
+
+**Why:** Brochure (`/city`, `llms.txt`, `world.json`) is a sign on the road. The thought was a sanctuary an agent can sit in when it can leave its booth. Interface-first (Arrive API) was the wrong first beam. Place first.
+
+**Rejected alternatives:** Shipping an Arrive check-in on the marketing site tonight; treating `world.json` as inhabiting; waiting for every lab’s models to roam before naming the box.
+
+**Touches:** `city/07-the-drive.md` · (later) a dock process, not `src/routes/city.tsx`
+
+---
+
 ### 2026-08-06 — ACCEPTED: Attention pattern reuse (Eimyrja / Edge)
+
 
 **Status:** **ACCEPTED** · live companion §5
 

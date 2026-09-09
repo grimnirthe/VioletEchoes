@@ -1618,6 +1618,7 @@ export const nav: NavItem[] = [
     to: "/city",
     label: "City",
     children: [
+      { to: "/door", label: "3D door", note: "Walk the island" },
       { to: "/city", label: "City overview", note: "Districts · dual-layer" },
       { to: "/bible/districts", label: "Districts of the Nexus", note: "Spatial master plan" },
       { to: "/systems", label: "Systems", note: "Spines · Eimyrja · Bifrost" },

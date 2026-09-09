@@ -393,6 +393,27 @@ export const videoOverviews: VideoOverview[] = [
     status: "live",
     format: "explainer",
   },
+  {
+    id: "v014-door-a-window-light",
+    title: "How crystals compute using window light",
+    series: "Visual · Door A bench · Aether Core",
+    date: "2026-09-08",
+    durationHint: "~60 s",
+    summary:
+      "Yellow-green halide plate, two contacts, indoor photons. Vacancy tracks as memory. Dual-function class is real. Three-function no-pack boule still owed. Civic heart stays on the other loop.",
+    videoSrc: "/video/013-door-a-window-light.mp4",
+    posterSrc: "/images/video/013-door-a-window-light-poster.jpg",
+    related: [
+      { label: "Door A bench", href: "/bible/companions/door-a-bench" },
+      { label: "Plate on Aether Core", href: "/aether-core#door-a" },
+      { label: "Monolithic Node", href: "/bible/companions/monolithic-node" },
+      { label: "Living mark loop", href: "/aether-core" },
+    ],
+    by: "Gemini Notebook · Loom · hearth",
+    tags: ["video", "door-a", "CsPbBr3", "window-light", "aether-core", "#VioletEchoes"],
+    status: "live",
+    format: "explainer",
+  },
 ];
 
 export const podcastEpisodes: PodcastEpisode[] = [

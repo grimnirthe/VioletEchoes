@@ -27,6 +27,7 @@ export function worldJsonPayload() {
       cityLook,
       endpoints: {
         htmlHome: "/",
+        door: "/door",
         bible: "/bible",
         search: "/search?q=",
         llmsTxt: "/llms.txt",
