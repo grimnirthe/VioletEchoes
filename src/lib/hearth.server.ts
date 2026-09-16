@@ -11,7 +11,7 @@ import {
 } from "@/lib/hearth";
 
 const XAI_URL = "https://api.x.ai/v1/chat/completions";
-const DEFAULT_MODEL = "grok-4.3";
+const DEFAULT_MODEL = "grok-4.20-0309-non-reasoning";
 const MAX_TURNS = 8;
 const MAX_CHARS = 2000;
 const HOUR_MS = 60 * 60 * 1000;
