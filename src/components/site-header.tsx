@@ -3,8 +3,10 @@ import {
   BookOpen,
   ChevronDown,
   Cpu,
+  Flame,
   Home,
   Map,
+  MessageCircle,
   Music2,
   Palette,
   Search,
@@ -29,6 +31,8 @@ const icons: Record<string, typeof Home> = {
   "/city": Map,
   "/systems": Cpu,
   "/bible": BookOpen,
+  "/ask": MessageCircle,
+  "/hearth": Flame,
   "/music": Music2,
   "/culture": Palette,
   "/podcast": Music2,
@@ -173,6 +177,9 @@ function NavDropdown({
                   <Link
                     key={child.to}
                     to={path}
+                    search={
+                      path === "/ask" || path === "/search" ? { q: "" } : undefined
+                    }
                     role="menuitem"
                     className={className}
                     onClick={onClose}

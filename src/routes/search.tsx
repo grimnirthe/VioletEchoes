@@ -92,6 +92,14 @@ function SearchPage() {
             >
               Browse full World Bible
             </Link>
+            <span className="mx-2 text-[var(--color-subtle)]">·</span>
+            <Link
+              to="/ask"
+              search={{ q }}
+              className="mt-3 inline-block text-sm text-[var(--color-primary-soft)] hover:underline"
+            >
+              Ask the Nexus
+            </Link>
           </div>
         ) : null}
       </main>

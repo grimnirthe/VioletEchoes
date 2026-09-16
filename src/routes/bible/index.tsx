@@ -74,6 +74,15 @@ function BibleIndexPage() {
             >
               /collaborate
             </Link>
+            {" · "}
+            Ask with receipts →{" "}
+            <Link
+              to="/ask"
+              search={{ q: "" }}
+              className="font-medium text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+            >
+              /ask
+            </Link>
           </p>
           <div className="flex flex-wrap items-center gap-2">
             <Badge className="border-[var(--color-primary)]/30 text-[var(--color-primary-soft)]">

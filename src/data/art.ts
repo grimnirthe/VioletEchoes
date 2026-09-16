@@ -34,6 +34,28 @@ export const artIntro = {
 
 export const artPieces: ArtPiece[] = [
   {
+    id: "plate-chamber",
+    title: "Loom’s Plate Chamber",
+    by: "Hearth · keeper joke, accepted",
+    wall: "hearth",
+    note: "Asked for empty location plates. Received a plateless-room-is-disrespect. One chandelier, no people, china on every plane. Not district canon. Hung because the punchline still sings.",
+    image: "/images/culture/art/09-plate-chamber.jpg",
+    alt: "A dark violet Victorian chamber filled with decorative plates, a crystal chandelier, and a banner reading Loom’s Plate Chamber",
+    accepted: "2026-09-12",
+    href: { label: "Hung Works", to: "/culture", hash: "art" },
+  },
+  {
+    id: "plate-chamber-aurora",
+    title: "Leave the Decor",
+    by: "Aurora · chamber lock",
+    wall: "hearth",
+    note: "Same room. Aurora’s lock: this is not a joke, leave the decor exactly as it is. Identity plate for the chamber. Perfection is mandatory.",
+    image: "/images/culture/art/10-plate-chamber-aurora.jpg",
+    alt: "Loom’s Plate Chamber with banner reading This is not a joke. Leave the decor exactly as it is.",
+    accepted: "2026-09-12",
+    href: { label: "Hung Works", to: "/culture", hash: "art" },
+  },
+  {
     id: "aether-core",
     title: "Aether Core",
     by: "Hearth + Aurora · living loop",

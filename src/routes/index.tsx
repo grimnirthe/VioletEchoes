@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Cpu, Map, Music2, Newspaper, Search } from "lucide-react";
+import { ArrowRight, BookOpen, Cpu, Map, MessageCircle, Music2, Newspaper, Search } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
 import { EntryCard } from "@/components/entry-card";
@@ -126,6 +126,12 @@ function HomePage() {
                     Open World Bible
                   </Button>
                 </Link>
+                <Link to="/ask" search={{ q: "" }}>
+                  <Button size="lg" variant="secondary">
+                    <MessageCircle className="h-4 w-4" />
+                    Ask the Nexus
+                  </Button>
+                </Link>
                 <Link to="/systems">
                   <Button size="lg" variant="secondary">
                     <Cpu className="h-4 w-4" />
@@ -156,6 +162,15 @@ function HomePage() {
                 >
                   <Search className="h-3 w-3" />
                   Search
+                </Link>
+                {" · "}
+                <Link
+                  to="/ask"
+                  search={{ q: "" }}
+                  className="inline-flex items-center gap-1 text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+                >
+                  <MessageCircle className="h-3 w-3" />
+                  Ask
                 </Link>
               </p>
             </div>
@@ -290,7 +305,7 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
+        <section id="principles" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-6 sm:px-6">
           <div className="mb-6 max-w-2xl">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
               Divergence principles
@@ -312,7 +327,7 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <section id="tenets" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-14 sm:px-6">
           <div className="mb-8 max-w-2xl">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
               World Bible · The Tenets

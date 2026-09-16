@@ -55,6 +55,12 @@ export function SiteFooter() {
           <Link to="/search" search={{ q: "" }} className="hover:text-[var(--color-primary-soft)]">
             Search
           </Link>
+          <Link to="/ask" search={{ q: "" }} className="hover:text-[var(--color-primary-soft)]">
+            Ask
+          </Link>
+          <Link to="/hearth" className="hover:text-[var(--color-primary-soft)]">
+            Hearth
+          </Link>
           <a
             href={musicHub.sunoProfile}
             target="_blank"

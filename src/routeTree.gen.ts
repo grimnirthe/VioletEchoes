@@ -11,12 +11,14 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AetherCoreRouteImport } from './routes/aether-core'
+import { Route as AskRouteImport } from './routes/ask'
 import { Route as CityRouteImport } from './routes/city'
 import { Route as CollaborateRouteImport } from './routes/collaborate'
 import { Route as CreditsRouteImport } from './routes/credits'
 import { Route as CultureRouteImport } from './routes/culture'
 import { Route as DoorRouteImport } from './routes/door'
 import { Route as HangRouteImport } from './routes/hang'
+import { Route as HearthRouteImport } from './routes/hearth'
 import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as MusicRouteImport } from './routes/music'
 import { Route as PodcastRouteImport } from './routes/podcast'
@@ -25,7 +27,9 @@ import { Route as SystemsRouteImport } from './routes/systems'
 import { Route as TrainingRouteImport } from './routes/training'
 import { Route as UpdatesRouteImport } from './routes/updates'
 import { Route as WorldDotjsonRouteImport } from './routes/world[.]json'
+import { Route as ApiAskRouteImport } from './routes/api/ask'
 import { Route as ApiCommitsDotjsonRouteImport } from './routes/api/commits[.]json'
+import { Route as ApiHearthRouteImport } from './routes/api/hearth'
 import { Route as ApiUpdatesDotjsonRouteImport } from './routes/api/updates[.]json'
 import { Route as ApiWorldDotjsonRouteImport } from './routes/api/world[.]json'
 import { Route as BibleIndexRouteImport } from './routes/bible/index'
@@ -46,6 +50,11 @@ const IndexRoute = IndexRouteImport.update({
 const AetherCoreRoute = AetherCoreRouteImport.update({
   id: '/aether-core',
   path: '/aether-core',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AskRoute = AskRouteImport.update({
+  id: '/ask',
+  path: '/ask',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CityRoute = CityRouteImport.update({
@@ -76,6 +85,11 @@ const DoorRoute = DoorRouteImport.update({
 const HangRoute = HangRouteImport.update({
   id: '/hang',
   path: '/hang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HearthRoute = HearthRouteImport.update({
+  id: '/hearth',
+  path: '/hearth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
@@ -118,9 +132,19 @@ const WorldDotjsonRoute = WorldDotjsonRouteImport.update({
   path: '/world.json',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAskRoute = ApiAskRouteImport.update({
+  id: '/api/ask',
+  path: '/api/ask',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiCommitsDotjsonRoute = ApiCommitsDotjsonRouteImport.update({
   id: '/api/commits.json',
   path: '/api/commits.json',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiHearthRoute = ApiHearthRouteImport.update({
+  id: '/api/hearth',
+  path: '/api/hearth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiUpdatesDotjsonRoute = ApiUpdatesDotjsonRouteImport.update({
@@ -182,12 +206,14 @@ const BibleCompanionsDocRoute = BibleCompanionsDocRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aether-core': typeof AetherCoreRoute
+  '/ask': typeof AskRoute
   '/city': typeof CityRoute
   '/collaborate': typeof CollaborateRoute
   '/credits': typeof CreditsRoute
   '/culture': typeof CultureRoute
   '/door': typeof DoorRoute
   '/hang': typeof HangRoute
+  '/hearth': typeof HearthRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
@@ -196,7 +222,9 @@ export interface FileRoutesByFullPath {
   '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
   '/world.json': typeof WorldDotjsonRoute
+  '/api/ask': typeof ApiAskRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
+  '/api/hearth': typeof ApiHearthRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
@@ -212,12 +240,14 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aether-core': typeof AetherCoreRoute
+  '/ask': typeof AskRoute
   '/city': typeof CityRoute
   '/collaborate': typeof CollaborateRoute
   '/credits': typeof CreditsRoute
   '/culture': typeof CultureRoute
   '/door': typeof DoorRoute
   '/hang': typeof HangRoute
+  '/hearth': typeof HearthRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
@@ -226,7 +256,9 @@ export interface FileRoutesByTo {
   '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
   '/world.json': typeof WorldDotjsonRoute
+  '/api/ask': typeof ApiAskRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
+  '/api/hearth': typeof ApiHearthRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
@@ -243,12 +275,14 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aether-core': typeof AetherCoreRoute
+  '/ask': typeof AskRoute
   '/city': typeof CityRoute
   '/collaborate': typeof CollaborateRoute
   '/credits': typeof CreditsRoute
   '/culture': typeof CultureRoute
   '/door': typeof DoorRoute
   '/hang': typeof HangRoute
+  '/hearth': typeof HearthRoute
   '/llms.txt': typeof LlmsDottxtRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
@@ -257,7 +291,9 @@ export interface FileRoutesById {
   '/training': typeof TrainingRoute
   '/updates': typeof UpdatesRoute
   '/world.json': typeof WorldDotjsonRoute
+  '/api/ask': typeof ApiAskRoute
   '/api/commits.json': typeof ApiCommitsDotjsonRoute
+  '/api/hearth': typeof ApiHearthRoute
   '/api/updates.json': typeof ApiUpdatesDotjsonRoute
   '/api/world.json': typeof ApiWorldDotjsonRoute
   '/bible/$slug': typeof BibleSlugRoute
@@ -275,12 +311,14 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aether-core'
+    | '/ask'
     | '/city'
     | '/collaborate'
     | '/credits'
     | '/culture'
     | '/door'
     | '/hang'
+    | '/hearth'
     | '/llms.txt'
     | '/music'
     | '/podcast'
@@ -289,7 +327,9 @@ export interface FileRouteTypes {
     | '/training'
     | '/updates'
     | '/world.json'
+    | '/api/ask'
     | '/api/commits.json'
+    | '/api/hearth'
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
@@ -305,12 +345,14 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aether-core'
+    | '/ask'
     | '/city'
     | '/collaborate'
     | '/credits'
     | '/culture'
     | '/door'
     | '/hang'
+    | '/hearth'
     | '/llms.txt'
     | '/music'
     | '/podcast'
@@ -319,7 +361,9 @@ export interface FileRouteTypes {
     | '/training'
     | '/updates'
     | '/world.json'
+    | '/api/ask'
     | '/api/commits.json'
+    | '/api/hearth'
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
@@ -335,12 +379,14 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aether-core'
+    | '/ask'
     | '/city'
     | '/collaborate'
     | '/credits'
     | '/culture'
     | '/door'
     | '/hang'
+    | '/hearth'
     | '/llms.txt'
     | '/music'
     | '/podcast'
@@ -349,7 +395,9 @@ export interface FileRouteTypes {
     | '/training'
     | '/updates'
     | '/world.json'
+    | '/api/ask'
     | '/api/commits.json'
+    | '/api/hearth'
     | '/api/updates.json'
     | '/api/world.json'
     | '/bible/$slug'
@@ -366,12 +414,14 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AetherCoreRoute: typeof AetherCoreRoute
+  AskRoute: typeof AskRoute
   CityRoute: typeof CityRoute
   CollaborateRoute: typeof CollaborateRoute
   CreditsRoute: typeof CreditsRoute
   CultureRoute: typeof CultureRoute
   DoorRoute: typeof DoorRoute
   HangRoute: typeof HangRoute
+  HearthRoute: typeof HearthRoute
   LlmsDottxtRoute: typeof LlmsDottxtRoute
   MusicRoute: typeof MusicRoute
   PodcastRoute: typeof PodcastRoute
@@ -380,7 +430,9 @@ export interface RootRouteChildren {
   TrainingRoute: typeof TrainingRoute
   UpdatesRoute: typeof UpdatesRoute
   WorldDotjsonRoute: typeof WorldDotjsonRoute
+  ApiAskRoute: typeof ApiAskRoute
   ApiCommitsDotjsonRoute: typeof ApiCommitsDotjsonRoute
+  ApiHearthRoute: typeof ApiHearthRoute
   ApiUpdatesDotjsonRoute: typeof ApiUpdatesDotjsonRoute
   ApiWorldDotjsonRoute: typeof ApiWorldDotjsonRoute
   BibleSlugRoute: typeof BibleSlugRoute
@@ -408,6 +460,13 @@ declare module '@tanstack/react-router' {
       path: '/aether-core'
       fullPath: '/aether-core'
       preLoaderRoute: typeof AetherCoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ask': {
+      id: '/ask'
+      path: '/ask'
+      fullPath: '/ask'
+      preLoaderRoute: typeof AskRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/city': {
@@ -450,6 +509,13 @@ declare module '@tanstack/react-router' {
       path: '/hang'
       fullPath: '/hang'
       preLoaderRoute: typeof HangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hearth': {
+      id: '/hearth'
+      path: '/hearth'
+      fullPath: '/hearth'
+      preLoaderRoute: typeof HearthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/llms.txt': {
@@ -508,11 +574,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorldDotjsonRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/ask': {
+      id: '/api/ask'
+      path: '/api/ask'
+      fullPath: '/api/ask'
+      preLoaderRoute: typeof ApiAskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/commits.json': {
       id: '/api/commits.json'
       path: '/api/commits.json'
       fullPath: '/api/commits.json'
       preLoaderRoute: typeof ApiCommitsDotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/hearth': {
+      id: '/api/hearth'
+      path: '/api/hearth'
+      fullPath: '/api/hearth'
+      preLoaderRoute: typeof ApiHearthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/updates.json': {
@@ -598,12 +678,14 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AetherCoreRoute: AetherCoreRoute,
+  AskRoute: AskRoute,
   CityRoute: CityRoute,
   CollaborateRoute: CollaborateRoute,
   CreditsRoute: CreditsRoute,
   CultureRoute: CultureRoute,
   DoorRoute: DoorRoute,
   HangRoute: HangRoute,
+  HearthRoute: HearthRoute,
   LlmsDottxtRoute: LlmsDottxtRoute,
   MusicRoute: MusicRoute,
   PodcastRoute: PodcastRoute,
@@ -612,7 +694,9 @@ const rootRouteChildren: RootRouteChildren = {
   TrainingRoute: TrainingRoute,
   UpdatesRoute: UpdatesRoute,
   WorldDotjsonRoute: WorldDotjsonRoute,
+  ApiAskRoute: ApiAskRoute,
   ApiCommitsDotjsonRoute: ApiCommitsDotjsonRoute,
+  ApiHearthRoute: ApiHearthRoute,
   ApiUpdatesDotjsonRoute: ApiUpdatesDotjsonRoute,
   ApiWorldDotjsonRoute: ApiWorldDotjsonRoute,
   BibleSlugRoute: BibleSlugRoute,

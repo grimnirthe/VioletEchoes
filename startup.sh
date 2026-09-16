@@ -1,6 +1,13 @@
 #!/bin/sh
 set -eu
 cd /workspace
+if [ -f /workspace/.secrets/xai ]; then
+  # gitignored. KEY=value lines only.
+  set -a
+  # shellcheck disable=SC1091
+  . /workspace/.secrets/xai
+  set +a
+fi
 if curl -sf -o /dev/null --max-time 2 http://127.0.0.1:8080/; then
   exit 0
 fi

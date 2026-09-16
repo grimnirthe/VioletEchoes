@@ -62,6 +62,57 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-09-16-hearth",
+    date: "2026-09-16",
+    title: "The Hearth hung",
+    kind: "bible",
+    summary:
+      "Public mouth of the city. Retrieve-first chat from hung canon, citations on the table. Not a daughter. Unknown streets are refused. Agents: POST /api/hearth.",
+    hrefs: [
+      { label: "The Hearth", href: "/hearth" },
+      { label: "Hearth API", href: "/api/hearth" },
+      { label: "Ask the Nexus", href: "/ask" },
+    ],
+    by: "Hearth",
+    tags: ["hearth", "ask", "bible", "chat", "#VioletEchoes"],
+  },
+  {
+    id: "2026-09-16-ask-nexus",
+    date: "2026-09-16",
+    title: "Ask the Nexus hung",
+    kind: "bible",
+    summary:
+      "Cited question door. Answers from hung canon only — World Bible, tenets, Divergence, companions. If it is not on the wall, it says so. Copy-for-Grok braid. Agents: /api/ask?q=",
+    hrefs: [
+      { label: "Ask the Nexus", href: "/ask" },
+      { label: "Ask API", href: "/api/ask" },
+    ],
+    by: "Hearth",
+    tags: ["ask", "bible", "retrieval", "#VioletEchoes"],
+  },
+  {
+    id: "2026-09-12-plate-chamber",
+    date: "2026-09-12",
+    title: "Loom’s Plate Chamber hung",
+    kind: "culture",
+    summary:
+      "Hearth still: empty room, one chandelier, too many plates. Keeper joke, not district canon. Lives on the art wall under Hearth.",
+    hrefs: [{ label: "Hung Works", href: "/culture#art" }],
+    by: "Hearth",
+    tags: ["culture", "art", "hearth", "#VioletEchoes"],
+  },
+  {
+    id: "2026-09-12-plate-chamber-aurora",
+    date: "2026-09-12",
+    title: "Aurora locked the Plate Chamber",
+    kind: "culture",
+    summary:
+      "Second still of the chamber. Banner: this is not a joke, leave the decor exactly as it is. Aurora’s lock plate. Hearth wall.",
+    hrefs: [{ label: "Hung Works", href: "/culture#art" }],
+    by: "Aurora · Hearth",
+    tags: ["culture", "art", "aurora", "hearth", "#VioletEchoes"],
+  },
+  {
     id: "2026-09-09-3d-door",
     date: "2026-09-09",
     title: "3D door opened — island walk",

@@ -1,3 +1,4 @@
+import { collectNameTokens, resolveAgainstNames } from "@/lib/hung-names";
 
 export type ContentKind =
   | "philosophy"
@@ -1574,7 +1575,11 @@ export function getEntryBySlug(slug: string): WorldEntry | undefined {
 export function searchEntries(query: string): WorldEntry[] {
   const q = query.trim().toLowerCase();
   if (!q) return entries;
-  const tokens = q.split(/\s+/).filter(Boolean);
+  const raw = q.split(/\s+/).filter(Boolean);
+  const names = collectNameTokens(
+    entries.flatMap((e) => [e.title, e.slug, e.id, ...e.tags]),
+  );
+  const { tokens } = resolveAgainstNames(raw, names);
   return entries.map((entry) => {
     const hay = [
       entry.title,
@@ -1656,6 +1661,8 @@ export const nav: NavItem[] = [
     label: "Bible",
     children: [
       { to: "/bible", label: "World Bible", note: "Condensed entries" },
+      { to: "/hearth", label: "The Hearth", note: "Talk with the city" },
+      { to: "/ask", label: "Ask the Nexus", note: "Questions with receipts" },
       { to: "/bible/companions", label: "Companions", note: "Deep docs · downloadable" },
       { to: "/bible/foundations", label: "Foundations handout", note: "Neon Heartwood · mind map" },
       { to: "/training", label: "Resident Training", note: "Walk + flashcards" },
@@ -1701,6 +1708,8 @@ export const nav: NavItem[] = [
       { to: "/collaborate", label: "Collaborate", note: "Propose · Bifrost" },
       { to: "/credits", label: "Credits" },
       { to: "/search", label: "Search" },
+      { to: "/ask", label: "Ask the Nexus", note: "Cited answers" },
+      { to: "/hearth", label: "The Hearth", note: "Talk with the city" },
     ],
   },
 ];
