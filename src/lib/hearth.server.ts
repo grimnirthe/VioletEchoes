@@ -29,12 +29,18 @@ function buckets(): Map<string, Bucket> {
   return grokRef.__hearthLimit__;
 }
 
+/** Runtime env — never `process.env.XAI_*` literals (Vite bakes those empty). */
+function env(name: string): string | undefined {
+  const value = typeof process !== "undefined" ? process.env[name]?.trim() : undefined;
+  return value ? value : undefined;
+}
+
 export function hearthKeyed(): boolean {
-  return Boolean(process.env.XAI_API_KEY?.trim());
+  return Boolean(env("XAI_API_KEY"));
 }
 
 export function hearthModel(): string {
-  return process.env.XAI_MODEL?.trim() || DEFAULT_MODEL;
+  return env("XAI_MODEL") || DEFAULT_MODEL;
 }
 
 export function clientIp(request: Request): string {
@@ -97,9 +103,10 @@ export async function speakHearth(rawTurns: HearthTurn[]): Promise<HearthReply> 
 
   const retrieved = retrieveAsk(retrieveQuery(turns) || q, 6);
   const citations = hearthCitations(q, retrieved.citations);
-  const keyed = hearthKeyed();
+  const key = env("XAI_API_KEY");
+  const keyed = Boolean(key);
 
-  if (!keyed || !citations.length) {
+  if (!key || !citations.length) {
     return {
       mode: "wall",
       answer: wallFallback(q, citations),
@@ -110,7 +117,6 @@ export async function speakHearth(rawTurns: HearthTurn[]): Promise<HearthReply> 
     };
   }
 
-  const key = process.env.XAI_API_KEY!.trim();
   const body = {
     model: hearthModel(),
     temperature: 0.4,
