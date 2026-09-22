@@ -62,6 +62,20 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-09-22-scale-snap",
+    date: "2026-09-22",
+    title: "Scale snap hung",
+    kind: "process",
+    summary:
+      "Locked-camera 3D preview of a Scale Lock character shot. One height, one ruler, no orbit. Proof pane before Aurora — not a second locker.",
+    hrefs: [
+      { label: "Scale snap", href: "/lock" },
+      { label: "3D door", href: "/door" },
+    ],
+    by: "Loom",
+    tags: ["scale-lock", "camera", "loom", "#VioletEchoes"],
+  },
+  {
     id: "2026-09-16-hearth",
     date: "2026-09-16",
     title: "The Hearth hung",

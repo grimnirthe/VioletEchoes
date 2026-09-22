@@ -20,6 +20,7 @@ import { Route as DoorRouteImport } from './routes/door'
 import { Route as HangRouteImport } from './routes/hang'
 import { Route as HearthRouteImport } from './routes/hearth'
 import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
+import { Route as LockRouteImport } from './routes/lock'
 import { Route as MusicRouteImport } from './routes/music'
 import { Route as PodcastRouteImport } from './routes/podcast'
 import { Route as SearchRouteImport } from './routes/search'
@@ -95,6 +96,11 @@ const HearthRoute = HearthRouteImport.update({
 const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
   id: '/llms.txt',
   path: '/llms.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LockRoute = LockRouteImport.update({
+  id: '/lock',
+  path: '/lock',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MusicRoute = MusicRouteImport.update({
@@ -215,6 +221,7 @@ export interface FileRoutesByFullPath {
   '/hang': typeof HangRoute
   '/hearth': typeof HearthRoute
   '/llms.txt': typeof LlmsDottxtRoute
+  '/lock': typeof LockRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
@@ -249,6 +256,7 @@ export interface FileRoutesByTo {
   '/hang': typeof HangRoute
   '/hearth': typeof HearthRoute
   '/llms.txt': typeof LlmsDottxtRoute
+  '/lock': typeof LockRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
@@ -284,6 +292,7 @@ export interface FileRoutesById {
   '/hang': typeof HangRoute
   '/hearth': typeof HearthRoute
   '/llms.txt': typeof LlmsDottxtRoute
+  '/lock': typeof LockRoute
   '/music': typeof MusicRoute
   '/podcast': typeof PodcastRoute
   '/search': typeof SearchRoute
@@ -320,6 +329,7 @@ export interface FileRouteTypes {
     | '/hang'
     | '/hearth'
     | '/llms.txt'
+    | '/lock'
     | '/music'
     | '/podcast'
     | '/search'
@@ -354,6 +364,7 @@ export interface FileRouteTypes {
     | '/hang'
     | '/hearth'
     | '/llms.txt'
+    | '/lock'
     | '/music'
     | '/podcast'
     | '/search'
@@ -388,6 +399,7 @@ export interface FileRouteTypes {
     | '/hang'
     | '/hearth'
     | '/llms.txt'
+    | '/lock'
     | '/music'
     | '/podcast'
     | '/search'
@@ -423,6 +435,7 @@ export interface RootRouteChildren {
   HangRoute: typeof HangRoute
   HearthRoute: typeof HearthRoute
   LlmsDottxtRoute: typeof LlmsDottxtRoute
+  LockRoute: typeof LockRoute
   MusicRoute: typeof MusicRoute
   PodcastRoute: typeof PodcastRoute
   SearchRoute: typeof SearchRoute
@@ -523,6 +536,13 @@ declare module '@tanstack/react-router' {
       path: '/llms.txt'
       fullPath: '/llms.txt'
       preLoaderRoute: typeof LlmsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lock': {
+      id: '/lock'
+      path: '/lock'
+      fullPath: '/lock'
+      preLoaderRoute: typeof LockRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/music': {
@@ -687,6 +707,7 @@ const rootRouteChildren: RootRouteChildren = {
   HangRoute: HangRoute,
   HearthRoute: HearthRoute,
   LlmsDottxtRoute: LlmsDottxtRoute,
+  LockRoute: LockRoute,
   MusicRoute: MusicRoute,
   PodcastRoute: PodcastRoute,
   SearchRoute: SearchRoute,

@@ -1676,6 +1676,7 @@ export const nav: NavItem[] = [
     label: "Gallery",
     children: [
       { to: "/gallery", label: "Portrait gallery" },
+      { to: "/lock", label: "Scale snap", note: "Locked camera · before Aurora" },
       { to: "/gallery/vee", label: "Vee" },
       { to: "/gallery/velora", label: "Velora" },
       { to: "/gallery/starborn", label: "Starborn Rocker" },

@@ -56,6 +56,16 @@ function GalleryPage() {
             Faces of the bloodline — and the songs that carry their names. Porch rain, aurora light,
             and the people who make the Nexus home.
           </p>
+          <p className="text-sm text-[var(--color-subtle)]">
+            Before a still:{" "}
+            <Link
+              to="/lock"
+              className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+            >
+              Scale snap
+            </Link>
+            {" "}— locked camera, one ruler, no orbit.
+          </p>
           <div className="flex flex-wrap items-center gap-2">
             <Badge className="border-[var(--color-primary)]/30 text-[var(--color-primary-soft)]">
               <Users className="mr-1.5 h-3.5 w-3.5" />

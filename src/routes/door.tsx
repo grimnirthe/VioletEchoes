@@ -37,6 +37,16 @@ function DoorPage() {
             Coherence over peak.
           </p>
           <p className="text-sm text-[var(--color-subtle)]">
+            Character stills use a different law — locked camera, no orbit. That’s{" "}
+            <Link
+              to="/lock"
+              className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
+            >
+              Scale snap
+            </Link>
+            .
+          </p>
+          <p className="text-sm text-[var(--color-subtle)]">
             Compiler hung for the next builder:{" "}
             <Link
               to="/bible/companions/$doc"
