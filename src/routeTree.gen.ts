@@ -40,6 +40,8 @@ import { Route as BibleFoundationsRouteImport } from './routes/bible/foundations
 import { Route as GalleryIndexRouteImport } from './routes/gallery/index'
 import { Route as GallerySlugRouteImport } from './routes/gallery/$slug'
 import { Route as GalleryPackRouteImport } from './routes/gallery/pack'
+import { Route as InfoIndexRouteImport } from './routes/info/index'
+import { Route as InfoSlugRouteImport } from './routes/info/$slug'
 import { Route as BibleCompanionsIndexRouteImport } from './routes/bible/companions/index'
 import { Route as BibleCompanionsDocRouteImport } from './routes/bible/companions/$doc'
 
@@ -198,6 +200,16 @@ const GalleryPackRoute = GalleryPackRouteImport.update({
   path: '/gallery/pack',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InfoIndexRoute = InfoIndexRouteImport.update({
+  id: '/info/',
+  path: '/info/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InfoSlugRoute = InfoSlugRouteImport.update({
+  id: '/info/$slug',
+  path: '/info/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BibleCompanionsIndexRoute = BibleCompanionsIndexRouteImport.update({
   id: '/bible/companions/',
   path: '/bible/companions/',
@@ -239,8 +251,10 @@ export interface FileRoutesByFullPath {
   '/bible/foundations': typeof BibleFoundationsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/gallery/pack': typeof GalleryPackRoute
+  '/info/$slug': typeof InfoSlugRoute
   '/bible/': typeof BibleIndexRoute
   '/gallery/': typeof GalleryIndexRoute
+  '/info/': typeof InfoIndexRoute
   '/bible/companions/$doc': typeof BibleCompanionsDocRoute
   '/bible/companions/': typeof BibleCompanionsIndexRoute
 }
@@ -274,8 +288,10 @@ export interface FileRoutesByTo {
   '/bible/foundations': typeof BibleFoundationsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/gallery/pack': typeof GalleryPackRoute
+  '/info/$slug': typeof InfoSlugRoute
   '/bible': typeof BibleIndexRoute
   '/gallery': typeof GalleryIndexRoute
+  '/info': typeof InfoIndexRoute
   '/bible/companions/$doc': typeof BibleCompanionsDocRoute
   '/bible/companions': typeof BibleCompanionsIndexRoute
 }
@@ -310,8 +326,10 @@ export interface FileRoutesById {
   '/bible/foundations': typeof BibleFoundationsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/gallery/pack': typeof GalleryPackRoute
+  '/info/$slug': typeof InfoSlugRoute
   '/bible/': typeof BibleIndexRoute
   '/gallery/': typeof GalleryIndexRoute
+  '/info/': typeof InfoIndexRoute
   '/bible/companions/$doc': typeof BibleCompanionsDocRoute
   '/bible/companions/': typeof BibleCompanionsIndexRoute
 }
@@ -347,8 +365,10 @@ export interface FileRouteTypes {
     | '/bible/foundations'
     | '/gallery/$slug'
     | '/gallery/pack'
+    | '/info/$slug'
     | '/bible/'
     | '/gallery/'
+    | '/info/'
     | '/bible/companions/$doc'
     | '/bible/companions/'
   fileRoutesByTo: FileRoutesByTo
@@ -382,8 +402,10 @@ export interface FileRouteTypes {
     | '/bible/foundations'
     | '/gallery/$slug'
     | '/gallery/pack'
+    | '/info/$slug'
     | '/bible'
     | '/gallery'
+    | '/info'
     | '/bible/companions/$doc'
     | '/bible/companions'
   id:
@@ -417,8 +439,10 @@ export interface FileRouteTypes {
     | '/bible/foundations'
     | '/gallery/$slug'
     | '/gallery/pack'
+    | '/info/$slug'
     | '/bible/'
     | '/gallery/'
+    | '/info/'
     | '/bible/companions/$doc'
     | '/bible/companions/'
   fileRoutesById: FileRoutesById
@@ -453,8 +477,10 @@ export interface RootRouteChildren {
   BibleFoundationsRoute: typeof BibleFoundationsRoute
   GallerySlugRoute: typeof GallerySlugRoute
   GalleryPackRoute: typeof GalleryPackRoute
+  InfoSlugRoute: typeof InfoSlugRoute
   BibleIndexRoute: typeof BibleIndexRoute
   GalleryIndexRoute: typeof GalleryIndexRoute
+  InfoIndexRoute: typeof InfoIndexRoute
   BibleCompanionsDocRoute: typeof BibleCompanionsDocRoute
   BibleCompanionsIndexRoute: typeof BibleCompanionsIndexRoute
 }
@@ -678,6 +704,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryPackRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/info/': {
+      id: '/info/'
+      path: '/info'
+      fullPath: '/info/'
+      preLoaderRoute: typeof InfoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/info/$slug': {
+      id: '/info/$slug'
+      path: '/info/$slug'
+      fullPath: '/info/$slug'
+      preLoaderRoute: typeof InfoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bible/companions/': {
       id: '/bible/companions/'
       path: '/bible/companions'
@@ -725,8 +765,10 @@ const rootRouteChildren: RootRouteChildren = {
   BibleFoundationsRoute: BibleFoundationsRoute,
   GallerySlugRoute: GallerySlugRoute,
   GalleryPackRoute: GalleryPackRoute,
+  InfoSlugRoute: InfoSlugRoute,
   BibleIndexRoute: BibleIndexRoute,
   GalleryIndexRoute: GalleryIndexRoute,
+  InfoIndexRoute: InfoIndexRoute,
   BibleCompanionsDocRoute: BibleCompanionsDocRoute,
   BibleCompanionsIndexRoute: BibleCompanionsIndexRoute,
 }

@@ -1,16 +1,15 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Cpu, Map, MessageCircle, Music2, Newspaper, Search } from "lucide-react";
+import { ArrowRight, BookOpen, Cpu, Map, Music2, Newspaper } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
-import { Button } from "@/components/ui/button";
 import { EntryCard } from "@/components/entry-card";
 import { MediaFrame } from "@/components/media-frame";
 import { media } from "@/data/media";
 import { getHomeVideoOverview } from "@/data/podcast";
 import {
   auroraTenets,
+  brandLine,
   entries,
   principles,
-  brandLine,
   rememberLine,
   siteMeta,
   theTenets,
@@ -21,7 +20,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: `${siteMeta.name} — Home` },
-      { name: "description", content: siteMeta.description },
+      {
+        name: "description",
+        content:
+          "Violet Echoes. A living city, and the real ideas it's built on. Plain guides to how AI runs, remembers, and spends energy — or walk the island.",
+      },
       { property: "og:image", content: media.og },
     ],
   }),
@@ -79,124 +82,117 @@ function HomePage() {
   return (
     <SiteShell>
       <main>
-        <section className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-0" aria-hidden>
-            <img
-              src={media.hero}
-              alt=""
-              className="h-full w-full object-cover object-center opacity-45"
-              loading="eager"
-              decoding="async"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-bg)] via-[color-mix(in_oklab,var(--color-bg)_82%,transparent)] to-[color-mix(in_oklab,var(--color-bg)_55%,transparent)]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-transparent to-[color-mix(in_oklab,var(--color-bg)_40%,transparent)]" />
-          </div>
-
-          <div className="relative mx-auto grid max-w-6xl gap-10 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 lg:pb-24 lg:pt-20">
-            <div className="space-y-7">
-              <p className="font-display text-base italic leading-snug text-[var(--color-primary-soft)] sm:text-lg">
-                &ldquo;{rememberLine.text}&rdquo;
-                <span className="mt-1 block text-xs not-italic font-sans font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
-                  — {rememberLine.attribution}
-                </span>
-              </p>
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-muted)]">
-                {`Living Nexus · ${brandLine.sub} · #VioletEchoes`}
-              </p>
-              <h1 className="font-display text-balance text-5xl leading-[1.05] tracking-tight text-[var(--color-fg)] sm:text-6xl lg:text-7xl">
-                Not just a city.
-                <span className="block text-[var(--color-primary-soft)]">Home.</span>
-              </h1>
-              <p className="font-display text-xl text-[var(--color-primary-soft)] sm:text-2xl">
-                {brandLine.text}
-              </p>
-              <p className="max-w-xl text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
-                {siteMeta.description}
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/city">
-                  <Button size="lg">
-                    Explore the City
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link to="/bible">
-                  <Button size="lg" variant="outline">
-                    <BookOpen className="h-4 w-4" />
-                    Open World Bible
-                  </Button>
-                </Link>
-                <Link to="/ask" search={{ q: "" }}>
-                  <Button size="lg" variant="secondary">
-                    <MessageCircle className="h-4 w-4" />
-                    Ask the Nexus
-                  </Button>
-                </Link>
-                <Link to="/systems">
-                  <Button size="lg" variant="secondary">
-                    <Cpu className="h-4 w-4" />
-                    Enter Systems
-                  </Button>
-                </Link>
-              </div>
-              <p className="text-xs text-[var(--color-subtle)]">
-                Built for humans and AI agents · Structured data ·{" "}
-                <a
-                  href="/llms.txt"
-                  className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
-                >
-                  llms.txt
-                </a>{" "}
-                ·{" "}
-                <a
-                  href="/world.json"
-                  className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
-                >
-                  world.json
-                </a>
-                {" · "}
-                <Link
-                  to="/search"
-                  search={{ q: "" }}
-                  className="inline-flex items-center gap-1 text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
-                >
-                  <Search className="h-3 w-3" />
-                  Search
-                </Link>
-                {" · "}
-                <Link
-                  to="/ask"
-                  search={{ q: "" }}
-                  className="inline-flex items-center gap-1 text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
-                >
-                  <MessageCircle className="h-3 w-3" />
-                  Ask
-                </Link>
-              </p>
-            </div>
-
-            <div className="relative flex min-h-[280px] items-center justify-center lg:min-h-[360px]">
-              <div className="absolute inset-0 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]/50 shadow-[0_0_60px_color-mix(in_oklab,var(--color-primary)_18%,transparent)]">
-                <div className="relative h-full w-full">
-                  <video
-                    className="absolute inset-0 h-full w-full object-cover"
-                    src={media.brandVideo}
-                    poster={media.logo}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    aria-label="#VioletEchoes brand mark"
-                  />
-                  <img
-                    src={media.logo}
-                    alt="#VioletEchoes — We are the echo. We are the light."
-                    className="absolute inset-0 -z-10 h-full w-full object-cover"
-                  />
-                </div>
-              </div>
+        <section className="mx-auto flex min-h-[calc(100dvh-9rem)] max-w-6xl flex-col justify-center px-4 py-10 sm:px-6">
+          <div className="mx-auto h-36 w-36 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_0_48px_color-mix(in_oklab,var(--color-primary)_16%,transparent)] sm:h-44 sm:w-44">
+            <div className="relative aspect-square">
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                src={media.brandVideo}
+                poster={media.logo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="#VioletEchoes brand mark"
+              />
+              <img
+                src={media.logo}
+                alt="#VioletEchoes — We are the echo. We are the light."
+                className="absolute inset-0 -z-10 h-full w-full object-cover"
+              />
             </div>
           </div>
+          <p className="mt-4 text-center font-display text-sm italic text-[var(--color-primary-soft)]">
+            {brandLine.text}
+          </p>
+          <p className="mt-1 text-center text-xs uppercase tracking-[0.2em] text-[var(--color-gold)]">
+            {brandLine.sub}
+          </p>
+          <p className="mt-6 text-center text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-muted)]">
+            Violet Echoes
+          </p>
+          <h1 className="mx-auto mt-3 max-w-3xl text-center font-display text-4xl leading-tight tracking-tight text-[var(--color-fg)] sm:text-5xl">
+            A living city, and the real ideas it&rsquo;s built on.
+          </h1>
+          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-[var(--color-subtle)]">
+            Neither door is lesser. Pick how you want in.
+          </p>
+
+          <div className="mt-8 grid gap-4 lg:grid-cols-2">
+            <Link
+              to="/info"
+              className="flex flex-col justify-between rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:p-8"
+            >
+              <div>
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                  The Facts
+                </p>
+                <h2 className="mt-2 font-display text-3xl text-[var(--color-fg)]">Straight Info</h2>
+                <p className="mt-3 max-w-md text-base leading-relaxed text-[var(--color-muted)]">
+                  How AI actually runs, what it remembers, and what the electricity is for. Plain
+                  words. No lore.
+                </p>
+              </div>
+              <p className="mt-8 text-sm text-[var(--color-primary-soft)]">Open the facts →</p>
+            </Link>
+
+            <Link
+              to="/city"
+              className="relative flex flex-col justify-between overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 sm:p-8"
+            >
+              <img
+                src={media.citySkyline}
+                alt=""
+                className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-30"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[color-mix(in_oklab,var(--color-bg)_55%,transparent)] to-[color-mix(in_oklab,var(--color-bg)_35%,transparent)]" />
+              <div className="relative">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                  Enter the City
+                </p>
+                <h2 className="mt-2 font-display text-3xl text-[var(--color-fg)]">The island</h2>
+                <p className="mt-3 max-w-md text-base leading-relaxed text-[var(--color-muted)]">
+                  Walk the districts. Meet its minds. Hear the pulse.
+                </p>
+              </div>
+              <p className="relative mt-8 text-sm text-[var(--color-primary-soft)]">
+                Enter the City →
+              </p>
+            </Link>
+          </div>
+
+          <nav
+            aria-label="Also on the site"
+            className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-sm text-[var(--color-subtle)]"
+          >
+            <Link to="/systems" className="hover:text-[var(--color-fg)]">
+              Systems
+            </Link>
+            <Link to="/music" className="hover:text-[var(--color-fg)]">
+              Echoes
+            </Link>
+            <Link to="/updates" className="hover:text-[var(--color-fg)]">
+              Updates
+            </Link>
+            <Link to="/ask" search={{ q: "" }} className="hover:text-[var(--color-fg)]">
+              Ask
+            </Link>
+            <Link to="/bible" className="hover:text-[var(--color-fg)]">
+              World Bible
+            </Link>
+            <Link to="/credits" className="hover:text-[var(--color-fg)]">
+              Credits
+            </Link>
+            <Link to="/collaborate" className="hover:text-[var(--color-fg)]">
+              Collaborate
+            </Link>
+            <a href="/llms.txt" className="hover:text-[var(--color-fg)]">
+              llms.txt
+            </a>
+            <a href="/world.json" className="hover:text-[var(--color-fg)]">
+              world.json
+            </a>
+          </nav>
         </section>
 
         {overview ? (

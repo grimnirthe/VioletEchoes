@@ -1620,6 +1620,19 @@ export type NavItem = {
 export const nav: NavItem[] = [
   { to: "/", label: "Home" },
   {
+    to: "/info",
+    label: "Facts",
+    children: [
+      { to: "/info", label: "Straight Info", note: "Plain words. No lore." },
+      { to: "/info/edge-computing", label: "Edge computing", note: "Local vs cloud" },
+      { to: "/info/on-your-own-machine", label: "On your machine", note: "Weights, memory, privacy" },
+      { to: "/info/ai-memory", label: "AI memory", note: "Why it forgets" },
+      { to: "/info/when-it-invents", label: "When it invents", note: "Fluent is not true" },
+      { to: "/info/energy-cost", label: "Energy cost", note: "Training vs answers" },
+      { to: "/info/neuromorphic", label: "Neuromorphic", note: "Chips that spike" },
+    ],
+  },
+  {
     to: "/city",
     label: "City",
     children: [
