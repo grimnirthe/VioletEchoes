@@ -72,6 +72,7 @@ Improve the model. Improve the data. Let specialists exist. Stop when the sevent
 ## How to use it
 
 - When someone says “let the city improve itself”: ask which flavor, and who holds the brake.
+- When someone says “throw out the residents, computation will invent the city”: that is the eviction. Read [The Bitter Lesson](/bible/companions/bitter-lesson). Do not freeze the street into a grammar. Do not evict the people who walk it.
 - When a system wants more instances because it got cheaper: that is their explosion logic wearing our clothes.
 - When recursion starts eating its own output: that is the degeneration they already named. Cut the feed. Go back to the street.
 

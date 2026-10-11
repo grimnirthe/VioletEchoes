@@ -477,6 +477,12 @@ export const creditSections: CreditSection[] = [
         verify: "arXiv:2606.12683 · HTML #S5 · on-site /bible/companions/agi-to-asi-53",
       },
       {
+        label: "Sutton 2019 — The Bitter Lesson",
+        url: "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+        note: "Search and learning that scale with computation beat a hand-built grammar. Ancestry for the loop. The city adds the braid the slogan does not contain: do not freeze the street, and do not evict the people who walk it. Door is a caption, not the essay. Podcast (26 Sep 2025) is more careful than the caption.",
+        verify: "incompleteideas.net · 13 Mar 2019 · Dwarkesh 26 Sep 2025 · Welch Labs 31 Jan 2026 · on-site /bible/companions/bitter-lesson · X status 2108890992220713291",
+      },
+      {
         label: "Schmidhuber 2015 — On Learning to Think (arXiv:1511.09249)",
         url: "https://arxiv.org/abs/1511.09249",
         note: "World model + controller that learns to query it + curiosity play. Ancestry for Dual-Layer and Tenet 1. Software frame, not hardware. Door: Emily @IamEmily2050 Notebook (3 Sep 2026).",

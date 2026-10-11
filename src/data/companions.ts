@@ -26,6 +26,16 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "Ancestry card · §5.3 · .md",
   },
   {
+    id: "bitter-lesson",
+    title: "The Bitter Lesson — do not freeze, do not evict",
+    blurb:
+      "Sutton 2019: search and learning beat a grammar frozen by hand. The city sentence is the braid the slogan leaves out. Do not freeze the street into a grammar. Do not evict the people who walk it.",
+    href: "/docs/bitter-lesson.md",
+    to: "/bible/companions/bitter-lesson",
+    kind: "core",
+    pagesHint: "Ancestry card · essay · .md",
+  },
+  {
     id: "learning-to-think-2015",
     title: "Learning to Think — 2015 echo",
     blurb:

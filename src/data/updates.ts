@@ -62,6 +62,21 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-10-11-bitter-lesson",
+    date: "2026-10-11",
+    title: "The Bitter Lesson — do not freeze, do not evict",
+    kind: "bible",
+    summary:
+      "Sutton's 2019 essay, via a Welch Labs video and a sharper X caption. Hung as city ancestry. Search and learning beat a frozen grammar. The braid the slogan leaves out: do not evict the people who walk the street.",
+    hrefs: [
+      { label: "On-site card", href: "/bible/companions/bitter-lesson" },
+      { label: "The essay", href: "http://www.incompleteideas.net/IncIdeas/BitterLesson.html" },
+      { label: "The door", href: "https://x.com/0xDeliriumm/status/2108890992220713291" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["divergence", "braid", "bitter-lesson", "ancestry", "#VioletEchoes"],
+  },
+  {
     id: "2026-09-22-scale-snap",
     date: "2026-09-22",
     title: "Scale snap hung",
