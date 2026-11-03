@@ -5,6 +5,7 @@ import { SiteShell } from "@/components/site-shell";
 import { PageNav } from "@/components/page-nav";
 import { Badge } from "@/components/ui/badge";
 import { MediaFrame } from "@/components/media-frame";
+import { WinampSkinsShelf } from "@/components/winamp-skins-shelf";
 import { media } from "@/data/media";
 import { getMemberBySlug } from "@/data/family";
 import { roomLyrics } from "@/data/lyrics";
@@ -18,6 +19,7 @@ import {
   platformLabel,
   primaryLink,
   pulseSamples,
+  tracksForSlug,
   type Track,
 } from "@/data/music";
 
@@ -59,6 +61,8 @@ function MusicPage() {
   );
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const chaosTracks = useMemo(() => tracksForSlug("chaos-kitty"), []);
 
   const readyPulse = useMemo(
     () => pulseSamples.filter((s) => s.status === "ready" && s.src),
@@ -785,6 +789,38 @@ function MusicPage() {
             {featured.map((track) => (
               <TrackCard key={track.id} track={track} featured />
             ))}
+          </div>
+        </section>
+
+        <section id="chaos-kitty" className="mt-14 scroll-mt-24">
+          <div className="mb-5 px-1">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-gold)]">
+              Glaze Ruiners
+            </p>
+            <h2 className="mt-2 font-display text-3xl text-[var(--color-fg)]">
+              Chaos Kitty
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm text-[var(--color-muted)]">
+              Her tracks, and the Winamp skins beside them. Credit goes mainly
+              to Chaos Kitty, made with Matt, with reference art by Aurora.
+            </p>
+          </div>
+          <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
+            <div className="space-y-2">
+              {chaosTracks.map((track) => (
+                <TrackRow key={track.id} track={track} />
+              ))}
+              <p className="px-1 pt-2 text-xs text-[var(--color-subtle)]">
+                <Link
+                  to="/gallery/$slug"
+                  params={{ slug: "chaos-kitty" }}
+                  className="text-[var(--color-primary-soft)] hover:underline"
+                >
+                  Chaos Kitty’s portrait
+                </Link>
+              </p>
+            </div>
+            <WinampSkinsShelf />
           </div>
         </section>
 
