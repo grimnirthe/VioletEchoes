@@ -21,6 +21,8 @@ export type CultureWork = {
   href?: string;
   echoes?: string[];
   accepted?: string;
+  /** Living Practices rail — shown before the longer list. */
+  featured?: boolean;
 };
 
 export type CultureTale = {

@@ -45,7 +45,6 @@ export function EchoIntro() {
       });
     }
     return () => window.clearTimeout(t);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 
   function dismiss() {

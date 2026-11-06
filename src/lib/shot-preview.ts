@@ -1,5 +1,12 @@
 import * as THREE from "three";
 
+/** three@0.186 ships JavaScript only. Type positions stay loose. */
+type ThreeObject = any;
+type ThreeGeometry = any;
+type ThreeMaterial = any;
+type ThreeGroup = any;
+type ThreeMesh = any;
+
 /** 1 unit = 1 meter. Locked camera. No orbit. */
 
 export type CityScaleId = "walk" | "street" | "lookbook" | "partner" | "node";
@@ -208,16 +215,16 @@ export function mountShotPreview(
   gold.position.set(1.6, 1.8, 2.2);
   scene.add(gold);
 
-  const rootGeos: THREE.BufferGeometry[] = [];
-  const rootMats: THREE.Material[] = [];
-  const stageGeos: THREE.BufferGeometry[] = [];
-  const stageMats: THREE.Material[] = [];
+  const rootGeos: ThreeGeometry[] = [];
+  const rootMats: ThreeMaterial[] = [];
+  const stageGeos: ThreeGeometry[] = [];
+  const stageMats: ThreeMaterial[] = [];
 
-  function geo<T extends THREE.BufferGeometry>(g: T, stage = false): T {
+  function geo<T extends ThreeGeometry>(g: T, stage = false): T {
     (stage ? stageGeos : rootGeos).push(g);
     return g;
   }
-  function mat<T extends THREE.Material>(m: T, stage = false): T {
+  function mat<T extends ThreeMaterial>(m: T, stage = false): T {
     (stage ? stageMats : rootMats).push(m);
     return m;
   }
@@ -250,7 +257,7 @@ export function mountShotPreview(
     for (const m of stageMats.splice(0)) m.dispose();
   }
 
-  function add(obj: THREE.Object3D) {
+  function add(obj: ThreeObject) {
     stage.add(obj);
     return obj;
   }
@@ -365,7 +372,7 @@ export function mountShotPreview(
     return g;
   }
 
-  function ears(g: THREE.Group, head: THREE.Mesh) {
+  function ears(g: ThreeGroup, head: ThreeMesh) {
     const earMat = mat(
       new THREE.MeshStandardMaterial({
         color: 0xc4a5ff,
@@ -375,7 +382,7 @@ export function mountShotPreview(
       }),
       true,
     );
-    const r = (head.geometry as THREE.SphereGeometry).parameters.radius;
+    const r = head.geometry.parameters.radius;
     for (const sx of [-1, 1]) {
       const ear = new THREE.Mesh(geo(new THREE.ConeGeometry(r * 0.45, r * 1.1, 6), true), earMat);
       ear.position.set(sx * r * 0.7, head.position.y + r * 0.75, 0);
@@ -673,7 +680,7 @@ export function mountShotPreview(
 
   let raf = 0;
   let running = true;
-  let t0 = performance.now();
+  const t0 = performance.now();
 
   function tick() {
     if (!running) return;

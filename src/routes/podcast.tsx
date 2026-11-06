@@ -258,7 +258,8 @@ function PodcastPage() {
             </li>
             <li>
               <Link
-                to="/bible/the-tenets"
+                to="/bible/$slug"
+                params={{ slug: "the-tenets" }}
                 className="text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
               >
                 The Tenets — five roots

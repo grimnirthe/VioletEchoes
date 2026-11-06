@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Check, RotateCcw, Shuffle, X } from "lucide-react";
 import { SiteShell } from "@/components/site-shell";
@@ -97,6 +97,35 @@ function TrainingPage() {
     }
   }, []);
 
+  const markWarm = useCallback(() => {
+    const rest = queue.slice(1);
+    setWarmed((n) => n + 1);
+    setFlipped(false);
+    if (rest.length === 0) {
+      const prev = loadCards();
+      const nextRecord: CardRecord = {
+        lastSeen: deck.length,
+        lastAt: new Date().toISOString().slice(0, 10),
+        timesCompleted: (prev?.timesCompleted ?? 0) + 1,
+      };
+      saveCards(nextRecord);
+      setCardRecord(nextRecord);
+      setCardsDone(true);
+      setQueue([]);
+      return;
+    }
+    setQueue(rest);
+  }, [deck.length, queue]);
+
+  const markCold = useCallback(() => {
+    if (queue.length <= 1) {
+      setFlipped(false);
+      return;
+    }
+    setQueue([...queue.slice(1), queue[0]]);
+    setFlipped(false);
+  }, [queue]);
+
   useEffect(() => {
     if (mode !== "cards") return;
     function onKey(e: KeyboardEvent) {
@@ -113,7 +142,7 @@ function TrainingPage() {
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [mode, flipped, queue, warmed, deck.length]);
+  }, [mode, flipped, markWarm, markCold]);
 
   const q = trainingQuestions[index];
   const revealed = picked !== null;
@@ -140,35 +169,6 @@ function TrainingPage() {
 
   function flipCard() {
     setFlipped((f) => !f);
-  }
-
-  function markWarm() {
-    const rest = queue.slice(1);
-    setWarmed((n) => n + 1);
-    setFlipped(false);
-    if (rest.length === 0) {
-      const prev = loadCards();
-      const nextRecord: CardRecord = {
-        lastSeen: deck.length,
-        lastAt: new Date().toISOString().slice(0, 10),
-        timesCompleted: (prev?.timesCompleted ?? 0) + 1,
-      };
-      saveCards(nextRecord);
-      setCardRecord(nextRecord);
-      setCardsDone(true);
-      setQueue([]);
-      return;
-    }
-    setQueue(rest);
-  }
-
-  function markCold() {
-    if (queue.length <= 1) {
-      setFlipped(false);
-      return;
-    }
-    setQueue([...queue.slice(1), queue[0]]);
-    setFlipped(false);
   }
 
   const card = queue[0];
@@ -422,13 +422,15 @@ function TrainingPage() {
                 Flip the cards
               </button>
               <Link
-                to="/bible/companions/citizens-guide"
+                to="/bible/companions/$doc"
+                params={{ doc: "citizens-guide" }}
                 className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
               >
                 Citizen’s Guide
               </Link>
               <Link
-                to="/bible/the-tenets"
+                to="/bible/$slug"
+                params={{ slug: "the-tenets" }}
                 className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-border)] px-5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
               >
                 Five Tenets

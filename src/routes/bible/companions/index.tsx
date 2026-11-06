@@ -318,7 +318,8 @@ function CompanionsIndexPage() {
                   PDF
                 </a>
                 <Link
-                  to="/bible/codex-aurora"
+                  to="/bible/$slug"
+                  params={{ slug: "codex-aurora" }}
                   className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-fg)]"
                 >
                   Codex Aurora entry
