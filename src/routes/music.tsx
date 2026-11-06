@@ -54,9 +54,9 @@ function MusicPage() {
   const featured = featuredEchoTracks();
   const dualLayer = getVideoOverview("v007-dual-layer-city");
   const roomTracks = musicHub.roomTracks;
-  const playableRoom = roomTracks.filter((t) => t.src || t.externalUrl);
+  const playableRoom = roomTracks.filter((t) => t.src || roomExternalUrl(t));
   const [filter, setFilter] = useState<(typeof filters)[number]["id"]>("all");
-  const [activeRoomId, setActiveRoomId] = useState(
+  const [activeRoomId, setActiveRoomId] = useState<string>(
     () => playableRoom[0]?.id ?? roomTracks[0]?.id ?? "",
   );
   const [playing, setPlaying] = useState(false);
@@ -240,7 +240,8 @@ function MusicPage() {
 
               <div className="flex flex-wrap gap-2">
                 {roomTracks.map((rt) => {
-                  const ready = Boolean(rt.src || rt.externalUrl);
+                  const external = roomExternalUrl(rt);
+                  const ready = Boolean(rt.src || external);
                   const active = rt.id === activeRoomId;
                   return (
                     <button
@@ -249,8 +250,8 @@ function MusicPage() {
                       disabled={!ready && rt.kind === "original"}
                       onClick={() => {
                         if (rt.src) selectRoom(rt.id);
-                        else if (rt.externalUrl)
-                          window.open(rt.externalUrl, "_blank", "noopener,noreferrer");
+                        else if (external)
+                          window.open(external, "_blank", "noopener,noreferrer");
                       }}
                       className={[
                         "rounded-full border px-3 py-1.5 text-xs transition-colors",
@@ -297,9 +298,9 @@ function MusicPage() {
                       )}
                       {playing ? "Playing · tap to stop" : "Play in room"}
                     </button>
-                    {activeRoom.externalUrl ? (
+                    {roomExternalUrl(activeRoom) ? (
                       <a
-                        href={activeRoom.externalUrl}
+                        href={roomExternalUrl(activeRoom)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-xs text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
@@ -310,9 +311,9 @@ function MusicPage() {
                     ) : null}
                   </div>
                 </>
-              ) : activeRoom?.externalUrl ? (
+              ) : roomExternalUrl(activeRoom) ? (
                 <a
-                  href={activeRoom.externalUrl}
+                  href={roomExternalUrl(activeRoom)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-[var(--color-primary-soft)] underline-offset-2 hover:underline"
@@ -860,6 +861,13 @@ function MusicPage() {
 
 function nameForSlug(slug: string) {
   return getMemberBySlug(slug)?.name ?? slug;
+}
+
+type RoomTrack = (typeof musicHub.roomTracks)[number];
+
+function roomExternalUrl(track: RoomTrack | undefined): string | undefined {
+  if (!track || !("externalUrl" in track)) return undefined;
+  return track.externalUrl;
 }
 
 function TrackCard({ track, featured }: { track: Track; featured?: boolean }) {

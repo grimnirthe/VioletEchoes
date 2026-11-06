@@ -2,6 +2,18 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { mapPins, type MapPin } from "@/data/city-map";
 
+/** three@0.186 ships JavaScript only. Type positions stay loose. */
+type ThreeObject = {
+  parent: ThreeObject | null;
+  userData: { pinId?: string };
+  scale: { setScalar(n: number): void };
+  traverse(cb: (child: { material?: { emissiveIntensity?: number } }) => void): void;
+};
+type ThreeGeometry = any;
+type ThreeMaterial = any;
+type ThreePoints = any;
+type ThreeAttribute = any;
+
 export type DoorHandle = {
   dispose: () => void;
   reset: () => void;
@@ -101,13 +113,13 @@ export function mountIslandDoor(
   controls.target.copy(homeTarget);
   controls.update();
 
-  const disposables: THREE.Object3D[] = [];
-  const geos: THREE.BufferGeometry[] = [];
-  const mats: THREE.Material[] = [];
-  const pickables: THREE.Object3D[] = [];
-  const byId = new Map<string, THREE.Object3D[]>();
+  const disposables: ThreeObject[] = [];
+  const geos: ThreeGeometry[] = [];
+  const mats: ThreeMaterial[] = [];
+  const pickables: ThreeObject[] = [];
+  const byId = new Map<string, ThreeObject[]>();
 
-  function track<T extends THREE.Object3D>(obj: T, id?: string): T {
+  function track<T extends ThreeObject>(obj: T, id?: string): T {
     disposables.push(obj);
     scene.add(obj);
     if (id) {
@@ -120,11 +132,11 @@ export function mountIslandDoor(
     return obj;
   }
 
-  function geo<T extends THREE.BufferGeometry>(g: T): T {
+  function geo<T extends ThreeGeometry>(g: T): T {
     geos.push(g);
     return g;
   }
-  function mat<T extends THREE.Material>(m: T): T {
+  function mat<T extends ThreeMaterial>(m: T): T {
     mats.push(m);
     return m;
   }
@@ -306,7 +318,7 @@ export function mountIslandDoor(
   }
 
   // Rain
-  let rain: THREE.Points | null = null;
+  let rain: ThreePoints | null = null;
   let rainVel: Float32Array | null = null;
   if (!reduceMotion) {
     const count = 700;
@@ -336,7 +348,6 @@ export function mountIslandDoor(
     disposables.push(rain);
   }
 
-  let selected: string | null = null;
   const raycaster = new THREE.Raycaster();
   const pointer = new THREE.Vector2();
   let moved = false;
@@ -346,7 +357,6 @@ export function mountIslandDoor(
   let lastT = 0;
 
   function applySelect(id: string | null) {
-    selected = id;
     byId.forEach((objs, key) => {
       const on = key === id;
       for (const o of objs) {
@@ -374,7 +384,7 @@ export function mountIslandDoor(
       return;
     }
     let id: string | null = null;
-    let obj: THREE.Object3D | null = hit.object;
+    let obj: ThreeObject | null = hit.object;
     while (obj) {
       if (typeof obj.userData.pinId === "string") {
         id = obj.userData.pinId;
@@ -469,7 +479,7 @@ export function mountIslandDoor(
     }
 
     if (rain && rainVel) {
-      const pos = rain.geometry.getAttribute("position") as THREE.BufferAttribute;
+      const pos = rain.geometry.getAttribute("position") as ThreeAttribute;
       const arr = pos.array as Float32Array;
       for (let i = 0; i < rainVel.length; i++) {
         arr[i * 3 + 1] -= rainVel[i] * dt;

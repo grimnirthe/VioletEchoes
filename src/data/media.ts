@@ -179,12 +179,9 @@ export const media = {
   bibleSectionsVisual: "/images/bible-sections-visual.jpg",
   bibleCoverPillars: "/images/bible-cover-pillars.jpg",
   factionsRhythms: "/images/factions-rhythms.jpg",
-  factionsSkyline: "/images/factions-skyline.jpg",
   factionsSkills: "/images/factions-skills.jpg",
   factionsPattern: "/images/factions-pattern.jpg",
   veilProtocol: "/images/veil-protocol.jpg",
-  veilWatcher: "/images/veil-watcher.jpg",
-  veilInterface: "/images/veil-interface.jpg",
   veilEdge: "/images/veil-edge.jpg",
   spireApproach: "/images/spire-approach.jpg",
   spireTerrace: "/images/spire-terrace.jpg",
@@ -1460,7 +1457,6 @@ export const entryImages: Record<string, string> = {
   veilreach: media.veilProtocol,
   hearthrow: media.hearthPorch,
   "longhouse-nexus": media.nexusOverview,
-  "the-tenets": media.tenetsBook,
 };
 
 export function imageForEntry(id: string): string | undefined {

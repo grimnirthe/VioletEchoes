@@ -3,7 +3,6 @@
 import {
   canonUrl,
   composeAnswer,
-  retrieveAsk,
   type AskCitation,
 } from "@/lib/ask";
 

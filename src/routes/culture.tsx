@@ -17,7 +17,7 @@ import {
   type CultureTale,
   type CultureWork,
 } from "@/data/culture";
-import { fashionLine, fashionLooks, fashionLooksWave } from "@/data/fashion";
+import { fashionLine, fashionLooksWave } from "@/data/fashion";
 import { musicGrounding, musicMemoryForm } from "@/data/music";
 import { getVideoOverview } from "@/data/podcast";
 import { media } from "@/data/media";
