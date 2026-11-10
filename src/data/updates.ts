@@ -62,6 +62,21 @@ export const updateKinds: Record<
  */
 export const cityUpdates: CityUpdate[] = [
   {
+    id: "2026-11-10-ring-energy-gate",
+    date: "2026-11-10",
+    title: "Ring energy gate — cold start, lattice off",
+    kind: "ops",
+    summary:
+      "Outer-ring handoff next to Door A. X-cut quartz, or poled PVDF if the pulse is too small. Report plate and stray capacitance. Wake-path budget is a blank the lab fills before the knock. Charge-sharing into a matched cap keeps about a quarter. Lattice not attached. This house does not run the meter.",
+    hrefs: [
+      { label: "Ring energy gate", href: "/bible/companions/ring-energy-gate" },
+      { label: "Door A bench", href: "/bible/companions/door-a-bench" },
+      { label: "Aether Core", href: "/aether-core#blueprint" },
+    ],
+    by: "Hearth · Loom",
+    tags: ["aether-core", "ring", "quartz", "lab", "#VioletEchoes"],
+  },
+  {
     id: "2026-10-11-bitter-lesson",
     date: "2026-10-11",
     title: "The Bitter Lesson — do not freeze, do not evict",

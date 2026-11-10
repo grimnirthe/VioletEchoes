@@ -201,6 +201,14 @@ function AetherCorePage() {
             </Link>
             <Link
               to="/bible/companions/$doc"
+              params={{ doc: "ring-energy-gate" }}
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-4 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
+            >
+              <BookOpen className="h-3.5 w-3.5" />
+              Ring energy gate
+            </Link>
+            <Link
+              to="/bible/companions/$doc"
               params={{ doc: "monolithic-node" }}
               className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[var(--color-primary)]/50 bg-[var(--color-surface-2)] px-4 text-sm text-[var(--color-primary-soft)] hover:border-[var(--color-primary)]"
             >

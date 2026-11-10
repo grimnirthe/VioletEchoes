@@ -197,6 +197,16 @@ export const companionDocs: CompanionDoc[] = [
     pagesHint: "Lab protocol · 1 page · .md",
   },
   {
+    id: "ring-energy-gate",
+    title: "Ring Energy Gate — cold-start one-pager",
+    blurb:
+      "Lab sheet for the outer ring alone. X-cut quartz, or poled PVDF if the pulse is too small. Lattice not attached. A quarter is the ceiling for plain charge-sharing.",
+    href: "/docs/aether-core-ring-energy-gate.md",
+    to: "/bible/companions/ring-energy-gate",
+    kind: "technical",
+    pagesHint: "Lab protocol · 1 page · .md",
+  },
+  {
     id: "core-framework",
     title: "The Development Divergence — Core Framework",
     blurb:

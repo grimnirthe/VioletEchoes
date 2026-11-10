@@ -257,7 +257,7 @@ export const entries: WorldEntry[] = [
       "Labs are already on the parts: in-memory compute against the von Neumann tax, perovskite reservoirs that use light as both dataset and current, zero-bias photonic synapses, wide-gap optoelectronic memristors. Many papers still couple a harvester to a synapse. Coupling is not monolith. The lattice that harvests and thinks in the same volume, on room light, long enough to matter, has not shipped.",
       "Chemical hunt: one ABX₃ (or double) single crystal — Cs/FA on A, Pb or a double on B, mixed I/Br on X, iodine vacancies on purpose. Gap ~2.3–2.8 eV. 0 V under window-light. Think, beat, and spend on the same boule. Not a sandwich. Formula still owed.",
       "A heart that starts thinking for the city is an overlord. We do not hang that. Fountain hue and spine hum are the resonator made felt. Circadian rest and attenuation are homeostasis. Energy honesty is the transducer. Do not invent a Neuro-District power station. Foundations / footfall stay reserved for Gemini. The mark is hung. The stone is still owed.",
-      "Full blueprint: The Monolithic Node — Aether Core Blueprint. Share door: /aether-core."
+      "Full blueprint: The Monolithic Node — Aether Core Blueprint. Cold start is a separate coupon: the Ring Energy Gate. X-cut quartz, or poled PVDF if the pulse is too small. Lattice not attached. Share door: /aether-core."
     ],
     tags: [
       "aether core",

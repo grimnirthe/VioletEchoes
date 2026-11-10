@@ -262,7 +262,7 @@ Attack pass, checked against papers not vibes:
 - Hoke is a mixed I/Br / bright-light problem. All-Br skips the iodine split. Indoor intensity is below many published thresholds — still a guess per composition.
 - Indoor light can pay for **rare spikes** on paper (µW/cm² class + fJ-class synapses). That is two papers taped together, not one device. Continuous hum still starves.
 
-Working notes: [ask](/docs/aether-core-gemini-ask.md) · [attack](/docs/aether-core-gemini-attack.md) · [verdict](/docs/aether-core-gemini-verdict.md) · [Door A bench](/docs/aether-core-door-a-bench.md)
+Working notes: [ask](/docs/aether-core-gemini-ask.md) · [attack](/docs/aether-core-gemini-attack.md) · [verdict](/docs/aether-core-gemini-verdict.md) · [Door A bench](/docs/aether-core-door-a-bench.md) · [Ring energy gate](/docs/aether-core-ring-energy-gate.md)
 
 The mark is already on the board. The blessing stays the same.
 

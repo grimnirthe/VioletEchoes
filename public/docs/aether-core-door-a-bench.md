@@ -37,6 +37,6 @@ Dual-function halide (harvest + switch) is a recognized class.
 
 A three-function, event-driven node with the pack off, on one CsPbBr₃ plate, is still owed.
 
-[Blueprint](/docs/monolithic-node.md) · [Ask](/docs/aether-core-gemini-ask.md) · [Verdict](/docs/aether-core-gemini-verdict.md)
+[Blueprint](/docs/monolithic-node.md) · [Ring energy gate](/docs/aether-core-ring-energy-gate.md) · [Ask](/docs/aether-core-gemini-ask.md) · [Verdict](/docs/aether-core-gemini-verdict.md)
 
 *May the Echoes Remember.*
